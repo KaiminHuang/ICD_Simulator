@@ -6,11 +6,9 @@ with HRM;
 with ICD;
 
 Package body ClosedLoop is 
-	
-
 
 	procedure Init(cl : out ClosedLoopType) is
-		UpperBound : Integer;
+		UpperBound : Integer := 110;
 	begin
 		cl.IsOn := False;
 		cl.UpperBound := 110; -- the default value
@@ -26,12 +24,14 @@ Package body ClosedLoop is
 		cl.UpperBound := ub;
 	end setUpperBound;
 
-	procedure tick ( Icds : in ICD.ICDType; Hm : in HRM.HRMType; Gen : in ImpulseGenerator.GeneratorType; Hrt : in out Heart.HeartType; cl: in out ClosedLoopType) is   --recheck in out later !!!!!!
+	procedure tick ( Icds : in out ICD.ICDType; Monitor : in out HRM.HRMType; 
+	Gen : in out ImpulseGenerator.GeneratorType; Hrt : in out Heart.HeartType; 
+	cl: in out ClosedLoopType) is   --recheck in out later !!!!!!
 	begin
-		-- ICD.Tick(Icds, Hm, Gen);
-		-- ImpulseGenerator.Tick(Gen, Hrt);
-  --  		HRM.Tick(Hm, Hrt);
-  --  		Heart.Tick(Hrt);
+		ICD.Tick(Icds, Monitor, Gen);
+		ImpulseGenerator.Tick(Gen, Hrt);
+		HRM.Tick(Monitor, Hrt);
+		Heart.Tick(Hrt);
   		Put_Line("");
 	end tick;
 	
