@@ -5,7 +5,7 @@ RN
 RV NO_IO
 RV SPARK
 
-U closedloop%b		closedloop.adb		798eb4e1 NE OO PK KM
+U closedloop%b		closedloop.adb		a8da2a16 NE OO PK KM
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W heart%s		heart.adb		heart.ali
@@ -14,7 +14,7 @@ W icd%s			icd.adb			icd.ali
 W impulsegenerator%s	impulsegenerator.adb	impulsegenerator.ali
 W measures%s		measures.adb		measures.ali
 
-U closedloop%s		closedloop.ads		fa9ecdfb EE NE OO PK KM
+U closedloop%s		closedloop.ads		60368f19 EE NE OO PK KM
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W heart%s		heart.adb		heart.ali
@@ -31,8 +31,8 @@ D a-stream.ads		20130417131021 2ca4ee37
 D a-tags.ads		20130417131022 6c0509d0
 D a-textio.ads		20130417131022 386df5d4
 D a-unccon.ads		20130417131022 f9eb8f06
-D closedloop.ads	20140314121331 0b1f82d9
-D closedloop.adb	20140314121321 8310791a
+D closedloop.ads	20140314123804 91b7c03b
+D closedloop.adb	20140314124625 c8eca50f
 D heart.ads		20140311060305 9fbc8907
 D hrm.ads		20140313103344 070f95d8
 D icd.ads		20140314120306 4d050822
@@ -61,43 +61,52 @@ X 1 ada.ads
 16K9*Ada 19e8 9|1r6 1r23 10|1r6 1r23
 X 7 a-textio.ads
 49K13*Text_IO 471e16 9|1w10 1r27 10|1w10 1r27
-263U14*Put_Line 10|37s17
 X 9 closedloop.ads
-15K9*ClosedLoop 37l5 37e15 10|8b14 41l5 41t15
-16R14*ClosedLoopType 20e27 23r33 26r39 29r43 34r20 10|12r33 19r39 24r43 31r20
-18b25*IsOn{boolean} 10|15m20 21m20 21r35
-19i25*UpperBound{integer} 10|16m20 26m20
-23U19*Init 23<24 10|12b19 17l13 17t17
-23r24 cl{16R14} 10|12b24 15m17 16m17
-26U19*switch 26=27 10|19b19 22l13 22t19
-26r27 cl{16R14} 10|19b27 21m17 21r32
-29U19*setUpperBound 29<34 29>59 10|24b19 27l13 27t26
-29r34 cl{16R14} 10|24b34 26m17
-29i59 ub{integer} 10|24b59 26r34
-32U19*tick 32=27 32=54 33=9 33=54 34=9 10|29b19 38l13 38t17
-32r27 Icds{13|14R14} 10|29b26 33m26
-32r54 Monitor{12|11R9} 10|29b53 33r32 35m26
-33r9 Gen{14|10R9} 10|30b9 33m41 34r39
-33r54 Hrt{11|10R9} 10|30b54 34m44 35r35 36m28
-34r9 cl{16R14} 10|31b9
+15K9*ClosedLoop 41l5 41e15 10|8b14 56l5 56t15
+16R14*ClosedLoopType 24e27 27r33 30r39 33r43 39r36 10|10r33 26r39 38r43 46r36
+18b25*IsOn{boolean} 10|15m20 28m20 28r35 29r23
+19i25*UpperBound{integer} 10|16m20 40m20
+20r25*Hrt{11|10R9} 10|19m31 31r47 50m56 51r41 52m31
+21r25*Monitor{12|11R9} 10|20m29 31m35 33r44 49r38 51m29
+22r25*Generator{14|10R9} 10|22m42 32m48 49m50 50r42
+23r25*Icds{13|14R14} 10|21m29 33m35 49m29
+27U19*Init 27<24 10|10b19 24l13 24t17
+27r24 cl{16R14} 10|10b24 15m17 16m17 19m28 19r28 20m26 20r26 21m26 21r26
+. 22m39 22r39
+30U19*switch 30=27 10|26b19 36l13 36t19
+30r27 cl{16R14} 10|26b27 28m17 28r32 29r20 31m32 31r32 31r44 32m45 32r45
+. 33m32 33r32 33r41
+33U19*setUpperBound 33<34 33>59 10|38b19 41l13 41t26
+33r34 cl{16R14} 10|38b34 40m17
+33i59 ub{integer} 10|38b59 40r34
+39U19*tick 39=25 10|46b19 53l13 53t17
+39r25 cl{16R14} 10|46b25 49m26 49r26 49r35 49m47 49r47 50r39 50m53 50r53
+. 51m26 51r26 51r38 52m28 52r28
 X 10 closedloop.adb
-13i17 UpperBound{integer}
+11i17 UpperBound{integer}
 X 11 heart.ads
-7K9*Heart 9|4w6 33r67 10|4w6 30r67 36r17 11|39e11
-10R9*HeartType 9|33r73 10|30r73 11|18e17
-37U14*Tick 10|36s23
+7K9*Heart 9|4w6 20r31 10|4w6 19r17 52r17 11|39e11
+10R9*HeartType 9|20r37 11|18e17
+22U14*Init 10|19s23
+37U14*Tick 10|52s23
 X 12 hrm.ads
-7K9*HRM 9|5w6 32r71 10|5w6 29r70 35r17 12|38e8
-11R9*HRMType 9|32r75 10|29r74 12|16e17
-36U14*Tick 10|35s21
+7K9*HRM 9|5w6 21r35 10|5w6 20r17 31r25 51r17 12|38e8
+11R9*HRMType 9|21r39 12|16e17
+19U14*Init 10|20s21
+22U14*On 10|31s29
+36U14*Tick 10|51s21
 X 13 icd.ads
-11K9*ICD 9|6w6 32r41 10|6w6 29r40 33r17 13|46e8
-14R14*ICDType 9|32r45 10|29r44 13|21e27
-45U19*Tick 10|33s21
+11K9*ICD 9|6w6 23r32 10|6w6 21r17 33r25 49r17 13|46e8
+14R14*ICDType 9|23r36 13|21e27
+24U19*Init 10|21s21
+27U19*On 10|33s29
+45U19*Tick 10|49s21
 X 14 impulsegenerator.ads
-7K9*ImpulseGenerator 9|2w6 33r22 10|2w6 30r22 34r17 14|38e21
-10R9*GeneratorType 9|33r39 10|30r39 14|18e17
-36U14*Tick 10|34s34
+7K9*ImpulseGenerator 9|2w6 22r37 10|2w6 22r17 32r25 50r17 14|38e21
+10R9*GeneratorType 9|22r54 14|18e17
+21U14*Init 10|22s34
+24U14*On 10|32s42
+36U14*Tick 10|50s34
 X 17 measures.ads
 3K9*Measures 9|3w6 10|3w6 17|31e13
 

@@ -1,5 +1,5 @@
 with Ada.Text_IO; use Ada.Text_IO;
-with Measures;
+with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;with Measures;
 with Heart;
 with HRM;
 
@@ -55,6 +55,9 @@ package body ICD is
 		if Icd.IsOn then
 			-- read the heart rate from hrm
 			HRM.GetRate(Hm, Icd.Rate);
+			Put("Heart rate  = ");
+			Put(Item => Icd.Rate);
+			New_Line;
 			if Icd.isTachycardia then
 				-- if there is a Tachyardia detected calculate and set the impluse
 				CalculateImpluse(Icd);

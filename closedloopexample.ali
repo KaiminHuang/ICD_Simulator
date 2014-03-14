@@ -1,0 +1,89 @@
+V "GNAT Lib v2013"
+M P W=b
+P ZX
+
+RN
+RV NO_DELAY
+RV NO_FIXED_POINT
+RV NO_IO
+RV NO_RELATIVE_DELAY
+RV SPARK
+
+U closedloopexample%b	closedloopexample.adb	7fb933c7 NE OO SU KM
+W ada%s			ada.ads			ada.ali
+W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W closedloop%s		closedloop.adb		closedloop.ali
+W heart%s		heart.adb		heart.ali
+W hrm%s			hrm.adb			hrm.ali
+W icd%s			icd.adb			icd.ali
+W impulsegenerator%s	impulsegenerator.adb	impulsegenerator.ali
+W measures%s		measures.adb		measures.ali
+
+D ada.ads		20130417131023 3ffc8e18
+D a-calend.ads		20130417131018 d86d6c8c
+D a-caldel.ads		20130417131018 9f20b83d
+D a-except.ads		20130417131019 10fcae55
+D a-finali.ads		20130417131020 52ecdc1b
+D a-inteio.ads		20130417131020 f64b89a4
+D a-ioexce.ads		20130417131020 8b9de6cd
+D a-stream.ads		20130417131021 2ca4ee37
+D a-tags.ads		20130417131022 6c0509d0
+D a-textio.ads		20130417131022 386df5d4
+D a-tiinio.ads		20130417131022 aa04e5d6
+D a-unccon.ads		20130417131022 f9eb8f06
+D closedloop.ads	20140314123804 91b7c03b
+D closedloopexample.adb	20140314124110 e9c4357a
+D heart.ads		20140311060305 9fbc8907
+D hrm.ads		20140313103344 070f95d8
+D icd.ads		20140314120306 4d050822
+D impulsegenerator.ads	20140314100710 31c22809
+D interfac.ads		20130417131027 cb4a8015
+D i-cstrea.ads		20130417131026 8128536b
+D measures.ads		20140313094036 2d988602
+D system.ads		20130417131036 f2f2d889
+D s-crtl.ads		20130417131029 dfcfca61
+D s-exctab.ads		20130417131029 66e51330
+D s-ficobl.ads		20130417131029 55a71d43
+D s-finmas.ads		20130417131029 b95bb341
+D s-finroo.ads		20130417131029 4ff27390
+D s-parame.ads		20130417131032 b6e20cc0
+D s-pooglo.ads		20130417131032 542f33d0
+D s-soflin.ads		20130417131032 24c8153c
+D s-stache.ads		20130417131032 596fc1b4
+D s-stalib.ads		20130417131032 f78bcf95
+D s-stoele.ads		20130417131032 facd7d98
+D s-stoele.adb		20130417131032 afc5dc80
+D s-stopoo.ads		20130417131032 7b8fbeee
+D s-traent.ads		20130417131033 5221ee41
+D s-unstyp.ads		20130417131034 6ae15c76
+D s-wchcon.ads		20130417131034 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 14|1r6 1r23 2r6 2r31
+X 6 a-inteio.ads
+18K13*Integer_Text_IO[11|45] 14|2w10 2r35
+X 10 a-textio.ads
+49K13*Text_IO 471e16 14|1w10 1r27
+263U14*Put_Line 14|19s17
+X 13 closedloop.ads
+15K9*ClosedLoop 41e15 14|9w6 13r14 15r9 16r9 20r17
+16R14*ClosedLoopType 24e27 14|13r25
+27U19*Init 14|15s20
+30U19*switch 14|16s20
+39U19*tick 14|20s28
+X 14 closedloopexample.adb
+12U11*ClosedLoopExample 12b11 23l5 23t22
+13r9 cl{13|16R14} 15m25 16m27 16r27 20m33 20r33
+18i13 I{integer}
+X 15 heart.ads
+7K9*Heart 14|6w6 15|39e11
+X 16 hrm.ads
+7K9*HRM 14|7w6 16|38e8
+X 17 icd.ads
+11K9*ICD 14|8w6 17|46e8
+X 18 impulsegenerator.ads
+7K9*ImpulseGenerator 14|4w6 18|38e21
+X 21 measures.ads
+3K9*Measures 14|5w6 21|31e13
+
