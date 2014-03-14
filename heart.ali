@@ -24,7 +24,7 @@ D a-tags.ads		20130417131022 6c0509d0
 D a-textio.ads		20130417131022 386df5d4
 D a-unccon.ads		20130417131022 f9eb8f06
 D heart.ads		20140311060305 9fbc8907
-D heart.adb		20140313104909 fd4d197c
+D heart.adb		20140313120156 fd4d197c
 D interfac.ads		20130417131027 cb4a8015
 D i-cstrea.ads		20130417131026 8128536b
 D measures.ads		20140313094036 2d988602
@@ -51,7 +51,7 @@ X 1 ada.ads
 X 7 a-textio.ads
 49K13*Text_IO 471e16 10|3w10 3r27
 X 9 heart.ads
-7K9*Heart 39l6 39e11 10|5b14 67l5 67t10
+7K9*Heart 39l6 39e11 10|5b14 66l5 66t10
 10R9*HeartType 18e17 22r31 26r40 29r35 33r33 37r34 10|24r31 31r40 37r33 42r35
 . 47r34
 13i10*Rate{13|15I12} 10|27m13 39r21 52m16 52r48 55m16 55r48 57m16 62m13 62r82
@@ -66,7 +66,7 @@ X 9 heart.ads
 33U14*GetRate 33>22 34<22 10|37b14 40l8 40t15
 33r22 Heart{10R9} 10|37b22 39r15
 34i22 Rate{13|15I12} 10|37b44 39m7
-37U14*Tick 37=19 10|47b14 65l8 65t12
+37U14*Tick 37=19 10|47b14 64l8 64t12
 37r19 Heart{10R9} 10|47b19 49r11 52m10 52r42 53r14 55m10 55r42 55r55 57m10
 . 62m7 62r76
 X 10 heart.adb
@@ -74,7 +74,7 @@ X 10 heart.adb
 9i4 SmallShock{13|9I12} 53r30
 12i4 HeartRateMu{13|15I12} 27r66
 13i4 HeartRateSigma{13|15I12} 27r78
-16f4 Volatility{float} 63r64
+16f4 Volatility{float} 62r88
 19i4 DefaultChange{integer} 52r55 58m10
 X 13 measures.ads
 3K9*Measures 9|1w6 13r17 16r20 26r63 29r53 34r33 10|1w6 8r23 9r26 12r27 13r30

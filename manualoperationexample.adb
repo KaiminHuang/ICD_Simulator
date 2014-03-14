@@ -37,6 +37,7 @@ begin
       -- Tick all components
       ImpulseGenerator.Tick(Generator, Hrt);
       HRM.Tick(Monitor, Hrt); --this is calling Heart.GetRate()
+      --here to put ico tick !!!!!
       Heart.Tick(Hrt);
 
       -- Why HRM is ticking before Heart?
@@ -46,33 +47,33 @@ begin
       delay 0.1;
    end loop;
    
-   -- -- Turn off the monitor: should return -1.0 for the next readings
-   -- HRM.Off(Monitor);
+   -- Turn off the monitor: should return -1.0 for the next readings
+   HRM.Off(Monitor);
    
-   -- HRM.GetRate(Monitor, HeartRate);
-   -- ImpulseGenerator.Tick(Generator, Hrt);
-   -- HRM.Tick(Monitor, Hrt);
-   -- Heart.Tick(Hrt);
+   HRM.GetRate(Monitor, HeartRate);
+   ImpulseGenerator.Tick(Generator, Hrt);
+   HRM.Tick(Monitor, Hrt);
+   Heart.Tick(Hrt);
    
-   -- Put("Heart rate should be -1 = ");
-   -- Put(Item => HeartRate);
-   -- New_Line;
+   Put("Heart rate should be -1 = ");
+   Put(Item => HeartRate);
+   New_Line;
    
-   -- -- Turn the machine back on
-   -- HRM.On(Monitor, Hrt);
+   -- Turn the machine back on
+   HRM.On(Monitor, Hrt);
    
-   -- -- Ramp up the impulse 
-   -- ImpulseGenerator.SetImpulse(Generator, 4);
-   -- for I in Integer range 0..100 loop
-   --    HRM.GetRate(Monitor, HeartRate);
+   -- Ramp up the impulse 
+   ImpulseGenerator.SetImpulse(Generator, 4);
+   for I in Integer range 0..100 loop
+      HRM.GetRate(Monitor, HeartRate);
       
-   --    Put("After turn on = ");
-   --    Put(Item => HeartRate);
-   --    New_Line;     
+      Put("After turn on = ");
+      Put(Item => HeartRate);
+      New_Line;     
       
-   --    ImpulseGenerator.Tick(Generator, Hrt);
-   --    HRM.Tick(Monitor, Hrt);
-   --    Heart.Tick(Hrt);
-   --    delay 0.1;
-   -- end loop; 
+      ImpulseGenerator.Tick(Generator, Hrt);
+      HRM.Tick(Monitor, Hrt);
+      Heart.Tick(Hrt);
+      delay 0.1;
+   end loop; 
 end ManualOperationExample;
