@@ -1,0 +1,51 @@
+V "GNAT Lib v2013"
+P ZX
+
+RN
+
+U impulsegenerator%b	impulsegenerator.adb	0a821b88 NE OO PK
+W heart%s		heart.adb		heart.ali
+W randomnumber%s	randomnumber.adb	randomnumber.ali
+
+U impulsegenerator%s	impulsegenerator.ads	83e6270c EE NE OO PK
+W heart%s		heart.adb		heart.ali
+W measures%s		measures.adb		measures.ali
+
+D heart.ads		20140311060305 9fbc8907
+D impulsegenerator.ads	20140313092357 31c22809
+D impulsegenerator.adb	20140313101749 ca1a6ce4
+D measures.ads		20140313094036 2d988602
+D randomnumber.ads	20140311060305 6ee6d662
+D system.ads		20130417131036 f2f2d889
+X 1 heart.ads
+7K9*Heart 39e11 2|2w6 36r56 3|2w6 35r56 36r21 44r10
+10R9*HeartType 18e17 2|36r62 3|35r62 36r27
+26U14*SetImpulse 3|44s16
+X 2 impulsegenerator.ads
+7K9*ImpulseGenerator 38l5 38e21 3|4b14 49l5 49t21
+10R9*GeneratorType 18e17 21r29 24r30 27r31 30r27 33r38 36r28 3|6r29 12r30
+. 17r31 22r27 27r38 35r28
+14i9*Impulse{4|9I12} 3|9m11 31m14 44r44
+17b9*IsOn{boolean} 3|8m11 14m11 19m11 24r18 30r14 39r14
+21U14*Init 21<19 3|6b14 10l8 10t12
+21r19 Gen{10R9} 3|6b19 8m7 9m7
+24U14*On 24=17 3|12b14 15l8 15t10
+24r17 Gen{10R9} 3|12b17 14m7
+27U14*Off 27=18 3|17b14 20l8 20t11
+27r18 Gen{10R9} 3|17b18 19m7
+30V13*IsOn{boolean} 30>18 3|22b13 25l8 25t12
+30r18 Gen{10R9} 3|22b18 24r14
+33U14*SetImpulse 33=25 33>53 3|27b14 33l8 33t18
+33r25 Gen{10R9} 3|27b25 30r10 31m10
+33i53 J{4|9I12} 3|27b53 31r25
+36U14*Tick 36>19 36=43 3|35b14 47l8 47t12
+36r19 Gen{10R9} 3|35b19 39r10 44r40
+36r43 Hrt{1|10R9} 3|35b43 43r25 45m10
+X 3 impulsegenerator.adb
+36r7 HrtVariable{1|10R9} 43m10 44m27 44r27 45r17
+X 4 measures.ads
+3K9*Measures 2|1w6 14r19 33r60 3|9r22 27r60 4|31e13
+9I12*Joules{integer} 2|14r28 33r69 3|9r31 27r69
+X 5 randomnumber.ads
+2K9*RandomNumber 3|1w6 5|33e17
+

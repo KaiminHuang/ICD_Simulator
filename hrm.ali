@@ -1,0 +1,55 @@
+V "GNAT Lib v2013"
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+
+U hrm%b			hrm.adb			0e1eef98 NE OO PK IU
+W heart%s		heart.adb		heart.ali
+W randomnumber%s	randomnumber.adb	randomnumber.ali
+
+U hrm%s			hrm.ads			b52b9add EE NE OO PK IU
+W heart%s		heart.adb		heart.ali
+W measures%s		measures.adb		measures.ali
+
+D heart.ads		20140311060305 9fbc8907
+D hrm.ads		20140313103344 070f95d8
+D hrm.adb		20140313103308 f84b2525
+D measures.ads		20140313094036 2d988602
+D randomnumber.ads	20140311060305 6ee6d662
+D system.ads		20130417131036 f2f2d889
+X 1 heart.ads
+7K9*Heart 39e11 2|2w6 22r45 36r50 3|1w6 14r45 18r7 40r50 44r10
+10R9*HeartType 18e17 2|22r51 36r56 3|14r51 40r56
+33U14*GetRate 3|18s13 44s16
+X 2 hrm.ads
+7K9*HRM 38l5 38e8 3|4b14 53l5 53t8
+11R9*HRMType 16e17 19r29 22r27 25r31 28r27 32r31 36r32 3|8r29 14r27 21r31
+. 26r27 31r31 40r32
+14i10*Rate{4|15I12} 3|11m11 18m30 34r22 44m33 46m14 46r81 49m14
+15b10*IsOn{boolean} 3|10m11 17m11 23m11 28r18 33r14 42r14
+19U14*Init 19<19 3|8b14 12l8 12t12
+19r19 Hrm{11R9} 3|8b19 10m7 11m7
+22U14*On 22<17 22>36 3|14b14 19l8 19t10
+22r17 Hrm{11R9} 3|14b17 17m7 18m26 18r26
+22r36 Hrt{1|10R9} 3|14b36 18r21
+25U14*Off 25=18 3|21b14 24l8 24t11
+25r18 Hrm{11R9} 3|21b18 23m7
+28V13*IsOn{boolean} 28>18 3|26b13 29l8 29t12
+28r18 Hrm{11R9} 3|26b18 28r14
+32U14*GetRate 32>22 33<22 3|31b14 38l8 38t15
+32r22 Hrm{11R9} 3|31b22 33r10 34r18
+33i22 Rate{4|15I12} 3|31b40 34m10 36m10
+36U14*Tick 36=19 36>41 3|40b14 52l8 52t12
+36r19 Hrm{11R9} 3|40b19 42r10 44m29 44r29 46m10 46r77 49m10
+36r41 Hrt{1|10R9} 3|40b41 44r24
+X 3 hrm.adb
+6f4 Error{float} 46r87
+X 4 measures.ads
+3K9*Measures 2|1w6 14r17 33r33 3|11r19 31r51 36r18 46r22 49r22 4|31e13
+15I12*BPM{integer} 2|14r26 33r42 3|11r28 31r60 36r27 49r31
+24V13*LimitBPM{15I12} 3|46s31
+X 5 randomnumber.ads
+2K9*RandomNumber 3|2w6 46r40 5|33e17
+31V13*UniformIntegerWithError{integer} 3|46s53
+
