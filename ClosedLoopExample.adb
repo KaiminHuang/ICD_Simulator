@@ -18,7 +18,7 @@ begin
 	ClosedLoop.setUpperBound(cl, 120);
 
 	Put_Line("Loop Start");
-	for I in Integer range 0..100 loop
+	for I in Integer range 0..190 loop
 		ClosedLoop.tick(cl);
 		delay 0.1;
 	end loop;

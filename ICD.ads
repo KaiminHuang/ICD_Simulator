@@ -15,6 +15,8 @@ Package ICD is
 		record
 			Rate 				: Measures.BPM;		-- Heart rate get from HRM
 			UpperBound 			: Integer; 			-- Setting the upper bound for a tachycardia
+			FibrillationBound	: Integer;			-- Setting the bound of a  Fibrillation
+			isFibrillation 		: Boolean; 			-- Indeicates whether there is a Fibrillation?
 			IsOn 				: Boolean; 			-- Indeicates whether ICD is on
 			isTachycardia 		: Boolean; 			-- Indeicates whether there is a tachycardia?
 			Impulse 			: Measures.Joules;  -- The impulse to be administered in the next tick
