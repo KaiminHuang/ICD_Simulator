@@ -1,3 +1,5 @@
+with Ada.Text_IO; use Ada.Text_IO;
+with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
 with RandomNumber;
 with Heart;
 
@@ -42,6 +44,11 @@ package body ImpulseGenerator is
          --  Heart.SetImpulse back to Ptnt
          HrtVariable := Hrt;
          Heart.SetImpulse(HrtVariable, Gen.Impulse);
+
+         Put("generate a impulse -->");
+         Put(Item => Gen.Impulse);
+         New_Line;
+
          Hrt := HrtVariable;
       end if;
    end Tick;

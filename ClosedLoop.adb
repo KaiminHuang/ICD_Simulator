@@ -1,4 +1,5 @@
 with Ada.Text_IO; use Ada.Text_IO;
+with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
 with ImpulseGenerator;
 with Measures;
 with Heart;
@@ -14,7 +15,6 @@ Package body ClosedLoop is
 	begin
 		cl.IsOn := False;
 		cl.UpperBound := 110; -- the default value
-
    		--Initalise hrt, monitor, gen, icd
 		Heart.Init(cl.Hrt);
 		HRM.Init(cl.Monitor);
@@ -31,13 +31,23 @@ Package body ClosedLoop is
 			HRM.On(cl.Monitor, cl.Hrt);
 			ImpulseGenerator.On(cl.Generator);
 			ICD.On(cl.Icds, cl.Monitor);
+			Put_Line("Switched to On mode");
+		else
+			Put_Line("Switched to Off mode");
 		end if;
 
 	end switch;
 
 	procedure setUpperBound (cl : out ClosedLoopType; ub : in Integer) is
 	begin
-		cl.UpperBound := ub;
+		if not cl.IsOn then
+			cl.UpperBound := ub;
+			Put_Line("The Upper Bound has been changed to");
+			Put(Item => cl.UpperBound);
+		else
+			Put_Line("The UpperBound can only be changed in Off mode");
+			Put_Line("Please use Switch to change the mode");
+		end if;
 	end setUpperBound;
 
 	-- procedure tick ( Icds : in out ICD.ICDType; Monitor : in out HRM.HRMType; 

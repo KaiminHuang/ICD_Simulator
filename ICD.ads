@@ -13,11 +13,16 @@ Package ICD is
 	-- The record type for a ICD 
 	type ICDType is
 		record
-			Rate 		: Measures.BPM;    -- Heart rate get from HRM
-			UpperBound 	: Integer; -- Setting the upper bound for a tachycardia
-			IsOn 		: Boolean; -- Indeicates whether ICD is on
-			isTachycardia : Boolean; -- Indeicates whether there is a tachycardia?
-			Impulse : Measures.Joules;  -- The impulse to be administered in the next tick
+			Rate 				: Measures.BPM;		-- Heart rate get from HRM
+			UpperBound 			: Integer; 			-- Setting the upper bound for a tachycardia
+			IsOn 				: Boolean; 			-- Indeicates whether ICD is on
+			isTachycardia 		: Boolean; 			-- Indeicates whether there is a tachycardia?
+			Impulse 			: Measures.Joules;  -- The impulse to be administered in the next tick
+			ImpulseRate 		: Integer; 			-- The rate of impulse
+			Offset 				: Integer; 			-- the offset of impulse
+			TickToNextImpulse 	: Integer; 			-- setting how many ticks before next impulse
+			Signal 				: Integer; 			-- setting how many singals need to be sent
+			isImpulse			: Boolean; 			-- Indicate whether it's in the period of giving impulse
 		end record;
 		
 	-- Create and initialise a ICD.
@@ -36,7 +41,7 @@ Package ICD is
 	procedure GetRate (Icd : in ICDType ; Rate : out Measures.BPM); -- is this necessary??
 
 	-- Get the status of whether there is a tachycardia?
-	function isTachycardia(Icd : in ICDType) return Boolean;
+	procedure isTachycardia(Icd : in out ICDType);
 
 	-- Calculate the Impluse
 	procedure CalculateImpluse(Icd : out ICDType);

@@ -14,9 +14,11 @@ Procedure ClosedLoopExample is
 begin
 	ClosedLoop.Init(cl); -- Initalise the Closed Loop
 	ClosedLoop.switch(cl);-- Set the mode to On
+	ClosedLoop.switch(cl);
+	ClosedLoop.setUpperBound(cl, 120);
 
-	for I in Integer range 0..4 loop
-		Put_Line("Loop Start");
+	Put_Line("Loop Start");
+	for I in Integer range 0..100 loop
 		ClosedLoop.tick(cl);
 		delay 0.1;
 	end loop;
