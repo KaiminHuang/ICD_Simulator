@@ -18,7 +18,7 @@ package body ICD is
 		Icd.Offset 				:= 0;
 		Icd.TickToNextImpulse 	:= 0;
 		Icd.Signal 				:= 10;
-		Icd.isImpulse 			:= False;
+		Icd.isInImpulseProcess 	:= False;
 	end Init;
 	
 	procedure On(Icd: out ICDType ; Hm : in HRM.HRMType) is
@@ -52,7 +52,12 @@ package body ICD is
 		--check wheter the heart rate is higher than the upper bound
 		if Icd.Rate >= Icd.UpperBound  then 
 			Icd.isTachycardia := True;
-			Icd.isImpulse := True;
+
+			if Icd.isTachycardia and not Icd.isInImpulseProcess then
+				
+				Put_Line("A ventricular tachycardia was detected ");
+			end if;
+			Icd.isInImpulseProcess := True;
 		else
 			Icd.isTachycardia := False;
 		end if;
@@ -92,7 +97,7 @@ package body ICD is
 			-- then if a Fibrillation is detected, set impulse
 			-- to 30, and terminate all in process impulse
 			Icd.Impulse 			:= 4;
-			Icd.isImpulse 			:= False;
+			Icd.isInImpulseProcess 	:= False;
 			-- reset tick and sinal to it's defualt value
 			Icd.TickToNextImpulse 	:= 0;
 			Icd.Signal 				:= 10;
@@ -102,7 +107,7 @@ package body ICD is
 
 		-- check whether there is still a Tachycardia treatment 
 		-- in process
-		if Icd.isImpulse then
+		if Icd.isInImpulseProcess then
 			--caculate the bpm, which equals Upper Bound + 15
 			Icd.ImpulseRate := Icd.UpperBound + 15;
 			--caculate the offset between inpulse
@@ -124,7 +129,7 @@ package body ICD is
 			-- reset singal to 10
 			if Icd.Signal = 0 then
 				Icd.Signal := 10;
-				Icd.isImpulse := False;
+				Icd.isInImpulseProcess := False;
 			end if;
 		end if;
 	end CalculateImpluse;
@@ -147,8 +152,6 @@ package body ICD is
 
 	procedure Tick(Icd : in out ICDType; Hm : in HRM.HRMType; Gen : in out ImpulseGenerator.GeneratorType) is
 	begin
-
-
 		-- read the heart rate from hrm
 		HRM.GetRate(Hm, Icd.Rate);
 		Put("Heart rate  = ");
@@ -159,13 +162,14 @@ package body ICD is
 			isTachycardia(Icd);
 			--check whether there is a Fibrillation
 			isFibrillation(Icd);
+			if Icd.isInImpulseProcess then
+				Put_Line("--Already in impulse procedure");
+			else
 
-			if Icd.isFibrillation then
-				Put_Line("May DAy May Day,  Fibrillation is detected!");
-			end if;
 
-			if Icd.isTachycardia then
-				Put_Line("A ventricular tachycardia was detected ");
+				if Icd.isFibrillation then
+					Put_Line("May DAy May Day,  Fibrillation is detected!");
+				end if;
 			end if;
 
 			-- calculate and set the impluse

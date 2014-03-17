@@ -24,7 +24,7 @@ Package ICD is
 			Offset 				: Integer; 			-- the offset of impulse
 			TickToNextImpulse 	: Integer; 			-- setting how many ticks before next impulse
 			Signal 				: Integer; 			-- setting how many singals need to be sent
-			isImpulse			: Boolean; 			-- Indicate whether it's in the period of giving impulse
+			isInImpulseProcess	: Boolean; 			-- Indicate whether it's in the period of giving impulse
 		end record;
 		
 	-- Create and initialise a ICD.
