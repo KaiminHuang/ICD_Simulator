@@ -6,7 +6,7 @@ RN
 RV NO_IO
 RV SPARK
 
-U test%b		test.adb		bc992c72 NE OO SU IL
+U test%b		test.adb		374a126b NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -42,7 +42,7 @@ D s-stopoo.ads		20130417131032 7b8fbeee
 D s-traent.ads		20130417131033 5221ee41
 D s-unstyp.ads		20130417131034 6ae15c76
 D s-wchcon.ads		20130417131034 bfeb2e3d
-D test.adb		20140315015049 72bf5002
+D test.adb		20140317065550 f96c6e1b
 X 1 ada.ads
 16K9*Ada 19e8 31|1r6 1r23 2r6 2r31
 X 4 a-inteio.ads

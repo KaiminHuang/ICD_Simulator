@@ -6,7 +6,7 @@ procedure test is
 	offset : Integer := 0;
 begin
 	Put_Line(Integer'Image(BPM'First));
-	offset := 600 / 110;
+	offset := 600 / 120;
 	Put(Item => offset);
 
 end test;

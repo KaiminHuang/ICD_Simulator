@@ -18,7 +18,7 @@ begin
 	ClosedLoop.switch(cl);
 	Put_Line("-- Set the setUpperBound to 120");
 
-	ClosedLoop.setUpperBound(cl, 120);
+	ClosedLoop.setUpperBound(cl, 105);
 
 	Put_Line("-- Loop Start");
 	for I in Integer range 0..100 loop
@@ -35,7 +35,7 @@ begin
 	Put_Line("-- Turn on the sys");
 	ClosedLoop.switch(cl);
 	Put_Line("-- Set the setUpperBound to 150");
-	ClosedLoop.setUpperBound(cl, 150);
+	ClosedLoop.setUpperBound(cl, 135);
 
 	Put_Line("-- Loop Start");
 	for I in Integer range 0..100 loop

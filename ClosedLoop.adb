@@ -14,7 +14,7 @@ Package body ClosedLoop is
 
 	begin
 		cl.IsOn := False;
-		cl.UpperBound := 110; -- the default value
+		cl.UpperBound := 110; -- the default value move it to measures latter
    		--Initalise hrt, monitor, gen, icd
 		Heart.Init(cl.Hrt);
 		HRM.Init(cl.Monitor);
@@ -47,10 +47,7 @@ Package body ClosedLoop is
 		ICD.setUpperBound(cl.Icds, ub);
 	end setUpperBound;
 
-	-- procedure tick ( Icds : in out ICD.ICDType; Monitor : in out HRM.HRMType; 
-	-- Gen : in out ImpulseGenerator.GeneratorType; Hrt : in out Heart.HeartType; 
-	-- cl: in out ClosedLoopType) is   --recheck in out later !!!!!!
-	procedure tick (cl: in out ClosedLoopType) is   --recheck in out later !!!!!!
+	procedure tick (cl: in out ClosedLoopType) is 
 	begin
 
 		ICD.Tick(cl.Icds, cl.Monitor, cl.Generator);
