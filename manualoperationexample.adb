@@ -26,26 +26,26 @@ begin
    ImpulseGenerator.SetImpulse(Generator, 0); 
 
    -- -- Loop 100 times with no impulse
-   for I in Integer range 0..4 loop
-      Put_Line("Loop Start");
-      -- Read and print the current heart rate
-      HRM.GetRate(Monitor, HeartRate); -- the reason for giveing Monitor is to check whether it's on
-      Put("Heart rate  = ");
-      Put(Item => HeartRate);
-      New_Line;
+   -- for I in Integer range 0..4 loop
+   --    Put_Line("Loop Start");
+   --    -- Read and print the current heart rate
+   --    HRM.GetRate(Monitor, HeartRate); -- the reason for giveing Monitor is to check whether it's on
+   --    Put("Heart rate  = ");
+   --    Put(Item => HeartRate);
+   --    New_Line;
             
-      -- Tick all components
-      ImpulseGenerator.Tick(Generator, Hrt);
-      HRM.Tick(Monitor, Hrt); --this is calling Heart.GetRate()
-      --here to put ico tick !!!!!
-      Heart.Tick(Hrt);
+   --    -- Tick all components
+   --    ImpulseGenerator.Tick(Generator, Hrt);
+   --    HRM.Tick(Monitor, Hrt); --this is calling Heart.GetRate()
+   --    --here to put ico tick !!!!!
+   --    Heart.Tick(Hrt);
 
-      -- Why HRM is ticking before Heart?
-      -- Because HRM.tick() set HRM.rate = "new rate"
-      -- Then Heart.tick() set Heart.rate = "new rate"
-      -- Is it Cheating   ???
-      delay 0.1;
-   end loop;
+   --    -- Why HRM is ticking before Heart?
+   --    -- Because HRM.tick() set HRM.rate = "new rate"
+   --    -- Then Heart.tick() set Heart.rate = "new rate"
+   --    -- Is it Cheating   ???
+   --    delay 0.1;
+   -- end loop;
    
    -- Turn off the monitor: should return -1.0 for the next readings
    HRM.Off(Monitor);

@@ -44,10 +44,11 @@ package body ImpulseGenerator is
          --  Heart.SetImpulse back to Ptnt
          HrtVariable := Hrt;
          Heart.SetImpulse(HrtVariable, Gen.Impulse);
-
-         Put("generate a impulse -->");
-         Put(Item => Gen.Impulse);
-         New_Line;
+         if (Gen.Impulse /= 0) then
+            Put("generate a impulse -->");
+            Put(Item => Gen.Impulse);
+            New_Line;
+         end if;
 
          Hrt := HrtVariable;
       end if;

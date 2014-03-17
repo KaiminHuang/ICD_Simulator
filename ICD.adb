@@ -14,7 +14,7 @@ package body ICD is
 		Icd.Impulse 			:= 0;
 		Icd.ImpulseRate 		:= 0;
 		Icd.UpperBound 			:= 110;
-		Icd.FibrillationBound 	:= 130;
+		Icd.FibrillationBound 	:= 260;
 		Icd.Offset 				:= 0;
 		Icd.TickToNextImpulse 	:= 0;
 		Icd.Signal 				:= 10;
@@ -75,6 +75,16 @@ package body ICD is
 	procedure CalculateImpluse(Icd : out ICDType) is
 	begin
 
+		-- Put("* signal  = ");
+		-- Put(Item => Icd.Signal);
+		-- New_Line;
+
+		-- Put("* TickToNextImpulse  = ");
+		-- Put(Item => Icd.TickToNextImpulse);
+		-- New_Line;
+
+		-- reset impulse to 0 before each caculation
+		Icd.Impulse := 0;
 		--Check whether there is a Fibrillation
 		if Icd.isFibrillation then
 			Icd.Impulse := 4;
@@ -113,22 +123,38 @@ package body ICD is
 			-- then set the isTachycardia to False
 			-- reset singal to 10
 			if Icd.Signal = 0 then
-				Icd.Impulse := 0;
 				Icd.Signal := 10;
 				Icd.isImpulse := False;
 			end if;
 		end if;
 	end CalculateImpluse;
 	
-	procedure Tick(Icd : in out ICDType; Hm : in HRM.HRMType; Gen : in out ImpulseGenerator.GeneratorType) is
+	procedure setUpperBound (Icd : in out ICDType; ub : in Integer) is
 	begin
 		if Icd.IsOn then
-			-- read the heart rate from hrm
-			HRM.GetRate(Hm, Icd.Rate);
-			Put("Heart rate  = ");
-			Put(Item => Icd.Rate);
-			New_Line;
+			Icd.UpperBound := ub;
+			Put_Line("The Upper Bound has been changed to");
+			Put(Item => Icd.UpperBound);
+    		New_Line;     
 
+		else
+			Put_Line("The UpperBound can only be changed in Off mode");
+			Put_Line("Please use Switch to change the mode");
+    		New_Line;     
+
+		end if;
+	end setUpperBound;
+
+	procedure Tick(Icd : in out ICDType; Hm : in HRM.HRMType; Gen : in out ImpulseGenerator.GeneratorType) is
+	begin
+
+
+		-- read the heart rate from hrm
+		HRM.GetRate(Hm, Icd.Rate);
+		Put("Heart rate  = ");
+		Put(Item => Icd.Rate);
+		New_Line;
+		if Icd.IsOn then
 			--check whether there is a Tachycardia
 			isTachycardia(Icd);
 			--check whether there is a Fibrillation
@@ -146,8 +172,9 @@ package body ICD is
 			CalculateImpluse(Icd);
 			ImpulseGenerator.SetImpulse(Gen, Icd.Impulse);
 		else
-			--if icd is off return 0
-			icd.Rate := Measures.BPM'First;
+			Put("the sys was swithced off, Please turn on first");
+    		New_Line;     
+
 		end if;
 	end Tick;
 end ICD;

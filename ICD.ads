@@ -48,6 +48,9 @@ Package ICD is
 	-- Calculate the Impluse
 	procedure CalculateImpluse(Icd : out ICDType);
 
+	-- Set Upper Bound for tachycardia
+	procedure setUpperBound (Icd : in out ICDType; ub : in Integer);
+
 	-- Tick the clock, reading heart rate from the Hrm, and decide wheter to call the generator
 	procedure Tick(Icd : in out ICDType; Hm : in HRM.HRMType; Gen : in out ImpulseGenerator.GeneratorType);
 end ICD;

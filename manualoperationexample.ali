@@ -9,15 +9,13 @@ RV NO_IO
 RV NO_RELATIVE_DELAY
 RV SPARK
 
-U closedloopexample%b	closedloopexample.adb	bf4f4f1c NE OO SU KM
+U manualoperationexample%b  manualoperationexample.adb  07f89de2 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
-W closedloop%s		closedloop.adb		closedloop.ali
 W heart%s		heart.adb		heart.ali
 W hrm%s			hrm.adb			hrm.ali
-W icd%s			icd.adb			icd.ali
 W impulsegenerator%s	impulsegenerator.adb	impulsegenerator.ali
 W measures%s		measures.adb		measures.ali
 
@@ -33,14 +31,12 @@ D a-tags.ads		20130417131022 6c0509d0
 D a-textio.ads		20130417131022 386df5d4
 D a-tiinio.ads		20130417131022 aa04e5d6
 D a-unccon.ads		20130417131022 f9eb8f06
-D closedloop.ads	20140314124955 91b7c03b
-D closedloopexample.adb	20140317021053 69a631ba
 D heart.ads		20140317012927 9fbc8907
 D hrm.ads		20140313103344 070f95d8
-D icd.ads		20140317014209 0d917039
 D impulsegenerator.ads	20140314100710 31c22809
 D interfac.ads		20130417131027 cb4a8015
 D i-cstrea.ads		20130417131026 8128536b
+D manualoperationexample.adb  20140317012712 4d375346
 D measures.ads		20140313094036 2d988602
 D system.ads		20130417131036 f2f2d889
 D s-crtl.ads		20130417131029 dfcfca61
@@ -60,34 +56,46 @@ D s-traent.ads		20130417131033 5221ee41
 D s-unstyp.ads		20130417131034 6ae15c76
 D s-wchcon.ads		20130417131034 bfeb2e3d
 X 1 ada.ads
-16K9*Ada 19e8 14|1r6 1r23 2r6 2r31
+16K9*Ada 19e8 18|1r6 1r23 2r6 2r31
 X 6 a-inteio.ads
-18K13*Integer_Text_IO[11|45] 14|2w10 2r35
+18K13*Integer_Text_IO[11|45] 18|2w10 2r35
 X 10 a-textio.ads
-49K13*Text_IO 471e16 14|1w10 1r27
-263U14*Put_Line 14|19s9 23s9 30s9 35s9 37s9 40s9
-X 13 closedloop.ads
-15K9*ClosedLoop 41e15 14|9w6 13r14 15r9 18r9 21r9 25r17 31r9 32r9 36r9 38r9
-. 42r17
-16R14*ClosedLoopType 24e27 14|13r25
-27U19*Init 14|15s20
-30U19*switch 14|18s20 31s20 36s20
-33U19*setUpperBound 14|21s20 38s20
-39U19*tick 14|25s28 32s20 42s28
-X 14 closedloopexample.adb
-12U11*ClosedLoopExample 12b11 46l5 46t22
-13r9 cl{13|16R14} 15m25 18m27 18r27 21m34 25m33 25r33 31m27 31r27 32m25 32r25
-. 36m27 36r27 38m34 42m33 42r33
-24i13 I{integer}
-41i13 I{integer}
-X 15 heart.ads
-7K9*Heart 14|6w6 15|39e11
-X 16 hrm.ads
-7K9*HRM 14|7w6 16|38e8
-X 17 icd.ads
-11K9*ICD 14|8w6 17|56e8
-X 18 impulsegenerator.ads
-7K9*ImpulseGenerator 14|4w6 18|38e21
-X 21 measures.ads
-3K9*Measures 14|5w6 21|31e13
+49K13*Text_IO 471e16 18|1w10 1r27
+166U14*New_Line 18|60s4 72s7
+242U14*Put 18|58s4 70s7
+X 11 a-tiinio.ads
+65U14*Put 18|59s4[6|18] 71s7[6|18]
+66i7 Item{integer} 18|59r8[6|18] 71r11[6|18]
+X 13 heart.ads
+7K9*Heart 39e11 18|5w6 12r10 18r4 56r4 76r7
+10R9*HeartType 18e17 18|12r16
+22U14*Init 18|18s10
+37U14*Tick 18|56s10 76s13
+X 14 hrm.ads
+7K9*HRM 38e8 18|6w6 13r14 19r4 22r4 51r4 53r4 55r4 63r4 68r7 75r7
+11R9*HRMType 16e17 18|13r18
+19U14*Init 18|19s8
+22U14*On 18|22s8 63s8
+25U14*Off 18|51s8
+32U14*GetRate 18|53s8 68s11
+36U14*Tick 18|55s8 75s11
+X 15 impulsegenerator.ads
+7K9*ImpulseGenerator 38e21 18|7w6 14r16 20r4 23r4 26r4 54r4 66r4 74r7
+10R9*GeneratorType 18e17 18|14r33
+21U14*Init 18|20s21
+24U14*On 18|23s21
+33U14*SetImpulse 18|26s21 66s21
+36U14*Tick 18|54s21 74s24
+X 18 manualoperationexample.adb
+11U11*ManualOperationExample 11b11 79l5 79t27
+12r4 Hrt{13|10R9} 18m15 22r20 54m37 54r37 55r22 56m15 56r15 63r20 74m40 74r40
+. 75r25 76m18 76r18
+13r4 Monitor{14|11R9} 19m13 22m11 51m12 51r12 53r16 55m13 55r13 63m11 68r19
+. 75m16 75r16
+14r4 Generator{15|10R9} 20m26 23m24 23r24 26m32 26r32 54r26 66m32 66r32 74r29
+15i4 HeartRate{19|15I12} 53m25 59r16 68m28 71r19
+67i8 I{integer}
+X 19 measures.ads
+3K9*Measures 18|4w6 4r20 19|31e13
+15I12*BPM{integer} 18|15r16
 
