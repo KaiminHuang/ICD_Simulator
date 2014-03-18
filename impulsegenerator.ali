@@ -12,7 +12,7 @@ W ada.text_io%s		a-textio.adb		a-textio.ali
 W heart%s		heart.adb		heart.ali
 W randomnumber%s	randomnumber.adb	randomnumber.ali
 
-U impulsegenerator%s	impulsegenerator.ads	83e6270c EE NE OO PK
+U impulsegenerator%s	impulsegenerator.ads	e600a5ed EE NE OO PK
 W heart%s		heart.adb		heart.ali
 W measures%s		measures.adb		measures.ali
 
@@ -31,7 +31,7 @@ D impulsegenerator.ads	20140314100710 31c22809
 D impulsegenerator.adb	20140317013104 a115b2d4
 D interfac.ads		20130417131027 cb4a8015
 D i-cstrea.ads		20130417131026 8128536b
-D measures.ads		20140313094036 2d988602
+D measures.ads		20140318034920 487e04e3
 D randomnumber.ads	20140311060305 6ee6d662
 D system.ads		20130417131036 f2f2d889
 D s-crtl.ads		20130417131029 dfcfca61
@@ -88,7 +88,7 @@ X 12 impulsegenerator.ads
 X 13 impulsegenerator.adb
 38r7 HrtVariable{11|10R9} 45m10 46m27 46r27 53r17
 X 16 measures.ads
-3K9*Measures 12|1w6 14r19 33r60 13|11r22 29r60 16|31e13
+3K9*Measures 12|1w6 14r19 33r60 13|11r22 29r60 16|56e13
 9I12*Joules{integer} 12|14r28 33r69 13|11r31 29r69
 X 17 randomnumber.ads
 2K9*RandomNumber 13|3w6 17|33e17

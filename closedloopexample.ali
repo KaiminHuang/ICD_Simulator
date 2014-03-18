@@ -9,7 +9,7 @@ RV NO_IO
 RV NO_RELATIVE_DELAY
 RV SPARK
 
-U closedloopexample%b	closedloopexample.adb	cc06592c NE OO SU KM
+U closedloopexample%b	closedloopexample.adb	1775a5e8 NE OO SU KM
 W ada%s			ada.ads			ada.ali
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -33,15 +33,15 @@ D a-tags.ads		20130417131022 6c0509d0
 D a-textio.ads		20130417131022 386df5d4
 D a-tiinio.ads		20130417131022 aa04e5d6
 D a-unccon.ads		20130417131022 f9eb8f06
-D closedloop.ads	20140314124955 91b7c03b
-D closedloopexample.adb	20140317065631 a7fdbfef
+D closedloop.ads	20140318034956 2d490cc4
+D closedloopexample.adb	20140318034457 58a55f63
 D heart.ads		20140317012927 9fbc8907
 D hrm.ads		20140313103344 070f95d8
-D icd.ads		20140317024058 b083e85c
+D icd.ads		20140318035056 4db0ba0a
 D impulsegenerator.ads	20140314100710 31c22809
 D interfac.ads		20130417131027 cb4a8015
 D i-cstrea.ads		20130417131026 8128536b
-D measures.ads		20140313094036 2d988602
+D measures.ads		20140318034920 487e04e3
 D system.ads		20130417131036 f2f2d889
 D s-crtl.ads		20130417131029 dfcfca61
 D s-exctab.ads		20130417131029 66e51330
@@ -67,13 +67,13 @@ X 10 a-textio.ads
 49K13*Text_IO 471e16 14|1w10 1r27
 263U14*Put_Line 14|19s9 23s9 30s9 35s9 37s9 40s9
 X 13 closedloop.ads
-15K9*ClosedLoop 41e15 14|9w6 13r14 15r9 18r9 21r9 25r17 31r9 32r9 36r9 38r9
+15K9*ClosedLoop 40e15 14|9w6 13r14 15r9 18r9 21r9 25r17 31r9 32r9 36r9 38r9
 . 42r17
-16R14*ClosedLoopType 24e27 14|13r25
-27U19*Init 14|15s20
-30U19*switch 14|18s20 31s20 36s20
-33U19*setUpperBound 14|21s20 38s20
-39U19*tick 14|25s28 32s20 42s28
+16R14*ClosedLoopType 23e27 14|13r25
+26U19*Init 14|15s20
+29U19*switch 14|18s20 31s20 36s20
+32U19*setUpperBound 14|21s20 38s20
+38U19*tick 14|25s28 32s20 42s28
 X 14 closedloopexample.adb
 12U11*ClosedLoopExample 12b11 46l5 46t22
 13r9 cl{13|16R14} 15m25 18m27 18r27 21m34 25m33 25r33 31m27 31r27 32m25 32r25
@@ -89,5 +89,5 @@ X 17 icd.ads
 X 18 impulsegenerator.ads
 7K9*ImpulseGenerator 14|4w6 18|38e21
 X 21 measures.ads
-3K9*Measures 14|5w6 21|31e13
+3K9*Measures 14|5w6 21|56e13
 

@@ -16,7 +16,6 @@ Package ClosedLoop is
 	type ClosedLoopType is
 		record
 			IsOn : Boolean;
-			UpperBound : Integer; -- might set a normal boundary in measure later !!!!!!!
 			Hrt : Heart.HeartType;                -- The simulated heart
 	   		Monitor : HRM.HRMType;                -- The simulated heart rate monitor
 	   		Generator : ImpulseGenerator.GeneratorType; -- The simulated generator

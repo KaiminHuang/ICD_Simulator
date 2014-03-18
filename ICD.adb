@@ -14,8 +14,8 @@ package body ICD is
 		Icd.isFibrillation		:= False;
 		Icd.Impulse 			:= 0;
 		Icd.ImpulseRate 		:= 0;
-		Icd.UpperBound 			:= 110;
-		Icd.FibrillationBound 	:= 260;
+		Icd.TachycardiaBound 	:= Measures.TUB'First;
+		Icd.FibrillationBound 	:= Measures.FUB'First;
 		Icd.Offset 				:= 0;
 		Icd.TickToNextImpulse 	:= 0;
 		Icd.Signal 				:= 10;
@@ -36,8 +36,8 @@ package body ICD is
 		Icd.isInImpulseProcess 	:= False;
     	Icd.TickToNextImpulse 	:= 0;
 		Icd.Signal 				:= 10;
-		Icd.UpperBound 			:= 110;   -- !!! change to defualt in measures later
-		Icd.FibrillationBound 	:= 260;
+		Icd.TachycardiaBound 	:= Measures.TUB'First;
+		Icd.FibrillationBound 	:= Measures.FUB'First;
 		Icd.Impulse 			:= 0;
 		Icd.ImpulseRate 		:= 0;
 		Icd.Offset 				:= 0;
@@ -67,7 +67,7 @@ package body ICD is
 	procedure isTachycardia(Icd : in out ICDType) is
 	begin
 		--check wheter the heart rate is higher than the upper bound
-		if Icd.Rate >= Icd.UpperBound  then 
+		if Icd.Rate >= Icd.TachycardiaBound  then 
 			Icd.isTachycardia := True;
 			
 		else
@@ -126,7 +126,7 @@ package body ICD is
 			-- a process is finised (signal == 0)
 			Icd.isInImpulseProcess := True;
 			--caculate the bpm, which equals Upper Bound + 15
-			Icd.ImpulseRate := Icd.UpperBound + 15;
+			Icd.ImpulseRate := Icd.TachycardiaBound + 15;
 			--caculate the offset between inpulse
 			Icd.offset := 600 / Icd.ImpulseRate;
 
@@ -155,33 +155,28 @@ package body ICD is
 				Icd.TickToNextImpulse := 0;
 				Put("--");
 				Put(Item => Icd.Signal);
-				Put("==");
 				Icd.Signal := 10;
 				Icd.isInImpulseProcess := False;
 			end if;
-							Put("TickToNextImpulse is");
-				Put(Item => Icd.TickToNextImpulse);
-				New_Line;
-
-				
 		end if;
 	end CalculateImpluse;
 	
-	procedure setUpperBound (Icd : in out ICDType; ub : in Integer) is
+	procedure setTachycardiaBound (Icd : in out ICDType; ub : in Integer) is
 	begin
 		if Icd.IsOn then
-			Icd.UpperBound := ub;
-			Put("The Upper Bound has been changed to");
-			Put(Item => Icd.UpperBound);
+			-- make sure the Ub is in the range
+			Icd.TachycardiaBound := Measures.LimitTUB(ub);
+			Put("The Tachycardia Upper Bound has been changed to");
+			Put(Item => Icd.TachycardiaBound);
     		New_Line;     
 
 		else
-			Put_Line("The UpperBound can only be changed in Off mode");
+			Put_Line("The Tachycardia UpperBound can only be changed in Off mode");
 			Put_Line("Please use Switch to change the mode");
     		New_Line;     
 
 		end if;
-	end setUpperBound;
+	end setTachycardiaBound;
 
 	procedure Tick(Icd : in out ICDType; Hm : in HRM.HRMType; Gen : in out ImpulseGenerator.GeneratorType) is
 	begin

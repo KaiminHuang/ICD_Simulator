@@ -9,12 +9,8 @@ with ICD;
 Package body ClosedLoop is 
 
 	procedure Init(cl : out ClosedLoopType) is
-		UpperBound : Integer := 110;
-
-
 	begin
 		cl.IsOn := False;
-		cl.UpperBound := 110; -- the default value move it to measures latter
    		--Initalise hrt, monitor, gen, icd
 		Heart.Init(cl.Hrt);
 		HRM.Init(cl.Monitor);
@@ -44,7 +40,7 @@ Package body ClosedLoop is
 
 	procedure setUpperBound (cl : out ClosedLoopType; ub : in Integer) is
 	begin
-		ICD.setUpperBound(cl.Icds, ub);
+		ICD.setTachycardiaBound(cl.Icds, ub);
 	end setUpperBound;
 
 	procedure tick (cl: in out ClosedLoopType) is 

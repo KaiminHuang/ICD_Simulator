@@ -14,8 +14,8 @@ Package ICD is
 	type ICDType is
 		record
 			Rate 				: Measures.BPM;		-- Heart rate get from HRM
-			UpperBound 			: Integer; 			-- Setting the upper bound for a tachycardia
-			FibrillationBound	: Integer;			-- Setting the bound of a  Fibrillation
+			TachycardiaBound 			: Measures.TUB; 		-- Setting the upper bound for a tachycardia
+			FibrillationBound	: Measures.FUB;			-- Setting the bound of a  Fibrillation
 			isFibrillation 		: Boolean; 			-- Indeicates whether there is a Fibrillation?
 			IsOn 				: Boolean; 			-- Indeicates whether ICD is on
 			isTachycardia 		: Boolean; 			-- Indeicates whether there is a tachycardia?
@@ -49,7 +49,7 @@ Package ICD is
 	procedure CalculateImpluse(Icd : out ICDType);
 
 	-- Set Upper Bound for tachycardia
-	procedure setUpperBound (Icd : in out ICDType; ub : in Integer);
+	procedure setTachycardiaBound (Icd : in out ICDType; ub : in Integer);
 
 	-- Tick the clock, reading heart rate from the Hrm, and decide wheter to call the generator
 	procedure Tick(Icd : in out ICDType; Hm : in HRM.HRMType; Gen : in out ImpulseGenerator.GeneratorType);

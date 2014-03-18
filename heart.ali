@@ -6,13 +6,13 @@ RV NO_FLOATING_POINT
 RV NO_IO
 RV SPARK
 
-U heart%b		heart.adb		19e235cf NE OO PK
+U heart%b		heart.adb		7c04b72e NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W measures%s		measures.adb		measures.ali
 W randomnumber%s	randomnumber.adb	randomnumber.ali
 
-U heart%s		heart.ads		b2240f05 EE NE OO PK
+U heart%s		heart.ads		d7c28de4 EE NE OO PK
 W measures%s		measures.adb		measures.ali
 
 D ada.ads		20130417131023 3ffc8e18
@@ -27,7 +27,7 @@ D heart.ads		20140317012927 9fbc8907
 D heart.adb		20140313120156 fd4d197c
 D interfac.ads		20130417131027 cb4a8015
 D i-cstrea.ads		20130417131026 8128536b
-D measures.ads		20140313094036 2d988602
+D measures.ads		20140318034920 487e04e3
 D randomnumber.ads	20140311060305 6ee6d662
 D system.ads		20130417131036 f2f2d889
 D s-crtl.ads		20130417131029 dfcfca61
@@ -78,10 +78,10 @@ X 10 heart.adb
 19i4 DefaultChange{integer} 52r55 58m10
 X 13 measures.ads
 3K9*Measures 9|1w6 13r17 16r20 26r63 29r53 34r33 10|1w6 8r23 9r26 12r27 13r30
-. 27r21 32r37 37r55 42r53 52r24 55r24 62r21 13|31e13
+. 27r21 32r37 37r55 42r53 52r24 55r24 62r21 13|56e13
 9I12*Joules{integer} 9|16r29 26r72 29r62 10|8r32 9r35 32r46 42r62
 15I12*BPM{integer} 9|13r26 34r42 10|12r36 13r39 37r64
-24V13*LimitBPM{15I12} 10|27s30 52s33 55s33 62s30
+40V13*LimitBPM{15I12} 10|27s30 52s33 55s33 62s30
 X 14 randomnumber.ads
 2K9*RandomNumber 10|2w6 27r39 62r39 14|33e17
 6V13*NormalInteger{integer} 10|27s52

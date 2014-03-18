@@ -5,7 +5,7 @@ RN
 RV NO_IO
 RV SPARK
 
-U closedloop%b		closedloop.adb		f422fcbd NE OO PK KM
+U closedloop%b		closedloop.adb		c18f01a2 NE OO PK KM
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -15,7 +15,7 @@ W icd%s			icd.adb			icd.ali
 W impulsegenerator%s	impulsegenerator.adb	impulsegenerator.ali
 W measures%s		measures.adb		measures.ali
 
-U closedloop%s		closedloop.ads		9db06f67 EE NE OO PK KM
+U closedloop%s		closedloop.ads		b99b732f EE NE OO PK KM
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W heart%s		heart.adb		heart.ali
@@ -34,15 +34,15 @@ D a-tags.ads		20130417131022 6c0509d0
 D a-textio.ads		20130417131022 386df5d4
 D a-tiinio.ads		20130417131022 aa04e5d6
 D a-unccon.ads		20130417131022 f9eb8f06
-D closedloop.ads	20140314124955 91b7c03b
-D closedloop.adb	20140317025201 9fd91a7e
+D closedloop.ads	20140318034956 2d490cc4
+D closedloop.adb	20140318035234 8e5ffb29
 D heart.ads		20140317012927 9fbc8907
 D hrm.ads		20140313103344 070f95d8
-D icd.ads		20140317024058 b083e85c
+D icd.ads		20140318035056 4db0ba0a
 D impulsegenerator.ads	20140314100710 31c22809
 D interfac.ads		20130417131027 cb4a8015
 D i-cstrea.ads		20130417131026 8128536b
-D measures.ads		20140313094036 2d988602
+D measures.ads		20140318034920 487e04e3
 D system.ads		20130417131036 f2f2d889
 D s-crtl.ads		20130417131029 dfcfca61
 D s-exctab.ads		20130417131029 66e51330
@@ -66,57 +66,54 @@ X 4 a-inteio.ads
 18K13*Integer_Text_IO[9|45] 12|2w10 2r35
 X 8 a-textio.ads
 49K13*Text_IO 471e16 11|1w10 1r27 12|1w10 1r27
-263U14*Put_Line 12|34s25 40s25
+263U14*Put_Line 12|30s25 36s25
 X 11 closedloop.ads
-15K9*ClosedLoop 41l5 41e15 12|9b14 60l5 60t15
-16R14*ClosedLoopType 24e27 27r33 30r39 33r43 39r36 12|11r33 26r39 45r43 50r36
-18b25*IsOn{boolean} 12|16m20 28m20 28r35 29r23
-19i25*UpperBound{integer} 12|17m20
-20r25*Hrt{13|10R9} 12|19m31 31r47 54m56 55r41 56m31
-21r25*Monitor{14|11R9} 12|20m29 31m35 33r44 37m36 53r38 55m29
-22r25*Generator{16|10R9} 12|22m42 32m48 38m49 53m50 54r42
-23r25*Icds{15|14R14} 12|21m29 33m35 39m36 47m38 53m29
-27U19*Init 27<24 12|11b19 24l13 24t17
-27r24 cl{16R14} 12|11b24 16m17 17m17 19m28 19r28 20m26 20r26 21m26 21r26
-. 22m39 22r39
-30U19*switch 30=27 12|26b19 43l13 43t19
-30r27 cl{16R14} 12|26b27 28m17 28r32 29r20 31m32 31r32 31r44 32m45 32r45
-. 33m32 33r32 33r41 37m33 37r33 38m46 38r46 39m33 39r33
-33U19*setUpperBound 33<34 33>59 12|45b19 48l13 48t26
-33r34 cl{16R14} 12|45b34 47m35 47r35
-33i59 ub{integer} 12|45b59 47r44
-39U19*tick 39=25 12|50b19 57l13 57t17
-39r25 cl{16R14} 12|50b25 53m26 53r26 53r35 53m47 53r47 54r39 54m53 54r53
-. 55m26 55r26 55r38 56m28 56r28
-X 12 closedloop.adb
-12i17 UpperBound{integer}
+15K9*ClosedLoop 40l5 40e15 12|9b14 56l5 56t15
+16R14*ClosedLoopType 23e27 26r33 29r39 32r43 38r36 12|11r33 22r39 41r43 46r36
+18b25*IsOn{boolean} 12|13m20 24m20 24r35 25r23
+19r25*Hrt{13|10R9} 12|15m31 27r47 50m56 51r41 52m31
+20r25*Monitor{14|11R9} 12|16m29 27m35 29r44 33m36 49r38 51m29
+21r25*Generator{16|10R9} 12|18m42 28m48 34m49 49m50 50r42
+22r25*Icds{15|14R14} 12|17m29 29m35 35m36 43m44 49m29
+26U19*Init 26<24 12|11b19 20l13 20t17
+26r24 cl{16R14} 12|11b24 13m17 15m28 15r28 16m26 16r26 17m26 17r26 18m39
+. 18r39
+29U19*switch 29=27 12|22b19 39l13 39t19
+29r27 cl{16R14} 12|22b27 24m17 24r32 25r20 27m32 27r32 27r44 28m45 28r45
+. 29m32 29r32 29r41 33m33 33r33 34m46 34r46 35m33 35r33
+32U19*setUpperBound 32<34 32>59 12|41b19 44l13 44t26
+32r34 cl{16R14} 12|41b34 43m41 43r41
+32i59 ub{integer} 12|41b59 43r50
+38U19*tick 38=25 12|46b19 53l13 53t17
+38r25 cl{16R14} 12|46b25 49m26 49r26 49r35 49m47 49r47 50r39 50m53 50r53
+. 51m26 51r26 51r38 52m28 52r28
 X 13 heart.ads
-7K9*Heart 11|4w6 20r31 12|5w6 19r17 56r17 13|39e11
-10R9*HeartType 11|20r37 13|18e17
-22U14*Init 12|19s23
-37U14*Tick 12|56s23
+7K9*Heart 11|4w6 19r31 12|5w6 15r17 52r17 13|39e11
+10R9*HeartType 11|19r37 13|18e17
+22U14*Init 12|15s23
+37U14*Tick 12|52s23
 X 14 hrm.ads
-7K9*HRM 11|5w6 21r35 12|6w6 20r17 31r25 37r25 55r17 14|38e8
-11R9*HRMType 11|21r39 14|16e17
-19U14*Init 12|20s21
-22U14*On 12|31s29
-25U14*Off 12|37s29
-36U14*Tick 12|55s21
+7K9*HRM 11|5w6 20r35 12|6w6 16r17 27r25 33r25 51r17 14|38e8
+11R9*HRMType 11|20r39 14|16e17
+19U14*Init 12|16s21
+22U14*On 12|27s29
+25U14*Off 12|33s29
+36U14*Tick 12|51s21
 X 15 icd.ads
-11K9*ICD 11|6w6 23r32 12|7w6 21r17 33r25 39r25 47r17 53r17 15|56e8
-14R14*ICDType 11|23r36 15|28e27
-31U19*Init 12|21s21
-34U19*On 12|33s29
-37U19*Off 12|39s29
-52U19*setUpperBound 12|47s21
-55U19*Tick 12|53s21
+11K9*ICD 11|6w6 22r32 12|7w6 17r17 29r25 35r25 43r17 49r17 15|56e8
+14R14*ICDType 11|22r36 15|28e27
+31U19*Init 12|17s21
+34U19*On 12|29s29
+37U19*Off 12|35s29
+52U19*setTachycardiaBound 12|43s21
+55U19*Tick 12|49s21
 X 16 impulsegenerator.ads
-7K9*ImpulseGenerator 11|2w6 22r37 12|3w6 22r17 32r25 38r25 54r17 16|38e21
-10R9*GeneratorType 11|22r54 16|18e17
-21U14*Init 12|22s34
-24U14*On 12|32s42
-27U14*Off 12|38s42
-36U14*Tick 12|54s34
+7K9*ImpulseGenerator 11|2w6 21r37 12|3w6 18r17 28r25 34r25 50r17 16|38e21
+10R9*GeneratorType 11|21r54 16|18e17
+21U14*Init 12|18s34
+24U14*On 12|28s42
+27U14*Off 12|34s42
+36U14*Tick 12|50s34
 X 19 measures.ads
-3K9*Measures 11|3w6 12|4w6 19|31e13
+3K9*Measures 11|3w6 12|4w6 19|56e13
 

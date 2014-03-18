@@ -16,9 +16,9 @@ begin
 	
 	-- turn on the sys and set upper bound to 120
 	ClosedLoop.switch(cl);
-	Put_Line("-- Set the setUpperBound to 120");
+	Put_Line("-- Set the Tachycardia UpperBound to 90");
 
-	ClosedLoop.setUpperBound(cl, 105);
+	ClosedLoop.setUpperBound(cl, 90);
 
 	Put_Line("-- Loop Start");
 	for I in Integer range 0..100 loop
