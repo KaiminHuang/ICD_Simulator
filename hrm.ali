@@ -8,14 +8,14 @@ U hrm%b			hrm.adb			0e1eef98 NE OO PK IU
 W heart%s		heart.adb		heart.ali
 W randomnumber%s	randomnumber.adb	randomnumber.ali
 
-U hrm%s			hrm.ads			d0cd183c EE NE OO PK IU
+U hrm%s			hrm.ads			d3bbb84a EE NE OO PK IU
 W heart%s		heart.adb		heart.ali
 W measures%s		measures.adb		measures.ali
 
 D heart.ads		20140317012927 9fbc8907
-D hrm.ads		20140313103344 070f95d8
-D hrm.adb		20140316061750 f84b2525
-D measures.ads		20140318034920 487e04e3
+D hrm.ads		20140318091921 070f95d8
+D hrm.adb		20140318131636 f84b2525
+D measures.ads		20140318133706 4b08a495
 D randomnumber.ads	20140311060305 6ee6d662
 D system.ads		20130417131036 f2f2d889
 X 1 heart.ads
@@ -46,9 +46,9 @@ X 2 hrm.ads
 X 3 hrm.adb
 6f4 Error{float} 46r87
 X 4 measures.ads
-3K9*Measures 2|1w6 14r17 33r33 3|11r19 31r51 36r18 46r22 49r22 4|56e13
+3K9*Measures 2|1w6 14r17 33r33 3|11r19 31r51 36r18 46r22 49r22 4|55e13
 15I12*BPM{integer} 2|14r26 33r42 3|11r28 31r60 36r27 49r31
-40V13*LimitBPM{15I12} 3|46s31
+39V13*LimitBPM{15I12} 3|46s31
 X 5 randomnumber.ads
 2K9*RandomNumber 3|2w6 46r40 5|33e17
 31V13*UniformIntegerWithError{integer} 3|46s53

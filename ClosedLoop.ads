@@ -15,7 +15,6 @@ with ICD;
 Package ClosedLoop is 
 	type ClosedLoopType is
 		record
-			IsOn : Boolean;
 			Hrt : Heart.HeartType;                -- The simulated heart
 	   		Monitor : HRM.HRMType;                -- The simulated heart rate monitor
 	   		Generator : ImpulseGenerator.GeneratorType; -- The simulated generator
@@ -26,7 +25,10 @@ Package ClosedLoop is
 	procedure Init(cl : out ClosedLoopType);
 
 	-- Switch between on/off mode
-	procedure switch (cl : in out ClosedLoopType);
+	procedure On (cl : in out ClosedLoopType);
+
+	-- Switch between on/off mode
+	procedure Off (cl : in out ClosedLoopType);
 
 	-- Set Upper Bound for tachycardia
 	procedure setUpperBound (cl : out ClosedLoopType; ub : in Integer);

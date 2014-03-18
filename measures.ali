@@ -5,12 +5,12 @@ RN
 RV NO_IO
 RV SPARK
 
-U measures%b		measures.adb		35b0bc38 NE OO PK
+U measures%b		measures.adb		36c61c4e NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 
-U measures%s		measures.ads		487e04e3 EE NE OO PK
+U measures%s		measures.ads		4b08a495 EE NE OO PK
 
 D ada.ads		20130417131023 3ffc8e18
 D a-except.ads		20130417131019 10fcae55
@@ -24,7 +24,7 @@ D a-tiinio.ads		20130417131022 aa04e5d6
 D a-unccon.ads		20130417131022 f9eb8f06
 D interfac.ads		20130417131027 cb4a8015
 D i-cstrea.ads		20130417131026 8128536b
-D measures.ads		20140318034920 487e04e3
+D measures.ads		20140318133706 4b08a495
 D measures.adb		20140318035346 b3e8c4ab
 D system.ads		20130417131036 f2f2d889
 D s-crtl.ads		20130417131029 dfcfca61
@@ -57,32 +57,33 @@ X 9 a-tiinio.ads
 66i7 Item{integer} 14|33r11[4|18] 35r11[4|18] 43r11[4|18] 45r11[4|18]
 67i7 Width{8|73I12} 14|33r30[4|18] 35r29[4|18] 43r30[4|18] 45r29[4|18]
 X 13 measures.ads
-3K9*Measures 56l5 56e13 14|3b14 49l5 49t13
+3K9*Measures 55l5 55e13 14|3b14 49l5 49t13
 5i4*MIN_JOULES{integer} 9r36
 6i4*MAX_JOULES{integer} 9r50
-9I12*Joules{integer} 44r52 14|25r52 27r27 27r41
+9I12*Joules{integer} 43r52 14|25r52 27r27 27r41
 11i4*MIN_BPM{integer} 15r33
 12i4*MAX_BPM{integer} 15r44
-15I12*BPM{integer} 40r49 14|20r49 22r27 22r38
+15I12*BPM{integer} 27r53 39r49 14|20r49 22r27 22r38
 17i4*MIN_TUB{integer} 20r33
 18i4*MAX_TUB{integer} 20r44
-20I12*TUB{integer} 48r49 14|30r49 33r19 35r19 37r27 37r38
-24i4*MIN_FUB{integer} 27r33
-25i4*MAX_FUB{integer} 27r44
-27I12*FUB{integer} 52r49 14|40r49 43r19 45r19 47r27 47r38
-34V13*Limit{integer} 34>19 34>39 34>57 14|5b13 18l8 18t13 22s14 27s14 37s14
+20I12*TUB{integer} 47r49 14|30r49 33r19 35r19 37r27 37r38
+22i4*MIN_FUB{integer} 25r33
+23i4*MAX_FUB{integer} 25r44
+25I12*FUB{integer} 51r49 14|40r49 43r19 45r19 47r27 47r38
+27A9*BPMARRAY(15I12)<integer>
+33V13*Limit{integer} 33>19 33>39 33>57 14|5b13 18l8 18t13 22s14 27s14 37s14
 . 47s14
-34i19 Input{integer} 14|5b19 9r10 11r13 14r24
-34i39 Fst{integer} 14|5b39 9r18 10r24
-34i57 Lst{integer} 14|5b57 11r21 12r24
-40V13*LimitBPM{15I12} 40>22 14|20b13 23l8 23t16
-40i22 Input{integer} 14|20b22 22r20
-44V13*LimitJoules{9I12} 44>25 14|25b13 28l8 28t19
-44i25 Input{integer} 14|25b25 27r20
-48V13*LimitTUB{20I12} 48>22 14|30b13 38l8 38t16
-48i22 Input{integer} 14|30b22 37r20
-52V13*LimitFUB{27I12} 52>22 14|40b13 48l8 48t16
-52i22 Input{integer} 14|40b22 47r20
+33i19 Input{integer} 14|5b19 9r10 11r13 14r24
+33i39 Fst{integer} 14|5b39 9r18 10r24
+33i57 Lst{integer} 14|5b57 11r21 12r24
+39V13*LimitBPM{15I12} 39>22 14|20b13 23l8 23t16
+39i22 Input{integer} 14|20b22 22r20
+43V13*LimitJoules{9I12} 43>25 14|25b13 28l8 28t19
+43i25 Input{integer} 14|25b25 27r20
+47V13*LimitTUB{20I12} 47>22 14|30b13 38l8 38t16
+47i22 Input{integer} 14|30b22 37r20
+51V13*LimitFUB{25I12} 51>22 14|40b13 48l8 48t16
+51i22 Input{integer} 14|40b22 47r20
 X 14 measures.adb
 7i7 Output{integer} 10m14 12m14 14m14 17r14
 

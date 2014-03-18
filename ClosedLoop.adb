@@ -10,7 +10,6 @@ Package body ClosedLoop is
 
 	procedure Init(cl : out ClosedLoopType) is
 	begin
-		cl.IsOn := False;
    		--Initalise hrt, monitor, gen, icd
 		Heart.Init(cl.Hrt);
 		HRM.Init(cl.Monitor);
@@ -19,24 +18,21 @@ Package body ClosedLoop is
 
 	end Init;
 
-	procedure switch (cl : in out ClosedLoopType) is
+	procedure Off (cl : in out ClosedLoopType) is
 	begin
-		cl.IsOn := not cl.IsOn;
-		if cl.IsOn then
-			-- Set all components to On 
-			HRM.On(cl.Monitor, cl.Hrt);
-			ImpulseGenerator.On(cl.Generator);
-			ICD.On(cl.Icds, cl.Monitor);
-			Put_Line("Switched to On mode");
-		else
-			-- set all components to Off
-			HRM.Off(cl.Monitor);
-			ImpulseGenerator.Off(cl.Generator);
-			ICD.Off(cl.Icds);
-			Put_Line("Switched to Off mode");
-		end if;
+		-- set all components to Off
+		ICD.Off(cl.Icds, cl.Monitor, cl.Generator);
+		Put_Line("Switched to Off mode");
 
-	end switch;
+	end Off;
+
+	procedure On (cl : in out ClosedLoopType) is
+	begin
+		-- Set all components to On 
+		ICD.On(cl.Icds, cl.Monitor, cl.Generator, cl.Hrt);
+		Put_Line("Switched to On mode");
+
+	end On;
 
 	procedure setUpperBound (cl : out ClosedLoopType; ub : in Integer) is
 	begin
@@ -45,11 +41,13 @@ Package body ClosedLoop is
 
 	procedure tick (cl: in out ClosedLoopType) is 
 	begin
+		Heart.Tick(cl.Hrt);
+	
+		HRM.Tick(cl.Monitor, cl.Hrt);
 
 		ICD.Tick(cl.Icds, cl.Monitor, cl.Generator);
 		ImpulseGenerator.Tick(cl.Generator, cl.Hrt);
-		HRM.Tick(cl.Monitor, cl.Hrt);
-		Heart.Tick(cl.Hrt);
+
 	end tick;
 	
 
