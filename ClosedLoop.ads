@@ -15,10 +15,10 @@ with ICD;
 Package ClosedLoop is 
 	type ClosedLoopType is
 		record
-			Hrt : Heart.HeartType;                -- The simulated heart
-	   		Monitor : HRM.HRMType;                -- The simulated heart rate monitor
-	   		Generator : ImpulseGenerator.GeneratorType; -- The simulated generator
-	   		Icds : ICD.ICDType; -- The simulated ICD software 
+			Hrt 		: Heart.HeartType;                	-- The simulated heart
+	   		Monitor 	: HRM.HRMType;                		-- The simulated heart rate monitor
+	   		Generator 	: ImpulseGenerator.GeneratorType; 	-- The simulated generator
+	   		Icds 		: ICD.ICDType; 						-- The simulated ICD software 
 		end record;
 	
 	-- Create and initalise a ClosedLoop
@@ -37,9 +37,6 @@ Package ClosedLoop is
 	procedure setFibrillationBound (cl : out ClosedLoopType; ub : in Integer);
 
 	-- tick heart, monitor, ICD, Umpilse
-	-- procedure tick (  Icds : in out ICD.ICDType; Monitor : in out HRM.HRMType; 
-	-- Gen : in out ImpulseGenerator.GeneratorType; Hrt : in out Heart.HeartType; 
-	-- cl: in out ClosedLoopType);   --recheck in out later !!!!!!
 	procedure tick (cl: in out ClosedLoopType);
 
 end ClosedLoop;

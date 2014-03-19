@@ -19,11 +19,12 @@ package Measures is
    -- The type for tachycardia Upper Bound: beats per minute
    subtype TUB is Integer range MIN_TUB .. MAX_TUB;
 
-   MIN_FUB : constant Integer := 2;
+   MIN_FUB : constant Integer := 3;
    MAX_FUB : constant Integer := 15;
    -- the type for Fibrillation Bound: percentage
    subtype FUB is Integer range MIN_FUB .. MAX_FUB;
 
+   -- the Array for Last 6 heart rates : BPM
    type BPMARRAY is array (Integer range 0 .. 5) of BPM;
 
 

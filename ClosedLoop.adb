@@ -46,10 +46,9 @@ Package body ClosedLoop is
 
 	procedure tick (cl: in out ClosedLoopType) is 
 	begin
+		-- tick all components
 		Heart.Tick(cl.Hrt);
-
 		HRM.Tick(cl.Monitor, cl.Hrt);
-
 		ICD.Tick(cl.Icds, cl.Monitor, cl.Generator);
 		ImpulseGenerator.Tick(cl.Generator, cl.Hrt);
 
