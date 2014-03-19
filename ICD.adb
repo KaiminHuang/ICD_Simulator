@@ -11,7 +11,7 @@ package body ICD is
 	begin
 		Icd.IsOn 				:= False;
 
-		Icd.LastRate            := Measures.BPM'First;
+		Icd.Last6Rate            := (0,0,0,0,0,0);
 		Icd.Rate 				:= Measures.BPM'First;
 
 		Icd.isTachycardia 		:= False;
@@ -37,23 +37,15 @@ package body ICD is
 	
 	procedure On(Icd: out ICDType ; Hm : in out HRM.HRMType; Gen : out ImpulseGenerator.GeneratorType; Hrt: in Heart.HeartType) is
 	begin
+
+		Init(Icd);
 	 	-- Get an initial reading for the heart
 	 	Icd.IsOn := True;
 		HRM.GetRate(Hm, Icd.Rate);
 
 		--reset all values to default once it turned on
-		Icd.isTachycardia 		:= False;
-		Icd.isFibrillation		:= False;
-		Icd.Rate 				:= Measures.BPM'First;
 
-		Icd.isInImpulseProcess 	:= False;
-    	Icd.TickToNextImpulse 	:= 0;
-		Icd.Signal 				:= 10;
-		Icd.TachycardiaBound 	:= Measures.TUB'First;
-		Icd.FibrillationBound 	:= Measures.FUB'First;
-		Icd.Impulse 			:= 0;
-		Icd.ImpulseRate 		:= 0;
-		Icd.Offset 				:= 0;
+
 
 		HRM.On(Hm, Hrt);
 		ImpulseGenerator.On(Gen);
@@ -105,6 +97,14 @@ package body ICD is
 		-- 	Icd.isFibrillation := False;
 		-- end if;
 		GetAbnormalNum(Icd);
+		if Icd.AbnormalNum > 3 then
+			Icd.isFibrillation := true;
+			Icd.isTachycardia := False;
+		else
+			Icd.isFibrillation := False;
+
+
+		end if;
 
 	end isFibrillation;
 
@@ -189,6 +189,26 @@ package body ICD is
 
 	end CalculateImpluse;
 	
+	procedure setFibrillationBound (Icd : in out ICDType; ub : in Integer) is
+	begin
+		if not Icd.IsOn then
+			-- make sure the Ub is in the range
+			Icd.FibrillationBound := Measures.LimitFUB(ub);
+			Put("-- The Fibrillation Bound has been changed to");
+			Put(Item => Icd.FibrillationBound, width => 0);
+    		New_Line;     
+		else
+			Put_Line("-- The Fibrillation Bound can only be changed in Off mode");
+			Put_Line("-- Please use Switch to change the mode");
+			Put("-- The Fibrillation Upper Bound is still ");
+			Put(Item => Icd.FibrillationBound, width => 0);
+    		New_Line;     
+
+		end if;
+	end setFibrillationBound;
+
+
+
 	procedure setTachycardiaBound (Icd : in out ICDType; ub : in Integer) is
 	begin
 		if not Icd.IsOn then
@@ -215,16 +235,13 @@ package body ICD is
 	end BPMArrayUpdate;
 
 	procedure GetAbnormalNum (Icd : in out ICDType) is
-	AbnormalNum : Integer := 0;
 	begin 
+		Icd.AbnormalNum := 0;
 		for I in Integer range 0..4 loop
 			if abs(Icd.Last6Rate(I) - Icd.Last6Rate(I + 1)) >= Icd.FibrillationBound then
-				AbnormalNum := AbnormalNum + 1;
+				Icd.AbnormalNum := Icd.AbnormalNum + 1;
 			end if;
 		end loop;
-		if AbnormalNum > 3 then
-			Icd.isFibrillation := true;
-		end if;
 	end GetAbnormalNum;	
 
 	procedure Tick(Icd : in out ICDType; Hm : in HRM.HRMType; Gen : in out ImpulseGenerator.GeneratorType) is
@@ -235,13 +252,13 @@ package body ICD is
 		BPMArrayUpdate(icd);
 		Icd.Last6Rate(0) := Icd.Rate;
 
-		-- Put("   This last 6 Rate  ");
-		-- Put(Item => Icd.Last6Rate(0));
-		-- Put(Item => Icd.Last6Rate(1));
-		-- Put(Item => Icd.Last6Rate(2));
-		-- Put(Item => Icd.Last6Rate(3));
-		-- Put(Item => Icd.Last6Rate(4));
-		-- Put(Item => Icd.Last6Rate(5));
+		Put("   This last 6 Rate  ");
+		Put(Item => Icd.Last6Rate(0));
+		Put(Item => Icd.Last6Rate(1));
+		Put(Item => Icd.Last6Rate(2));
+		Put(Item => Icd.Last6Rate(3));
+		Put(Item => Icd.Last6Rate(4));
+		Put(Item => Icd.Last6Rate(5));
 
 		New_Line;
 		--check whether there is 1s after giving a shock

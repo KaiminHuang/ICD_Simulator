@@ -31,7 +31,10 @@ Package ClosedLoop is
 	procedure Off (cl : in out ClosedLoopType);
 
 	-- Set Upper Bound for tachycardia
-	procedure setUpperBound (cl : out ClosedLoopType; ub : in Integer);
+	procedure setTachycardiaBound (cl : out ClosedLoopType; ub : in Integer);
+
+	-- Set Upper Bound for tachycardia
+	procedure setFibrillationBound (cl : out ClosedLoopType; ub : in Integer);
 
 	-- tick heart, monitor, ICD, Umpilse
 	-- procedure tick (  Icds : in out ICD.ICDType; Monitor : in out HRM.HRMType; 

@@ -6,13 +6,13 @@ RV NO_FLOATING_POINT
 RV NO_IO
 RV SPARK
 
-U heart%b		heart.adb		7f721758 NE OO PK
+U heart%b		heart.adb		e674e42f NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W measures%s		measures.adb		measures.ali
 W randomnumber%s	randomnumber.adb	randomnumber.ali
 
-U heart%s		heart.ads		d4b42d92 EE NE OO PK
+U heart%s		heart.ads		4db2dee5 EE NE OO PK
 W measures%s		measures.adb		measures.ali
 
 D ada.ads		20130417131023 3ffc8e18
@@ -27,7 +27,7 @@ D heart.ads		20140317012927 9fbc8907
 D heart.adb		20140313120156 fd4d197c
 D interfac.ads		20130417131027 cb4a8015
 D i-cstrea.ads		20130417131026 8128536b
-D measures.ads		20140318133706 4b08a495
+D measures.ads		20140319013717 d20e57e2
 D randomnumber.ads	20140311060305 6ee6d662
 D system.ads		20130417131036 f2f2d889
 D s-crtl.ads		20130417131029 dfcfca61

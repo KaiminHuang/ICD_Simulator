@@ -34,18 +34,20 @@ Package ICD is
 			Last6Rate           : Measures.BPMARRAY;-- Last 6 Heart rate get from HRM
 			waitAfterShock      : Integer;			-- After a shoc; icd should wait a few time before next action
 			isWait				: Boolean;          -- indicate whether sys is in the wait mode after a shock is delivered
+
+			AbnormalNum 		: Integer;
 		end record;
 		
 	-- Create and initialise a ICD.
 	procedure Init(Icd :out ICDType);
 
-	-- Turn on the ICD and get first reading from the HRM
+	-- Turn on the sys and get first reading from the HRM
 	procedure On(Icd: out ICDType ; Hm : in out HRM.HRMType; Gen : out ImpulseGenerator.GeneratorType ; Hrt: in Heart.HeartType);
 
-	-- Turn off the ICD
+	-- Turn off the monitor and generator
 	procedure Off(Icd: out ICDType; Hm : in out HRM.HRMType; Gen : out ImpulseGenerator.GeneratorType);
 
-	-- Get the status of Icd (on/off)?
+	-- Get the status of system (on/off)?
 	function IsOn(Icd : in ICDType) return Boolean;
 
 	-- Access the heart rate
@@ -62,6 +64,9 @@ Package ICD is
 
 	-- Set Tachycardia Upper Bound for tachycardia
 	procedure setTachycardiaBound (Icd : in out ICDType; ub : in Integer);
+
+	-- Set Tachycardia Upper Bound for Fibrillation
+	procedure setFibrillationBound (Icd : in out ICDType; ub : in Integer);
 	
 	-- Get how many abnormal heart rates in last 5 tick, if more than 3 , it's a Fibrillation
 	procedure GetAbnormalNum (Icd : in out ICDType);

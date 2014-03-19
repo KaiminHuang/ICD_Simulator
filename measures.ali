@@ -5,12 +5,12 @@ RN
 RV NO_IO
 RV SPARK
 
-U measures%b		measures.adb		36c61c4e NE OO PK
+U measures%b		measures.adb		afc0ef39 NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 
-U measures%s		measures.ads		4b08a495 EE NE OO PK
+U measures%s		measures.ads		d20e57e2 EE NE OO PK
 
 D ada.ads		20130417131023 3ffc8e18
 D a-except.ads		20130417131019 10fcae55
@@ -24,7 +24,7 @@ D a-tiinio.ads		20130417131022 aa04e5d6
 D a-unccon.ads		20130417131022 f9eb8f06
 D interfac.ads		20130417131027 cb4a8015
 D i-cstrea.ads		20130417131026 8128536b
-D measures.ads		20140318133706 4b08a495
+D measures.ads		20140319013717 d20e57e2
 D measures.adb		20140318035346 b3e8c4ab
 D system.ads		20130417131036 f2f2d889
 D s-crtl.ads		20130417131029 dfcfca61

@@ -34,15 +34,20 @@ Package body ClosedLoop is
 
 	end On;
 
-	procedure setUpperBound (cl : out ClosedLoopType; ub : in Integer) is
+	procedure setTachycardiaBound (cl : out ClosedLoopType; ub : in Integer) is
 	begin
 		ICD.setTachycardiaBound(cl.Icds, ub);
-	end setUpperBound;
+	end setTachycardiaBound;
+
+	procedure setFibrillationBound (cl : out ClosedLoopType; ub : in Integer) is
+	begin
+		ICD.setFibrillationBound(cl.Icds, ub);
+	end setFibrillationBound;
 
 	procedure tick (cl: in out ClosedLoopType) is 
 	begin
 		Heart.Tick(cl.Hrt);
-	
+
 		HRM.Tick(cl.Monitor, cl.Hrt);
 
 		ICD.Tick(cl.Icds, cl.Monitor, cl.Generator);

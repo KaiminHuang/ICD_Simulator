@@ -9,7 +9,7 @@ RV NO_IO
 RV NO_RELATIVE_DELAY
 RV SPARK
 
-U closedloopexample%b	closedloopexample.adb	424d406d NE OO SU KM
+U closedloopexample%b	closedloopexample.adb	f6ea2fc5 NE OO SU KM
 W ada%s			ada.ads			ada.ali
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -33,15 +33,15 @@ D a-tags.ads		20130417131022 6c0509d0
 D a-textio.ads		20130417131022 386df5d4
 D a-tiinio.ads		20130417131022 aa04e5d6
 D a-unccon.ads		20130417131022 f9eb8f06
-D closedloop.ads	20140318060458 6bc7fc72
-D closedloopexample.adb	20140318102032 e2f5aa49
+D closedloop.ads	20140319013200 3ed5b3d6
+D closedloopexample.adb	20140319013328 f9d18d69
 D heart.ads		20140317012927 9fbc8907
 D hrm.ads		20140318091921 070f95d8
-D icd.ads		20140318132644 e720fa65
+D icd.ads		20140319012935 84b70e3e
 D impulsegenerator.ads	20140314100710 31c22809
 D interfac.ads		20130417131027 cb4a8015
 D i-cstrea.ads		20130417131026 8128536b
-D measures.ads		20140318133706 4b08a495
+D measures.ads		20140319013717 d20e57e2
 D system.ads		20130417131036 f2f2d889
 D s-crtl.ads		20130417131029 dfcfca61
 D s-exctab.ads		20130417131029 66e51330
@@ -65,29 +65,31 @@ X 6 a-inteio.ads
 18K13*Integer_Text_IO[11|45] 14|2w10 2r35
 X 10 a-textio.ads
 49K13*Text_IO 471e16 14|1w10 1r27
-166U14*New_Line 14|30s9 31s9 32s9 55s9 56s9 57s9
-263U14*Put_Line 14|19s9 20s9 24s9 29s9 35s9 39s9 40s9 45s9 49s9 54s9
+166U14*New_Line 14|30s9 31s9 32s9 58s9 59s9 60s9
+263U14*Put_Line 14|19s9 20s9 24s9 29s9 35s9 39s9 40s9 43s9 44s9 48s9 52s9
+. 57s9
 X 13 closedloop.ads
-15K9*ClosedLoop 42e15 14|9w6 13r14 15r9 18r9 22r9 26r17 36r9 37r9 42r9 46r9
-. 51r17
+15K9*ClosedLoop 45e15 14|9w6 13r14 15r9 18r9 22r9 26r17 36r9 37r9 41r9 45r9
+. 49r9 54r17
 16R14*ClosedLoopType 22e27 14|13r25
 25U19*Init 14|15s20
-28U19*On 14|18s20 46s20
+28U19*On 14|18s20 49s20
 31U19*Off 14|36s20
-34U19*setUpperBound 14|22s20 42s20
-40U19*tick 14|26s28 37s20 51s28
+34U19*setTachycardiaBound 14|22s20 41s20
+37U19*setFibrillationBound 14|45s20
+43U19*tick 14|26s28 37s20 54s28
 X 14 closedloopexample.adb
-12U11*ClosedLoopExample 12b11 58l5 58t22
-13r9 cl{13|16R14} 15m25 18m23 18r23 22m34 26m33 26r33 36m24 36r24 37m25 37r25
-. 42m34 46m23 46r23 51m33 51r33
+12U11*ClosedLoopExample 12b11 61l5 61t22
+13r9 cl{13|16R14} 15m25 18m23 18r23 22m40 26m33 26r33 36m24 36r24 37m25 37r25
+. 41m40 45m41 49m23 49r23 54m33 54r33
 25i13 I{integer}
-50i13 I{integer}
+53i13 I{integer}
 X 15 heart.ads
 7K9*Heart 14|6w6 15|39e11
 X 16 hrm.ads
 7K9*HRM 14|7w6 16|38e8
 X 17 icd.ads
-11K9*ICD 14|8w6 17|75e8
+11K9*ICD 14|8w6 17|80e8
 X 18 impulsegenerator.ads
 7K9*ImpulseGenerator 14|4w6 18|38e21
 X 21 measures.ads
