@@ -1,0 +1,98 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+*****************************************************************************
+
+
+CREATED 31-MAY-2014, 16:12:43  SIMPLIFIED 31-MAY-2014, 16:13:22
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure ICD.Tick
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_tick_1.  @@@@@@@@@@
+%%%  Simplified H55 on reading formula in, to give:
+     %%%  H55:  fld_ison(icdinstance__1) <-> fld_ison(icdinstance)
+%%%  Simplified H57 on reading formula in, to give:
+     %%%  H57:  fld_istachycardia(icdinstance__1) <-> fld_istachycardia(
+          icdinstance)
+%%%  Simplified H58 on reading formula in, to give:
+     %%%  H58:  fld_isinimpulseprocess(icdinstance__1) <-> 
+          fld_isinimpulseprocess(icdinstance)
+%%%  Simplified H65 on reading formula in, to give:
+     %%%  H65:  fld_isfibrillation(icdinstance__1) <-> fld_isfibrillation(
+          icdinstance)
+%%%  Simplified H68 on reading formula in, to give:
+     %%%  H68:  fld_iswait(icdinstance__1) <-> fld_iswait(icdinstance)
+***  Proved C1:  fld_rate(icdinstance__1) >= measures__bpm__first
+     using hypothesis H47.
+***  Proved C2:  fld_rate(icdinstance__1) <= measures__bpm__last
+     using hypothesis H48.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_tick_2.  @@@@@@@@@@
+%%%  Simplified H55 on reading formula in, to give:
+     %%%  H55:  fld_ison(icdinstance__1) <-> fld_ison(icdinstance)
+%%%  Simplified H57 on reading formula in, to give:
+     %%%  H57:  fld_istachycardia(icdinstance__1) <-> fld_istachycardia(
+          icdinstance)
+%%%  Simplified H58 on reading formula in, to give:
+     %%%  H58:  fld_isinimpulseprocess(icdinstance__1) <-> 
+          fld_isinimpulseprocess(icdinstance)
+%%%  Simplified H65 on reading formula in, to give:
+     %%%  H65:  fld_isfibrillation(icdinstance__1) <-> fld_isfibrillation(
+          icdinstance)
+%%%  Simplified H68 on reading formula in, to give:
+     %%%  H68:  fld_iswait(icdinstance__1) <-> fld_iswait(icdinstance)
+---  Hypothesis H70 has been replaced by "true".  (It is already present, as 
+          H47).
+---  Hypothesis H71 has been replaced by "true".  (It is already present, as 
+          H48).
+***  Proved C1:  fld_rate(icdinstance__2) >= measures__bpm__first
+     using hypothesis H107.
+***  Proved C2:  fld_rate(icdinstance__2) <= measures__bpm__last
+     using hypothesis H108.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_tick_3.  @@@@@@@@@@
+%%%  Simplified H55 on reading formula in, to give:
+     %%%  H55:  fld_ison(icdinstance__1) <-> fld_ison(icdinstance)
+%%%  Simplified H57 on reading formula in, to give:
+     %%%  H57:  fld_istachycardia(icdinstance__1) <-> fld_istachycardia(
+          icdinstance)
+%%%  Simplified H58 on reading formula in, to give:
+     %%%  H58:  fld_isinimpulseprocess(icdinstance__1) <-> 
+          fld_isinimpulseprocess(icdinstance)
+%%%  Simplified H65 on reading formula in, to give:
+     %%%  H65:  fld_isfibrillation(icdinstance__1) <-> fld_isfibrillation(
+          icdinstance)
+%%%  Simplified H68 on reading formula in, to give:
+     %%%  H68:  fld_iswait(icdinstance__1) <-> fld_iswait(icdinstance)
+---  Hypothesis H70 has been replaced by "true".  (It is already present, as 
+          H47).
+---  Hypothesis H71 has been replaced by "true".  (It is already present, as 
+          H48).
+---  Hypothesis H109 has been replaced by "true".  (It is already present, as 
+          H107).
+---  Hypothesis H110 has been replaced by "true".  (It is already present, as 
+          H108).
+***  Proved C1:  fld_impulse(icdinstance__4) >= measures__joules__first
+     using hypothesis H164.
+***  Proved C2:  fld_impulse(icdinstance__4) <= measures__joules__last
+     using hypothesis H165.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_tick_4.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

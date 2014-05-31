@@ -1,0 +1,91 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+*****************************************************************************
+
+
+CREATED 31-MAY-2014, 16:12:43  SIMPLIFIED 31-MAY-2014, 16:13:22
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure ICD.BPMArrayUpdate
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_bpmarrayupdate_1.  @@@@@@@@@@
+***  Proved C1:  fld_last5thrate(icdinstance) >= measures__bpm__first
+     using hypothesis H33.
+***  Proved C2:  fld_last5thrate(icdinstance) <= measures__bpm__last
+     using hypothesis H34.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_bpmarrayupdate_2.  @@@@@@@@@@
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H33).
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H34).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  fld_last4thrate(icdinstance) >= measures__bpm__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  fld_last4thrate(icdinstance) <= measures__bpm__last
+***  Proved C1:  fld_last4thrate(icdinstance) >= measures__bpm__first
+     using hypothesis H31.
+***  Proved C2:  fld_last4thrate(icdinstance) <= measures__bpm__last
+     using hypothesis H32.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_bpmarrayupdate_3.  @@@@@@@@@@
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H33).
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H34).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  fld_last4thrate(icdinstance) >= measures__bpm__first
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  fld_last4thrate(icdinstance) <= measures__bpm__last
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  fld_last3rdrate(icdinstance) >= measures__bpm__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  fld_last3rdrate(icdinstance) <= measures__bpm__last
+***  Proved C1:  fld_last3rdrate(icdinstance) >= measures__bpm__first
+     using hypothesis H29.
+***  Proved C2:  fld_last3rdrate(icdinstance) <= measures__bpm__last
+     using hypothesis H30.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_bpmarrayupdate_4.  @@@@@@@@@@
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H33).
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H34).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  fld_last4thrate(icdinstance) >= measures__bpm__first
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  fld_last4thrate(icdinstance) <= measures__bpm__last
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  fld_last3rdrate(icdinstance) >= measures__bpm__first
+%%%  Simplified H44 on reading formula in, to give:
+     %%%  H44:  fld_last3rdrate(icdinstance) <= measures__bpm__last
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  fld_last2ndrate(icdinstance) >= measures__bpm__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  fld_last2ndrate(icdinstance) <= measures__bpm__last
+***  Proved C1:  fld_last2ndrate(icdinstance) >= measures__bpm__first
+     using hypothesis H27.
+***  Proved C2:  fld_last2ndrate(icdinstance) <= measures__bpm__last
+     using hypothesis H28.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_bpmarrayupdate_5.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

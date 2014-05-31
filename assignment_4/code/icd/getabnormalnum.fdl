@@ -1,0 +1,17 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                              {Examiner GPL 2011}
+             {Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.}
+           {*******************************************************}
+
+
+                        {DATE : 31-MAY-2014 15:35:47.63}
+
+                        {procedure ICD.GetAbnormalNum}
+
+
+title procedure getabnormalnum;
+
+  function round__(real) : integer;
+
+end;

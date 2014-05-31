@@ -1,0 +1,49 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+*****************************************************************************
+
+
+CREATED 31-MAY-2014, 16:12:43  SIMPLIFIED 31-MAY-2014, 16:13:22
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure ClosedLoop.setFibrillationBound
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_setfibrillationbound_1.  @@@@@@@@@@
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  not fld_ison(fld_icds(cl))
+***  Proved C1:  ub >= integer__first
+     using hypothesis H2.
+***  Proved C2:  ub <= integer__last
+     using hypothesis H3.
+-S-  Applied substitution rule setfibrillat_rules(2).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H2:  ub >= - 2147483648
+-S-  Applied substitution rule setfibrillat_rules(3).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H3:  ub <= 2147483647
+---  Eliminated hypothesis H1 (true-hypothesis).
+     +++  New H4:  integer__size >= 0
+     +++  New H5:  measures__joules__size >= 0
+     +++  New H6:  measures__bpm__size >= 0
+     +++  New H7:  heart__hearttype__size >= 0
+     +++  New H8:  impulsegenerator__generatortype__size >= 0
+     +++  New H9:  hrm__hrmtype__size >= 0
+     +++  New H10:  icd__icdtype__size >= 0
+     +++  New H11:  closedlooptype__size >= 0
+
+
+@@@@@@@@@@  VC: procedure_setfibrillationbound_2.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

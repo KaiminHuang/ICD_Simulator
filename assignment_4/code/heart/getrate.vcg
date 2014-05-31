@@ -1,0 +1,45 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+           *******************************************************
+
+
+                        DATE : 31-MAY-2014 16:20:10.72
+
+                          procedure Heart.GetRate
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 38:
+
+procedure_getrate_1.
+H1:    true .
+H2:    fld_defaultchange(hrt) >= measures__bpm__first .
+H3:    fld_defaultchange(hrt) <= measures__bpm__last .
+H4:    fld_impulse(hrt) >= measures__joules__first .
+H5:    fld_impulse(hrt) <= measures__joules__last .
+H6:    fld_rate(hrt) >= measures__bpm__first .
+H7:    fld_rate(hrt) <= measures__bpm__last .
+        ->
+C1:    fld_rate(hrt) >= measures__bpm__first .
+C2:    fld_rate(hrt) <= measures__bpm__last .
+ 
+
+For path(s) from start to finish:
+
+procedure_getrate_2.
+H1:    true .
+H2:    fld_defaultchange(hrt) >= measures__bpm__first .
+H3:    fld_defaultchange(hrt) <= measures__bpm__last .
+H4:    fld_impulse(hrt) >= measures__joules__first .
+H5:    fld_impulse(hrt) <= measures__joules__last .
+H6:    fld_rate(hrt) >= measures__bpm__first .
+H7:    fld_rate(hrt) <= measures__bpm__last .
+H8:    fld_rate(hrt) >= measures__bpm__first .
+H9:    fld_rate(hrt) <= measures__bpm__last .
+        ->
+C1:    fld_rate(hrt) = fld_rate(hrt) .
+ 
+

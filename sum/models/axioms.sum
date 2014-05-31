@@ -1,0 +1,30 @@
+module Axioms is
+
+  ////////////////////////////////////////////////////////////
+  // Helper functions for assignment 3
+  ////////////////////////////////////////////////////////////  
+
+  //calculate the sum, average, and standard deviation of a sequence
+  //of integers
+  axiom is
+  dec
+    sum : seq int --> int;
+    average : seq int --> int
+  pred
+    sum(<>) = 0;
+    forall ds : seq int | ds /= <> @  sum(ds) = head(ds) + sum(tail(ds));
+    forall ds : seq int @ average(ds) = sum(ds) div #ds
+  end;
+
+  //Take a set of integers and return them as a sequence in 
+  //ascending order
+  axiom is
+  dec
+    sort : power int --> seq int
+  pred
+    sort({}) = <>;
+    forall ps : power int | ps /= {} @ 
+       sort(ps) = <min(ps)> ^ sort(ps diff {min(ps)})
+  end
+
+end Axioms

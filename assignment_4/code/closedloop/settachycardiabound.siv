@@ -1,0 +1,41 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+*****************************************************************************
+
+
+CREATED 31-MAY-2014, 16:12:43  SIMPLIFIED 31-MAY-2014, 16:13:22
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure ClosedLoop.setTachycardiaBound
+
+
+
+
+For path(s) from start to precondition check associated with statement of line 
+          32:
+
+procedure_settachycardiabound_1.
+H1:    ub >= - 2147483648 .
+H2:    ub <= 2147483647 .
+H3:    integer__size >= 0 .
+H4:    measures__joules__size >= 0 .
+H5:    measures__bpm__size >= 0 .
+H6:    heart__hearttype__size >= 0 .
+H7:    impulsegenerator__generatortype__size >= 0 .
+H8:    hrm__hrmtype__size >= 0 .
+H9:    icd__icdtype__size >= 0 .
+H10:   closedlooptype__size >= 0 .
+       ->
+C1:    not fld_ison(fld_icds(cl)) .
+
+
+For path(s) from start to finish:
+
+procedure_settachycardiabound_2.
+*** true .          /* all conclusions proved */
+
+

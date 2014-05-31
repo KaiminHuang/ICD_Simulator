@@ -1,0 +1,404 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+           *******************************************************
+
+
+                        DATE : 31-MAY-2014 16:20:10.83
+
+                             procedure ICD.Init
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 9:
+
+procedure_init_1.
+H1:    true .
+        ->
+C1:    measures__bpm__first >= measures__bpm__first .
+C2:    measures__bpm__first <= measures__bpm__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 10:
+
+procedure_init_2.
+H1:    true .
+H2:    measures__bpm__first >= measures__bpm__first .
+H3:    measures__bpm__first <= measures__bpm__last .
+        ->
+C1:    measures__bpm__first >= measures__bpm__first .
+C2:    measures__bpm__first <= measures__bpm__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 11:
+
+procedure_init_3.
+H1:    true .
+H2:    measures__bpm__first >= measures__bpm__first .
+H3:    measures__bpm__first <= measures__bpm__last .
+H4:    measures__bpm__first >= measures__bpm__first .
+H5:    measures__bpm__first <= measures__bpm__last .
+        ->
+C1:    measures__bpm__first >= measures__bpm__first .
+C2:    measures__bpm__first <= measures__bpm__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 12:
+
+procedure_init_4.
+H1:    true .
+H2:    measures__bpm__first >= measures__bpm__first .
+H3:    measures__bpm__first <= measures__bpm__last .
+H4:    measures__bpm__first >= measures__bpm__first .
+H5:    measures__bpm__first <= measures__bpm__last .
+H6:    measures__bpm__first >= measures__bpm__first .
+H7:    measures__bpm__first <= measures__bpm__last .
+        ->
+C1:    measures__bpm__first >= measures__bpm__first .
+C2:    measures__bpm__first <= measures__bpm__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 13:
+
+procedure_init_5.
+H1:    true .
+H2:    measures__bpm__first >= measures__bpm__first .
+H3:    measures__bpm__first <= measures__bpm__last .
+H4:    measures__bpm__first >= measures__bpm__first .
+H5:    measures__bpm__first <= measures__bpm__last .
+H6:    measures__bpm__first >= measures__bpm__first .
+H7:    measures__bpm__first <= measures__bpm__last .
+H8:    measures__bpm__first >= measures__bpm__first .
+H9:    measures__bpm__first <= measures__bpm__last .
+        ->
+C1:    measures__bpm__first >= measures__bpm__first .
+C2:    measures__bpm__first <= measures__bpm__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 14:
+
+procedure_init_6.
+H1:    true .
+H2:    measures__bpm__first >= measures__bpm__first .
+H3:    measures__bpm__first <= measures__bpm__last .
+H4:    measures__bpm__first >= measures__bpm__first .
+H5:    measures__bpm__first <= measures__bpm__last .
+H6:    measures__bpm__first >= measures__bpm__first .
+H7:    measures__bpm__first <= measures__bpm__last .
+H8:    measures__bpm__first >= measures__bpm__first .
+H9:    measures__bpm__first <= measures__bpm__last .
+H10:   measures__bpm__first >= measures__bpm__first .
+H11:   measures__bpm__first <= measures__bpm__last .
+        ->
+C1:    measures__bpm__first >= measures__bpm__first .
+C2:    measures__bpm__first <= measures__bpm__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 15:
+
+procedure_init_7.
+H1:    true .
+H2:    measures__bpm__first >= measures__bpm__first .
+H3:    measures__bpm__first <= measures__bpm__last .
+H4:    measures__bpm__first >= measures__bpm__first .
+H5:    measures__bpm__first <= measures__bpm__last .
+H6:    measures__bpm__first >= measures__bpm__first .
+H7:    measures__bpm__first <= measures__bpm__last .
+H8:    measures__bpm__first >= measures__bpm__first .
+H9:    measures__bpm__first <= measures__bpm__last .
+H10:   measures__bpm__first >= measures__bpm__first .
+H11:   measures__bpm__first <= measures__bpm__last .
+H12:   measures__bpm__first >= measures__bpm__first .
+H13:   measures__bpm__first <= measures__bpm__last .
+        ->
+C1:    measures__bpm__first >= measures__bpm__first .
+C2:    measures__bpm__first <= measures__bpm__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 19:
+
+procedure_init_8.
+H1:    true .
+H2:    measures__bpm__first >= measures__bpm__first .
+H3:    measures__bpm__first <= measures__bpm__last .
+H4:    measures__bpm__first >= measures__bpm__first .
+H5:    measures__bpm__first <= measures__bpm__last .
+H6:    measures__bpm__first >= measures__bpm__first .
+H7:    measures__bpm__first <= measures__bpm__last .
+H8:    measures__bpm__first >= measures__bpm__first .
+H9:    measures__bpm__first <= measures__bpm__last .
+H10:   measures__bpm__first >= measures__bpm__first .
+H11:   measures__bpm__first <= measures__bpm__last .
+H12:   measures__bpm__first >= measures__bpm__first .
+H13:   measures__bpm__first <= measures__bpm__last .
+H14:   measures__bpm__first >= measures__bpm__first .
+H15:   measures__bpm__first <= measures__bpm__last .
+        ->
+C1:    0 >= integer__first .
+C2:    0 <= integer__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 22:
+
+procedure_init_9.
+H1:    true .
+H2:    measures__bpm__first >= measures__bpm__first .
+H3:    measures__bpm__first <= measures__bpm__last .
+H4:    measures__bpm__first >= measures__bpm__first .
+H5:    measures__bpm__first <= measures__bpm__last .
+H6:    measures__bpm__first >= measures__bpm__first .
+H7:    measures__bpm__first <= measures__bpm__last .
+H8:    measures__bpm__first >= measures__bpm__first .
+H9:    measures__bpm__first <= measures__bpm__last .
+H10:   measures__bpm__first >= measures__bpm__first .
+H11:   measures__bpm__first <= measures__bpm__last .
+H12:   measures__bpm__first >= measures__bpm__first .
+H13:   measures__bpm__first <= measures__bpm__last .
+H14:   measures__bpm__first >= measures__bpm__first .
+H15:   measures__bpm__first <= measures__bpm__last .
+H16:   0 >= integer__first .
+H17:   0 <= integer__last .
+        ->
+C1:    0 >= measures__joules__first .
+C2:    0 <= measures__joules__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 23:
+
+procedure_init_10.
+H1:    true .
+H2:    measures__bpm__first >= measures__bpm__first .
+H3:    measures__bpm__first <= measures__bpm__last .
+H4:    measures__bpm__first >= measures__bpm__first .
+H5:    measures__bpm__first <= measures__bpm__last .
+H6:    measures__bpm__first >= measures__bpm__first .
+H7:    measures__bpm__first <= measures__bpm__last .
+H8:    measures__bpm__first >= measures__bpm__first .
+H9:    measures__bpm__first <= measures__bpm__last .
+H10:   measures__bpm__first >= measures__bpm__first .
+H11:   measures__bpm__first <= measures__bpm__last .
+H12:   measures__bpm__first >= measures__bpm__first .
+H13:   measures__bpm__first <= measures__bpm__last .
+H14:   measures__bpm__first >= measures__bpm__first .
+H15:   measures__bpm__first <= measures__bpm__last .
+H16:   0 >= integer__first .
+H17:   0 <= integer__last .
+H18:   0 >= measures__joules__first .
+H19:   0 <= measures__joules__last .
+        ->
+C1:    0 >= integer__first .
+C2:    0 <= integer__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 24:
+
+procedure_init_11.
+H1:    true .
+H2:    measures__bpm__first >= measures__bpm__first .
+H3:    measures__bpm__first <= measures__bpm__last .
+H4:    measures__bpm__first >= measures__bpm__first .
+H5:    measures__bpm__first <= measures__bpm__last .
+H6:    measures__bpm__first >= measures__bpm__first .
+H7:    measures__bpm__first <= measures__bpm__last .
+H8:    measures__bpm__first >= measures__bpm__first .
+H9:    measures__bpm__first <= measures__bpm__last .
+H10:   measures__bpm__first >= measures__bpm__first .
+H11:   measures__bpm__first <= measures__bpm__last .
+H12:   measures__bpm__first >= measures__bpm__first .
+H13:   measures__bpm__first <= measures__bpm__last .
+H14:   measures__bpm__first >= measures__bpm__first .
+H15:   measures__bpm__first <= measures__bpm__last .
+H16:   0 >= integer__first .
+H17:   0 <= integer__last .
+H18:   0 >= measures__joules__first .
+H19:   0 <= measures__joules__last .
+H20:   0 >= integer__first .
+H21:   0 <= integer__last .
+        ->
+C1:    0 >= integer__first .
+C2:    0 <= integer__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 25:
+
+procedure_init_12.
+H1:    true .
+H2:    measures__bpm__first >= measures__bpm__first .
+H3:    measures__bpm__first <= measures__bpm__last .
+H4:    measures__bpm__first >= measures__bpm__first .
+H5:    measures__bpm__first <= measures__bpm__last .
+H6:    measures__bpm__first >= measures__bpm__first .
+H7:    measures__bpm__first <= measures__bpm__last .
+H8:    measures__bpm__first >= measures__bpm__first .
+H9:    measures__bpm__first <= measures__bpm__last .
+H10:   measures__bpm__first >= measures__bpm__first .
+H11:   measures__bpm__first <= measures__bpm__last .
+H12:   measures__bpm__first >= measures__bpm__first .
+H13:   measures__bpm__first <= measures__bpm__last .
+H14:   measures__bpm__first >= measures__bpm__first .
+H15:   measures__bpm__first <= measures__bpm__last .
+H16:   0 >= integer__first .
+H17:   0 <= integer__last .
+H18:   0 >= measures__joules__first .
+H19:   0 <= measures__joules__last .
+H20:   0 >= integer__first .
+H21:   0 <= integer__last .
+H22:   0 >= integer__first .
+H23:   0 <= integer__last .
+        ->
+C1:    0 >= integer__first .
+C2:    0 <= integer__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 26:
+
+procedure_init_13.
+H1:    true .
+H2:    measures__bpm__first >= measures__bpm__first .
+H3:    measures__bpm__first <= measures__bpm__last .
+H4:    measures__bpm__first >= measures__bpm__first .
+H5:    measures__bpm__first <= measures__bpm__last .
+H6:    measures__bpm__first >= measures__bpm__first .
+H7:    measures__bpm__first <= measures__bpm__last .
+H8:    measures__bpm__first >= measures__bpm__first .
+H9:    measures__bpm__first <= measures__bpm__last .
+H10:   measures__bpm__first >= measures__bpm__first .
+H11:   measures__bpm__first <= measures__bpm__last .
+H12:   measures__bpm__first >= measures__bpm__first .
+H13:   measures__bpm__first <= measures__bpm__last .
+H14:   measures__bpm__first >= measures__bpm__first .
+H15:   measures__bpm__first <= measures__bpm__last .
+H16:   0 >= integer__first .
+H17:   0 <= integer__last .
+H18:   0 >= measures__joules__first .
+H19:   0 <= measures__joules__last .
+H20:   0 >= integer__first .
+H21:   0 <= integer__last .
+H22:   0 >= integer__first .
+H23:   0 <= integer__last .
+H24:   0 >= integer__first .
+H25:   0 <= integer__last .
+        ->
+C1:    10 >= integer__first .
+C2:    10 <= integer__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 28:
+
+procedure_init_14.
+H1:    true .
+H2:    measures__bpm__first >= measures__bpm__first .
+H3:    measures__bpm__first <= measures__bpm__last .
+H4:    measures__bpm__first >= measures__bpm__first .
+H5:    measures__bpm__first <= measures__bpm__last .
+H6:    measures__bpm__first >= measures__bpm__first .
+H7:    measures__bpm__first <= measures__bpm__last .
+H8:    measures__bpm__first >= measures__bpm__first .
+H9:    measures__bpm__first <= measures__bpm__last .
+H10:   measures__bpm__first >= measures__bpm__first .
+H11:   measures__bpm__first <= measures__bpm__last .
+H12:   measures__bpm__first >= measures__bpm__first .
+H13:   measures__bpm__first <= measures__bpm__last .
+H14:   measures__bpm__first >= measures__bpm__first .
+H15:   measures__bpm__first <= measures__bpm__last .
+H16:   0 >= integer__first .
+H17:   0 <= integer__last .
+H18:   0 >= measures__joules__first .
+H19:   0 <= measures__joules__last .
+H20:   0 >= integer__first .
+H21:   0 <= integer__last .
+H22:   0 >= integer__first .
+H23:   0 <= integer__last .
+H24:   0 >= integer__first .
+H25:   0 <= integer__last .
+H26:   10 >= integer__first .
+H27:   10 <= integer__last .
+        ->
+C1:    0 >= integer__first .
+C2:    0 <= integer__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 31:
+
+procedure_init_15.
+H1:    true .
+H2:    measures__bpm__first >= measures__bpm__first .
+H3:    measures__bpm__first <= measures__bpm__last .
+H4:    measures__bpm__first >= measures__bpm__first .
+H5:    measures__bpm__first <= measures__bpm__last .
+H6:    measures__bpm__first >= measures__bpm__first .
+H7:    measures__bpm__first <= measures__bpm__last .
+H8:    measures__bpm__first >= measures__bpm__first .
+H9:    measures__bpm__first <= measures__bpm__last .
+H10:   measures__bpm__first >= measures__bpm__first .
+H11:   measures__bpm__first <= measures__bpm__last .
+H12:   measures__bpm__first >= measures__bpm__first .
+H13:   measures__bpm__first <= measures__bpm__last .
+H14:   measures__bpm__first >= measures__bpm__first .
+H15:   measures__bpm__first <= measures__bpm__last .
+H16:   0 >= integer__first .
+H17:   0 <= integer__last .
+H18:   0 >= measures__joules__first .
+H19:   0 <= measures__joules__last .
+H20:   0 >= integer__first .
+H21:   0 <= integer__last .
+H22:   0 >= integer__first .
+H23:   0 <= integer__last .
+H24:   0 >= integer__first .
+H25:   0 <= integer__last .
+H26:   10 >= integer__first .
+H27:   10 <= integer__last .
+H28:   0 >= integer__first .
+H29:   0 <= integer__last .
+        ->
+C1:    10 >= integer__first .
+C2:    10 <= integer__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 32:
+
+procedure_init_16.
+H1:    true .
+H2:    measures__bpm__first >= measures__bpm__first .
+H3:    measures__bpm__first <= measures__bpm__last .
+H4:    measures__bpm__first >= measures__bpm__first .
+H5:    measures__bpm__first <= measures__bpm__last .
+H6:    measures__bpm__first >= measures__bpm__first .
+H7:    measures__bpm__first <= measures__bpm__last .
+H8:    measures__bpm__first >= measures__bpm__first .
+H9:    measures__bpm__first <= measures__bpm__last .
+H10:   measures__bpm__first >= measures__bpm__first .
+H11:   measures__bpm__first <= measures__bpm__last .
+H12:   measures__bpm__first >= measures__bpm__first .
+H13:   measures__bpm__first <= measures__bpm__last .
+H14:   measures__bpm__first >= measures__bpm__first .
+H15:   measures__bpm__first <= measures__bpm__last .
+H16:   0 >= integer__first .
+H17:   0 <= integer__last .
+H18:   0 >= measures__joules__first .
+H19:   0 <= measures__joules__last .
+H20:   0 >= integer__first .
+H21:   0 <= integer__last .
+H22:   0 >= integer__first .
+H23:   0 <= integer__last .
+H24:   0 >= integer__first .
+H25:   0 <= integer__last .
+H26:   10 >= integer__first .
+H27:   10 <= integer__last .
+H28:   0 >= integer__first .
+H29:   0 <= integer__last .
+H30:   10 >= integer__first .
+H31:   10 <= integer__last .
+        ->
+C1:    0 >= integer__first .
+C2:    0 <= integer__last .
+ 
+
+For path(s) from start to finish:
+
+procedure_init_17.
+*** true .          /* trivially true VC removed by Examiner */
+
+

@@ -1,0 +1,22 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+*****************************************************************************
+
+
+CREATED 31-MAY-2014, 16:12:43  SIMPLIFIED 31-MAY-2014, 16:13:22
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure ClosedLoop.Off
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_off_1.  @@@@@@@@@@
+---  Eliminated hypothesis H1 (true-hypothesis).
+

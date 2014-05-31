@@ -1,0 +1,248 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+*****************************************************************************
+
+
+CREATED 31-MAY-2014, 16:12:43  SIMPLIFIED 31-MAY-2014, 16:13:23
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure HRM.Tick
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_tick_1.  @@@@@@@@@@
+%%%  Simplified H15 on reading formula in, to give:
+     %%%  H15:  fld_ison(monitor__1) <-> fld_ison(monitor)
+***  Proved C1:  fld_rate(monitor__1) >= measures__bpm__first
+     using hypothesis H13.
+***  Proved C2:  fld_rate(monitor__1) <= measures__bpm__last
+     using hypothesis H14.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_tick_2.  @@@@@@@@@@
+%%%  Simplified H15 on reading formula in, to give:
+     %%%  H15:  fld_ison(monitor__1) <-> fld_ison(monitor)
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H14).
+-S-  Applied substitution rule tick_rules(1).
+     This was achieved by replacing all occurrences of error by:
+          1 / 50.
+<S>  New C1:  1 / 50 >= float__first
+<S>  New C2:  1 / 50 <= float__last
+-S-  Applied substitution rule tick_rules(8).
+     This was achieved by replacing all occurrences of float__first by:
+          - 340282000000000000000000000000000000000.
+<S>  New C1:  true
+-S-  Applied substitution rule tick_rules(9).
+     This was achieved by replacing all occurrences of float__last by:
+          340282000000000000000000000000000000000.
+<S>  New C2:  true
+-S-  Applied substitution rule tick_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New C3:  fld_rate(monitor__1) >= - 2147483648
+-S-  Applied substitution rule tick_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New C4:  fld_rate(monitor__1) <= 2147483647
+***  Proved C1:  true
+***  Proved C2:  true
++++  Using "A->B, A |- B" on hypotheses H15 & H11 yields a new hypothesis:
+     +++  H19:  fld_ison(monitor__1)
+-S-  Applied substitution rule tick_rules(13).
+     This was achieved by replacing all occurrences of measures__joules__first 
+          by:
+          0.
+<S>  New H7:  fld_impulse(hrt) >= 0
+-S-  Applied substitution rule tick_rules(14).
+     This was achieved by replacing all occurrences of measures__joules__last 
+          by:
+          45.
+<S>  New H8:  fld_impulse(hrt) <= 45
+-S-  Applied substitution rule tick_rules(18).
+     This was achieved by replacing all occurrences of measures__bpm__first by:
+          - 1.
+<S>  New H3:  fld_rate(monitor) >= - 1
+<S>  New H5:  fld_defaultchange(hrt) >= - 1
+<S>  New H9:  fld_rate(hrt) >= - 1
+<S>  New H13:  fld_rate(monitor__1) >= - 1
+-S-  Applied substitution rule tick_rules(19).
+     This was achieved by replacing all occurrences of measures__bpm__last by:
+          300.
+<S>  New H4:  fld_rate(monitor) <= 300
+<S>  New H6:  fld_defaultchange(hrt) <= 300
+<S>  New H10:  fld_rate(hrt) <= 300
+<S>  New H14:  fld_rate(monitor__1) <= 300
+***  Proved C3:  fld_rate(monitor__1) >= - 2147483648
+     using hypothesis H13.
+***  Proved C4:  fld_rate(monitor__1) <= 2147483647
+     using hypothesis H14.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_tick_3.  @@@@@@@@@@
+%%%  Simplified H15 on reading formula in, to give:
+     %%%  H15:  fld_ison(monitor__1) <-> fld_ison(monitor)
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H14).
+***  Proved C1:  randomnumber__uniformintegerwitherror(fld_rate(monitor__1), 
+          error) >= integer__first
+     using hypothesis H23.
+***  Proved C2:  randomnumber__uniformintegerwitherror(fld_rate(monitor__1), 
+          error) <= integer__last
+     using hypothesis H24.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_tick_4.  @@@@@@@@@@
+%%%  Simplified H15 on reading formula in, to give:
+     %%%  H15:  fld_ison(monitor__1) <-> fld_ison(monitor)
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H14).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H28).
+***  Proved C1:  measures__limitbpm(randomnumber__uniformintegerwitherror(
+          fld_rate(monitor__1), error)) >= measures__bpm__first
+     using hypothesis H27.
+***  Proved C2:  measures__limitbpm(randomnumber__uniformintegerwitherror(
+          fld_rate(monitor__1), error)) <= measures__bpm__last
+     using hypothesis H28.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_tick_5.  @@@@@@@@@@
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  true
+***  Proved C1:  true
+***  Proved C2:  measures__bpm__first <= measures__bpm__last
+     using hypotheses H3 & H4.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_tick_6.  @@@@@@@@@@
+%%%  Simplified H15 on reading formula in, to give:
+     %%%  H15:  fld_ison(monitor__1) <-> fld_ison(monitor)
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H14).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H28).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H27).
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as 
+          H28).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  not fld_ison(monitor__1) -> measures__limitbpm(
+          randomnumber__uniformintegerwitherror(fld_rate(monitor__1), error)) = 
+          measures__bpm__first
++++  Using "A->B, A |- B" on hypotheses H15 & H11 yields a new hypothesis:
+     +++  H33:  fld_ison(monitor__1)
+-S-  Applied substitution rule tick_rules(1).
+     This was achieved by replacing all occurrences of error by:
+          1 / 50.
+<S>  New H19:  1 / 50 >= float__first
+<S>  New H20:  1 / 50 <= float__last
+<S>  New H23:  randomnumber__uniformintegerwitherror(fld_rate(monitor__1), 1 / 
+          50) >= integer__first
+<S>  New H24:  randomnumber__uniformintegerwitherror(fld_rate(monitor__1), 1 / 
+          50) <= integer__last
+<S>  New H27:  measures__limitbpm(randomnumber__uniformintegerwitherror(
+          fld_rate(monitor__1), 1 / 50)) >= measures__bpm__first
+<S>  New H28:  measures__limitbpm(randomnumber__uniformintegerwitherror(
+          fld_rate(monitor__1), 1 / 50)) <= measures__bpm__last
+<S>  New H29:  measures__bpm__first <= measures__limitbpm(
+          randomnumber__uniformintegerwitherror(fld_rate(monitor__1), 1 / 50))
+<S>  New C1:  not fld_ison(monitor__1) -> measures__limitbpm(
+          randomnumber__uniformintegerwitherror(fld_rate(monitor__1), 1 / 50)) 
+          = measures__bpm__first
+-S-  Applied substitution rule tick_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H21:  fld_rate(monitor__1) >= - 2147483648
+<S>  New H23:  randomnumber__uniformintegerwitherror(fld_rate(monitor__1), 1 / 
+          50) >= - 2147483648
+-S-  Applied substitution rule tick_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H22:  fld_rate(monitor__1) <= 2147483647
+<S>  New H24:  randomnumber__uniformintegerwitherror(fld_rate(monitor__1), 1 / 
+          50) <= 2147483647
+-S-  Applied substitution rule tick_rules(8).
+     This was achieved by replacing all occurrences of float__first by:
+          - 340282000000000000000000000000000000000.
+<S>  New H19:  true
+-S-  Applied substitution rule tick_rules(9).
+     This was achieved by replacing all occurrences of float__last by:
+          340282000000000000000000000000000000000.
+<S>  New H20:  true
+-S-  Applied substitution rule tick_rules(13).
+     This was achieved by replacing all occurrences of measures__joules__first 
+          by:
+          0.
+<S>  New H7:  fld_impulse(hrt) >= 0
+-S-  Applied substitution rule tick_rules(14).
+     This was achieved by replacing all occurrences of measures__joules__last 
+          by:
+          45.
+<S>  New H8:  fld_impulse(hrt) <= 45
+-S-  Applied substitution rule tick_rules(18).
+     This was achieved by replacing all occurrences of measures__bpm__first by:
+          - 1.
+<S>  New H3:  fld_rate(monitor) >= - 1
+<S>  New H5:  fld_defaultchange(hrt) >= - 1
+<S>  New H9:  fld_rate(hrt) >= - 1
+<S>  New H13:  fld_rate(monitor__1) >= - 1
+<S>  New H27:  measures__limitbpm(randomnumber__uniformintegerwitherror(
+          fld_rate(monitor__1), 1 / 50)) >= - 1
+<S>  New H29:  - 1 <= measures__limitbpm(randomnumber__uniformintegerwitherror(
+          fld_rate(monitor__1), 1 / 50))
+<S>  New C1:  not fld_ison(monitor__1) -> measures__limitbpm(
+          randomnumber__uniformintegerwitherror(fld_rate(monitor__1), 1 / 50)) 
+          = - 1
+-S-  Applied substitution rule tick_rules(19).
+     This was achieved by replacing all occurrences of measures__bpm__last by:
+          300.
+<S>  New H4:  fld_rate(monitor) <= 300
+<S>  New H6:  fld_defaultchange(hrt) <= 300
+<S>  New H10:  fld_rate(hrt) <= 300
+<S>  New H14:  fld_rate(monitor__1) <= 300
+<S>  New H28:  measures__limitbpm(randomnumber__uniformintegerwitherror(
+          fld_rate(monitor__1), 1 / 50)) <= 300
+***  Proved C1:  not fld_ison(monitor__1) -> measures__limitbpm(
+          randomnumber__uniformintegerwitherror(fld_rate(monitor__1), 1 / 50)) 
+          = - 1
+     using hypothesis H33.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_tick_7.  @@@@@@@@@@
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  true
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  true
+***  Proved C1:  true
+***  PROVED VC.
+

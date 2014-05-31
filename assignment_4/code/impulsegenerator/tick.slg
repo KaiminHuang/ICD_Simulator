@@ -1,0 +1,79 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+*****************************************************************************
+
+
+CREATED 31-MAY-2014, 16:12:42  SIMPLIFIED 31-MAY-2014, 16:13:22
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure ImpulseGenerator.Tick
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_tick_1.  @@@@@@@@@@
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as H7)
+          .
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H10).
+***  Proved C1:  fld_impulse(generator) >= measures__joules__first
+     using hypothesis H3.
+***  Proved C2:  fld_impulse(generator) <= measures__joules__last
+     using hypothesis H4.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_tick_2.  @@@@@@@@@@
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as H7)
+          .
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H25).
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as 
+          H26).
+***  Proved C1:  not fld_ison(generator) -> hrtvariable__1 = hrt
+     using hypothesis H11.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_tick_3.  @@@@@@@@@@
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  true
+***  Proved C1:  true
+***  PROVED VC.
+

@@ -1,0 +1,25 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+*****************************************************************************
+
+
+CREATED 31-MAY-2014, 15:35:47  SIMPLIFIED 31-MAY-2014, 16:13:22
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure ICD.GetAbnormalNum
+
+
+
+
+For path(s) from start to finish:
+
+procedure_getabnormalnum_1.
+H1:    true .
+       ->
+C1:    false .
+
+

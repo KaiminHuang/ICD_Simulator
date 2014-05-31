@@ -1,0 +1,17 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                              {Examiner GPL 2011}
+             {Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.}
+           {*******************************************************}
+
+
+                        {DATE : 31-MAY-2014 16:20:10.94}
+
+                         {procedure ClosedLoop.Init}
+
+
+title procedure init;
+
+  function round__(real) : integer;
+
+end;

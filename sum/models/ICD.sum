@@ -1,0 +1,272 @@
+module ICD is
+
+  //Data types for the ICD system
+  BPM == -1 .. 300;
+  Joules == 0 .. 45;
+
+  //A schema representing a heart
+  schema Heart is
+  dec
+    //The heart rate
+    rate : BPM;
+
+    //The impulse to be administered to the heart 
+    impulse : Joules
+  end Heart;
+
+  //A schema representing an impulse generator
+  schema ImpulseGenerator is
+  dec
+    //Indicates whether the Pump is on
+    is_on : bool;
+
+    //The impulse to be administered to the heart at the next tick
+    impulse : Joules
+  end ImpulseGenerator;
+
+  //A schema representing a heart rate monitor
+  schema HRM is
+  dec
+    //Indicates whether the HRM is on
+    is_on : bool;
+
+    //The last reading from the heart
+    rate : BPM
+  end HRM;
+
+  //The system state consists of a heart, a monitor, and an impulse generator
+  schema state is
+  dec
+    heart : Heart;
+    hrm : HRM;
+    generator : ImpulseGenerator
+  end state;
+
+  //Initially, the impulse is the minimum. The heart rate is
+  //unconstrained, except that it cannot be negative
+  schema HeartInit is
+  dec
+    heart' : Heart
+  pred
+    //The measured rate is just non-negative
+    heart'.rate >= 0;
+    heart'.impulse = min(Joules)
+  end HeartInit;
+
+  //Initially, the impulse is the minimum, and the generator is off
+  schema ImpulseGeneratorInit is
+  dec
+    generator' : ImpulseGenerator
+  pred
+    not (generator'.is_on);
+    generator'.impulse = min(Joules)
+  end ImpulseGeneratorInit;
+
+  //Initially, there are no readings, and the monitor is off
+  schema HRMInit is
+  dec
+    hrm' : HRM
+  pred
+    not (hrm'.is_on);
+    hrm'.rate = min(BPM)
+  end HRMInit;
+
+  schema init is
+  pred
+    HeartInit;
+    ImpulseGeneratorInit;
+    HRMInit
+  end init;
+
+  ////////////////////////////////////////////////////////////
+  // Helper functions for the system
+  ////////////////////////////////////////////////////////////
+
+  //"Limit" an integer value to a set of values, by taking the min/max
+  //of the set if the value is lower/higher than the min/max of that set
+  //respectively
+  //Examples: limit(-1, 1..10) = 1
+  //          limit(5, 1..10) = 5
+  //          limit(15, 1..10) = 10
+  axiom is
+  dec
+    limit : int cross power int --> int
+  pred
+    forall i : int; ps : power int @ 
+        (i < min(ps) => limit(i, ps) = min(ps)) and 
+        (i >= min(ps) and i <= max(ps) => limit(i, ps) = i) and
+        (i > max(ps) => limit(i, ps) = max(ps))
+  end;
+
+  ////////////////////////////////////////////////////////////
+  // Operations for the Heart module
+  ////////////////////////////////////////////////////////////
+
+  axiom is
+  dec
+    HeartDefaultChange : BPM
+  pred
+    HeartDefaultChange = 1
+  end;
+
+  //For the purpose of animation, we specify a crude update:
+  //increase the heart rate by a constant if no impulse is delivered; and
+  //decrease the heart rate by the impulse if an impulse is delivered
+  //The case when a positive impulse is delivered:
+  op schema HeartTickNonZero is
+  pred
+    pre (heart.impulse > 0);
+    heart'.rate = limit(heart.rate - heart.impulse, BPM);
+    heart'.impulse = heart.impulse;
+    changes_only {heart}
+  end HeartTickNonZero;
+
+  //The case when no impulse is delivered
+  op schema HeartTickZero is
+  pred
+    pre (heart.impulse <= 0);
+    heart'.rate = limit(heart.rate + HeartDefaultChange, BPM);
+    changes_only {heart}
+  end HeartTickZero;
+
+  HeartTick == (HeartTickNonZero or HeartTickZero);
+
+  ////////////////////////////////////////////////////////////
+  // Operations for the ImpulseGenerator
+  ////////////////////////////////////////////////////////////
+
+  //Turn on the generator, but do not administer any impulses yet.
+  op schema ImpulseGeneratorOn is
+  pred
+    generator'.is_on;
+    generator'.impulse = generator.impulse;
+    changes_only {generator}
+  end ImpulseGeneratorOn;
+
+  //Turn off the generator
+  op schema ImpulseGeneratorOff is
+  pred
+    not (generator'.is_on);
+    generator'.impulse = generator.impulse;
+    changes_only {generator}
+  end ImpulseGeneratorOff;
+
+  //An operation for manually changing the impulse.
+  //This is for example purposes only, and is not part of the requirements.
+  op schema ImpulseGeneratorSetImpulseOn is
+  dec
+    impulse? : Joules
+  pred
+    pre (generator.is_on);
+    generator'.impulse = impulse?;
+    generator'.is_on = generator.is_on;
+    changes_only {generator}
+  end ImpulseGeneratorSetImpulseOn;
+
+  //Attempt to set the current impulse when the generator is off
+  op schema ImpulseGeneratorSetImpulseOff is
+  dec
+    impulse? : Joules
+  pred
+    pre (not (generator.is_on));
+    changes_only {}
+  end ImpulseGeneratorSetImpulseOff; 
+
+  //Attempt to set the current impulse
+  ImpulseGeneratorSetImpulse == 
+    (ImpulseGeneratorSetImpulseOn or ImpulseGeneratorSetImpulseOff);
+
+  //Get the current status of the generator
+  op schema ImpulseGeneratorStatus is
+  dec
+    is_on! : bool;
+    impulse! : Joules
+  pred
+    is_on! = generator.is_on;
+    impulse! = generator.impulse;
+    changes_only {}
+  end ImpulseGeneratorStatus;
+
+  //Tick the clock for the generator when the generator is on
+  //The heart 'receives' the input
+  op schema ImpulseGeneratorTickOn is
+  pred
+    pre (generator.is_on); 
+    heart'.impulse = generator.impulse;
+    heart'.rate = heart.rate;
+    changes_only {heart}
+  end ImpulseGeneratorTickOn;
+
+  //Tick the clock for the generator when the generator is off
+  op schema ImpulseGeneratorTickOff is
+  pred
+    pre (not (generator.is_on));
+    changes_only {}
+  end ImpulseGeneratorTickOff;
+
+  //Tick the clock for the generator, providing a impulse to the heart
+  //if the generator is on
+  ImpulseGeneratorTick == (ImpulseGeneratorTickOn or ImpulseGeneratorTickOff);
+
+  ////////////////////////////////////////////////////////////
+  // Operations for the HRM module
+  ////////////////////////////////////////////////////////////
+ 
+  //Turn on the HRM, but do not start readings
+  op schema HRMOn is
+  pred
+    hrm'.is_on;
+    hrm'.rate = hrm.rate;
+    changes_only {hrm}
+  end HRMOn;
+
+  //Turn off the HRM
+  op schema HRMOff is
+  pred
+    not (hrm'.is_on);
+    hrm'.rate = hrm.rate;
+    changes_only {hrm}
+  end HRMOff;
+
+  //Models reading the heart's blood pressure when the generator is on
+  op schema HRMGetPressureOn is
+  pred
+    pre (hrm.is_on);
+    hrm'.rate = heart.rate;
+    hrm'.is_on = hrm.is_on;
+    changes_only {hrm}
+  end HRMGetPressureOn;
+
+  //Models reading the heart's blood pressure when the generator is off
+  op schema HRMGetPressureOff is
+  pred
+    pre (not (hrm.is_on));
+    hrm'.rate = min(BPM);
+    hrm'.is_on = hrm.is_on;
+    changes_only {hrm}
+  end HRMGetPressureOff;
+
+  //Get the current status of the HRM
+  op schema HRMStatus is
+  dec
+    is_on! : bool;
+    rate! : BPM
+  pred
+    is_on! = hrm.is_on;
+    rate! = hrm.rate;
+    changes_only {}
+  end HRMStatus;
+
+  //Tick the clock for the HRM, which reads the heart's blood
+  //pressure if the HRM is on
+  HRMTick == (HRMGetPressureOn or HRMGetPressureOff);
+
+  ////////////////////////////////////////////////////////////
+  // Bringing the components together
+  ////////////////////////////////////////////////////////////
+
+  //The overall system tick
+  Tick == (ImpulseGeneratorTick s_compose HeartTick s_compose HRMTick)
+
+end ICD
+

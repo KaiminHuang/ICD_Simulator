@@ -1,0 +1,49 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+           *******************************************************
+
+
+                        DATE : 31-MAY-2014 16:20:10.71
+
+                         procedure Heart.SetImpulse
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 32:
+
+procedure_setimpulse_1.
+H1:    true .
+H2:    fld_defaultchange(hrt) >= measures__bpm__first .
+H3:    fld_defaultchange(hrt) <= measures__bpm__last .
+H4:    fld_impulse(hrt) >= measures__joules__first .
+H5:    fld_impulse(hrt) <= measures__joules__last .
+H6:    fld_rate(hrt) >= measures__bpm__first .
+H7:    fld_rate(hrt) <= measures__bpm__last .
+H8:    joules >= measures__joules__first .
+H9:    joules <= measures__joules__last .
+        ->
+C1:    joules >= measures__joules__first .
+C2:    joules <= measures__joules__last .
+ 
+
+For path(s) from start to finish:
+
+procedure_setimpulse_2.
+H1:    true .
+H2:    fld_defaultchange(hrt) >= measures__bpm__first .
+H3:    fld_defaultchange(hrt) <= measures__bpm__last .
+H4:    fld_impulse(hrt) >= measures__joules__first .
+H5:    fld_impulse(hrt) <= measures__joules__last .
+H6:    fld_rate(hrt) >= measures__bpm__first .
+H7:    fld_rate(hrt) <= measures__bpm__last .
+H8:    joules >= measures__joules__first .
+H9:    joules <= measures__joules__last .
+H10:   joules >= measures__joules__first .
+H11:   joules <= measures__joules__last .
+        ->
+C1:    fld_impulse(upf_impulse(hrt, joules)) = joules .
+ 
+

@@ -1,0 +1,69 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                              /*Examiner GPL 2011*/
+             /*Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.*/
+           /*********************************************************/
+
+
+                        /*DATE : 31-MAY-2014 16:20:10.92*/
+
+                             /*procedure ICD.Tick*/
+
+
+rule_family tick_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+tick_rules(1): integer__size >= 0 may_be_deduced.
+tick_rules(2): integer__first may_be_replaced_by -2147483648.
+tick_rules(3): integer__last may_be_replaced_by 2147483647.
+tick_rules(4): integer__base__first may_be_replaced_by -2147483648.
+tick_rules(5): integer__base__last may_be_replaced_by 2147483647.
+tick_rules(6): measures__joules__size >= 0 may_be_deduced.
+tick_rules(7): measures__joules__first may_be_replaced_by 0.
+tick_rules(8): measures__joules__last may_be_replaced_by 45.
+tick_rules(9): measures__joules__base__first may_be_replaced_by -2147483648.
+tick_rules(10): measures__joules__base__last may_be_replaced_by 2147483647.
+tick_rules(11): measures__bpm__size >= 0 may_be_deduced.
+tick_rules(12): measures__bpm__first may_be_replaced_by -1.
+tick_rules(13): measures__bpm__last may_be_replaced_by 300.
+tick_rules(14): measures__bpm__base__first may_be_replaced_by -2147483648.
+tick_rules(15): measures__bpm__base__last may_be_replaced_by 2147483647.
+tick_rules(16): impulsegenerator__generatortype__size >= 0 may_be_deduced.
+tick_rules(17): A = B may_be_deduced_from
+     [goal(checktype(A,impulsegenerator__generatortype)),
+      goal(checktype(B,impulsegenerator__generatortype)),
+      fld_impulse(A) = fld_impulse(B),
+      fld_ison(A) = fld_ison(B)].
+tick_rules(18): hrm__hrmtype__size >= 0 may_be_deduced.
+tick_rules(19): A = B may_be_deduced_from
+     [goal(checktype(A,hrm__hrmtype)),
+      goal(checktype(B,hrm__hrmtype)),
+      fld_rate(A) = fld_rate(B),
+      fld_ison(A) = fld_ison(B)].
+tick_rules(20): icdtype__size >= 0 may_be_deduced.
+tick_rules(21): A = B may_be_deduced_from
+     [goal(checktype(A,icdtype)),
+      goal(checktype(B,icdtype)),
+      fld_rate(A) = fld_rate(B),
+      fld_last6thrate(A) = fld_last6thrate(B),
+      fld_last5thrate(A) = fld_last5thrate(B),
+      fld_last4thrate(A) = fld_last4thrate(B),
+      fld_last3rdrate(A) = fld_last3rdrate(B),
+      fld_last2ndrate(A) = fld_last2ndrate(B),
+      fld_last1strate(A) = fld_last1strate(B),
+      fld_ison(A) = fld_ison(B),
+      fld_tachycardiabound(A) = fld_tachycardiabound(B),
+      fld_istachycardia(A) = fld_istachycardia(B),
+      fld_isinimpulseprocess(A) = fld_isinimpulseprocess(B),
+      fld_impulse(A) = fld_impulse(B),
+      fld_impulserate(A) = fld_impulserate(B),
+      fld_offset(A) = fld_offset(B),
+      fld_ticktonextimpulse(A) = fld_ticktonextimpulse(B),
+      fld_signal(A) = fld_signal(B),
+      fld_fibrillationbound(A) = fld_fibrillationbound(B),
+      fld_isfibrillation(A) = fld_isfibrillation(B),
+      fld_abnormalnum(A) = fld_abnormalnum(B),
+      fld_waitaftershock(A) = fld_waitaftershock(B),
+      fld_iswait(A) = fld_iswait(B)].

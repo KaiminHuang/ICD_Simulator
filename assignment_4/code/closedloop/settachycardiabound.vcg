@@ -1,0 +1,32 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+           *******************************************************
+
+
+                        DATE : 31-MAY-2014 16:20:10.97
+
+                  procedure ClosedLoop.setTachycardiaBound
+
+
+
+
+For path(s) from start to precondition check associated with statement of line 38:
+
+procedure_settachycardiabound_1.
+H1:    true .
+H2:    ub >= integer__first .
+H3:    ub <= integer__last .
+        ->
+C1:    ub >= integer__first .
+C2:    ub <= integer__last .
+C3:    fld_ison(fld_icds(cl)) = false .
+ 
+
+For path(s) from start to finish:
+
+procedure_settachycardiabound_2.
+*** true .          /* trivially true VC removed by Examiner */
+
+

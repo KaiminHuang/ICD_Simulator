@@ -1,0 +1,127 @@
+           *******************************************************
+                            Listing of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+           *******************************************************
+
+
+                        DATE : 31-MAY-2014 16:20:10.98
+
+Line
+   1  with Measures;
+   2  with Heart;
+   3  with HRM;
+   4  with ImpulseGenerator;
+   5  with ICD;
+   6  
+   7  package body ClosedLoop is
+   8   	procedure Init(cl : out ClosedLoopType) is
+   9  	begin
+  10     		--Initalise hrt, monitor, gen, icd
+  11  		Heart.Init(cl.Hrt);
+  12  		HRM.Init(cl.Monitor);
+  13  		ICD.Init(cl.Icds);
+  14  		ImpulseGenerator.Init(cl.Generator);
+  15  
+  16  	end Init;
+
++++        Flow analysis of subprogram Init performed: no 
+           errors found.
+
+  17  
+  18  	procedure Off (cl : in out ClosedLoopType) is
+  19  	begin
+  20  		-- set all components to Off
+  21  		ICD.Off(cl.Icds);
+  22      	HRM.Off(cl.Monitor);
+  23  		ImpulseGenerator.Off(cl.Generator);
+  24  	end Off;
+
++++        Flow analysis of subprogram Off performed: no 
+           errors found.
+
+  25  
+  26  	procedure On (cl : in out ClosedLoopType) is
+  27  	begin
+  28  		HRM.On(cl.Monitor, cl.Hrt);
+  29  		ImpulseGenerator.On(cl.Generator);
+  30  		Heart.Init(cl.Hrt);
+  31  		HRM.GetRate(cl.Monitor, cl.Icds.Rate);
+  32  		ICD.On(cl.Icds);
+  33  
+  34  	end On;
+
++++        Flow analysis of subprogram On performed: no 
+           errors found.
+
+  35  
+  36  	procedure setTachycardiaBound (cl : out ClosedLoopType; ub : in Integer) is
+  37  	begin
+  38  		ICD.setTachycardiaBound(cl.Icds, ub);
+      		^1
+!!! (  1)  Flow Error        : 23: Statement contains reference(s) to variable 
+           cl.Icds which has an undefined value.
+
+  39  	end setTachycardiaBound;
+
+!!! (  2)  Flow Error        : 32: The variable cl.Hrt is neither imported nor 
+           defined.
+!!! (  3)  Flow Error        : 32: The variable cl.Monitor is neither imported nor 
+           defined.
+!!! (  4)  Flow Error        : 32: The variable cl.Generator is neither imported 
+           nor defined.
+!!! (  5)  Flow Error        : 31: The variable cl.Hrt is exported but not 
+           (internally) defined.
+!!! (  6)  Flow Error        : 31: The variable cl.Monitor is exported but not 
+           (internally) defined.
+!!! (  7)  Flow Error        : 31: The variable cl.Generator is exported but not 
+           (internally) defined.
+??? (  8)  Flow Error        :602: The undefined initial value of cl may be used in 
+           the derivation of cl.
+
+  40  
+  41  	procedure setFibrillationBound (cl : out ClosedLoopType; ub : in Integer) is
+  42  	begin
+  43  		ICD.setFibrillationBound(cl.Icds, ub);
+      		^9
+!!! (  9)  Flow Error        : 23: Statement contains reference(s) to variable 
+           cl.Icds which has an undefined value.
+
+  44  	end setFibrillationBound;
+
+!!! ( 10)  Flow Error        : 32: The variable cl.Hrt is neither imported nor 
+           defined.
+!!! ( 11)  Flow Error        : 32: The variable cl.Monitor is neither imported nor 
+           defined.
+!!! ( 12)  Flow Error        : 32: The variable cl.Generator is neither imported 
+           nor defined.
+!!! ( 13)  Flow Error        : 31: The variable cl.Hrt is exported but not 
+           (internally) defined.
+!!! ( 14)  Flow Error        : 31: The variable cl.Monitor is exported but not 
+           (internally) defined.
+!!! ( 15)  Flow Error        : 31: The variable cl.Generator is exported but not 
+           (internally) defined.
+??? ( 16)  Flow Error        :602: The undefined initial value of cl may be used in 
+           the derivation of cl.
+
+  45  
+  46  	procedure tick (cl: in out ClosedLoopType) is 
+  47  	begin
+  48  		-- tick all components
+  49  		Heart.Tick(cl.Hrt);
+  50  		HRM.Tick(cl.Monitor, cl.Hrt);
+  51  		ICD.Tick(cl.Icds, cl.Monitor, cl.Generator);
+  52  		ImpulseGenerator.Tick(cl.Generator, cl.Hrt);
+  53  
+  54  	end tick;
+
++++        Flow analysis of subprogram tick performed: no 
+           errors found.
+
+  55  	
+  56  end ClosedLoop;
+No summarized warnings
+
+
+
+--End of file--------------------------------------------------

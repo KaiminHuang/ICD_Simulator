@@ -1,0 +1,29 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+*****************************************************************************
+
+
+CREATED 31-MAY-2014, 16:12:42  SIMPLIFIED 31-MAY-2014, 16:13:22
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Heart.GetImpulse
+
+
+
+
+
+
+@@@@@@@@@@  VC: function_getimpulse_1.  @@@@@@@@@@
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  true
+***  Proved C1:  true
+***  Proved C2:  fld_impulse(hrt) >= measures__joules__first
+     using hypothesis H4.
+***  Proved C3:  fld_impulse(hrt) <= measures__joules__last
+     using hypothesis H5.
+***  PROVED VC.
+

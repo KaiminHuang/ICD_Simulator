@@ -1,0 +1,38 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+*****************************************************************************
+
+
+CREATED 31-MAY-2014, 16:12:43  SIMPLIFIED 31-MAY-2014, 16:13:22
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure ICD.setTachycardiaBound
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_settachycardiabound_1.  @@@@@@@@@@
+%%%  Simplified H1 on reading formula in, to give:
+     %%%  H1:  not fld_ison(icdinstance)
+***  Proved C1:  ub >= integer__first
+     using hypothesis H39.
+***  Proved C2:  ub <= integer__last
+     using hypothesis H40.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_settachycardiabound_2.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_settachycardiabound_3.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
