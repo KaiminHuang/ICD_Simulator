@@ -16,7 +16,7 @@ package body ICD is
 
 		icdInstance.IsOn 				:= False;
 		--Tachycardia realated variables
-		icdInstance.TachycardiaBound 	:= 0;
+		icdInstance.TachycardiaBound 	:= Measures.TUB'First;
 		icdInstance.isTachycardia 		:= False;
 		icdInstance.isInImpulseProcess 	:= False;
 		icdInstance.Impulse 			:= 0;
@@ -25,7 +25,7 @@ package body ICD is
 		icdInstance.TickToNextImpulse 	:= 0;
 		icdInstance.Signal 				:= 10;
 		--Fibrillation realated variables
-		icdInstance.FibrillationBound 	:= 0;
+		icdInstance.FibrillationBound 	:= Measures.FUB'First;
 		icdInstance.isFibrillation		:= False;
 		icdInstance.isWait				:= False;
 		icdInstance.waitAfterShock      := 10;
@@ -45,7 +45,7 @@ package body ICD is
 		icdInstance.IsOn 				:= True;
 
 		--Tachycardia realated variables
-		icdInstance.TachycardiaBound 	:= 0;
+		icdInstance.TachycardiaBound 	:= Measures.TUB'First;
 		icdInstance.isTachycardia 		:= False;
 		icdInstance.isInImpulseProcess 	:= False;
 		icdInstance.Impulse 			:= 0;
@@ -54,7 +54,7 @@ package body ICD is
 		icdInstance.TickToNextImpulse 	:= 0;
 		icdInstance.Signal 				:= 10;
 		--Fibrillation realated variables
-		icdInstance.FibrillationBound 	:= 0;
+		icdInstance.FibrillationBound 	:= Measures.FUB'First;
 		icdInstance.isFibrillation		:= False;
 		icdInstance.isWait				:= False;
 		icdInstance.waitAfterShock      := 10;
@@ -75,6 +75,26 @@ package body ICD is
     	icdInstance.IsOn := False;
    	end Off;
 
+	procedure GetAbnormalNum (icdInstance : in out ICDType) is
+	begin 
+		icdInstance.AbnormalNum := 0;
+		if abs(icdInstance.Last6thRate - icdInstance.Last5thRate) >= icdInstance.FibrillationBound then
+			icdInstance.AbnormalNum := icdInstance.AbnormalNum + 1;
+		end if;
+		if abs(icdInstance.Last5thRate - icdInstance.Last4thRate) >= icdInstance.FibrillationBound then
+			icdInstance.AbnormalNum := icdInstance.AbnormalNum + 1;
+		end if;
+		if abs(icdInstance.Last4thRate - icdInstance.Last3rdRate) >= icdInstance.FibrillationBound then
+			icdInstance.AbnormalNum := icdInstance.AbnormalNum + 1;
+		end if;
+		if abs(icdInstance.Last3rdRate - icdInstance.Last2ndRate) >= icdInstance.FibrillationBound then
+			icdInstance.AbnormalNum := icdInstance.AbnormalNum + 1;
+		end if;
+		if abs(icdInstance.Last2ndRate - icdInstance.Last1stRate) >= icdInstance.FibrillationBound then
+			icdInstance.AbnormalNum := icdInstance.AbnormalNum + 1;
+		end if;
+	end GetAbnormalNum;	
+
 	procedure isTachycardia(icdInstance : in out ICDType) is
 	begin
 		-- check wheter the heart rate is higher than the upper bound
@@ -89,6 +109,7 @@ package body ICD is
 	procedure isFibrillation(icdInstance : in out ICDType) is
 	begin
 		-- if there are 3 abnormal rate in 5 ticks then it is considered as a Fibrillation
+		GetAbnormalNum(icdInstance);
 		if icdInstance.AbnormalNum > 3 then
 			icdInstance.isFibrillation := true;
 			-- when a Fibrillation is detected Tachycardia detection should be turn off, since 
@@ -98,12 +119,14 @@ package body ICD is
 			icdInstance.isFibrillation := False;
 		end if;
 	end isFibrillation;
+
+
    	procedure setFibrillationBound (icdInstance : in out ICDType; ub : in Integer) is
 	begin
 		-- The Fibrillation Bound can only be changed in Off mode
 		if not icdInstance.IsOn then
 			-- make sure the Ub is in the range
-			icdInstance.FibrillationBound := ub;
+			icdInstance.FibrillationBound :=  Measures.LimitFUB(ub);
 		end if;
 	end setFibrillationBound;
 
@@ -112,7 +135,7 @@ package body ICD is
 		-- The Fibrillation Bound can only be changed in Off mode
 		if not icdInstance.IsOn then
 			-- make sure the Ub is in the range
-			icdInstance.TachycardiaBound := ub;   
+			icdInstance.TachycardiaBound := Measures.LimitTUB(ub);   
 		end if;
 	end setTachycardiaBound;
 
@@ -122,10 +145,74 @@ package body ICD is
 		icdInstance.Last5thRate := icdInstance.Last4thRate;
 		icdInstance.Last4thRate := icdInstance.Last3rdRate;
 		icdInstance.Last3rdRate := icdInstance.Last2ndRate;
+		icdInstance.Last2ndRate := icdInstance.Last1stRate;
+		icdInstance.Last1stRate := icdInstance.Rate;
 		-- Update the last 1,2,3,4,5,6
 
 	end BPMArrayUpdate;
 
+	procedure CalculateAndSetImpluse(icdInstance : in out ICDType) is
+	begin
+		-- reset impulse to 0 before each caculation
+		icdInstance.Impulse := 0;
+		--check whether there is 1s after giving a shock
+		if not icdInstance.isWait then
+			-- Check whether there is a Fibrillation
+			if icdInstance.isFibrillation then
+				-- since Fibrillation is heavier than Tachycardia then if a Fibrillation is detected
+				--, set impulse to 30, and terminate all in process impulse
+				icdInstance.Impulse 			:= 30;
+				icdInstance.isInImpulseProcess 	:= False;
+				icdInstance.isWait				:= True;
+				-- reset tick and sinal to it's defualt value
+				icdInstance.TickToNextImpulse 	:= 0;
+				icdInstance.Signal 				:= 10;
+			end if;
+				
+			-- check whether there is a Tachycardia detected or a impulse treatment in process
+			if (icdInstance.isTachycardia or icdInstance.isInImpulseProcess) then
+				-- set the isInImpulseProcess to true indicatong that there is a treatment in 
+				-- process it will be changed to false when  a process is finised (signal == 0)
+				icdInstance.isInImpulseProcess := True;
+				--caculate the bpm, which equals Upper Bound + 15
+				icdInstance.ImpulseRate := icdInstance.TachycardiaBound + 15;
+				--caculate the offset between inpulse
+				icdInstance.offset := 600 / icdInstance.ImpulseRate;
+
+				if icdInstance.TickToNextImpulse = 0 then
+					-- if yes print "--Already in impulse procedure"
+					-- set Impluse value to 2 j;
+					icdInstance.Impulse := 2;
+					-- update how many signal remains need to send
+					icdInstance.Signal := icdInstance.Signal - 1;
+					-- set next impulse time to offset once it is 0
+					icdInstance.TickToNextImpulse := icdInstance.offset -1 ;
+				else
+					icdInstance.Impulse := 0;
+					icdInstance.TickToNextImpulse := icdInstance.TickToNextImpulse - 1;
+				end if;
+				-- if singal equals to 0 means the treatment is fninished then set the isTachycardia
+				-- to False set TickToNextImpulse to default 0 reset singal to 10
+				if icdInstance.Signal = 0 then
+					icdInstance.TickToNextImpulse := 0;
+					icdInstance.Signal := 10;
+					icdInstance.isInImpulseProcess := False;
+				end if;
+			end if;
+		end if;
+
+	end CalculateAndSetImpluse;
+
+	procedure isWait(icdInstance : in out ICDType) is
+	begin
+		if icdInstance.isWait then
+			icdInstance.waitAfterShock := icdInstance.waitAfterShock -1 ;
+			if icdInstance.waitAfterShock = 0 then
+				icdInstance.waitAfterShock := 10;
+				icdInstance.isWait := False;
+			end if;
+		end if;
+	end isWait;
 
 	procedure Tick(icdInstance : in out ICDType; Hm : in HRM.HRMType; Gen : in out ImpulseGenerator
 		.GeneratorType) is
@@ -133,14 +220,13 @@ package body ICD is
 		-- read the heart rate from hrm
 		HRM.GetRate(Hm, icdInstance.Rate);
 		BPMArrayUpdate(icdInstance);
-		icdInstance.Last1stRate := icdInstance.Rate;
 		--check whether there is 1s after giving a shock
-		-- isWait(icdInstance);
+		isWait(icdInstance);
 		--check whether there is a Tachycardia
 		isTachycardia(icdInstance);
 		--check whether there is a Fibrillation
 		isFibrillation(icdInstance);		
-		-- CalculateImpluse(icdInstance);
+		CalculateAndSetImpluse(icdInstance);
 		-- calculate and set the impluse
 		ImpulseGenerator.SetImpulse(Gen, icdInstance.Impulse);    
 	end Tick;

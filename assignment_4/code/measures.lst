@@ -5,7 +5,7 @@
            *******************************************************
 
 
-                        DATE : 31-MAY-2014 16:20:10.69
+                        DATE : 31-MAY-2014 19:43:59.02
 
 Line
    1  package body Measures is
@@ -48,7 +48,24 @@ Line
            performed: no errors found.
 
   28  
-  29  end Measures;
+  29     function LimitTUB(Input : in Integer) return TUB
+  30     is begin
+  31        return Limit(Input, TUB'First, TUB'Last);
+  32     end LimitTUB;
+
++++        Flow analysis of subprogram LimitTUB performed: 
+           no errors found.
+
+  33  
+  34     function LimitFUB(Input : in Integer) return FUB
+  35     is begin
+  36        return Limit(Input, FUB'First, FUB'Last);
+  37     end LimitFUB;
+
++++        Flow analysis of subprogram LimitFUB performed: 
+           no errors found.
+
+  38  end Measures;
 No summarized warnings
 
 

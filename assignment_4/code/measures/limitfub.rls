@@ -1,0 +1,27 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                              /*Examiner GPL 2011*/
+             /*Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.*/
+           /*********************************************************/
+
+
+                        /*DATE : 31-MAY-2014 19:43:59.02*/
+
+                         /*function Measures.LimitFUB*/
+
+
+rule_family limitfub_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+limitfub_rules(1): integer__size >= 0 may_be_deduced.
+limitfub_rules(2): integer__first may_be_replaced_by -2147483648.
+limitfub_rules(3): integer__last may_be_replaced_by 2147483647.
+limitfub_rules(4): integer__base__first may_be_replaced_by -2147483648.
+limitfub_rules(5): integer__base__last may_be_replaced_by 2147483647.
+limitfub_rules(6): fub__size >= 0 may_be_deduced.
+limitfub_rules(7): fub__first may_be_replaced_by 3.
+limitfub_rules(8): fub__last may_be_replaced_by 15.
+limitfub_rules(9): fub__base__first may_be_replaced_by -2147483648.
+limitfub_rules(10): fub__base__last may_be_replaced_by 2147483647.

@@ -1,0 +1,27 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                              /*Examiner GPL 2011*/
+             /*Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.*/
+           /*********************************************************/
+
+
+                        /*DATE : 31-MAY-2014 19:43:59.01*/
+
+                         /*function Measures.LimitTUB*/
+
+
+rule_family limittub_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+limittub_rules(1): integer__size >= 0 may_be_deduced.
+limittub_rules(2): integer__first may_be_replaced_by -2147483648.
+limittub_rules(3): integer__last may_be_replaced_by 2147483647.
+limittub_rules(4): integer__base__first may_be_replaced_by -2147483648.
+limittub_rules(5): integer__base__last may_be_replaced_by 2147483647.
+limittub_rules(6): tub__size >= 0 may_be_deduced.
+limittub_rules(7): tub__first may_be_replaced_by 100.
+limittub_rules(8): tub__last may_be_replaced_by 150.
+limittub_rules(9): tub__base__first may_be_replaced_by -2147483648.
+limittub_rules(10): tub__base__last may_be_replaced_by 2147483647.

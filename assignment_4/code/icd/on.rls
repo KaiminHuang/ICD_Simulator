@@ -5,7 +5,7 @@
            /*********************************************************/
 
 
-                        /*DATE : 31-MAY-2014 16:20:10.85*/
+                        /*DATE : 31-MAY-2014 19:43:59.18*/
 
                               /*procedure ICD.On*/
 
@@ -30,8 +30,18 @@ on_rules(12): measures__bpm__first may_be_replaced_by -1.
 on_rules(13): measures__bpm__last may_be_replaced_by 300.
 on_rules(14): measures__bpm__base__first may_be_replaced_by -2147483648.
 on_rules(15): measures__bpm__base__last may_be_replaced_by 2147483647.
-on_rules(16): icdtype__size >= 0 may_be_deduced.
-on_rules(17): A = B may_be_deduced_from
+on_rules(16): measures__tub__size >= 0 may_be_deduced.
+on_rules(17): measures__tub__first may_be_replaced_by 100.
+on_rules(18): measures__tub__last may_be_replaced_by 150.
+on_rules(19): measures__tub__base__first may_be_replaced_by -2147483648.
+on_rules(20): measures__tub__base__last may_be_replaced_by 2147483647.
+on_rules(21): measures__fub__size >= 0 may_be_deduced.
+on_rules(22): measures__fub__first may_be_replaced_by 3.
+on_rules(23): measures__fub__last may_be_replaced_by 15.
+on_rules(24): measures__fub__base__first may_be_replaced_by -2147483648.
+on_rules(25): measures__fub__base__last may_be_replaced_by 2147483647.
+on_rules(26): icdtype__size >= 0 may_be_deduced.
+on_rules(27): A = B may_be_deduced_from
      [goal(checktype(A,icdtype)),
       goal(checktype(B,icdtype)),
       fld_rate(A) = fld_rate(B),

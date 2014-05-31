@@ -1,0 +1,281 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+*****************************************************************************
+
+
+CREATED 31-MAY-2014, 19:37:37  SIMPLIFIED 31-MAY-2014, 19:44:13
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure ICD.CalculateImpluse
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 157:
+
+procedure_calculateimpluse_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 164:
+
+procedure_calculateimpluse_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 168:
+
+procedure_calculateimpluse_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 169:
+
+procedure_calculateimpluse_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 178:
+
+procedure_calculateimpluse_5.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 180:
+
+procedure_calculateimpluse_7.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 185:
+
+procedure_calculateimpluse_9.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 187:
+
+procedure_calculateimpluse_11.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_12.
+H1:    fld_waitaftershock(icdinstance) >= - 2147483648 .
+H2:    fld_waitaftershock(icdinstance) <= 2147483647 .
+H3:    fld_abnormalnum(icdinstance) >= - 2147483648 .
+H4:    fld_abnormalnum(icdinstance) <= 2147483647 .
+H5:    fld_fibrillationbound(icdinstance) >= 3 .
+H6:    fld_fibrillationbound(icdinstance) <= 15 .
+H7:    fld_signal(icdinstance) >= - 2147483648 .
+H8:    fld_signal(icdinstance) <= 2147483647 .
+H9:    fld_offset(icdinstance) >= - 2147483648 .
+H10:   fld_offset(icdinstance) <= 2147483647 .
+H11:   fld_impulserate(icdinstance) >= - 2147483648 .
+H12:   fld_impulserate(icdinstance) <= 2147483647 .
+H13:   fld_impulse(icdinstance) >= 0 .
+H14:   fld_impulse(icdinstance) <= 45 .
+H15:   fld_tachycardiabound(icdinstance) >= 100 .
+H16:   fld_tachycardiabound(icdinstance) <= 150 .
+H17:   fld_last1strate(icdinstance) >= - 1 .
+H18:   fld_last1strate(icdinstance) <= 300 .
+H19:   fld_last2ndrate(icdinstance) >= - 1 .
+H20:   fld_last2ndrate(icdinstance) <= 300 .
+H21:   fld_last3rdrate(icdinstance) >= - 1 .
+H22:   fld_last3rdrate(icdinstance) <= 300 .
+H23:   fld_last4thrate(icdinstance) >= - 1 .
+H24:   fld_last4thrate(icdinstance) <= 300 .
+H25:   fld_last5thrate(icdinstance) >= - 1 .
+H26:   fld_last5thrate(icdinstance) <= 300 .
+H27:   fld_last6thrate(icdinstance) >= - 1 .
+H28:   fld_last6thrate(icdinstance) <= 300 .
+H29:   fld_rate(icdinstance) >= - 1 .
+H30:   fld_rate(icdinstance) <= 300 .
+H31:   not fld_iswait(icdinstance) .
+H32:   not fld_isfibrillation(icdinstance) .
+H33:   fld_istachycardia(icdinstance) or fld_isinimpulseprocess(icdinstance) .
+H34:   600 div (fld_tachycardiabound(icdinstance) + 15) >= - 2147483648 .
+H35:   600 div (fld_tachycardiabound(icdinstance) + 15) <= 2147483647 .
+H36:   fld_ticktonextimpulse(icdinstance) = 0 .
+H37:   integer__size >= 0 .
+H38:   measures__joules__size >= 0 .
+H39:   measures__bpm__size >= 0 .
+H40:   measures__tub__size >= 0 .
+H41:   measures__fub__size >= 0 .
+H42:   icdtype__size >= 0 .
+       ->
+C1:    fld_signal(icdinstance) >= - 2147483647 .
+
+
+For path(s) from start to run-time check associated with statement of line 189:
+
+procedure_calculateimpluse_13.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_14.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 191:
+
+procedure_calculateimpluse_15.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_16.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 192:
+
+procedure_calculateimpluse_17.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_18.
+H1:    fld_waitaftershock(icdinstance) >= - 2147483648 .
+H2:    fld_waitaftershock(icdinstance) <= 2147483647 .
+H3:    fld_abnormalnum(icdinstance) >= - 2147483648 .
+H4:    fld_abnormalnum(icdinstance) <= 2147483647 .
+H5:    fld_fibrillationbound(icdinstance) >= 3 .
+H6:    fld_fibrillationbound(icdinstance) <= 15 .
+H7:    fld_signal(icdinstance) >= - 2147483648 .
+H8:    fld_signal(icdinstance) <= 2147483647 .
+H9:    fld_ticktonextimpulse(icdinstance) >= - 2147483648 .
+H10:   fld_ticktonextimpulse(icdinstance) <= 2147483647 .
+H11:   fld_offset(icdinstance) >= - 2147483648 .
+H12:   fld_offset(icdinstance) <= 2147483647 .
+H13:   fld_impulserate(icdinstance) >= - 2147483648 .
+H14:   fld_impulserate(icdinstance) <= 2147483647 .
+H15:   fld_impulse(icdinstance) >= 0 .
+H16:   fld_impulse(icdinstance) <= 45 .
+H17:   fld_tachycardiabound(icdinstance) >= 100 .
+H18:   fld_tachycardiabound(icdinstance) <= 150 .
+H19:   fld_last1strate(icdinstance) >= - 1 .
+H20:   fld_last1strate(icdinstance) <= 300 .
+H21:   fld_last2ndrate(icdinstance) >= - 1 .
+H22:   fld_last2ndrate(icdinstance) <= 300 .
+H23:   fld_last3rdrate(icdinstance) >= - 1 .
+H24:   fld_last3rdrate(icdinstance) <= 300 .
+H25:   fld_last4thrate(icdinstance) >= - 1 .
+H26:   fld_last4thrate(icdinstance) <= 300 .
+H27:   fld_last5thrate(icdinstance) >= - 1 .
+H28:   fld_last5thrate(icdinstance) <= 300 .
+H29:   fld_last6thrate(icdinstance) >= - 1 .
+H30:   fld_last6thrate(icdinstance) <= 300 .
+H31:   fld_rate(icdinstance) >= - 1 .
+H32:   fld_rate(icdinstance) <= 300 .
+H33:   not fld_iswait(icdinstance) .
+H34:   not fld_isfibrillation(icdinstance) .
+H35:   fld_istachycardia(icdinstance) or fld_isinimpulseprocess(icdinstance) .
+H36:   600 div (fld_tachycardiabound(icdinstance) + 15) >= - 2147483648 .
+H37:   600 div (fld_tachycardiabound(icdinstance) + 15) <= 2147483647 .
+H38:   fld_ticktonextimpulse(icdinstance) <> 0 .
+H39:   integer__size >= 0 .
+H40:   measures__joules__size >= 0 .
+H41:   measures__bpm__size >= 0 .
+H42:   measures__tub__size >= 0 .
+H43:   measures__fub__size >= 0 .
+H44:   icdtype__size >= 0 .
+       ->
+C1:    fld_ticktonextimpulse(icdinstance) >= - 2147483647 .
+
+
+For path(s) from start to run-time check associated with statement of line 197:
+
+procedure_calculateimpluse_19.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_20.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_21.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_22.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 198:
+
+procedure_calculateimpluse_23.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_24.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_25.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_26.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_calculateimpluse_27.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_28.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_29.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_30.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_31.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_32.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_33.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_34.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_35.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_36.
+*** true .          /* all conclusions proved */
+
+
+procedure_calculateimpluse_37.
+*** true .          /* all conclusions proved */
+
+

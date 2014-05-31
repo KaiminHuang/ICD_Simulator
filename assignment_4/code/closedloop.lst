@@ -5,7 +5,7 @@
            *******************************************************
 
 
-                        DATE : 31-MAY-2014 16:20:10.98
+                        DATE : 31-MAY-2014 19:43:59.71
 
 Line
    1  with Measures;
@@ -23,103 +23,81 @@ Line
   13  		ICD.Init(cl.Icds);
   14  		ImpulseGenerator.Init(cl.Generator);
   15  
-  16  	end Init;
+  16  		cl.IsOn 				:= False;
+  17  
+  18  	end Init;
 
 +++        Flow analysis of subprogram Init performed: no 
            errors found.
 
-  17  
-  18  	procedure Off (cl : in out ClosedLoopType) is
-  19  	begin
-  20  		-- set all components to Off
-  21  		ICD.Off(cl.Icds);
-  22      	HRM.Off(cl.Monitor);
-  23  		ImpulseGenerator.Off(cl.Generator);
-  24  	end Off;
+  19  
+  20  	procedure Off (cl : in out ClosedLoopType) is
+  21  	begin
+  22  		-- set all components to Off
+  23  		ICD.Off(cl.Icds);
+  24      	HRM.Off(cl.Monitor);
+  25  		ImpulseGenerator.Off(cl.Generator);
+  26  	end Off;
 
 +++        Flow analysis of subprogram Off performed: no 
            errors found.
 
-  25  
-  26  	procedure On (cl : in out ClosedLoopType) is
-  27  	begin
-  28  		HRM.On(cl.Monitor, cl.Hrt);
-  29  		ImpulseGenerator.On(cl.Generator);
-  30  		Heart.Init(cl.Hrt);
-  31  		HRM.GetRate(cl.Monitor, cl.Icds.Rate);
-  32  		ICD.On(cl.Icds);
-  33  
-  34  	end On;
+  27  
+  28  	procedure On (cl : in out ClosedLoopType) is
+  29  	begin
+  30  		HRM.On(cl.Monitor, cl.Hrt);
+  31  		ImpulseGenerator.On(cl.Generator);
+  32  		Heart.Init(cl.Hrt);
+  33  		HRM.GetRate(cl.Monitor, cl.Icds.Rate);
+  34  		ICD.On(cl.Icds);
+  35  	end On;
 
 +++        Flow analysis of subprogram On performed: no 
            errors found.
 
-  35  
-  36  	procedure setTachycardiaBound (cl : out ClosedLoopType; ub : in Integer) is
-  37  	begin
-  38  		ICD.setTachycardiaBound(cl.Icds, ub);
-      		^1
-!!! (  1)  Flow Error        : 23: Statement contains reference(s) to variable 
-           cl.Icds which has an undefined value.
+  36  
+  37  	procedure setTachycardiaBound (cl : in out ClosedLoopType; ub : in Integer) is
+  38  	begin
+  39  		ICD.setTachycardiaBound(cl.Icds, ub);
+  40  	end setTachycardiaBound;
 
-  39  	end setTachycardiaBound;
++++        Flow analysis of subprogram setTachycardiaBound 
+           performed: no errors found.
 
-!!! (  2)  Flow Error        : 32: The variable cl.Hrt is neither imported nor 
-           defined.
-!!! (  3)  Flow Error        : 32: The variable cl.Monitor is neither imported nor 
-           defined.
-!!! (  4)  Flow Error        : 32: The variable cl.Generator is neither imported 
-           nor defined.
-!!! (  5)  Flow Error        : 31: The variable cl.Hrt is exported but not 
-           (internally) defined.
-!!! (  6)  Flow Error        : 31: The variable cl.Monitor is exported but not 
-           (internally) defined.
-!!! (  7)  Flow Error        : 31: The variable cl.Generator is exported but not 
-           (internally) defined.
-??? (  8)  Flow Error        :602: The undefined initial value of cl may be used in 
-           the derivation of cl.
+  41  
+  42  	procedure setFibrillationBound (cl : in out ClosedLoopType; ub : in Integer) is
+  43  	begin
+  44  		ICD.setFibrillationBound(cl.Icds, ub);
+  45  	end setFibrillationBound;
 
-  40  
-  41  	procedure setFibrillationBound (cl : out ClosedLoopType; ub : in Integer) is
-  42  	begin
-  43  		ICD.setFibrillationBound(cl.Icds, ub);
-      		^9
-!!! (  9)  Flow Error        : 23: Statement contains reference(s) to variable 
-           cl.Icds which has an undefined value.
++++        Flow analysis of subprogram setFibrillationBound 
+           performed: no errors found.
 
-  44  	end setFibrillationBound;
-
-!!! ( 10)  Flow Error        : 32: The variable cl.Hrt is neither imported nor 
-           defined.
-!!! ( 11)  Flow Error        : 32: The variable cl.Monitor is neither imported nor 
-           defined.
-!!! ( 12)  Flow Error        : 32: The variable cl.Generator is neither imported 
-           nor defined.
-!!! ( 13)  Flow Error        : 31: The variable cl.Hrt is exported but not 
-           (internally) defined.
-!!! ( 14)  Flow Error        : 31: The variable cl.Monitor is exported but not 
-           (internally) defined.
-!!! ( 15)  Flow Error        : 31: The variable cl.Generator is exported but not 
-           (internally) defined.
-??? ( 16)  Flow Error        :602: The undefined initial value of cl may be used in 
-           the derivation of cl.
-
-  45  
-  46  	procedure tick (cl: in out ClosedLoopType) is 
-  47  	begin
-  48  		-- tick all components
-  49  		Heart.Tick(cl.Hrt);
-  50  		HRM.Tick(cl.Monitor, cl.Hrt);
-  51  		ICD.Tick(cl.Icds, cl.Monitor, cl.Generator);
-  52  		ImpulseGenerator.Tick(cl.Generator, cl.Hrt);
-  53  
-  54  	end tick;
+  46  
+  47  	procedure tick (cl: in out ClosedLoopType) is 
+  48  	begin
+  49  		-- tick all components
+  50  		Heart.Tick(cl.Hrt);
+  51  		HRM.Tick(cl.Monitor, cl.Hrt);
+  52  		ICD.Tick(cl.Icds, cl.Monitor, cl.Generator);
+  53  		ImpulseGenerator.Tick(cl.Generator, cl.Hrt);
+  54  
+  55  	end tick;
 
 +++        Flow analysis of subprogram tick performed: no 
            errors found.
 
-  55  	
-  56  end ClosedLoop;
+  56  
+  57  	function IsOn(cl: in ClosedLoopType) return Boolean is
+  58    	begin
+  59      	return cl.IsOn;
+  60  	end IsOn;
+
++++        Flow analysis of subprogram IsOn performed: no 
+           errors found.
+
+  61  	
+  62  end ClosedLoop;
 No summarized warnings
 
 

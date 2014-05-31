@@ -5,7 +5,7 @@
            /*********************************************************/
 
 
-                        /*DATE : 31-MAY-2014 16:20:10.97*/
+                        /*DATE : 31-MAY-2014 19:43:59.68*/
 
                   /*procedure ClosedLoop.setTachycardiaBound*/
 
@@ -30,27 +30,37 @@ settachycard_rules(12): measures__bpm__first may_be_replaced_by -1.
 settachycard_rules(13): measures__bpm__last may_be_replaced_by 300.
 settachycard_rules(14): measures__bpm__base__first may_be_replaced_by -2147483648.
 settachycard_rules(15): measures__bpm__base__last may_be_replaced_by 2147483647.
-settachycard_rules(16): heart__hearttype__size >= 0 may_be_deduced.
-settachycard_rules(17): A = B may_be_deduced_from
+settachycard_rules(16): measures__tub__size >= 0 may_be_deduced.
+settachycard_rules(17): measures__tub__first may_be_replaced_by 100.
+settachycard_rules(18): measures__tub__last may_be_replaced_by 150.
+settachycard_rules(19): measures__tub__base__first may_be_replaced_by -2147483648.
+settachycard_rules(20): measures__tub__base__last may_be_replaced_by 2147483647.
+settachycard_rules(21): measures__fub__size >= 0 may_be_deduced.
+settachycard_rules(22): measures__fub__first may_be_replaced_by 3.
+settachycard_rules(23): measures__fub__last may_be_replaced_by 15.
+settachycard_rules(24): measures__fub__base__first may_be_replaced_by -2147483648.
+settachycard_rules(25): measures__fub__base__last may_be_replaced_by 2147483647.
+settachycard_rules(26): heart__hearttype__size >= 0 may_be_deduced.
+settachycard_rules(27): A = B may_be_deduced_from
      [goal(checktype(A,heart__hearttype)),
       goal(checktype(B,heart__hearttype)),
       fld_rate(A) = fld_rate(B),
       fld_impulse(A) = fld_impulse(B),
       fld_defaultchange(A) = fld_defaultchange(B)].
-settachycard_rules(18): impulsegenerator__generatortype__size >= 0 may_be_deduced.
-settachycard_rules(19): A = B may_be_deduced_from
+settachycard_rules(28): impulsegenerator__generatortype__size >= 0 may_be_deduced.
+settachycard_rules(29): A = B may_be_deduced_from
      [goal(checktype(A,impulsegenerator__generatortype)),
       goal(checktype(B,impulsegenerator__generatortype)),
       fld_impulse(A) = fld_impulse(B),
       fld_ison(A) = fld_ison(B)].
-settachycard_rules(20): hrm__hrmtype__size >= 0 may_be_deduced.
-settachycard_rules(21): A = B may_be_deduced_from
+settachycard_rules(30): hrm__hrmtype__size >= 0 may_be_deduced.
+settachycard_rules(31): A = B may_be_deduced_from
      [goal(checktype(A,hrm__hrmtype)),
       goal(checktype(B,hrm__hrmtype)),
       fld_rate(A) = fld_rate(B),
       fld_ison(A) = fld_ison(B)].
-settachycard_rules(22): icd__icdtype__size >= 0 may_be_deduced.
-settachycard_rules(23): A = B may_be_deduced_from
+settachycard_rules(32): icd__icdtype__size >= 0 may_be_deduced.
+settachycard_rules(33): A = B may_be_deduced_from
      [goal(checktype(A,icd__icdtype)),
       goal(checktype(B,icd__icdtype)),
       fld_rate(A) = fld_rate(B),
@@ -74,11 +84,12 @@ settachycard_rules(23): A = B may_be_deduced_from
       fld_abnormalnum(A) = fld_abnormalnum(B),
       fld_waitaftershock(A) = fld_waitaftershock(B),
       fld_iswait(A) = fld_iswait(B)].
-settachycard_rules(24): closedlooptype__size >= 0 may_be_deduced.
-settachycard_rules(25): A = B may_be_deduced_from
+settachycard_rules(34): closedlooptype__size >= 0 may_be_deduced.
+settachycard_rules(35): A = B may_be_deduced_from
      [goal(checktype(A,closedlooptype)),
       goal(checktype(B,closedlooptype)),
       fld_hrt(A) = fld_hrt(B),
       fld_monitor(A) = fld_monitor(B),
       fld_generator(A) = fld_generator(B),
-      fld_icds(A) = fld_icds(B)].
+      fld_icds(A) = fld_icds(B),
+      fld_ison(A) = fld_ison(B)].

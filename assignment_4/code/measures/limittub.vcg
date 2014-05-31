@@ -1,0 +1,54 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+           *******************************************************
+
+
+                        DATE : 31-MAY-2014 19:43:59.01
+
+                         function Measures.LimitTUB
+
+
+
+
+For path(s) from start to precondition check associated with statement of line 31:
+
+function_limittub_1.
+H1:    true .
+H2:    input >= integer__first .
+H3:    input <= integer__last .
+        ->
+C1:    tub__first <= tub__last .
+C2:    tub__last >= integer__first .
+C3:    tub__last <= integer__last .
+C4:    tub__first >= integer__first .
+C5:    tub__first <= integer__last .
+C6:    input >= integer__first .
+C7:    input <= integer__last .
+ 
+
+For path(s) from start to finish:
+
+function_limittub_2.
+H1:    true .
+H2:    input >= integer__first .
+H3:    input <= integer__last .
+H4:    tub__first <= tub__last .
+H5:    tub__last >= integer__first .
+H6:    tub__last <= integer__last .
+H7:    tub__first >= integer__first .
+H8:    tub__first <= integer__last .
+H9:    input >= integer__first .
+H10:   input <= integer__last .
+H11:   limit(input, tub__first, tub__last) >= integer__first .
+H12:   limit(input, tub__first, tub__last) <= integer__last .
+H13:   tub__first <= limit(input, tub__first, tub__last) .
+H14:   limit(input, tub__first, tub__last) <= tub__last .
+        ->
+C1:    tub__first <= limit(input, tub__first, tub__last) .
+C2:    limit(input, tub__first, tub__last) <= tub__last .
+C3:    limit(input, tub__first, tub__last) >= tub__first .
+C4:    limit(input, tub__first, tub__last) <= tub__last .
+ 
+

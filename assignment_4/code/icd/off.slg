@@ -5,7 +5,7 @@
 *****************************************************************************
 
 
-CREATED 31-MAY-2014, 16:12:43  SIMPLIFIED 31-MAY-2014, 16:13:22
+CREATED 31-MAY-2014, 19:43:59  SIMPLIFIED 31-MAY-2014, 19:44:14
 
 SPARK Simplifier GPL 2011
 Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
@@ -18,5 +18,10 @@ procedure ICD.Off
 
 
 @@@@@@@@@@  VC: procedure_off_1.  @@@@@@@@@@
----  Eliminated hypothesis H1 (true-hypothesis).
+%%%  Simplified H1 on reading formula in, to give:
+     %%%  H1:  fld_ison(icdinstance)
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  true
+***  Proved C1:  true
+***  PROVED VC.
 

@@ -5,7 +5,7 @@
            {*******************************************************}
 
 
-                        {DATE : 31-MAY-2014 16:20:10.87}
+                        {DATE : 31-MAY-2014 19:43:59.20}
 
                              {function ICD.IsOn}
 
@@ -36,6 +36,10 @@ title function ison;
         waitaftershock : integer;
         iswait : boolean
      end;
+  const measures__fub__base__first : integer = pending; 
+  const measures__fub__base__last : integer = pending; 
+  const measures__tub__base__first : integer = pending; 
+  const measures__tub__base__last : integer = pending; 
   const measures__bpm__base__first : integer = pending; 
   const measures__bpm__base__last : integer = pending; 
   const measures__joules__base__first : integer = pending; 
@@ -43,6 +47,12 @@ title function ison;
   const integer__base__first : integer = pending; 
   const integer__base__last : integer = pending; 
   const icdtype__size : integer = pending; 
+  const measures__fub__first : integer = pending; 
+  const measures__fub__last : integer = pending; 
+  const measures__fub__size : integer = pending; 
+  const measures__tub__first : integer = pending; 
+  const measures__tub__last : integer = pending; 
+  const measures__tub__size : integer = pending; 
   const measures__bpm__first : integer = pending; 
   const measures__bpm__last : integer = pending; 
   const measures__bpm__size : integer = pending; 

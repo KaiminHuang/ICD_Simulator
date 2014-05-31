@@ -5,7 +5,7 @@
            /*********************************************************/
 
 
-                        /*DATE : 31-MAY-2014 16:20:10.89*/
+                        /*DATE : 31-MAY-2014 19:43:59.47*/
 
                      /*procedure ICD.setFibrillationBound*/
 
@@ -30,8 +30,18 @@ setfibrillat_rules(12): measures__bpm__first may_be_replaced_by -1.
 setfibrillat_rules(13): measures__bpm__last may_be_replaced_by 300.
 setfibrillat_rules(14): measures__bpm__base__first may_be_replaced_by -2147483648.
 setfibrillat_rules(15): measures__bpm__base__last may_be_replaced_by 2147483647.
-setfibrillat_rules(16): icdtype__size >= 0 may_be_deduced.
-setfibrillat_rules(17): A = B may_be_deduced_from
+setfibrillat_rules(16): measures__tub__size >= 0 may_be_deduced.
+setfibrillat_rules(17): measures__tub__first may_be_replaced_by 100.
+setfibrillat_rules(18): measures__tub__last may_be_replaced_by 150.
+setfibrillat_rules(19): measures__tub__base__first may_be_replaced_by -2147483648.
+setfibrillat_rules(20): measures__tub__base__last may_be_replaced_by 2147483647.
+setfibrillat_rules(21): measures__fub__size >= 0 may_be_deduced.
+setfibrillat_rules(22): measures__fub__first may_be_replaced_by 3.
+setfibrillat_rules(23): measures__fub__last may_be_replaced_by 15.
+setfibrillat_rules(24): measures__fub__base__first may_be_replaced_by -2147483648.
+setfibrillat_rules(25): measures__fub__base__last may_be_replaced_by 2147483647.
+setfibrillat_rules(26): icdtype__size >= 0 may_be_deduced.
+setfibrillat_rules(27): A = B may_be_deduced_from
      [goal(checktype(A,icdtype)),
       goal(checktype(B,icdtype)),
       fld_rate(A) = fld_rate(B),

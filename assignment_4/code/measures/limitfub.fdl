@@ -1,0 +1,29 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                              {Examiner GPL 2011}
+             {Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.}
+           {*******************************************************}
+
+
+                        {DATE : 31-MAY-2014 19:43:59.02}
+
+                         {function Measures.LimitFUB}
+
+
+title function limitfub;
+
+  function round__(real) : integer;
+  const fub__base__first : integer = pending; 
+  const fub__base__last : integer = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const fub__first : integer = pending; 
+  const fub__last : integer = pending; 
+  const fub__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var input : integer;
+  function limit(integer, integer, integer) : integer;
+
+end;

@@ -26,5 +26,14 @@ package body Measures is
       return Limit(Input, Joules'First, Joules'Last);
    end LimitJoules;
 
+   function LimitTUB(Input : in Integer) return TUB
+   is begin
+      return Limit(Input, TUB'First, TUB'Last);
+   end LimitTUB;
+
+   function LimitFUB(Input : in Integer) return FUB
+   is begin
+      return Limit(Input, FUB'First, FUB'Last);
+   end LimitFUB;
 end Measures;
 

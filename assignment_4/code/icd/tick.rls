@@ -5,7 +5,7 @@
            /*********************************************************/
 
 
-                        /*DATE : 31-MAY-2014 16:20:10.92*/
+                        /*DATE : 31-MAY-2014 19:43:59.63*/
 
                              /*procedure ICD.Tick*/
 
@@ -30,20 +30,30 @@ tick_rules(12): measures__bpm__first may_be_replaced_by -1.
 tick_rules(13): measures__bpm__last may_be_replaced_by 300.
 tick_rules(14): measures__bpm__base__first may_be_replaced_by -2147483648.
 tick_rules(15): measures__bpm__base__last may_be_replaced_by 2147483647.
-tick_rules(16): impulsegenerator__generatortype__size >= 0 may_be_deduced.
-tick_rules(17): A = B may_be_deduced_from
+tick_rules(16): measures__tub__size >= 0 may_be_deduced.
+tick_rules(17): measures__tub__first may_be_replaced_by 100.
+tick_rules(18): measures__tub__last may_be_replaced_by 150.
+tick_rules(19): measures__tub__base__first may_be_replaced_by -2147483648.
+tick_rules(20): measures__tub__base__last may_be_replaced_by 2147483647.
+tick_rules(21): measures__fub__size >= 0 may_be_deduced.
+tick_rules(22): measures__fub__first may_be_replaced_by 3.
+tick_rules(23): measures__fub__last may_be_replaced_by 15.
+tick_rules(24): measures__fub__base__first may_be_replaced_by -2147483648.
+tick_rules(25): measures__fub__base__last may_be_replaced_by 2147483647.
+tick_rules(26): impulsegenerator__generatortype__size >= 0 may_be_deduced.
+tick_rules(27): A = B may_be_deduced_from
      [goal(checktype(A,impulsegenerator__generatortype)),
       goal(checktype(B,impulsegenerator__generatortype)),
       fld_impulse(A) = fld_impulse(B),
       fld_ison(A) = fld_ison(B)].
-tick_rules(18): hrm__hrmtype__size >= 0 may_be_deduced.
-tick_rules(19): A = B may_be_deduced_from
+tick_rules(28): hrm__hrmtype__size >= 0 may_be_deduced.
+tick_rules(29): A = B may_be_deduced_from
      [goal(checktype(A,hrm__hrmtype)),
       goal(checktype(B,hrm__hrmtype)),
       fld_rate(A) = fld_rate(B),
       fld_ison(A) = fld_ison(B)].
-tick_rules(20): icdtype__size >= 0 may_be_deduced.
-tick_rules(21): A = B may_be_deduced_from
+tick_rules(30): icdtype__size >= 0 may_be_deduced.
+tick_rules(31): A = B may_be_deduced_from
      [goal(checktype(A,icdtype)),
       goal(checktype(B,icdtype)),
       fld_rate(A) = fld_rate(B),

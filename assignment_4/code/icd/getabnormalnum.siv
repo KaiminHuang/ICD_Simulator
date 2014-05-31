@@ -5,7 +5,7 @@
 *****************************************************************************
 
 
-CREATED 31-MAY-2014, 15:35:47  SIMPLIFIED 31-MAY-2014, 16:13:22
+CREATED 31-MAY-2014, 19:43:59  SIMPLIFIED 31-MAY-2014, 19:44:05
 
 SPARK Simplifier GPL 2011
 Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
@@ -15,11 +15,407 @@ procedure ICD.GetAbnormalNum
 
 
 
-For path(s) from start to finish:
+For path(s) from start to run-time check associated with statement of line 80:
 
 procedure_getabnormalnum_1.
-H1:    true .
-       ->
-C1:    false .
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 81:
+
+procedure_getabnormalnum_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 82:
+
+procedure_getabnormalnum_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 84:
+
+procedure_getabnormalnum_4.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 85:
+
+procedure_getabnormalnum_6.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 87:
+
+procedure_getabnormalnum_8.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_9.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_10.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 88:
+
+procedure_getabnormalnum_12.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_13.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_14.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_15.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 90:
+
+procedure_getabnormalnum_16.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_17.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_18.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_19.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_20.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_21.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_22.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_23.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 91:
+
+procedure_getabnormalnum_24.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_25.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_26.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_27.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_28.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_29.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_30.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_31.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 93:
+
+procedure_getabnormalnum_32.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_33.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_34.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_35.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_36.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_37.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_38.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_39.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_40.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_41.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_42.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_43.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_44.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_45.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_46.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_47.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 94:
+
+procedure_getabnormalnum_48.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_49.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_50.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_51.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_52.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_53.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_54.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_55.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_56.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_57.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_58.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_59.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_60.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_61.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_62.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_63.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_getabnormalnum_64.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_65.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_66.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_67.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_68.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_69.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_70.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_71.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_72.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_73.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_74.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_75.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_76.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_77.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_78.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_79.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_80.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_81.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_82.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_83.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_84.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_85.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_86.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_87.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_88.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_89.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_90.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_91.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_92.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_93.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_94.
+*** true .          /* all conclusions proved */
+
+
+procedure_getabnormalnum_95.
+*** true .          /* all conclusions proved */
 
 

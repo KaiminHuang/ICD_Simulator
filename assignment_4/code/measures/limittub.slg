@@ -1,0 +1,70 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+*****************************************************************************
+
+
+CREATED 31-MAY-2014, 19:43:59  SIMPLIFIED 31-MAY-2014, 19:44:00
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Measures.LimitTUB
+
+
+
+
+
+
+@@@@@@@@@@  VC: function_limittub_1.  @@@@@@@@@@
+***  Proved C6:  input >= integer__first
+     using hypothesis H2.
+***  Proved C7:  input <= integer__last
+     using hypothesis H3.
+-S-  Applied substitution rule limittub_rules(7).
+     This was achieved by replacing all occurrences of tub__first by:
+          100.
+<S>  New C1:  100 <= tub__last
+<S>  New C4:  100 >= integer__first
+<S>  New C5:  100 <= integer__last
+-S-  Applied substitution rule limittub_rules(8).
+     This was achieved by replacing all occurrences of tub__last by:
+          150.
+<S>  New C2:  150 >= integer__first
+<S>  New C3:  150 <= integer__last
+<S>  New C1:  true
+-S-  Applied substitution rule limittub_rules(2).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H2:  input >= - 2147483648
+<S>  New C4:  true
+<S>  New C2:  true
+-S-  Applied substitution rule limittub_rules(3).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H3:  input <= 2147483647
+<S>  New C5:  true
+<S>  New C3:  true
+***  Proved C1:  true
+***  Proved C4:  true
+***  Proved C2:  true
+***  Proved C5:  true
+***  Proved C3:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_limittub_2.  @@@@@@@@@@
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H3)
+          .
+***  Proved C1:  tub__first <= limit(input, tub__first, tub__last)
+     using hypothesis H13.
+***  Proved C2:  limit(input, tub__first, tub__last) <= tub__last
+     using hypothesis H14.
+***  Proved C3:  limit(input, tub__first, tub__last) >= tub__first
+     using hypothesis H13.
+***  Proved C4:  limit(input, tub__first, tub__last) <= tub__last
+     using hypothesis H14.
+***  PROVED VC.
+

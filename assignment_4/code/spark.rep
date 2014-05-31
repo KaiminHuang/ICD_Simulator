@@ -5,7 +5,7 @@
            *******************************************************
 
 
-                        DATE : 31-MAY-2014 16:20:10.98
+                        DATE : 31-MAY-2014 19:43:59.71
 
 Options:
     noswitch
@@ -230,13 +230,7 @@ Listing Filename:  /home/kaiminh/swen90010-2014/assignments/assignment-4/code/ic
    Unit type:  package body
    Unit has been analysed, any errors are listed below.
 
-1 error(s) or warning(s)
-
-Line
- 147  	end Tick;
-
-!!! (  1)  Flow Error        : 50: icdInstance is not derived from the imported 
-           value(s) of Gen.
+No errors found
 
 No summarized warnings
 
@@ -248,52 +242,7 @@ Listing Filename:  /home/kaiminh/swen90010-2014/assignments/assignment-4/code/cl
    Unit type:  package body
    Unit has been analysed, any errors are listed below.
 
-16 error(s) or warning(s)
-
-Line
-  38  		ICD.setTachycardiaBound(cl.Icds, ub);
-      		^1
-!!! (  1)  Flow Error        : 23: Statement contains reference(s) to variable 
-           cl.Icds which has an undefined value.
-
-  39  	end setTachycardiaBound;
-
-!!! (  2)  Flow Error        : 32: The variable cl.Hrt is neither imported nor 
-           defined.
-!!! (  3)  Flow Error        : 32: The variable cl.Monitor is neither imported nor 
-           defined.
-!!! (  4)  Flow Error        : 32: The variable cl.Generator is neither imported nor 
-           defined.
-!!! (  5)  Flow Error        : 31: The variable cl.Hrt is exported but not 
-           (internally) defined.
-!!! (  6)  Flow Error        : 31: The variable cl.Monitor is exported but not 
-           (internally) defined.
-!!! (  7)  Flow Error        : 31: The variable cl.Generator is exported but not 
-           (internally) defined.
-??? (  8)  Flow Error        :602: The undefined initial value of cl may be used in 
-           the derivation of cl.
-
-  43  		ICD.setFibrillationBound(cl.Icds, ub);
-      		^9
-!!! (  9)  Flow Error        : 23: Statement contains reference(s) to variable 
-           cl.Icds which has an undefined value.
-
-  44  	end setFibrillationBound;
-
-!!! ( 10)  Flow Error        : 32: The variable cl.Hrt is neither imported nor 
-           defined.
-!!! ( 11)  Flow Error        : 32: The variable cl.Monitor is neither imported nor 
-           defined.
-!!! ( 12)  Flow Error        : 32: The variable cl.Generator is neither imported nor 
-           defined.
-!!! ( 13)  Flow Error        : 31: The variable cl.Hrt is exported but not 
-           (internally) defined.
-!!! ( 14)  Flow Error        : 31: The variable cl.Monitor is exported but not 
-           (internally) defined.
-!!! ( 15)  Flow Error        : 31: The variable cl.Generator is exported but not 
-           (internally) defined.
-??? ( 16)  Flow Error        :602: The undefined initial value of cl may be used in 
-           the derivation of cl.
+No errors found
 
 No summarized warnings
 

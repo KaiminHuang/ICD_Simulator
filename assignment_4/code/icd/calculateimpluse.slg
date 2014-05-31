@@ -1,0 +1,1647 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+*****************************************************************************
+
+
+CREATED 31-MAY-2014, 19:37:37  SIMPLIFIED 31-MAY-2014, 19:44:13
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure ICD.CalculateImpluse
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_1.  @@@@@@@@@@
+-S-  Applied substitution rule calculateimp_rules(7).
+     This was achieved by replacing all occurrences of measures__joules__first 
+          by:
+          0.
+<S>  New H18:  fld_impulse(icdinstance) >= 0
+<S>  New C1:  true
+-S-  Applied substitution rule calculateimp_rules(8).
+     This was achieved by replacing all occurrences of measures__joules__last 
+          by:
+          45.
+<S>  New H19:  fld_impulse(icdinstance) <= 45
+<S>  New C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_2.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  fld_isfibrillation(icdinstance)
+***  Proved C1:  30 >= measures__joules__first
+     using hypothesis H39.
+-S-  Applied substitution rule calculateimp_rules(8).
+     This was achieved by replacing all occurrences of measures__joules__last 
+          by:
+          45.
+<S>  New H19:  fld_impulse(icdinstance) <= 45
+<S>  New H40:  true
+<S>  New C2:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_3.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  fld_isfibrillation(icdinstance)
+-S-  Applied substitution rule calculateimp_rules(2).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H3:  fld_waitaftershock(icdinstance) >= - 2147483648
+<S>  New H5:  fld_abnormalnum(icdinstance) >= - 2147483648
+<S>  New H10:  fld_signal(icdinstance) >= - 2147483648
+<S>  New H12:  fld_ticktonextimpulse(icdinstance) >= - 2147483648
+<S>  New H14:  fld_offset(icdinstance) >= - 2147483648
+<S>  New H16:  fld_impulserate(icdinstance) >= - 2147483648
+<S>  New C1:  true
+-S-  Applied substitution rule calculateimp_rules(3).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H4:  fld_waitaftershock(icdinstance) <= 2147483647
+<S>  New H6:  fld_abnormalnum(icdinstance) <= 2147483647
+<S>  New H11:  fld_signal(icdinstance) <= 2147483647
+<S>  New H13:  fld_ticktonextimpulse(icdinstance) <= 2147483647
+<S>  New H15:  fld_offset(icdinstance) <= 2147483647
+<S>  New H17:  fld_impulserate(icdinstance) <= 2147483647
+<S>  New C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_4.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  fld_isfibrillation(icdinstance)
+***  Proved C1:  10 >= integer__first
+     using hypothesis H45.
+-S-  Applied substitution rule calculateimp_rules(3).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H4:  fld_waitaftershock(icdinstance) <= 2147483647
+<S>  New H6:  fld_abnormalnum(icdinstance) <= 2147483647
+<S>  New H11:  fld_signal(icdinstance) <= 2147483647
+<S>  New H13:  fld_ticktonextimpulse(icdinstance) <= 2147483647
+<S>  New H15:  fld_offset(icdinstance) <= 2147483647
+<S>  New H17:  fld_impulserate(icdinstance) <= 2147483647
+<S>  New H46:  true
+<S>  New C2:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_5.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  fld_isfibrillation(icdinstance)
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  fld_istachycardia(icdinstance)
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+-S-  Applied substitution rule calculateimp_rules(2).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H3:  fld_waitaftershock(icdinstance) >= - 2147483648
+<S>  New H5:  fld_abnormalnum(icdinstance) >= - 2147483648
+<S>  New H10:  fld_signal(icdinstance) >= - 2147483648
+<S>  New H12:  fld_ticktonextimpulse(icdinstance) >= - 2147483648
+<S>  New H14:  fld_offset(icdinstance) >= - 2147483648
+<S>  New H16:  fld_impulserate(icdinstance) >= - 2147483648
+<S>  New H45:  true
+<S>  New H47:  true
+<S>  New C1:  fld_tachycardiabound(icdinstance) >= - 2147483663
+-S-  Applied substitution rule calculateimp_rules(3).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H4:  fld_waitaftershock(icdinstance) <= 2147483647
+<S>  New H6:  fld_abnormalnum(icdinstance) <= 2147483647
+<S>  New H11:  fld_signal(icdinstance) <= 2147483647
+<S>  New H13:  fld_ticktonextimpulse(icdinstance) <= 2147483647
+<S>  New H15:  fld_offset(icdinstance) <= 2147483647
+<S>  New H17:  fld_impulserate(icdinstance) <= 2147483647
+<S>  New H46:  true
+<S>  New H48:  true
+<S>  New C2:  fld_tachycardiabound(icdinstance) <= 2147483632
+-S-  Applied substitution rule calculateimp_rules(7).
+     This was achieved by replacing all occurrences of measures__joules__first 
+          by:
+          0.
+<S>  New H18:  fld_impulse(icdinstance) >= 0
+<S>  New H39:  true
+<S>  New H43:  true
+-S-  Applied substitution rule calculateimp_rules(8).
+     This was achieved by replacing all occurrences of measures__joules__last 
+          by:
+          45.
+<S>  New H19:  fld_impulse(icdinstance) <= 45
+<S>  New H40:  true
+<S>  New H44:  true
+-S-  Applied substitution rule calculateimp_rules(12).
+     This was achieved by replacing all occurrences of measures__bpm__first by:
+          - 1.
+<S>  New H25:  fld_last1strate(icdinstance) >= - 1
+<S>  New H27:  fld_last2ndrate(icdinstance) >= - 1
+<S>  New H29:  fld_last3rdrate(icdinstance) >= - 1
+<S>  New H31:  fld_last4thrate(icdinstance) >= - 1
+<S>  New H33:  fld_last5thrate(icdinstance) >= - 1
+<S>  New H35:  fld_last6thrate(icdinstance) >= - 1
+<S>  New H37:  fld_rate(icdinstance) >= - 1
+-S-  Applied substitution rule calculateimp_rules(13).
+     This was achieved by replacing all occurrences of measures__bpm__last by:
+          300.
+<S>  New H26:  fld_last1strate(icdinstance) <= 300
+<S>  New H28:  fld_last2ndrate(icdinstance) <= 300
+<S>  New H30:  fld_last3rdrate(icdinstance) <= 300
+<S>  New H32:  fld_last4thrate(icdinstance) <= 300
+<S>  New H34:  fld_last5thrate(icdinstance) <= 300
+<S>  New H36:  fld_last6thrate(icdinstance) <= 300
+<S>  New H38:  fld_rate(icdinstance) <= 300
+-S-  Applied substitution rule calculateimp_rules(17).
+     This was achieved by replacing all occurrences of measures__tub__first by:
+          100.
+<S>  New H22:  fld_tachycardiabound(icdinstance) >= 100
+-S-  Applied substitution rule calculateimp_rules(18).
+     This was achieved by replacing all occurrences of measures__tub__last by:
+          150.
+<S>  New H23:  fld_tachycardiabound(icdinstance) <= 150
+-S-  Applied substitution rule calculateimp_rules(22).
+     This was achieved by replacing all occurrences of measures__fub__first by:
+          3.
+<S>  New H8:  fld_fibrillationbound(icdinstance) >= 3
+-S-  Applied substitution rule calculateimp_rules(23).
+     This was achieved by replacing all occurrences of measures__fub__last by:
+          15.
+<S>  New H9:  fld_fibrillationbound(icdinstance) <= 15
+***  Proved C1:  fld_tachycardiabound(icdinstance) >= - 2147483663
+     using hypothesis H22.
+***  Proved C2:  fld_tachycardiabound(icdinstance) <= 2147483632
+     using hypothesis H23.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_6.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  not fld_isfibrillation(icdinstance)
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  fld_istachycardia(icdinstance) or fld_isinimpulseprocess(
+          icdinstance)
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+-S-  Applied substitution rule calculateimp_rules(2).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H3:  fld_waitaftershock(icdinstance) >= - 2147483648
+<S>  New H5:  fld_abnormalnum(icdinstance) >= - 2147483648
+<S>  New H10:  fld_signal(icdinstance) >= - 2147483648
+<S>  New H12:  fld_ticktonextimpulse(icdinstance) >= - 2147483648
+<S>  New H14:  fld_offset(icdinstance) >= - 2147483648
+<S>  New H16:  fld_impulserate(icdinstance) >= - 2147483648
+<S>  New C1:  fld_tachycardiabound(icdinstance) >= - 2147483663
+-S-  Applied substitution rule calculateimp_rules(3).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H4:  fld_waitaftershock(icdinstance) <= 2147483647
+<S>  New H6:  fld_abnormalnum(icdinstance) <= 2147483647
+<S>  New H11:  fld_signal(icdinstance) <= 2147483647
+<S>  New H13:  fld_ticktonextimpulse(icdinstance) <= 2147483647
+<S>  New H15:  fld_offset(icdinstance) <= 2147483647
+<S>  New H17:  fld_impulserate(icdinstance) <= 2147483647
+<S>  New C2:  fld_tachycardiabound(icdinstance) <= 2147483632
+-S-  Applied substitution rule calculateimp_rules(7).
+     This was achieved by replacing all occurrences of measures__joules__first 
+          by:
+          0.
+<S>  New H18:  fld_impulse(icdinstance) >= 0
+<S>  New H39:  true
+-S-  Applied substitution rule calculateimp_rules(8).
+     This was achieved by replacing all occurrences of measures__joules__last 
+          by:
+          45.
+<S>  New H19:  fld_impulse(icdinstance) <= 45
+<S>  New H40:  true
+-S-  Applied substitution rule calculateimp_rules(12).
+     This was achieved by replacing all occurrences of measures__bpm__first by:
+          - 1.
+<S>  New H25:  fld_last1strate(icdinstance) >= - 1
+<S>  New H27:  fld_last2ndrate(icdinstance) >= - 1
+<S>  New H29:  fld_last3rdrate(icdinstance) >= - 1
+<S>  New H31:  fld_last4thrate(icdinstance) >= - 1
+<S>  New H33:  fld_last5thrate(icdinstance) >= - 1
+<S>  New H35:  fld_last6thrate(icdinstance) >= - 1
+<S>  New H37:  fld_rate(icdinstance) >= - 1
+-S-  Applied substitution rule calculateimp_rules(13).
+     This was achieved by replacing all occurrences of measures__bpm__last by:
+          300.
+<S>  New H26:  fld_last1strate(icdinstance) <= 300
+<S>  New H28:  fld_last2ndrate(icdinstance) <= 300
+<S>  New H30:  fld_last3rdrate(icdinstance) <= 300
+<S>  New H32:  fld_last4thrate(icdinstance) <= 300
+<S>  New H34:  fld_last5thrate(icdinstance) <= 300
+<S>  New H36:  fld_last6thrate(icdinstance) <= 300
+<S>  New H38:  fld_rate(icdinstance) <= 300
+-S-  Applied substitution rule calculateimp_rules(17).
+     This was achieved by replacing all occurrences of measures__tub__first by:
+          100.
+<S>  New H22:  fld_tachycardiabound(icdinstance) >= 100
+-S-  Applied substitution rule calculateimp_rules(18).
+     This was achieved by replacing all occurrences of measures__tub__last by:
+          150.
+<S>  New H23:  fld_tachycardiabound(icdinstance) <= 150
+-S-  Applied substitution rule calculateimp_rules(22).
+     This was achieved by replacing all occurrences of measures__fub__first by:
+          3.
+<S>  New H8:  fld_fibrillationbound(icdinstance) >= 3
+-S-  Applied substitution rule calculateimp_rules(23).
+     This was achieved by replacing all occurrences of measures__fub__last by:
+          15.
+<S>  New H9:  fld_fibrillationbound(icdinstance) <= 15
+***  Proved C1:  fld_tachycardiabound(icdinstance) >= - 2147483663
+     using hypothesis H22.
+***  Proved C2:  fld_tachycardiabound(icdinstance) <= 2147483632
+     using hypothesis H23.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_7.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  fld_isfibrillation(icdinstance)
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  fld_istachycardia(icdinstance)
+%%%  Simplified H50 on reading formula in, to give:
+     %%%  H50:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified H51 on reading formula in, to give:
+     %%%  H51:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  600 div (fld_tachycardiabound(icdinstance) + 15) >= 
+          integer__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  600 div (fld_tachycardiabound(icdinstance) + 15) <= integer__last
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  fld_tachycardiabound(icdinstance) <> - 15
+-S-  Applied substitution rule calculateimp_rules(2).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H3:  fld_waitaftershock(icdinstance) >= - 2147483648
+<S>  New H5:  fld_abnormalnum(icdinstance) >= - 2147483648
+<S>  New H10:  fld_signal(icdinstance) >= - 2147483648
+<S>  New H12:  fld_ticktonextimpulse(icdinstance) >= - 2147483648
+<S>  New H14:  fld_offset(icdinstance) >= - 2147483648
+<S>  New H16:  fld_impulserate(icdinstance) >= - 2147483648
+<S>  New H45:  true
+<S>  New H47:  true
+<S>  New H50:  fld_tachycardiabound(icdinstance) >= - 2147483663
+<S>  New C1:  600 div (fld_tachycardiabound(icdinstance) + 15) >= - 2147483648
+-S-  Applied substitution rule calculateimp_rules(3).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H4:  fld_waitaftershock(icdinstance) <= 2147483647
+<S>  New H6:  fld_abnormalnum(icdinstance) <= 2147483647
+<S>  New H11:  fld_signal(icdinstance) <= 2147483647
+<S>  New H13:  fld_ticktonextimpulse(icdinstance) <= 2147483647
+<S>  New H15:  fld_offset(icdinstance) <= 2147483647
+<S>  New H17:  fld_impulserate(icdinstance) <= 2147483647
+<S>  New H46:  true
+<S>  New H48:  true
+<S>  New H51:  fld_tachycardiabound(icdinstance) <= 2147483632
+<S>  New C2:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 2147483647
+-S-  Applied substitution rule calculateimp_rules(7).
+     This was achieved by replacing all occurrences of measures__joules__first 
+          by:
+          0.
+<S>  New H18:  fld_impulse(icdinstance) >= 0
+<S>  New H39:  true
+<S>  New H43:  true
+-S-  Applied substitution rule calculateimp_rules(8).
+     This was achieved by replacing all occurrences of measures__joules__last 
+          by:
+          45.
+<S>  New H19:  fld_impulse(icdinstance) <= 45
+<S>  New H40:  true
+<S>  New H44:  true
+-S-  Applied substitution rule calculateimp_rules(12).
+     This was achieved by replacing all occurrences of measures__bpm__first by:
+          - 1.
+<S>  New H25:  fld_last1strate(icdinstance) >= - 1
+<S>  New H27:  fld_last2ndrate(icdinstance) >= - 1
+<S>  New H29:  fld_last3rdrate(icdinstance) >= - 1
+<S>  New H31:  fld_last4thrate(icdinstance) >= - 1
+<S>  New H33:  fld_last5thrate(icdinstance) >= - 1
+<S>  New H35:  fld_last6thrate(icdinstance) >= - 1
+<S>  New H37:  fld_rate(icdinstance) >= - 1
+-S-  Applied substitution rule calculateimp_rules(13).
+     This was achieved by replacing all occurrences of measures__bpm__last by:
+          300.
+<S>  New H26:  fld_last1strate(icdinstance) <= 300
+<S>  New H28:  fld_last2ndrate(icdinstance) <= 300
+<S>  New H30:  fld_last3rdrate(icdinstance) <= 300
+<S>  New H32:  fld_last4thrate(icdinstance) <= 300
+<S>  New H34:  fld_last5thrate(icdinstance) <= 300
+<S>  New H36:  fld_last6thrate(icdinstance) <= 300
+<S>  New H38:  fld_rate(icdinstance) <= 300
+-S-  Applied substitution rule calculateimp_rules(17).
+     This was achieved by replacing all occurrences of measures__tub__first by:
+          100.
+<S>  New H22:  fld_tachycardiabound(icdinstance) >= 100
+-S-  Applied substitution rule calculateimp_rules(18).
+     This was achieved by replacing all occurrences of measures__tub__last by:
+          150.
+<S>  New H23:  fld_tachycardiabound(icdinstance) <= 150
+-S-  Applied substitution rule calculateimp_rules(22).
+     This was achieved by replacing all occurrences of measures__fub__first by:
+          3.
+<S>  New H8:  fld_fibrillationbound(icdinstance) >= 3
+-S-  Applied substitution rule calculateimp_rules(23).
+     This was achieved by replacing all occurrences of measures__fub__last by:
+          15.
+<S>  New H9:  fld_fibrillationbound(icdinstance) <= 15
+***  Proved C3:  fld_tachycardiabound(icdinstance) <> - 15
+     using hypothesis H22.
+---  Eliminated hypothesis H1 (true-hypothesis).
+---  Eliminated hypothesis H2 (true-hypothesis).
+---  Eliminated hypothesis H7 (true-hypothesis).
+---  Eliminated hypothesis H20 (true-hypothesis).
+---  Eliminated hypothesis H21 (true-hypothesis).
+---  Eliminated hypothesis H24 (true-hypothesis).
+---  Eliminated hypothesis H45 (true-hypothesis).
+---  Eliminated hypothesis H46 (true-hypothesis).
+---  Eliminated hypothesis H47 (true-hypothesis).
+---  Eliminated hypothesis H48 (true-hypothesis).
+---  Eliminated hypothesis H39 (true-hypothesis).
+---  Eliminated hypothesis H43 (true-hypothesis).
+---  Eliminated hypothesis H40 (true-hypothesis).
+---  Eliminated hypothesis H44 (true-hypothesis).
+---  Eliminated hypothesis H50 (redundant, given H22).
+---  Eliminated hypothesis H51 (redundant, given H23).
+***  Proved C1:  600 div (fld_tachycardiabound(icdinstance) + 15) >= - 
+          2147483648
+     using hypothesis H22.
+***  Proved C2:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 2147483647
+     using hypothesis H22.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_8.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  not fld_isfibrillation(icdinstance)
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  fld_istachycardia(icdinstance) or fld_isinimpulseprocess(
+          icdinstance)
+%%%  Simplified H44 on reading formula in, to give:
+     %%%  H44:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified H45 on reading formula in, to give:
+     %%%  H45:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  600 div (fld_tachycardiabound(icdinstance) + 15) >= 
+          integer__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  600 div (fld_tachycardiabound(icdinstance) + 15) <= integer__last
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  fld_tachycardiabound(icdinstance) <> - 15
+-S-  Applied substitution rule calculateimp_rules(2).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H3:  fld_waitaftershock(icdinstance) >= - 2147483648
+<S>  New H5:  fld_abnormalnum(icdinstance) >= - 2147483648
+<S>  New H10:  fld_signal(icdinstance) >= - 2147483648
+<S>  New H12:  fld_ticktonextimpulse(icdinstance) >= - 2147483648
+<S>  New H14:  fld_offset(icdinstance) >= - 2147483648
+<S>  New H16:  fld_impulserate(icdinstance) >= - 2147483648
+<S>  New H44:  fld_tachycardiabound(icdinstance) >= - 2147483663
+<S>  New C1:  600 div (fld_tachycardiabound(icdinstance) + 15) >= - 2147483648
+-S-  Applied substitution rule calculateimp_rules(3).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H4:  fld_waitaftershock(icdinstance) <= 2147483647
+<S>  New H6:  fld_abnormalnum(icdinstance) <= 2147483647
+<S>  New H11:  fld_signal(icdinstance) <= 2147483647
+<S>  New H13:  fld_ticktonextimpulse(icdinstance) <= 2147483647
+<S>  New H15:  fld_offset(icdinstance) <= 2147483647
+<S>  New H17:  fld_impulserate(icdinstance) <= 2147483647
+<S>  New H45:  fld_tachycardiabound(icdinstance) <= 2147483632
+<S>  New C2:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 2147483647
+-S-  Applied substitution rule calculateimp_rules(7).
+     This was achieved by replacing all occurrences of measures__joules__first 
+          by:
+          0.
+<S>  New H18:  fld_impulse(icdinstance) >= 0
+<S>  New H39:  true
+-S-  Applied substitution rule calculateimp_rules(8).
+     This was achieved by replacing all occurrences of measures__joules__last 
+          by:
+          45.
+<S>  New H19:  fld_impulse(icdinstance) <= 45
+<S>  New H40:  true
+-S-  Applied substitution rule calculateimp_rules(12).
+     This was achieved by replacing all occurrences of measures__bpm__first by:
+          - 1.
+<S>  New H25:  fld_last1strate(icdinstance) >= - 1
+<S>  New H27:  fld_last2ndrate(icdinstance) >= - 1
+<S>  New H29:  fld_last3rdrate(icdinstance) >= - 1
+<S>  New H31:  fld_last4thrate(icdinstance) >= - 1
+<S>  New H33:  fld_last5thrate(icdinstance) >= - 1
+<S>  New H35:  fld_last6thrate(icdinstance) >= - 1
+<S>  New H37:  fld_rate(icdinstance) >= - 1
+-S-  Applied substitution rule calculateimp_rules(13).
+     This was achieved by replacing all occurrences of measures__bpm__last by:
+          300.
+<S>  New H26:  fld_last1strate(icdinstance) <= 300
+<S>  New H28:  fld_last2ndrate(icdinstance) <= 300
+<S>  New H30:  fld_last3rdrate(icdinstance) <= 300
+<S>  New H32:  fld_last4thrate(icdinstance) <= 300
+<S>  New H34:  fld_last5thrate(icdinstance) <= 300
+<S>  New H36:  fld_last6thrate(icdinstance) <= 300
+<S>  New H38:  fld_rate(icdinstance) <= 300
+-S-  Applied substitution rule calculateimp_rules(17).
+     This was achieved by replacing all occurrences of measures__tub__first by:
+          100.
+<S>  New H22:  fld_tachycardiabound(icdinstance) >= 100
+-S-  Applied substitution rule calculateimp_rules(18).
+     This was achieved by replacing all occurrences of measures__tub__last by:
+          150.
+<S>  New H23:  fld_tachycardiabound(icdinstance) <= 150
+-S-  Applied substitution rule calculateimp_rules(22).
+     This was achieved by replacing all occurrences of measures__fub__first by:
+          3.
+<S>  New H8:  fld_fibrillationbound(icdinstance) >= 3
+-S-  Applied substitution rule calculateimp_rules(23).
+     This was achieved by replacing all occurrences of measures__fub__last by:
+          15.
+<S>  New H9:  fld_fibrillationbound(icdinstance) <= 15
+***  Proved C3:  fld_tachycardiabound(icdinstance) <> - 15
+     using hypothesis H22.
+---  Eliminated hypothesis H1 (true-hypothesis).
+---  Eliminated hypothesis H2 (true-hypothesis).
+---  Eliminated hypothesis H7 (true-hypothesis).
+---  Eliminated hypothesis H20 (true-hypothesis).
+---  Eliminated hypothesis H21 (true-hypothesis).
+---  Eliminated hypothesis H24 (true-hypothesis).
+---  Eliminated hypothesis H39 (true-hypothesis).
+---  Eliminated hypothesis H40 (true-hypothesis).
+---  Eliminated hypothesis H44 (redundant, given H22).
+---  Eliminated hypothesis H45 (redundant, given H23).
+***  Proved C1:  600 div (fld_tachycardiabound(icdinstance) + 15) >= - 
+          2147483648
+     using hypothesis H22.
+***  Proved C2:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 2147483647
+     using hypothesis H22.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_9.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  fld_isfibrillation(icdinstance)
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  fld_istachycardia(icdinstance)
+%%%  Simplified H50 on reading formula in, to give:
+     %%%  H50:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified H51 on reading formula in, to give:
+     %%%  H51:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+%%%  Simplified H52 on reading formula in, to give:
+     %%%  H52:  600 div (fld_tachycardiabound(icdinstance) + 15) >= 
+          integer__first
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 
+          integer__last
+%%%  Simplified H54 on reading formula in, to give:
+     %%%  H54:  fld_tachycardiabound(icdinstance) <> - 15
+%%%  Simplified H55 on reading formula in, to give:
+     %%%  H55:  true
+***  Proved C1:  2 >= measures__joules__first
+     using hypothesis H39.
+***  Proved C2:  2 <= measures__joules__last
+     using hypothesis H44.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_10.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  not fld_isfibrillation(icdinstance)
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  fld_istachycardia(icdinstance) or fld_isinimpulseprocess(
+          icdinstance)
+%%%  Simplified H44 on reading formula in, to give:
+     %%%  H44:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified H45 on reading formula in, to give:
+     %%%  H45:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+%%%  Simplified H46 on reading formula in, to give:
+     %%%  H46:  600 div (fld_tachycardiabound(icdinstance) + 15) >= 
+          integer__first
+%%%  Simplified H47 on reading formula in, to give:
+     %%%  H47:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 
+          integer__last
+%%%  Simplified H48 on reading formula in, to give:
+     %%%  H48:  fld_tachycardiabound(icdinstance) <> - 15
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  fld_ticktonextimpulse(icdinstance) = 0
+***  Proved C1:  2 >= measures__joules__first
+     using hypothesis H39.
+-S-  Applied substitution rule calculateimp_rules(8).
+     This was achieved by replacing all occurrences of measures__joules__last 
+          by:
+          45.
+<S>  New H19:  fld_impulse(icdinstance) <= 45
+<S>  New H40:  true
+<S>  New C2:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_11.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  fld_isfibrillation(icdinstance)
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  fld_istachycardia(icdinstance)
+%%%  Simplified H50 on reading formula in, to give:
+     %%%  H50:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified H51 on reading formula in, to give:
+     %%%  H51:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+%%%  Simplified H52 on reading formula in, to give:
+     %%%  H52:  600 div (fld_tachycardiabound(icdinstance) + 15) >= 
+          integer__first
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 
+          integer__last
+%%%  Simplified H54 on reading formula in, to give:
+     %%%  H54:  fld_tachycardiabound(icdinstance) <> - 15
+%%%  Simplified H55 on reading formula in, to give:
+     %%%  H55:  true
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  9 >= integer__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  9 <= integer__last
+***  Proved C1:  9 >= integer__first
+     using hypothesis H45.
+***  Proved C2:  9 <= integer__last
+     using hypothesis H48.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_12.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  not fld_isfibrillation(icdinstance)
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  fld_istachycardia(icdinstance) or fld_isinimpulseprocess(
+          icdinstance)
+%%%  Simplified H44 on reading formula in, to give:
+     %%%  H44:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified H45 on reading formula in, to give:
+     %%%  H45:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+%%%  Simplified H46 on reading formula in, to give:
+     %%%  H46:  600 div (fld_tachycardiabound(icdinstance) + 15) >= 
+          integer__first
+%%%  Simplified H47 on reading formula in, to give:
+     %%%  H47:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 
+          integer__last
+%%%  Simplified H48 on reading formula in, to give:
+     %%%  H48:  fld_tachycardiabound(icdinstance) <> - 15
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  fld_ticktonextimpulse(icdinstance) = 0
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  fld_signal(icdinstance) - 1 >= integer__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  fld_signal(icdinstance) - 1 <= integer__last
+***  Proved C2:  fld_signal(icdinstance) - 1 <= integer__last
+     using hypothesis H11.
+-S-  Applied substitution rule calculateimp_rules(2).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H3:  fld_waitaftershock(icdinstance) >= - 2147483648
+<S>  New H5:  fld_abnormalnum(icdinstance) >= - 2147483648
+<S>  New H10:  fld_signal(icdinstance) >= - 2147483648
+<S>  New H12:  fld_ticktonextimpulse(icdinstance) >= - 2147483648
+<S>  New H14:  fld_offset(icdinstance) >= - 2147483648
+<S>  New H16:  fld_impulserate(icdinstance) >= - 2147483648
+<S>  New H44:  fld_tachycardiabound(icdinstance) >= - 2147483663
+<S>  New H46:  600 div (fld_tachycardiabound(icdinstance) + 15) >= - 2147483648
+<S>  New C1:  fld_signal(icdinstance) >= - 2147483647
+-S-  Applied substitution rule calculateimp_rules(3).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H4:  fld_waitaftershock(icdinstance) <= 2147483647
+<S>  New H6:  fld_abnormalnum(icdinstance) <= 2147483647
+<S>  New H11:  fld_signal(icdinstance) <= 2147483647
+<S>  New H13:  fld_ticktonextimpulse(icdinstance) <= 2147483647
+<S>  New H15:  fld_offset(icdinstance) <= 2147483647
+<S>  New H17:  fld_impulserate(icdinstance) <= 2147483647
+<S>  New H45:  fld_tachycardiabound(icdinstance) <= 2147483632
+<S>  New H47:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 2147483647
+-S-  Applied substitution rule calculateimp_rules(7).
+     This was achieved by replacing all occurrences of measures__joules__first 
+          by:
+          0.
+<S>  New H18:  fld_impulse(icdinstance) >= 0
+<S>  New H39:  true
+<S>  New H50:  true
+-S-  Applied substitution rule calculateimp_rules(8).
+     This was achieved by replacing all occurrences of measures__joules__last 
+          by:
+          45.
+<S>  New H19:  fld_impulse(icdinstance) <= 45
+<S>  New H40:  true
+<S>  New H51:  true
+-S-  Applied substitution rule calculateimp_rules(12).
+     This was achieved by replacing all occurrences of measures__bpm__first by:
+          - 1.
+<S>  New H25:  fld_last1strate(icdinstance) >= - 1
+<S>  New H27:  fld_last2ndrate(icdinstance) >= - 1
+<S>  New H29:  fld_last3rdrate(icdinstance) >= - 1
+<S>  New H31:  fld_last4thrate(icdinstance) >= - 1
+<S>  New H33:  fld_last5thrate(icdinstance) >= - 1
+<S>  New H35:  fld_last6thrate(icdinstance) >= - 1
+<S>  New H37:  fld_rate(icdinstance) >= - 1
+-S-  Applied substitution rule calculateimp_rules(13).
+     This was achieved by replacing all occurrences of measures__bpm__last by:
+          300.
+<S>  New H26:  fld_last1strate(icdinstance) <= 300
+<S>  New H28:  fld_last2ndrate(icdinstance) <= 300
+<S>  New H30:  fld_last3rdrate(icdinstance) <= 300
+<S>  New H32:  fld_last4thrate(icdinstance) <= 300
+<S>  New H34:  fld_last5thrate(icdinstance) <= 300
+<S>  New H36:  fld_last6thrate(icdinstance) <= 300
+<S>  New H38:  fld_rate(icdinstance) <= 300
+-S-  Applied substitution rule calculateimp_rules(17).
+     This was achieved by replacing all occurrences of measures__tub__first by:
+          100.
+<S>  New H22:  fld_tachycardiabound(icdinstance) >= 100
+-S-  Applied substitution rule calculateimp_rules(18).
+     This was achieved by replacing all occurrences of measures__tub__last by:
+          150.
+<S>  New H23:  fld_tachycardiabound(icdinstance) <= 150
+-S-  Applied substitution rule calculateimp_rules(22).
+     This was achieved by replacing all occurrences of measures__fub__first by:
+          3.
+<S>  New H8:  fld_fibrillationbound(icdinstance) >= 3
+-S-  Applied substitution rule calculateimp_rules(23).
+     This was achieved by replacing all occurrences of measures__fub__last by:
+          15.
+<S>  New H9:  fld_fibrillationbound(icdinstance) <= 15
+---  Eliminated hypothesis H1 (true-hypothesis).
+---  Eliminated hypothesis H2 (true-hypothesis).
+---  Eliminated hypothesis H7 (true-hypothesis).
+---  Eliminated hypothesis H20 (true-hypothesis).
+---  Eliminated hypothesis H21 (true-hypothesis).
+---  Eliminated hypothesis H24 (true-hypothesis).
+---  Eliminated hypothesis H39 (true-hypothesis).
+---  Eliminated hypothesis H50 (true-hypothesis).
+---  Eliminated hypothesis H40 (true-hypothesis).
+---  Eliminated hypothesis H51 (true-hypothesis).
+---  Eliminated hypothesis H12 (redundant, given H49).
+---  Eliminated hypothesis H13 (redundant, given H49).
+---  Eliminated hypothesis H44 (redundant, given H22).
+---  Eliminated hypothesis H45 (redundant, given H23).
+---  Eliminated hypothesis H48 (redundant, given H22).
+     +++  New H52:  integer__size >= 0
+     +++  New H53:  measures__joules__size >= 0
+     +++  New H54:  measures__bpm__size >= 0
+     +++  New H55:  measures__tub__size >= 0
+     +++  New H56:  measures__fub__size >= 0
+     +++  New H57:  icdtype__size >= 0
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_13.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  fld_isfibrillation(icdinstance)
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  fld_istachycardia(icdinstance)
+%%%  Simplified H50 on reading formula in, to give:
+     %%%  H50:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified H51 on reading formula in, to give:
+     %%%  H51:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+%%%  Simplified H52 on reading formula in, to give:
+     %%%  H52:  600 div (fld_tachycardiabound(icdinstance) + 15) >= 
+          integer__first
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 
+          integer__last
+%%%  Simplified H54 on reading formula in, to give:
+     %%%  H54:  fld_tachycardiabound(icdinstance) <> - 15
+%%%  Simplified H55 on reading formula in, to give:
+     %%%  H55:  true
+%%%  Simplified H58 on reading formula in, to give:
+     %%%  H58:  9 >= integer__first
+%%%  Simplified H59 on reading formula in, to give:
+     %%%  H59:  9 <= integer__last
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  600 div (fld_tachycardiabound(icdinstance) + 15) - 1 >= 
+          integer__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  600 div (fld_tachycardiabound(icdinstance) + 15) - 1 <= 
+          integer__last
+***  Proved C2:  600 div (fld_tachycardiabound(icdinstance) + 15) - 1 <= 
+          integer__last
+     using hypothesis H53.
+-S-  Applied substitution rule calculateimp_rules(2).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H3:  fld_waitaftershock(icdinstance) >= - 2147483648
+<S>  New H5:  fld_abnormalnum(icdinstance) >= - 2147483648
+<S>  New H10:  fld_signal(icdinstance) >= - 2147483648
+<S>  New H12:  fld_ticktonextimpulse(icdinstance) >= - 2147483648
+<S>  New H14:  fld_offset(icdinstance) >= - 2147483648
+<S>  New H16:  fld_impulserate(icdinstance) >= - 2147483648
+<S>  New H45:  true
+<S>  New H47:  true
+<S>  New H50:  fld_tachycardiabound(icdinstance) >= - 2147483663
+<S>  New H52:  600 div (fld_tachycardiabound(icdinstance) + 15) >= - 2147483648
+<S>  New H58:  true
+<S>  New C1:  600 div (fld_tachycardiabound(icdinstance) + 15) >= - 2147483647
+-S-  Applied substitution rule calculateimp_rules(3).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H4:  fld_waitaftershock(icdinstance) <= 2147483647
+<S>  New H6:  fld_abnormalnum(icdinstance) <= 2147483647
+<S>  New H11:  fld_signal(icdinstance) <= 2147483647
+<S>  New H13:  fld_ticktonextimpulse(icdinstance) <= 2147483647
+<S>  New H15:  fld_offset(icdinstance) <= 2147483647
+<S>  New H17:  fld_impulserate(icdinstance) <= 2147483647
+<S>  New H46:  true
+<S>  New H48:  true
+<S>  New H51:  fld_tachycardiabound(icdinstance) <= 2147483632
+<S>  New H53:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 2147483647
+<S>  New H59:  true
+-S-  Applied substitution rule calculateimp_rules(7).
+     This was achieved by replacing all occurrences of measures__joules__first 
+          by:
+          0.
+<S>  New H18:  fld_impulse(icdinstance) >= 0
+<S>  New H39:  true
+<S>  New H43:  true
+<S>  New H56:  true
+-S-  Applied substitution rule calculateimp_rules(8).
+     This was achieved by replacing all occurrences of measures__joules__last 
+          by:
+          45.
+<S>  New H19:  fld_impulse(icdinstance) <= 45
+<S>  New H40:  true
+<S>  New H44:  true
+<S>  New H57:  true
+-S-  Applied substitution rule calculateimp_rules(12).
+     This was achieved by replacing all occurrences of measures__bpm__first by:
+          - 1.
+<S>  New H25:  fld_last1strate(icdinstance) >= - 1
+<S>  New H27:  fld_last2ndrate(icdinstance) >= - 1
+<S>  New H29:  fld_last3rdrate(icdinstance) >= - 1
+<S>  New H31:  fld_last4thrate(icdinstance) >= - 1
+<S>  New H33:  fld_last5thrate(icdinstance) >= - 1
+<S>  New H35:  fld_last6thrate(icdinstance) >= - 1
+<S>  New H37:  fld_rate(icdinstance) >= - 1
+-S-  Applied substitution rule calculateimp_rules(13).
+     This was achieved by replacing all occurrences of measures__bpm__last by:
+          300.
+<S>  New H26:  fld_last1strate(icdinstance) <= 300
+<S>  New H28:  fld_last2ndrate(icdinstance) <= 300
+<S>  New H30:  fld_last3rdrate(icdinstance) <= 300
+<S>  New H32:  fld_last4thrate(icdinstance) <= 300
+<S>  New H34:  fld_last5thrate(icdinstance) <= 300
+<S>  New H36:  fld_last6thrate(icdinstance) <= 300
+<S>  New H38:  fld_rate(icdinstance) <= 300
+-S-  Applied substitution rule calculateimp_rules(17).
+     This was achieved by replacing all occurrences of measures__tub__first by:
+          100.
+<S>  New H22:  fld_tachycardiabound(icdinstance) >= 100
+-S-  Applied substitution rule calculateimp_rules(18).
+     This was achieved by replacing all occurrences of measures__tub__last by:
+          150.
+<S>  New H23:  fld_tachycardiabound(icdinstance) <= 150
+-S-  Applied substitution rule calculateimp_rules(22).
+     This was achieved by replacing all occurrences of measures__fub__first by:
+          3.
+<S>  New H8:  fld_fibrillationbound(icdinstance) >= 3
+-S-  Applied substitution rule calculateimp_rules(23).
+     This was achieved by replacing all occurrences of measures__fub__last by:
+          15.
+<S>  New H9:  fld_fibrillationbound(icdinstance) <= 15
+---  Eliminated hypothesis H1 (true-hypothesis).
+---  Eliminated hypothesis H2 (true-hypothesis).
+---  Eliminated hypothesis H7 (true-hypothesis).
+---  Eliminated hypothesis H20 (true-hypothesis).
+---  Eliminated hypothesis H21 (true-hypothesis).
+---  Eliminated hypothesis H24 (true-hypothesis).
+---  Eliminated hypothesis H45 (true-hypothesis).
+---  Eliminated hypothesis H47 (true-hypothesis).
+---  Eliminated hypothesis H55 (true-hypothesis).
+---  Eliminated hypothesis H58 (true-hypothesis).
+---  Eliminated hypothesis H46 (true-hypothesis).
+---  Eliminated hypothesis H48 (true-hypothesis).
+---  Eliminated hypothesis H59 (true-hypothesis).
+---  Eliminated hypothesis H39 (true-hypothesis).
+---  Eliminated hypothesis H43 (true-hypothesis).
+---  Eliminated hypothesis H56 (true-hypothesis).
+---  Eliminated hypothesis H40 (true-hypothesis).
+---  Eliminated hypothesis H44 (true-hypothesis).
+---  Eliminated hypothesis H57 (true-hypothesis).
+---  Eliminated hypothesis H50 (redundant, given H22).
+---  Eliminated hypothesis H51 (redundant, given H23).
+---  Eliminated hypothesis H54 (redundant, given H22).
+***  Proved C1:  600 div (fld_tachycardiabound(icdinstance) + 15) >= - 
+          2147483647
+     using hypothesis H22.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_14.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  not fld_isfibrillation(icdinstance)
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  fld_istachycardia(icdinstance) or fld_isinimpulseprocess(
+          icdinstance)
+%%%  Simplified H44 on reading formula in, to give:
+     %%%  H44:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified H45 on reading formula in, to give:
+     %%%  H45:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+%%%  Simplified H46 on reading formula in, to give:
+     %%%  H46:  600 div (fld_tachycardiabound(icdinstance) + 15) >= 
+          integer__first
+%%%  Simplified H47 on reading formula in, to give:
+     %%%  H47:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 
+          integer__last
+%%%  Simplified H48 on reading formula in, to give:
+     %%%  H48:  fld_tachycardiabound(icdinstance) <> - 15
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  fld_ticktonextimpulse(icdinstance) = 0
+%%%  Simplified H52 on reading formula in, to give:
+     %%%  H52:  fld_signal(icdinstance) - 1 >= integer__first
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  fld_signal(icdinstance) - 1 <= integer__last
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  600 div (fld_tachycardiabound(icdinstance) + 15) - 1 >= 
+          integer__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  600 div (fld_tachycardiabound(icdinstance) + 15) - 1 <= 
+          integer__last
+***  Proved C2:  600 div (fld_tachycardiabound(icdinstance) + 15) - 1 <= 
+          integer__last
+     using hypothesis H47.
+-S-  Applied substitution rule calculateimp_rules(2).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H3:  fld_waitaftershock(icdinstance) >= - 2147483648
+<S>  New H5:  fld_abnormalnum(icdinstance) >= - 2147483648
+<S>  New H10:  fld_signal(icdinstance) >= - 2147483648
+<S>  New H12:  fld_ticktonextimpulse(icdinstance) >= - 2147483648
+<S>  New H14:  fld_offset(icdinstance) >= - 2147483648
+<S>  New H16:  fld_impulserate(icdinstance) >= - 2147483648
+<S>  New H44:  fld_tachycardiabound(icdinstance) >= - 2147483663
+<S>  New H46:  600 div (fld_tachycardiabound(icdinstance) + 15) >= - 2147483648
+<S>  New H52:  fld_signal(icdinstance) >= - 2147483647
+<S>  New C1:  600 div (fld_tachycardiabound(icdinstance) + 15) >= - 2147483647
+-S-  Applied substitution rule calculateimp_rules(3).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H4:  fld_waitaftershock(icdinstance) <= 2147483647
+<S>  New H6:  fld_abnormalnum(icdinstance) <= 2147483647
+<S>  New H11:  fld_signal(icdinstance) <= 2147483647
+<S>  New H13:  fld_ticktonextimpulse(icdinstance) <= 2147483647
+<S>  New H15:  fld_offset(icdinstance) <= 2147483647
+<S>  New H17:  fld_impulserate(icdinstance) <= 2147483647
+<S>  New H45:  fld_tachycardiabound(icdinstance) <= 2147483632
+<S>  New H47:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 2147483647
+<S>  New H53:  fld_signal(icdinstance) <= 2147483648
+-S-  Applied substitution rule calculateimp_rules(7).
+     This was achieved by replacing all occurrences of measures__joules__first 
+          by:
+          0.
+<S>  New H18:  fld_impulse(icdinstance) >= 0
+<S>  New H39:  true
+<S>  New H50:  true
+-S-  Applied substitution rule calculateimp_rules(8).
+     This was achieved by replacing all occurrences of measures__joules__last 
+          by:
+          45.
+<S>  New H19:  fld_impulse(icdinstance) <= 45
+<S>  New H40:  true
+<S>  New H51:  true
+-S-  Applied substitution rule calculateimp_rules(12).
+     This was achieved by replacing all occurrences of measures__bpm__first by:
+          - 1.
+<S>  New H25:  fld_last1strate(icdinstance) >= - 1
+<S>  New H27:  fld_last2ndrate(icdinstance) >= - 1
+<S>  New H29:  fld_last3rdrate(icdinstance) >= - 1
+<S>  New H31:  fld_last4thrate(icdinstance) >= - 1
+<S>  New H33:  fld_last5thrate(icdinstance) >= - 1
+<S>  New H35:  fld_last6thrate(icdinstance) >= - 1
+<S>  New H37:  fld_rate(icdinstance) >= - 1
+-S-  Applied substitution rule calculateimp_rules(13).
+     This was achieved by replacing all occurrences of measures__bpm__last by:
+          300.
+<S>  New H26:  fld_last1strate(icdinstance) <= 300
+<S>  New H28:  fld_last2ndrate(icdinstance) <= 300
+<S>  New H30:  fld_last3rdrate(icdinstance) <= 300
+<S>  New H32:  fld_last4thrate(icdinstance) <= 300
+<S>  New H34:  fld_last5thrate(icdinstance) <= 300
+<S>  New H36:  fld_last6thrate(icdinstance) <= 300
+<S>  New H38:  fld_rate(icdinstance) <= 300
+-S-  Applied substitution rule calculateimp_rules(17).
+     This was achieved by replacing all occurrences of measures__tub__first by:
+          100.
+<S>  New H22:  fld_tachycardiabound(icdinstance) >= 100
+-S-  Applied substitution rule calculateimp_rules(18).
+     This was achieved by replacing all occurrences of measures__tub__last by:
+          150.
+<S>  New H23:  fld_tachycardiabound(icdinstance) <= 150
+-S-  Applied substitution rule calculateimp_rules(22).
+     This was achieved by replacing all occurrences of measures__fub__first by:
+          3.
+<S>  New H8:  fld_fibrillationbound(icdinstance) >= 3
+-S-  Applied substitution rule calculateimp_rules(23).
+     This was achieved by replacing all occurrences of measures__fub__last by:
+          15.
+<S>  New H9:  fld_fibrillationbound(icdinstance) <= 15
+---  Eliminated hypothesis H1 (true-hypothesis).
+---  Eliminated hypothesis H2 (true-hypothesis).
+---  Eliminated hypothesis H7 (true-hypothesis).
+---  Eliminated hypothesis H20 (true-hypothesis).
+---  Eliminated hypothesis H21 (true-hypothesis).
+---  Eliminated hypothesis H24 (true-hypothesis).
+---  Eliminated hypothesis H39 (true-hypothesis).
+---  Eliminated hypothesis H50 (true-hypothesis).
+---  Eliminated hypothesis H40 (true-hypothesis).
+---  Eliminated hypothesis H51 (true-hypothesis).
+---  Eliminated hypothesis H10 (redundant, given H52).
+---  Eliminated hypothesis H12 (redundant, given H49).
+---  Eliminated hypothesis H13 (redundant, given H49).
+---  Eliminated hypothesis H44 (redundant, given H22).
+---  Eliminated hypothesis H45 (redundant, given H23).
+---  Eliminated hypothesis H48 (redundant, given H22).
+---  Eliminated hypothesis H53 (redundant, given H11).
+***  Proved C1:  600 div (fld_tachycardiabound(icdinstance) + 15) >= - 
+          2147483647
+     using hypothesis H22.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_15.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  fld_isfibrillation(icdinstance)
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  fld_istachycardia(icdinstance)
+%%%  Simplified H50 on reading formula in, to give:
+     %%%  H50:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified H51 on reading formula in, to give:
+     %%%  H51:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+%%%  Simplified H52 on reading formula in, to give:
+     %%%  H52:  600 div (fld_tachycardiabound(icdinstance) + 15) >= 
+          integer__first
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 
+          integer__last
+%%%  Simplified H54 on reading formula in, to give:
+     %%%  H54:  fld_tachycardiabound(icdinstance) <> - 15
+%%%  Simplified H55 on reading formula in, to give:
+     %%%  H55:  false
+***  Proved C1:  0 >= measures__joules__first
+     using hypothesis H39.
+***  Proved C2:  0 <= measures__joules__last
+     using hypothesis H40.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_16.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  not fld_isfibrillation(icdinstance)
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  fld_istachycardia(icdinstance) or fld_isinimpulseprocess(
+          icdinstance)
+%%%  Simplified H44 on reading formula in, to give:
+     %%%  H44:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified H45 on reading formula in, to give:
+     %%%  H45:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+%%%  Simplified H46 on reading formula in, to give:
+     %%%  H46:  600 div (fld_tachycardiabound(icdinstance) + 15) >= 
+          integer__first
+%%%  Simplified H47 on reading formula in, to give:
+     %%%  H47:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 
+          integer__last
+%%%  Simplified H48 on reading formula in, to give:
+     %%%  H48:  fld_tachycardiabound(icdinstance) <> - 15
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  not fld_ticktonextimpulse(icdinstance) = 0
+***  Proved C1:  0 >= measures__joules__first
+     using hypothesis H39.
+***  Proved C2:  0 <= measures__joules__last
+     using hypothesis H40.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_17.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  fld_isfibrillation(icdinstance)
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  fld_istachycardia(icdinstance)
+%%%  Simplified H50 on reading formula in, to give:
+     %%%  H50:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified H51 on reading formula in, to give:
+     %%%  H51:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+%%%  Simplified H52 on reading formula in, to give:
+     %%%  H52:  600 div (fld_tachycardiabound(icdinstance) + 15) >= 
+          integer__first
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 
+          integer__last
+%%%  Simplified H54 on reading formula in, to give:
+     %%%  H54:  fld_tachycardiabound(icdinstance) <> - 15
+%%%  Simplified H55 on reading formula in, to give:
+     %%%  H55:  false
+---  Hypothesis H56 has been replaced by "true".  (It is already present, as 
+          H39).
+---  Hypothesis H57 has been replaced by "true".  (It is already present, as 
+          H40).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  - 1 >= integer__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  - 1 <= integer__last
+***  Proved C2:  - 1 <= integer__last
+     using hypothesis H46.
+-S-  Applied substitution rule calculateimp_rules(2).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H3:  fld_waitaftershock(icdinstance) >= - 2147483648
+<S>  New H5:  fld_abnormalnum(icdinstance) >= - 2147483648
+<S>  New H10:  fld_signal(icdinstance) >= - 2147483648
+<S>  New H12:  fld_ticktonextimpulse(icdinstance) >= - 2147483648
+<S>  New H14:  fld_offset(icdinstance) >= - 2147483648
+<S>  New H16:  fld_impulserate(icdinstance) >= - 2147483648
+<S>  New H45:  true
+<S>  New H47:  true
+<S>  New H50:  fld_tachycardiabound(icdinstance) >= - 2147483663
+<S>  New H52:  600 div (fld_tachycardiabound(icdinstance) + 15) >= - 2147483648
+<S>  New C1:  true
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_18.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  not fld_isfibrillation(icdinstance)
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  fld_istachycardia(icdinstance) or fld_isinimpulseprocess(
+          icdinstance)
+%%%  Simplified H44 on reading formula in, to give:
+     %%%  H44:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified H45 on reading formula in, to give:
+     %%%  H45:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+%%%  Simplified H46 on reading formula in, to give:
+     %%%  H46:  600 div (fld_tachycardiabound(icdinstance) + 15) >= 
+          integer__first
+%%%  Simplified H47 on reading formula in, to give:
+     %%%  H47:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 
+          integer__last
+%%%  Simplified H48 on reading formula in, to give:
+     %%%  H48:  fld_tachycardiabound(icdinstance) <> - 15
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  not fld_ticktonextimpulse(icdinstance) = 0
+---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
+          H39).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H40).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  fld_ticktonextimpulse(icdinstance) - 1 >= integer__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  fld_ticktonextimpulse(icdinstance) - 1 <= integer__last
+***  Proved C2:  fld_ticktonextimpulse(icdinstance) - 1 <= integer__last
+     using hypothesis H13.
+-S-  Applied substitution rule calculateimp_rules(2).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H3:  fld_waitaftershock(icdinstance) >= - 2147483648
+<S>  New H5:  fld_abnormalnum(icdinstance) >= - 2147483648
+<S>  New H10:  fld_signal(icdinstance) >= - 2147483648
+<S>  New H12:  fld_ticktonextimpulse(icdinstance) >= - 2147483648
+<S>  New H14:  fld_offset(icdinstance) >= - 2147483648
+<S>  New H16:  fld_impulserate(icdinstance) >= - 2147483648
+<S>  New H44:  fld_tachycardiabound(icdinstance) >= - 2147483663
+<S>  New H46:  600 div (fld_tachycardiabound(icdinstance) + 15) >= - 2147483648
+<S>  New C1:  fld_ticktonextimpulse(icdinstance) >= - 2147483647
+>>>  Restructured hypothesis H49 into:
+     >>>  H49:  fld_ticktonextimpulse(icdinstance) <> 0
+-S-  Applied substitution rule calculateimp_rules(3).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H4:  fld_waitaftershock(icdinstance) <= 2147483647
+<S>  New H6:  fld_abnormalnum(icdinstance) <= 2147483647
+<S>  New H11:  fld_signal(icdinstance) <= 2147483647
+<S>  New H13:  fld_ticktonextimpulse(icdinstance) <= 2147483647
+<S>  New H15:  fld_offset(icdinstance) <= 2147483647
+<S>  New H17:  fld_impulserate(icdinstance) <= 2147483647
+<S>  New H45:  fld_tachycardiabound(icdinstance) <= 2147483632
+<S>  New H47:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 2147483647
+-S-  Applied substitution rule calculateimp_rules(7).
+     This was achieved by replacing all occurrences of measures__joules__first 
+          by:
+          0.
+<S>  New H18:  fld_impulse(icdinstance) >= 0
+<S>  New H39:  true
+-S-  Applied substitution rule calculateimp_rules(8).
+     This was achieved by replacing all occurrences of measures__joules__last 
+          by:
+          45.
+<S>  New H19:  fld_impulse(icdinstance) <= 45
+<S>  New H40:  true
+-S-  Applied substitution rule calculateimp_rules(12).
+     This was achieved by replacing all occurrences of measures__bpm__first by:
+          - 1.
+<S>  New H25:  fld_last1strate(icdinstance) >= - 1
+<S>  New H27:  fld_last2ndrate(icdinstance) >= - 1
+<S>  New H29:  fld_last3rdrate(icdinstance) >= - 1
+<S>  New H31:  fld_last4thrate(icdinstance) >= - 1
+<S>  New H33:  fld_last5thrate(icdinstance) >= - 1
+<S>  New H35:  fld_last6thrate(icdinstance) >= - 1
+<S>  New H37:  fld_rate(icdinstance) >= - 1
+-S-  Applied substitution rule calculateimp_rules(13).
+     This was achieved by replacing all occurrences of measures__bpm__last by:
+          300.
+<S>  New H26:  fld_last1strate(icdinstance) <= 300
+<S>  New H28:  fld_last2ndrate(icdinstance) <= 300
+<S>  New H30:  fld_last3rdrate(icdinstance) <= 300
+<S>  New H32:  fld_last4thrate(icdinstance) <= 300
+<S>  New H34:  fld_last5thrate(icdinstance) <= 300
+<S>  New H36:  fld_last6thrate(icdinstance) <= 300
+<S>  New H38:  fld_rate(icdinstance) <= 300
+-S-  Applied substitution rule calculateimp_rules(17).
+     This was achieved by replacing all occurrences of measures__tub__first by:
+          100.
+<S>  New H22:  fld_tachycardiabound(icdinstance) >= 100
+-S-  Applied substitution rule calculateimp_rules(18).
+     This was achieved by replacing all occurrences of measures__tub__last by:
+          150.
+<S>  New H23:  fld_tachycardiabound(icdinstance) <= 150
+-S-  Applied substitution rule calculateimp_rules(22).
+     This was achieved by replacing all occurrences of measures__fub__first by:
+          3.
+<S>  New H8:  fld_fibrillationbound(icdinstance) >= 3
+-S-  Applied substitution rule calculateimp_rules(23).
+     This was achieved by replacing all occurrences of measures__fub__last by:
+          15.
+<S>  New H9:  fld_fibrillationbound(icdinstance) <= 15
+---  Eliminated hypothesis H1 (true-hypothesis).
+---  Eliminated hypothesis H2 (true-hypothesis).
+---  Eliminated hypothesis H7 (true-hypothesis).
+---  Eliminated hypothesis H20 (true-hypothesis).
+---  Eliminated hypothesis H21 (true-hypothesis).
+---  Eliminated hypothesis H24 (true-hypothesis).
+---  Eliminated hypothesis H50 (true-hypothesis).
+---  Eliminated hypothesis H51 (true-hypothesis).
+---  Eliminated hypothesis H39 (true-hypothesis).
+---  Eliminated hypothesis H40 (true-hypothesis).
+---  Eliminated hypothesis H44 (redundant, given H22).
+---  Eliminated hypothesis H45 (redundant, given H23).
+---  Eliminated hypothesis H48 (redundant, given H22).
+     +++  New H52:  integer__size >= 0
+     +++  New H53:  measures__joules__size >= 0
+     +++  New H54:  measures__bpm__size >= 0
+     +++  New H55:  measures__tub__size >= 0
+     +++  New H56:  measures__fub__size >= 0
+     +++  New H57:  icdtype__size >= 0
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_19.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  fld_isfibrillation(icdinstance)
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  fld_istachycardia(icdinstance)
+%%%  Simplified H50 on reading formula in, to give:
+     %%%  H50:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified H51 on reading formula in, to give:
+     %%%  H51:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+%%%  Simplified H52 on reading formula in, to give:
+     %%%  H52:  600 div (fld_tachycardiabound(icdinstance) + 15) >= 
+          integer__first
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 
+          integer__last
+%%%  Simplified H54 on reading formula in, to give:
+     %%%  H54:  fld_tachycardiabound(icdinstance) <> - 15
+%%%  Simplified H55 on reading formula in, to give:
+     %%%  H55:  true
+%%%  Simplified H58 on reading formula in, to give:
+     %%%  H58:  9 >= integer__first
+%%%  Simplified H59 on reading formula in, to give:
+     %%%  H59:  9 <= integer__last
+%%%  Simplified H60 on reading formula in, to give:
+     %%%  H60:  600 div (fld_tachycardiabound(icdinstance) + 15) - 1 >= 
+          integer__first
+%%%  Simplified H61 on reading formula in, to give:
+     %%%  H61:  600 div (fld_tachycardiabound(icdinstance) + 15) - 1 <= 
+          integer__last
+%%%  Simplified H62 on reading formula in, to give:
+     %%%  H62:  false
+***  Proved C1:  0 >= integer__first
+     using hypothesis H45.
+***  Proved C2:  0 <= integer__last
+     using hypothesis H46.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_20.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  not fld_isfibrillation(icdinstance)
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  fld_istachycardia(icdinstance) or fld_isinimpulseprocess(
+          icdinstance)
+%%%  Simplified H44 on reading formula in, to give:
+     %%%  H44:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified H45 on reading formula in, to give:
+     %%%  H45:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+%%%  Simplified H46 on reading formula in, to give:
+     %%%  H46:  600 div (fld_tachycardiabound(icdinstance) + 15) >= 
+          integer__first
+%%%  Simplified H47 on reading formula in, to give:
+     %%%  H47:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 
+          integer__last
+%%%  Simplified H48 on reading formula in, to give:
+     %%%  H48:  fld_tachycardiabound(icdinstance) <> - 15
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  fld_ticktonextimpulse(icdinstance) = 0
+%%%  Simplified H52 on reading formula in, to give:
+     %%%  H52:  fld_signal(icdinstance) - 1 >= integer__first
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  fld_signal(icdinstance) - 1 <= integer__last
+%%%  Simplified H54 on reading formula in, to give:
+     %%%  H54:  600 div (fld_tachycardiabound(icdinstance) + 15) - 1 >= 
+          integer__first
+%%%  Simplified H55 on reading formula in, to give:
+     %%%  H55:  600 div (fld_tachycardiabound(icdinstance) + 15) - 1 <= 
+          integer__last
+%%%  Simplified H56 on reading formula in, to give:
+     %%%  H56:  fld_signal(icdinstance) = 1
+***  Proved C1:  0 >= integer__first
+     using hypotheses H12 & H49.
+***  Proved C2:  0 <= integer__last
+     using hypotheses H11 & H56.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_21.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  fld_isfibrillation(icdinstance)
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  fld_istachycardia(icdinstance)
+%%%  Simplified H50 on reading formula in, to give:
+     %%%  H50:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified H51 on reading formula in, to give:
+     %%%  H51:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+%%%  Simplified H52 on reading formula in, to give:
+     %%%  H52:  600 div (fld_tachycardiabound(icdinstance) + 15) >= 
+          integer__first
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 
+          integer__last
+%%%  Simplified H54 on reading formula in, to give:
+     %%%  H54:  fld_tachycardiabound(icdinstance) <> - 15
+%%%  Simplified H55 on reading formula in, to give:
+     %%%  H55:  false
+---  Hypothesis H56 has been replaced by "true".  (It is already present, as 
+          H39).
+---  Hypothesis H57 has been replaced by "true".  (It is already present, as 
+          H40).
+%%%  Simplified H58 on reading formula in, to give:
+     %%%  H58:  - 1 >= integer__first
+%%%  Simplified H59 on reading formula in, to give:
+     %%%  H59:  - 1 <= integer__last
+%%%  Simplified H60 on reading formula in, to give:
+     %%%  H60:  false
+***  Proved C1:  0 >= integer__first
+     using hypothesis H45.
+***  Proved C2:  0 <= integer__last
+     using hypothesis H46.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_22.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  not fld_isfibrillation(icdinstance)
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  fld_istachycardia(icdinstance) or fld_isinimpulseprocess(
+          icdinstance)
+%%%  Simplified H44 on reading formula in, to give:
+     %%%  H44:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified H45 on reading formula in, to give:
+     %%%  H45:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+%%%  Simplified H46 on reading formula in, to give:
+     %%%  H46:  600 div (fld_tachycardiabound(icdinstance) + 15) >= 
+          integer__first
+%%%  Simplified H47 on reading formula in, to give:
+     %%%  H47:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 
+          integer__last
+%%%  Simplified H48 on reading formula in, to give:
+     %%%  H48:  fld_tachycardiabound(icdinstance) <> - 15
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  not fld_ticktonextimpulse(icdinstance) = 0
+---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
+          H39).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H40).
+%%%  Simplified H52 on reading formula in, to give:
+     %%%  H52:  fld_ticktonextimpulse(icdinstance) - 1 >= integer__first
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  fld_ticktonextimpulse(icdinstance) - 1 <= integer__last
+%%%  Simplified H54 on reading formula in, to give:
+     %%%  H54:  fld_signal(icdinstance) = 0
+***  Proved C1:  0 >= integer__first
+     using hypotheses H10 & H54.
+***  Proved C2:  0 <= integer__last
+     using hypotheses H11 & H54.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_23.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  fld_isfibrillation(icdinstance)
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  fld_istachycardia(icdinstance)
+%%%  Simplified H50 on reading formula in, to give:
+     %%%  H50:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified H51 on reading formula in, to give:
+     %%%  H51:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+%%%  Simplified H52 on reading formula in, to give:
+     %%%  H52:  600 div (fld_tachycardiabound(icdinstance) + 15) >= 
+          integer__first
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 
+          integer__last
+%%%  Simplified H54 on reading formula in, to give:
+     %%%  H54:  fld_tachycardiabound(icdinstance) <> - 15
+%%%  Simplified H55 on reading formula in, to give:
+     %%%  H55:  true
+%%%  Simplified H58 on reading formula in, to give:
+     %%%  H58:  9 >= integer__first
+%%%  Simplified H59 on reading formula in, to give:
+     %%%  H59:  9 <= integer__last
+%%%  Simplified H60 on reading formula in, to give:
+     %%%  H60:  600 div (fld_tachycardiabound(icdinstance) + 15) - 1 >= 
+          integer__first
+%%%  Simplified H61 on reading formula in, to give:
+     %%%  H61:  600 div (fld_tachycardiabound(icdinstance) + 15) - 1 <= 
+          integer__last
+%%%  Simplified H62 on reading formula in, to give:
+     %%%  H62:  false
+---  Hypothesis H63 has been replaced by "true".  (It is already present, as 
+          H45).
+---  Hypothesis H64 has been replaced by "true".  (It is already present, as 
+          H46).
+***  Proved C1:  10 >= integer__first
+     using hypothesis H47.
+***  Proved C2:  10 <= integer__last
+     using hypothesis H48.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_24.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  not fld_isfibrillation(icdinstance)
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  fld_istachycardia(icdinstance) or fld_isinimpulseprocess(
+          icdinstance)
+%%%  Simplified H44 on reading formula in, to give:
+     %%%  H44:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified H45 on reading formula in, to give:
+     %%%  H45:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+%%%  Simplified H46 on reading formula in, to give:
+     %%%  H46:  600 div (fld_tachycardiabound(icdinstance) + 15) >= 
+          integer__first
+%%%  Simplified H47 on reading formula in, to give:
+     %%%  H47:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 
+          integer__last
+%%%  Simplified H48 on reading formula in, to give:
+     %%%  H48:  fld_tachycardiabound(icdinstance) <> - 15
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  fld_ticktonextimpulse(icdinstance) = 0
+%%%  Simplified H52 on reading formula in, to give:
+     %%%  H52:  fld_signal(icdinstance) - 1 >= integer__first
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  fld_signal(icdinstance) - 1 <= integer__last
+%%%  Simplified H54 on reading formula in, to give:
+     %%%  H54:  600 div (fld_tachycardiabound(icdinstance) + 15) - 1 >= 
+          integer__first
+%%%  Simplified H55 on reading formula in, to give:
+     %%%  H55:  600 div (fld_tachycardiabound(icdinstance) + 15) - 1 <= 
+          integer__last
+%%%  Simplified H56 on reading formula in, to give:
+     %%%  H56:  fld_signal(icdinstance) = 1
+***  Proved C1:  10 >= integer__first
+     using hypothesis H57.
+-S-  Applied substitution rule calculateimp_rules(3).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H4:  fld_waitaftershock(icdinstance) <= 2147483647
+<S>  New H6:  fld_abnormalnum(icdinstance) <= 2147483647
+<S>  New H11:  fld_signal(icdinstance) <= 2147483647
+<S>  New H13:  fld_ticktonextimpulse(icdinstance) <= 2147483647
+<S>  New H15:  fld_offset(icdinstance) <= 2147483647
+<S>  New H17:  fld_impulserate(icdinstance) <= 2147483647
+<S>  New H45:  fld_tachycardiabound(icdinstance) <= 2147483632
+<S>  New H47:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 2147483647
+<S>  New H53:  fld_signal(icdinstance) <= 2147483648
+<S>  New H55:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 2147483648
+<S>  New H58:  true
+<S>  New C2:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_25.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  fld_isfibrillation(icdinstance)
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  fld_istachycardia(icdinstance)
+%%%  Simplified H50 on reading formula in, to give:
+     %%%  H50:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified H51 on reading formula in, to give:
+     %%%  H51:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+%%%  Simplified H52 on reading formula in, to give:
+     %%%  H52:  600 div (fld_tachycardiabound(icdinstance) + 15) >= 
+          integer__first
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 
+          integer__last
+%%%  Simplified H54 on reading formula in, to give:
+     %%%  H54:  fld_tachycardiabound(icdinstance) <> - 15
+%%%  Simplified H55 on reading formula in, to give:
+     %%%  H55:  false
+---  Hypothesis H56 has been replaced by "true".  (It is already present, as 
+          H39).
+---  Hypothesis H57 has been replaced by "true".  (It is already present, as 
+          H40).
+%%%  Simplified H58 on reading formula in, to give:
+     %%%  H58:  - 1 >= integer__first
+%%%  Simplified H59 on reading formula in, to give:
+     %%%  H59:  - 1 <= integer__last
+%%%  Simplified H60 on reading formula in, to give:
+     %%%  H60:  false
+---  Hypothesis H61 has been replaced by "true".  (It is already present, as 
+          H45).
+---  Hypothesis H62 has been replaced by "true".  (It is already present, as 
+          H46).
+***  Proved C1:  10 >= integer__first
+     using hypothesis H47.
+***  Proved C2:  10 <= integer__last
+     using hypothesis H48.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_26.  @@@@@@@@@@
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  not fld_iswait(icdinstance)
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  not fld_isfibrillation(icdinstance)
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  fld_istachycardia(icdinstance) or fld_isinimpulseprocess(
+          icdinstance)
+%%%  Simplified H44 on reading formula in, to give:
+     %%%  H44:  fld_tachycardiabound(icdinstance) + 15 >= integer__first
+%%%  Simplified H45 on reading formula in, to give:
+     %%%  H45:  fld_tachycardiabound(icdinstance) + 15 <= integer__last
+%%%  Simplified H46 on reading formula in, to give:
+     %%%  H46:  600 div (fld_tachycardiabound(icdinstance) + 15) >= 
+          integer__first
+%%%  Simplified H47 on reading formula in, to give:
+     %%%  H47:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 
+          integer__last
+%%%  Simplified H48 on reading formula in, to give:
+     %%%  H48:  fld_tachycardiabound(icdinstance) <> - 15
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  not fld_ticktonextimpulse(icdinstance) = 0
+---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
+          H39).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H40).
+%%%  Simplified H52 on reading formula in, to give:
+     %%%  H52:  fld_ticktonextimpulse(icdinstance) - 1 >= integer__first
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  fld_ticktonextimpulse(icdinstance) - 1 <= integer__last
+%%%  Simplified H54 on reading formula in, to give:
+     %%%  H54:  fld_signal(icdinstance) = 0
+***  Proved C1:  10 >= integer__first
+     using hypothesis H55.
+-S-  Applied substitution rule calculateimp_rules(3).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H4:  fld_waitaftershock(icdinstance) <= 2147483647
+<S>  New H6:  fld_abnormalnum(icdinstance) <= 2147483647
+<S>  New H11:  fld_signal(icdinstance) <= 2147483647
+<S>  New H13:  fld_ticktonextimpulse(icdinstance) <= 2147483647
+<S>  New H15:  fld_offset(icdinstance) <= 2147483647
+<S>  New H17:  fld_impulserate(icdinstance) <= 2147483647
+<S>  New H45:  fld_tachycardiabound(icdinstance) <= 2147483632
+<S>  New H47:  600 div (fld_tachycardiabound(icdinstance) + 15) <= 2147483647
+<S>  New H53:  fld_ticktonextimpulse(icdinstance) <= 2147483648
+<S>  New H56:  true
+<S>  New C2:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_27.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_28.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_29.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_30.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_31.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_32.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_33.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_34.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_35.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_36.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_calculateimpluse_37.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

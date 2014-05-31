@@ -1,0 +1,30 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+*****************************************************************************
+
+
+CREATED 31-MAY-2014, 19:43:59  SIMPLIFIED 31-MAY-2014, 19:44:00
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Measures.LimitTUB
+
+
+
+
+For path(s) from start to precondition check associated with statement of line 
+          31:
+
+function_limittub_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+function_limittub_2.
+*** true .          /* all conclusions proved */
+
+

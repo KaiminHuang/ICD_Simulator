@@ -1,0 +1,67 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                              {Examiner GPL 2011}
+             {Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.}
+           {*******************************************************}
+
+
+                        {DATE : 31-MAY-2014 19:37:37.09}
+
+                       {procedure ICD.CalculateImpluse}
+
+
+title procedure calculateimpluse;
+
+  function round__(real) : integer;
+  type icdtype = record
+        rate : integer;
+        last6thrate : integer;
+        last5thrate : integer;
+        last4thrate : integer;
+        last3rdrate : integer;
+        last2ndrate : integer;
+        last1strate : integer;
+        ison : boolean;
+        tachycardiabound : integer;
+        istachycardia : boolean;
+        isinimpulseprocess : boolean;
+        impulse : integer;
+        impulserate : integer;
+        offset : integer;
+        ticktonextimpulse : integer;
+        signal : integer;
+        fibrillationbound : integer;
+        isfibrillation : boolean;
+        abnormalnum : integer;
+        waitaftershock : integer;
+        iswait : boolean
+     end;
+  const measures__fub__base__first : integer = pending; 
+  const measures__fub__base__last : integer = pending; 
+  const measures__tub__base__first : integer = pending; 
+  const measures__tub__base__last : integer = pending; 
+  const measures__bpm__base__first : integer = pending; 
+  const measures__bpm__base__last : integer = pending; 
+  const measures__joules__base__first : integer = pending; 
+  const measures__joules__base__last : integer = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const icdtype__size : integer = pending; 
+  const measures__fub__first : integer = pending; 
+  const measures__fub__last : integer = pending; 
+  const measures__fub__size : integer = pending; 
+  const measures__tub__first : integer = pending; 
+  const measures__tub__last : integer = pending; 
+  const measures__tub__size : integer = pending; 
+  const measures__bpm__first : integer = pending; 
+  const measures__bpm__last : integer = pending; 
+  const measures__bpm__size : integer = pending; 
+  const measures__joules__first : integer = pending; 
+  const measures__joules__last : integer = pending; 
+  const measures__joules__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var icdinstance : icdtype;
+
+end;

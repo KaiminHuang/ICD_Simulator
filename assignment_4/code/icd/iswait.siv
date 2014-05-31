@@ -1,0 +1,83 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                              Examiner GPL 2011
+             Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+*****************************************************************************
+
+
+CREATED 31-MAY-2014, 19:43:59  SIMPLIFIED 31-MAY-2014, 19:44:04
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure ICD.isWait
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 209:
+
+procedure_iswait_1.
+H1:    fld_waitaftershock(icdinstance) >= - 2147483648 .
+H2:    fld_waitaftershock(icdinstance) <= 2147483647 .
+H3:    fld_abnormalnum(icdinstance) >= - 2147483648 .
+H4:    fld_abnormalnum(icdinstance) <= 2147483647 .
+H5:    fld_fibrillationbound(icdinstance) >= 3 .
+H6:    fld_fibrillationbound(icdinstance) <= 15 .
+H7:    fld_signal(icdinstance) >= - 2147483648 .
+H8:    fld_signal(icdinstance) <= 2147483647 .
+H9:    fld_ticktonextimpulse(icdinstance) >= - 2147483648 .
+H10:   fld_ticktonextimpulse(icdinstance) <= 2147483647 .
+H11:   fld_offset(icdinstance) >= - 2147483648 .
+H12:   fld_offset(icdinstance) <= 2147483647 .
+H13:   fld_impulserate(icdinstance) >= - 2147483648 .
+H14:   fld_impulserate(icdinstance) <= 2147483647 .
+H15:   fld_impulse(icdinstance) >= 0 .
+H16:   fld_impulse(icdinstance) <= 45 .
+H17:   fld_tachycardiabound(icdinstance) >= 100 .
+H18:   fld_tachycardiabound(icdinstance) <= 150 .
+H19:   fld_last1strate(icdinstance) >= - 1 .
+H20:   fld_last1strate(icdinstance) <= 300 .
+H21:   fld_last2ndrate(icdinstance) >= - 1 .
+H22:   fld_last2ndrate(icdinstance) <= 300 .
+H23:   fld_last3rdrate(icdinstance) >= - 1 .
+H24:   fld_last3rdrate(icdinstance) <= 300 .
+H25:   fld_last4thrate(icdinstance) >= - 1 .
+H26:   fld_last4thrate(icdinstance) <= 300 .
+H27:   fld_last5thrate(icdinstance) >= - 1 .
+H28:   fld_last5thrate(icdinstance) <= 300 .
+H29:   fld_last6thrate(icdinstance) >= - 1 .
+H30:   fld_last6thrate(icdinstance) <= 300 .
+H31:   fld_rate(icdinstance) >= - 1 .
+H32:   fld_rate(icdinstance) <= 300 .
+H33:   fld_iswait(icdinstance) .
+H34:   integer__size >= 0 .
+H35:   measures__joules__size >= 0 .
+H36:   measures__bpm__size >= 0 .
+H37:   measures__tub__size >= 0 .
+H38:   measures__fub__size >= 0 .
+H39:   icdtype__size >= 0 .
+       ->
+C1:    fld_waitaftershock(icdinstance) >= - 2147483647 .
+
+
+For path(s) from start to run-time check associated with statement of line 211:
+
+procedure_iswait_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_iswait_3.
+*** true .          /* all conclusions proved */
+
+
+procedure_iswait_4.
+*** true .          /* all conclusions proved */
+
+
+procedure_iswait_5.
+*** true .          /* all conclusions proved */
+
+

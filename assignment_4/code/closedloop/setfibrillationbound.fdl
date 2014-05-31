@@ -5,7 +5,7 @@
            {*******************************************************}
 
 
-                        {DATE : 31-MAY-2014 16:20:10.97}
+                        {DATE : 31-MAY-2014 19:43:59.69}
 
                  {procedure ClosedLoop.setFibrillationBound}
 
@@ -53,8 +53,13 @@ title procedure setfibrillationbound;
         hrt : heart__hearttype;
         monitor : hrm__hrmtype;
         generator : impulsegenerator__generatortype;
-        icds : icd__icdtype
+        icds : icd__icdtype;
+        ison : boolean
      end;
+  const measures__fub__base__first : integer = pending; 
+  const measures__fub__base__last : integer = pending; 
+  const measures__tub__base__first : integer = pending; 
+  const measures__tub__base__last : integer = pending; 
   const measures__bpm__base__first : integer = pending; 
   const measures__bpm__base__last : integer = pending; 
   const measures__joules__base__first : integer = pending; 
@@ -66,6 +71,12 @@ title procedure setfibrillationbound;
   const hrm__hrmtype__size : integer = pending; 
   const impulsegenerator__generatortype__size : integer = pending; 
   const heart__hearttype__size : integer = pending; 
+  const measures__fub__first : integer = pending; 
+  const measures__fub__last : integer = pending; 
+  const measures__fub__size : integer = pending; 
+  const measures__tub__first : integer = pending; 
+  const measures__tub__last : integer = pending; 
+  const measures__tub__size : integer = pending; 
   const measures__bpm__first : integer = pending; 
   const measures__bpm__last : integer = pending; 
   const measures__bpm__size : integer = pending; 

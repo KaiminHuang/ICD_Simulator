@@ -5,7 +5,7 @@
            {*******************************************************}
 
 
-                        {DATE : 31-MAY-2014 16:20:10.92}
+                        {DATE : 31-MAY-2014 19:43:59.63}
 
                              {procedure ICD.Tick}
 
@@ -44,6 +44,10 @@ title procedure tick;
         waitaftershock : integer;
         iswait : boolean
      end;
+  const measures__fub__base__first : integer = pending; 
+  const measures__fub__base__last : integer = pending; 
+  const measures__tub__base__first : integer = pending; 
+  const measures__tub__base__last : integer = pending; 
   const measures__bpm__base__first : integer = pending; 
   const measures__bpm__base__last : integer = pending; 
   const measures__joules__base__first : integer = pending; 
@@ -53,6 +57,12 @@ title procedure tick;
   const icdtype__size : integer = pending; 
   const hrm__hrmtype__size : integer = pending; 
   const impulsegenerator__generatortype__size : integer = pending; 
+  const measures__fub__first : integer = pending; 
+  const measures__fub__last : integer = pending; 
+  const measures__fub__size : integer = pending; 
+  const measures__tub__first : integer = pending; 
+  const measures__tub__last : integer = pending; 
+  const measures__tub__size : integer = pending; 
   const measures__bpm__first : integer = pending; 
   const measures__bpm__last : integer = pending; 
   const measures__bpm__size : integer = pending; 
@@ -65,6 +75,8 @@ title procedure tick;
   var icdinstance : icdtype;
   var hm : hrm__hrmtype;
   var gen : impulsegenerator__generatortype;
+  var icdinstance__6 : icdtype;
+  var icdinstance__5 : icdtype;
   var icdinstance__4 : icdtype;
   var icdinstance__3 : icdtype;
   var icdinstance__2 : icdtype;

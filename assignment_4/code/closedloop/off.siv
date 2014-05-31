@@ -5,7 +5,7 @@
 *****************************************************************************
 
 
-CREATED 31-MAY-2014, 16:12:43  SIMPLIFIED 31-MAY-2014, 16:13:22
+CREATED 31-MAY-2014, 19:43:59  SIMPLIFIED 31-MAY-2014, 19:44:01
 
 SPARK Simplifier GPL 2011
 Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
@@ -15,11 +15,182 @@ procedure ClosedLoop.Off
 
 
 
-For path(s) from start to finish:
+For path(s) from start to precondition check associated with statement of line 
+          23:
 
 procedure_off_1.
-H1:    true .
+H1:    fld_ison(cl) .
+H2:    fld_waitaftershock(fld_icds(cl)) >= - 2147483648 .
+H3:    fld_waitaftershock(fld_icds(cl)) <= 2147483647 .
+H4:    fld_abnormalnum(fld_icds(cl)) >= - 2147483648 .
+H5:    fld_abnormalnum(fld_icds(cl)) <= 2147483647 .
+H6:    fld_fibrillationbound(fld_icds(cl)) >= 3 .
+H7:    fld_fibrillationbound(fld_icds(cl)) <= 15 .
+H8:    fld_signal(fld_icds(cl)) >= - 2147483648 .
+H9:    fld_signal(fld_icds(cl)) <= 2147483647 .
+H10:   fld_ticktonextimpulse(fld_icds(cl)) >= - 2147483648 .
+H11:   fld_ticktonextimpulse(fld_icds(cl)) <= 2147483647 .
+H12:   fld_offset(fld_icds(cl)) >= - 2147483648 .
+H13:   fld_offset(fld_icds(cl)) <= 2147483647 .
+H14:   fld_impulserate(fld_icds(cl)) >= - 2147483648 .
+H15:   fld_impulserate(fld_icds(cl)) <= 2147483647 .
+H16:   fld_impulse(fld_icds(cl)) >= 0 .
+H17:   fld_impulse(fld_icds(cl)) <= 45 .
+H18:   fld_tachycardiabound(fld_icds(cl)) >= 100 .
+H19:   fld_tachycardiabound(fld_icds(cl)) <= 150 .
+H20:   fld_last1strate(fld_icds(cl)) >= - 1 .
+H21:   fld_last1strate(fld_icds(cl)) <= 300 .
+H22:   fld_last2ndrate(fld_icds(cl)) >= - 1 .
+H23:   fld_last2ndrate(fld_icds(cl)) <= 300 .
+H24:   fld_last3rdrate(fld_icds(cl)) >= - 1 .
+H25:   fld_last3rdrate(fld_icds(cl)) <= 300 .
+H26:   fld_last4thrate(fld_icds(cl)) >= - 1 .
+H27:   fld_last4thrate(fld_icds(cl)) <= 300 .
+H28:   fld_last5thrate(fld_icds(cl)) >= - 1 .
+H29:   fld_last5thrate(fld_icds(cl)) <= 300 .
+H30:   fld_last6thrate(fld_icds(cl)) >= - 1 .
+H31:   fld_last6thrate(fld_icds(cl)) <= 300 .
+H32:   fld_rate(fld_icds(cl)) >= - 1 .
+H33:   fld_rate(fld_icds(cl)) <= 300 .
+H34:   fld_impulse(fld_generator(cl)) >= 0 .
+H35:   fld_impulse(fld_generator(cl)) <= 45 .
+H36:   fld_rate(fld_monitor(cl)) >= - 1 .
+H37:   fld_rate(fld_monitor(cl)) <= 300 .
+H38:   fld_defaultchange(fld_hrt(cl)) >= - 1 .
+H39:   fld_defaultchange(fld_hrt(cl)) <= 300 .
+H40:   fld_impulse(fld_hrt(cl)) >= 0 .
+H41:   fld_impulse(fld_hrt(cl)) <= 45 .
+H42:   fld_rate(fld_hrt(cl)) >= - 1 .
+H43:   fld_rate(fld_hrt(cl)) <= 300 .
+H44:   integer__size >= 0 .
+H45:   measures__joules__size >= 0 .
+H46:   measures__bpm__size >= 0 .
+H47:   measures__tub__size >= 0 .
+H48:   measures__fub__size >= 0 .
+H49:   heart__hearttype__size >= 0 .
+H50:   impulsegenerator__generatortype__size >= 0 .
+H51:   hrm__hrmtype__size >= 0 .
+H52:   icd__icdtype__size >= 0 .
+H53:   closedlooptype__size >= 0 .
        ->
-C1:    false .
+C1:    fld_ison(fld_icds(cl)) .
+
+
+For path(s) from start to finish:
+
+procedure_off_2.
+H1:    fld_ison(cl) .
+H2:    fld_waitaftershock(fld_icds(cl)) >= - 2147483648 .
+H3:    fld_waitaftershock(fld_icds(cl)) <= 2147483647 .
+H4:    fld_abnormalnum(fld_icds(cl)) >= - 2147483648 .
+H5:    fld_abnormalnum(fld_icds(cl)) <= 2147483647 .
+H6:    fld_fibrillationbound(fld_icds(cl)) >= 3 .
+H7:    fld_fibrillationbound(fld_icds(cl)) <= 15 .
+H8:    fld_signal(fld_icds(cl)) >= - 2147483648 .
+H9:    fld_signal(fld_icds(cl)) <= 2147483647 .
+H10:   fld_ticktonextimpulse(fld_icds(cl)) >= - 2147483648 .
+H11:   fld_ticktonextimpulse(fld_icds(cl)) <= 2147483647 .
+H12:   fld_offset(fld_icds(cl)) >= - 2147483648 .
+H13:   fld_offset(fld_icds(cl)) <= 2147483647 .
+H14:   fld_impulserate(fld_icds(cl)) >= - 2147483648 .
+H15:   fld_impulserate(fld_icds(cl)) <= 2147483647 .
+H16:   fld_impulse(fld_icds(cl)) >= 0 .
+H17:   fld_impulse(fld_icds(cl)) <= 45 .
+H18:   fld_tachycardiabound(fld_icds(cl)) >= 100 .
+H19:   fld_tachycardiabound(fld_icds(cl)) <= 150 .
+H20:   fld_last1strate(fld_icds(cl)) >= - 1 .
+H21:   fld_last1strate(fld_icds(cl)) <= 300 .
+H22:   fld_last2ndrate(fld_icds(cl)) >= - 1 .
+H23:   fld_last2ndrate(fld_icds(cl)) <= 300 .
+H24:   fld_last3rdrate(fld_icds(cl)) >= - 1 .
+H25:   fld_last3rdrate(fld_icds(cl)) <= 300 .
+H26:   fld_last4thrate(fld_icds(cl)) >= - 1 .
+H27:   fld_last4thrate(fld_icds(cl)) <= 300 .
+H28:   fld_last5thrate(fld_icds(cl)) >= - 1 .
+H29:   fld_last5thrate(fld_icds(cl)) <= 300 .
+H30:   fld_last6thrate(fld_icds(cl)) >= - 1 .
+H31:   fld_last6thrate(fld_icds(cl)) <= 300 .
+H32:   fld_rate(fld_icds(cl)) >= - 1 .
+H33:   fld_rate(fld_icds(cl)) <= 300 .
+H34:   fld_impulse(fld_generator(cl)) >= 0 .
+H35:   fld_impulse(fld_generator(cl)) <= 45 .
+H36:   fld_rate(fld_monitor(cl)) >= - 1 .
+H37:   fld_rate(fld_monitor(cl)) <= 300 .
+H38:   fld_defaultchange(fld_hrt(cl)) >= - 1 .
+H39:   fld_defaultchange(fld_hrt(cl)) <= 300 .
+H40:   fld_impulse(fld_hrt(cl)) >= 0 .
+H41:   fld_impulse(fld_hrt(cl)) <= 45 .
+H42:   fld_rate(fld_hrt(cl)) >= - 1 .
+H43:   fld_rate(fld_hrt(cl)) <= 300 .
+H44:   fld_ison(fld_icds(cl)) .
+H45:   not fld_ison(fld_icds(cl__1)) .
+H46:   fld_waitaftershock(fld_icds(cl__1)) >= - 2147483648 .
+H47:   fld_waitaftershock(fld_icds(cl__1)) <= 2147483647 .
+H48:   fld_abnormalnum(fld_icds(cl__1)) >= - 2147483648 .
+H49:   fld_abnormalnum(fld_icds(cl__1)) <= 2147483647 .
+H50:   fld_fibrillationbound(fld_icds(cl__1)) >= 3 .
+H51:   fld_fibrillationbound(fld_icds(cl__1)) <= 15 .
+H52:   fld_signal(fld_icds(cl__1)) >= - 2147483648 .
+H53:   fld_signal(fld_icds(cl__1)) <= 2147483647 .
+H54:   fld_ticktonextimpulse(fld_icds(cl__1)) >= - 2147483648 .
+H55:   fld_ticktonextimpulse(fld_icds(cl__1)) <= 2147483647 .
+H56:   fld_offset(fld_icds(cl__1)) >= - 2147483648 .
+H57:   fld_offset(fld_icds(cl__1)) <= 2147483647 .
+H58:   fld_impulserate(fld_icds(cl__1)) >= - 2147483648 .
+H59:   fld_impulserate(fld_icds(cl__1)) <= 2147483647 .
+H60:   fld_impulse(fld_icds(cl__1)) >= 0 .
+H61:   fld_impulse(fld_icds(cl__1)) <= 45 .
+H62:   fld_tachycardiabound(fld_icds(cl__1)) >= 100 .
+H63:   fld_tachycardiabound(fld_icds(cl__1)) <= 150 .
+H64:   fld_last1strate(fld_icds(cl__1)) >= - 1 .
+H65:   fld_last1strate(fld_icds(cl__1)) <= 300 .
+H66:   fld_last2ndrate(fld_icds(cl__1)) >= - 1 .
+H67:   fld_last2ndrate(fld_icds(cl__1)) <= 300 .
+H68:   fld_last3rdrate(fld_icds(cl__1)) >= - 1 .
+H69:   fld_last3rdrate(fld_icds(cl__1)) <= 300 .
+H70:   fld_last4thrate(fld_icds(cl__1)) >= - 1 .
+H71:   fld_last4thrate(fld_icds(cl__1)) <= 300 .
+H72:   fld_last5thrate(fld_icds(cl__1)) >= - 1 .
+H73:   fld_last5thrate(fld_icds(cl__1)) <= 300 .
+H74:   fld_last6thrate(fld_icds(cl__1)) >= - 1 .
+H75:   fld_last6thrate(fld_icds(cl__1)) <= 300 .
+H76:   fld_rate(fld_icds(cl__1)) >= - 1 .
+H77:   fld_rate(fld_icds(cl__1)) <= 300 .
+H78:   fld_hrt(cl__1) = fld_hrt(cl) .
+H79:   fld_monitor(cl__1) = fld_monitor(cl) .
+H80:   fld_generator(cl__1) = fld_generator(cl) .
+H81:   fld_ison(cl) .
+H82:   cl__1 = upf_icds(cl, fld_icds(cl__1)) .
+H83:   not fld_ison(fld_monitor(cl__2)) .
+H84:   fld_rate(fld_monitor(cl__2)) >= - 1 .
+H85:   fld_rate(fld_monitor(cl__2)) <= 300 .
+H86:   fld_hrt(cl__2) = fld_hrt(cl) .
+H87:   fld_generator(cl__2) = fld_generator(cl) .
+H88:   fld_icds(cl__2) = fld_icds(cl__1) .
+H89:   fld_ison(cl) .
+H90:   cl__2 = upf_monitor(cl__1, fld_monitor(cl__2)) .
+H91:   not fld_ison(fld_generator(cl__3)) .
+H92:   fld_impulse(fld_generator(cl__3)) >= 0 .
+H93:   fld_impulse(fld_generator(cl__3)) <= 45 .
+H94:   fld_hrt(cl__3) = fld_hrt(cl__2) .
+H95:   fld_monitor(cl__3) = fld_monitor(cl__2) .
+H96:   fld_icds(cl__3) = fld_icds(cl__1) .
+H97:   fld_ison(cl__2) .
+H98:   cl__3 = upf_generator(cl__2, fld_generator(cl__3)) .
+H99:   fld_ison(cl) .
+H100:  fld_ison(cl) .
+H101:  fld_ison(cl) .
+H102:  integer__size >= 0 .
+H103:  measures__joules__size >= 0 .
+H104:  measures__bpm__size >= 0 .
+H105:  measures__tub__size >= 0 .
+H106:  measures__fub__size >= 0 .
+H107:  heart__hearttype__size >= 0 .
+H108:  impulsegenerator__generatortype__size >= 0 .
+H109:  hrm__hrmtype__size >= 0 .
+H110:  icd__icdtype__size >= 0 .
+H111:  closedlooptype__size >= 0 .
+       ->
+C1:    not fld_ison(cl) .
 
 
