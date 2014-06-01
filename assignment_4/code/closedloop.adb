@@ -7,6 +7,7 @@ with ICD;
 package body ClosedLoop is
  	procedure Init(cl : out ClosedLoopType) is
 	begin
+		
    		--Initalise hrt, monitor, gen, icd
 		Heart.Init(cl.Hrt);
 		HRM.Init(cl.Monitor);
@@ -19,19 +20,25 @@ package body ClosedLoop is
 
 	procedure Off (cl : in out ClosedLoopType) is
 	begin
-		-- set all components to Off
-		ICD.Off(cl.Icds);
-    	HRM.Off(cl.Monitor);
-		ImpulseGenerator.Off(cl.Generator);
+		if cl.IsOn = True then
+			-- set all components to Off
+			ICD.Off(cl.Icds);
+			HRM.Off(cl.Monitor);
+			ImpulseGenerator.Off(cl.Generator);
+			cl.IsOn := False;
+		end if;
 	end Off;
 
 	procedure On (cl : in out ClosedLoopType) is
 	begin
-		HRM.On(cl.Monitor, cl.Hrt);
-		ImpulseGenerator.On(cl.Generator);
-		Heart.Init(cl.Hrt);
-		HRM.GetRate(cl.Monitor, cl.Icds.Rate);
-		ICD.On(cl.Icds);
+		if cl.IsOn = False then
+			HRM.On(cl.Monitor, cl.Hrt);
+			ImpulseGenerator.On(cl.Generator);
+			Heart.Init(cl.Hrt);
+			HRM.GetRate(cl.Monitor, cl.Icds.Rate);
+			ICD.On(cl.Icds);
+			cl.IsOn := True;
+		end if;
 	end On;
 
 	procedure setTachycardiaBound (cl : in out ClosedLoopType; ub : in Integer) is

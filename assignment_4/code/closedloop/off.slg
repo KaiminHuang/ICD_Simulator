@@ -5,7 +5,7 @@
 *****************************************************************************
 
 
-CREATED 01-JUN-2014, 12:40:45  SIMPLIFIED 01-JUN-2014, 12:40:46
+CREATED 01-JUN-2014, 13:56:56  SIMPLIFIED 01-JUN-2014, 13:56:57
 
 SPARK Simplifier GPL 2011
 Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
@@ -20,6 +20,8 @@ procedure ClosedLoop.Off
 @@@@@@@@@@  VC: procedure_off_1.  @@@@@@@@@@
 %%%  Simplified H1 on reading formula in, to give:
      %%%  H1:  fld_ison(cl)
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as H1)
+          .
 %%%  Simplified C1 on reading formula in, to give:
      %%%  C1:  fld_ison(fld_icds(cl))
 -S-  Applied substitution rule off_rules(2).
@@ -106,212 +108,48 @@ procedure ClosedLoop.Off
 ---  Eliminated hypothesis H27 (true-hypothesis).
 ---  Eliminated hypothesis H42 (true-hypothesis).
 ---  Eliminated hypothesis H45 (true-hypothesis).
-     +++  New H54:  integer__size >= 0
-     +++  New H55:  measures__joules__size >= 0
-     +++  New H56:  measures__bpm__size >= 0
-     +++  New H57:  measures__tub__size >= 0
-     +++  New H58:  measures__fub__size >= 0
-     +++  New H59:  heart__hearttype__size >= 0
-     +++  New H60:  impulsegenerator__generatortype__size >= 0
-     +++  New H61:  hrm__hrmtype__size >= 0
-     +++  New H62:  icd__icdtype__size >= 0
-     +++  New H63:  closedlooptype__size >= 0
+---  Eliminated hypothesis H54 (true-hypothesis).
+     +++  New H55:  integer__size >= 0
+     +++  New H56:  measures__joules__size >= 0
+     +++  New H57:  measures__bpm__size >= 0
+     +++  New H58:  measures__tub__size >= 0
+     +++  New H59:  measures__fub__size >= 0
+     +++  New H60:  heart__hearttype__size >= 0
+     +++  New H61:  impulsegenerator__generatortype__size >= 0
+     +++  New H62:  hrm__hrmtype__size >= 0
+     +++  New H63:  icd__icdtype__size >= 0
+     +++  New H64:  closedlooptype__size >= 0
 
 
 @@@@@@@@@@  VC: procedure_off_2.  @@@@@@@@@@
 %%%  Simplified H1 on reading formula in, to give:
      %%%  H1:  fld_ison(cl)
-%%%  Simplified H54 on reading formula in, to give:
-     %%%  H54:  fld_ison(fld_icds(cl))
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as H1)
+          .
 %%%  Simplified H55 on reading formula in, to give:
-     %%%  H55:  not fld_ison(fld_icds(cl__1))
-%%%  Simplified H98 on reading formula in, to give:
-     %%%  H98:  fld_ison(cl__1) <-> fld_ison(cl)
-%%%  Simplified H107 on reading formula in, to give:
-     %%%  H107:  fld_ison(cl__2) <-> fld_ison(cl__1)
-%%%  Simplified H116 on reading formula in, to give:
-     %%%  H116:  fld_ison(cl__3) <-> fld_ison(cl__2)
+     %%%  H55:  fld_ison(fld_icds(cl))
+%%%  Simplified H56 on reading formula in, to give:
+     %%%  H56:  not fld_ison(fld_icds(cl__1))
+%%%  Simplified H99 on reading formula in, to give:
+     %%%  H99:  fld_ison(cl__1) <-> fld_ison(cl)
+%%%  Simplified H108 on reading formula in, to give:
+     %%%  H108:  fld_ison(cl__2) <-> fld_ison(cl__1)
+%%%  Simplified H117 on reading formula in, to give:
+     %%%  H117:  fld_ison(cl__3) <-> fld_ison(cl__2)
 %%%  Simplified C1 on reading formula in, to give:
-     %%%  C1:  not fld_ison(cl__3)
-+++  Using "A->B, A |- B" on hypotheses H98 & H1 yields a new hypothesis:
-     +++  H118:  fld_ison(cl__1)
-+++  Using "A->B, A |- B" on hypotheses H107 & H118 yields a new hypothesis:
-     +++  H119:  fld_ison(cl__2)
-+++  Using "A->B, A |- B" on hypotheses H116 & H119 yields a new hypothesis:
-     +++  H120:  fld_ison(cl__3)
--S-  Applied substitution rule off_rules(2).
-     This was achieved by replacing all occurrences of integer__first by:
-          - 2147483648.
-<S>  New H4:  fld_waitaftershock(fld_icds(cl)) >= - 2147483648
-<S>  New H6:  fld_abnormalnum(fld_icds(cl)) >= - 2147483648
-<S>  New H11:  fld_signal(fld_icds(cl)) >= - 2147483648
-<S>  New H13:  fld_ticktonextimpulse(fld_icds(cl)) >= - 2147483648
-<S>  New H15:  fld_offset(fld_icds(cl)) >= - 2147483648
-<S>  New H17:  fld_impulserate(fld_icds(cl)) >= - 2147483648
-<S>  New H57:  fld_waitaftershock(fld_icds(cl__1)) >= - 2147483648
-<S>  New H59:  fld_abnormalnum(fld_icds(cl__1)) >= - 2147483648
-<S>  New H64:  fld_signal(fld_icds(cl__1)) >= - 2147483648
-<S>  New H66:  fld_ticktonextimpulse(fld_icds(cl__1)) >= - 2147483648
-<S>  New H68:  fld_offset(fld_icds(cl__1)) >= - 2147483648
-<S>  New H70:  fld_impulserate(fld_icds(cl__1)) >= - 2147483648
--S-  Applied substitution rule off_rules(3).
-     This was achieved by replacing all occurrences of integer__last by:
-          2147483647.
-<S>  New H5:  fld_waitaftershock(fld_icds(cl)) <= 2147483647
-<S>  New H7:  fld_abnormalnum(fld_icds(cl)) <= 2147483647
-<S>  New H12:  fld_signal(fld_icds(cl)) <= 2147483647
-<S>  New H14:  fld_ticktonextimpulse(fld_icds(cl)) <= 2147483647
-<S>  New H16:  fld_offset(fld_icds(cl)) <= 2147483647
-<S>  New H18:  fld_impulserate(fld_icds(cl)) <= 2147483647
-<S>  New H58:  fld_waitaftershock(fld_icds(cl__1)) <= 2147483647
-<S>  New H60:  fld_abnormalnum(fld_icds(cl__1)) <= 2147483647
-<S>  New H65:  fld_signal(fld_icds(cl__1)) <= 2147483647
-<S>  New H67:  fld_ticktonextimpulse(fld_icds(cl__1)) <= 2147483647
-<S>  New H69:  fld_offset(fld_icds(cl__1)) <= 2147483647
-<S>  New H71:  fld_impulserate(fld_icds(cl__1)) <= 2147483647
--S-  Applied substitution rule off_rules(7).
-     This was achieved by replacing all occurrences of measures__joules__first 
-          by:
-          0.
-<S>  New H19:  fld_impulse(fld_icds(cl)) >= 0
-<S>  New H43:  fld_impulse(fld_generator(cl)) >= 0
-<S>  New H50:  fld_impulse(fld_hrt(cl)) >= 0
-<S>  New H72:  fld_impulse(fld_icds(cl__1)) >= 0
-<S>  New H111:  fld_impulse(fld_generator(cl__3)) >= 0
--S-  Applied substitution rule off_rules(8).
-     This was achieved by replacing all occurrences of measures__joules__last 
-          by:
-          45.
-<S>  New H20:  fld_impulse(fld_icds(cl)) <= 45
-<S>  New H44:  fld_impulse(fld_generator(cl)) <= 45
-<S>  New H51:  fld_impulse(fld_hrt(cl)) <= 45
-<S>  New H73:  fld_impulse(fld_icds(cl__1)) <= 45
-<S>  New H112:  fld_impulse(fld_generator(cl__3)) <= 45
--S-  Applied substitution rule off_rules(12).
-     This was achieved by replacing all occurrences of measures__bpm__first by:
-          - 1.
-<S>  New H28:  fld_last1strate(fld_icds(cl)) >= - 1
-<S>  New H30:  fld_last2ndrate(fld_icds(cl)) >= - 1
-<S>  New H32:  fld_last3rdrate(fld_icds(cl)) >= - 1
-<S>  New H34:  fld_last4thrate(fld_icds(cl)) >= - 1
-<S>  New H36:  fld_last5thrate(fld_icds(cl)) >= - 1
-<S>  New H38:  fld_last6thrate(fld_icds(cl)) >= - 1
-<S>  New H40:  fld_rate(fld_icds(cl)) >= - 1
-<S>  New H46:  fld_rate(fld_monitor(cl)) >= - 1
-<S>  New H48:  fld_defaultchange(fld_hrt(cl)) >= - 1
-<S>  New H52:  fld_rate(fld_hrt(cl)) >= - 1
-<S>  New H81:  fld_last1strate(fld_icds(cl__1)) >= - 1
-<S>  New H83:  fld_last2ndrate(fld_icds(cl__1)) >= - 1
-<S>  New H85:  fld_last3rdrate(fld_icds(cl__1)) >= - 1
-<S>  New H87:  fld_last4thrate(fld_icds(cl__1)) >= - 1
-<S>  New H89:  fld_last5thrate(fld_icds(cl__1)) >= - 1
-<S>  New H91:  fld_last6thrate(fld_icds(cl__1)) >= - 1
-<S>  New H93:  fld_rate(fld_icds(cl__1)) >= - 1
-<S>  New H102:  fld_rate(fld_monitor(cl__2)) >= - 1
--S-  Applied substitution rule off_rules(13).
-     This was achieved by replacing all occurrences of measures__bpm__last by:
-          300.
-<S>  New H29:  fld_last1strate(fld_icds(cl)) <= 300
-<S>  New H31:  fld_last2ndrate(fld_icds(cl)) <= 300
-<S>  New H33:  fld_last3rdrate(fld_icds(cl)) <= 300
-<S>  New H35:  fld_last4thrate(fld_icds(cl)) <= 300
-<S>  New H37:  fld_last5thrate(fld_icds(cl)) <= 300
-<S>  New H39:  fld_last6thrate(fld_icds(cl)) <= 300
-<S>  New H41:  fld_rate(fld_icds(cl)) <= 300
-<S>  New H47:  fld_rate(fld_monitor(cl)) <= 300
-<S>  New H49:  fld_defaultchange(fld_hrt(cl)) <= 300
-<S>  New H53:  fld_rate(fld_hrt(cl)) <= 300
-<S>  New H82:  fld_last1strate(fld_icds(cl__1)) <= 300
-<S>  New H84:  fld_last2ndrate(fld_icds(cl__1)) <= 300
-<S>  New H86:  fld_last3rdrate(fld_icds(cl__1)) <= 300
-<S>  New H88:  fld_last4thrate(fld_icds(cl__1)) <= 300
-<S>  New H90:  fld_last5thrate(fld_icds(cl__1)) <= 300
-<S>  New H92:  fld_last6thrate(fld_icds(cl__1)) <= 300
-<S>  New H94:  fld_rate(fld_icds(cl__1)) <= 300
-<S>  New H103:  fld_rate(fld_monitor(cl__2)) <= 300
--S-  Applied substitution rule off_rules(17).
-     This was achieved by replacing all occurrences of measures__tub__first by:
-          100.
-<S>  New H23:  fld_impulseratebound(fld_icds(cl)) >= 100
-<S>  New H25:  fld_tachycardiabound(fld_icds(cl)) >= 100
-<S>  New H76:  fld_impulseratebound(fld_icds(cl__1)) >= 100
-<S>  New H78:  fld_tachycardiabound(fld_icds(cl__1)) >= 100
--S-  Applied substitution rule off_rules(18).
-     This was achieved by replacing all occurrences of measures__tub__last by:
-          150.
-<S>  New H24:  fld_impulseratebound(fld_icds(cl)) <= 150
-<S>  New H26:  fld_tachycardiabound(fld_icds(cl)) <= 150
-<S>  New H77:  fld_impulseratebound(fld_icds(cl__1)) <= 150
-<S>  New H79:  fld_tachycardiabound(fld_icds(cl__1)) <= 150
--S-  Applied substitution rule off_rules(22).
-     This was achieved by replacing all occurrences of measures__fub__first by:
-          3.
-<S>  New H9:  fld_fibrillationbound(fld_icds(cl)) >= 3
-<S>  New H62:  fld_fibrillationbound(fld_icds(cl__1)) >= 3
--S-  Applied substitution rule off_rules(23).
-     This was achieved by replacing all occurrences of measures__fub__last by:
-          15.
-<S>  New H10:  fld_fibrillationbound(fld_icds(cl)) <= 15
-<S>  New H63:  fld_fibrillationbound(fld_icds(cl__1)) <= 15
----  Eliminated hypothesis H2 (true-hypothesis).
----  Eliminated hypothesis H3 (true-hypothesis).
----  Eliminated hypothesis H8 (true-hypothesis).
----  Eliminated hypothesis H21 (true-hypothesis).
----  Eliminated hypothesis H22 (true-hypothesis).
----  Eliminated hypothesis H27 (true-hypothesis).
----  Eliminated hypothesis H42 (true-hypothesis).
----  Eliminated hypothesis H45 (true-hypothesis).
----  Eliminated hypothesis H56 (true-hypothesis).
----  Eliminated hypothesis H61 (true-hypothesis).
----  Eliminated hypothesis H74 (true-hypothesis).
----  Eliminated hypothesis H75 (true-hypothesis).
----  Eliminated hypothesis H80 (true-hypothesis).
----  Eliminated hypothesis H101 (true-hypothesis).
----  Eliminated hypothesis H110 (true-hypothesis).
->>>  Using "A->B, A |- B" on H98, given H118, we simplify the former to:
-     >>>  H98:  fld_ison(cl)
->>>  Using "A->B, A |- B" on H107, given H119, we simplify the former to:
-     >>>  H107:  fld_ison(cl__1)
->>>  Using "A->B, A |- B" on H116, given H120, we simplify the former to:
-     >>>  H116:  fld_ison(cl__2)
--S-  Substituted hypothesis H95.
-     This was achieved by replacing all occurrences of fld_hrt(cl__1) by:
-          fld_hrt(cl).
----  Substituted hypothesis H96, which specifies an equivalence for fld_monitor(
-          cl__1).
--S-  Substituted hypothesis H97.
-     This was achieved by replacing all occurrences of fld_generator(cl__1) by:
-          fld_generator(cl).
--S-  Substituted hypothesis H106.
-     This was achieved by replacing all occurrences of fld_icds(cl__2) by:
-          fld_icds(cl__1).
----  Substituted hypothesis H113, which specifies an equivalence for fld_hrt(
-          cl__3).
----  Substituted hypothesis H114, which specifies an equivalence for 
-          fld_monitor(cl__3).
----  Substituted hypothesis H104, which specifies an equivalence for fld_hrt(
-          cl__2).
----  Substituted hypothesis H105, which specifies an equivalence for 
-          fld_generator(cl__2).
----  Substituted hypothesis H115, which specifies an equivalence for fld_icds(
-          cl__3).
--S-  Substituted hypothesis H98.
-     This was achieved by replacing all occurrences of fld_ison(cl__1) by:
-          fld_ison(cl).
--S-  Substituted hypothesis H116.
-     This was achieved by replacing all occurrences of fld_ison(cl__3) by:
-          fld_ison(cl__2).
--S-  Substituted hypothesis H107.
-     This was achieved by replacing all occurrences of fld_ison(cl__2) by:
-          fld_ison(cl).
-     +++  New H121:  integer__size >= 0
-     +++  New H122:  measures__joules__size >= 0
-     +++  New H123:  measures__bpm__size >= 0
-     +++  New H124:  measures__tub__size >= 0
-     +++  New H125:  measures__fub__size >= 0
-     +++  New H126:  heart__hearttype__size >= 0
-     +++  New H127:  impulsegenerator__generatortype__size >= 0
-     +++  New H128:  hrm__hrmtype__size >= 0
-     +++  New H129:  icd__icdtype__size >= 0
-     +++  New H130:  closedlooptype__size >= 0
+     %%%  C1:  true
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_off_3.  @@@@@@@@@@
+%%%  Simplified H1 on reading formula in, to give:
+     %%%  H1:  fld_ison(cl)
+%%%  Simplified H54 on reading formula in, to give:
+     %%%  H54:  not fld_ison(cl)
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  not fld_ison(cl)
+***  Proved C1:  not fld_ison(cl)
+     using hypothesis H54.
+***  PROVED VC.
 

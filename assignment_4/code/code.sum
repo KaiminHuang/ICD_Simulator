@@ -36,14 +36,14 @@ Summary Dead Path files (.sdp)
 in the directory:
 /home/yingziz/ICD_Simulator/assignment_4/code
 
-Summary produced: 01-JUN-2014 12:41:05.42
+Summary produced: 01-JUN-2014 13:57:13.80
 
 File /home/yingziz/ICD_Simulator/assignment_4/code/closedloop/init.vcg
 procedure ClosedLoop.Init
 
-VCs generated 01-JUN-2014 12:40:45
+VCs generated 01-JUN-2014 13:56:56
 
-VCs simplified 01-JUN-2014 12:40:47
+VCs simplified 01-JUN-2014 13:56:57
 
 VCs for procedure_init :
  -----------------------------------------------------------------------------
@@ -56,9 +56,9 @@ VCs for procedure_init :
 File /home/yingziz/ICD_Simulator/assignment_4/code/closedloop/ison.vcg
 function ClosedLoop.IsOn
 
-VCs generated 01-JUN-2014 12:40:45
+VCs generated 01-JUN-2014 13:56:56
 
-VCs simplified 01-JUN-2014 12:40:46
+VCs simplified 01-JUN-2014 13:56:57
 
 VCs for function_ison :
  -----------------------------------------------------------------------------
@@ -71,48 +71,50 @@ VCs for function_ison :
 File /home/yingziz/ICD_Simulator/assignment_4/code/closedloop/off.vcg
 procedure ClosedLoop.Off
 
-VCs generated 01-JUN-2014 12:40:45
+VCs generated 01-JUN-2014 13:56:56
 
-VCs simplified 01-JUN-2014 12:40:46
+VCs simplified 01-JUN-2014 13:56:57
 
 VCs for procedure_off :
  -----------------------------------------------------------------------------
 | #   | From  | To                  | Proved By          | Dead Path | Status |
 |-----------------------------------------------------------------------------
-| 1   | start | pre check @ 23      | Undischarged       | No DPC    |   U-   |
-| 2   | start |    assert @ finish  | Undischarged       | No DPC    |   U-   |
+| 1   | start | pre check @ 25      | Undischarged       | No DPC    |   U-   |
+| 2   | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 3   | start |    assert @ finish  | Inference          | No DPC    |   I-   |
  -----------------------------------------------------------------------------
 
 
 File /home/yingziz/ICD_Simulator/assignment_4/code/closedloop/on.vcg
 procedure ClosedLoop.On
 
-VCs generated 01-JUN-2014 12:40:45
+VCs generated 01-JUN-2014 13:56:56
 
-VCs simplified 01-JUN-2014 12:40:47
+VCs simplified 01-JUN-2014 13:56:57
 
 VCs for procedure_on :
  -----------------------------------------------------------------------------
 | #   | From  | To                  | Proved By          | Dead Path | Status |
 |-----------------------------------------------------------------------------
-| 1   | start | rtc check @ 33      | Inference          | No DPC    |   I-   |
-| 2   | start | pre check @ 34      | Undischarged       | No DPC    |   U-   |
-| 3   | start |    assert @ finish  | Undischarged       | No DPC    |   U-   |
+| 1   | start | rtc check @ 38      | Inference          | No DPC    |   I-   |
+| 2   | start | pre check @ 39      | Undischarged       | No DPC    |   U-   |
+| 3   | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 4   | start |    assert @ finish  | Inference          | No DPC    |   I-   |
  -----------------------------------------------------------------------------
 
 
 File /home/yingziz/ICD_Simulator/assignment_4/code/closedloop/setfibrillationbound.vcg
 procedure ClosedLoop.setFibrillationBound
 
-VCs generated 01-JUN-2014 12:40:45
+VCs generated 01-JUN-2014 13:56:56
 
-VCs simplified 01-JUN-2014 12:40:50
+VCs simplified 01-JUN-2014 13:56:59
 
 VCs for procedure_setfibrillationbound :
  -----------------------------------------------------------------------------
 | #   | From  | To                  | Proved By          | Dead Path | Status |
 |-----------------------------------------------------------------------------
-| 1   | start | rtc check @ 44      | Inference          | No DPC    |   I-   |
+| 1   | start | rtc check @ 51      | Inference          | No DPC    |   I-   |
 | 2   | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
  -----------------------------------------------------------------------------
 
@@ -120,15 +122,15 @@ VCs for procedure_setfibrillationbound :
 File /home/yingziz/ICD_Simulator/assignment_4/code/closedloop/settachycardiabound.vcg
 procedure ClosedLoop.setTachycardiaBound
 
-VCs generated 01-JUN-2014 12:40:45
+VCs generated 01-JUN-2014 13:56:56
 
-VCs simplified 01-JUN-2014 12:40:46
+VCs simplified 01-JUN-2014 13:56:57
 
 VCs for procedure_settachycardiabound :
  -----------------------------------------------------------------------------
 | #   | From  | To                  | Proved By          | Dead Path | Status |
 |-----------------------------------------------------------------------------
-| 1   | start | rtc check @ 39      | Inference          | No DPC    |   I-   |
+| 1   | start | rtc check @ 46      | Inference          | No DPC    |   I-   |
 | 2   | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
  -----------------------------------------------------------------------------
 
@@ -136,9 +138,9 @@ VCs for procedure_settachycardiabound :
 File /home/yingziz/ICD_Simulator/assignment_4/code/closedloop/tick.vcg
 procedure ClosedLoop.tick
 
-VCs generated 01-JUN-2014 12:40:45
+VCs generated 01-JUN-2014 13:56:56
 
-VCs simplified 01-JUN-2014 12:40:47
+VCs simplified 01-JUN-2014 13:56:57
 
 VCs for procedure_tick :
  -----------------------------------------------------------------------------
@@ -151,9 +153,9 @@ VCs for procedure_tick :
 File /home/yingziz/ICD_Simulator/assignment_4/code/heart/getimpulse.vcg
 function Heart.GetImpulse
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:46
+VCs simplified 01-JUN-2014 13:56:57
 
 VCs for function_getimpulse :
  -----------------------------------------------------------------------------
@@ -166,9 +168,9 @@ VCs for function_getimpulse :
 File /home/yingziz/ICD_Simulator/assignment_4/code/heart/getrate.vcg
 procedure Heart.GetRate
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:46
+VCs simplified 01-JUN-2014 13:56:57
 
 VCs for procedure_getrate :
  -----------------------------------------------------------------------------
@@ -182,9 +184,9 @@ VCs for procedure_getrate :
 File /home/yingziz/ICD_Simulator/assignment_4/code/heart/init.vcg
 procedure Heart.Init
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:46
+VCs simplified 01-JUN-2014 13:56:57
 
 VCs for procedure_init :
  -----------------------------------------------------------------------------
@@ -202,9 +204,9 @@ VCs for procedure_init :
 File /home/yingziz/ICD_Simulator/assignment_4/code/heart/setimpulse.vcg
 procedure Heart.SetImpulse
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:46
+VCs simplified 01-JUN-2014 13:56:57
 
 VCs for procedure_setimpulse :
  -----------------------------------------------------------------------------
@@ -218,9 +220,9 @@ VCs for procedure_setimpulse :
 File /home/yingziz/ICD_Simulator/assignment_4/code/heart/tick.vcg
 procedure Heart.Tick
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:46
+VCs simplified 01-JUN-2014 13:56:57
 
 VCs for procedure_tick :
  -----------------------------------------------------------------------------
@@ -250,9 +252,9 @@ VCs for procedure_tick :
 File /home/yingziz/ICD_Simulator/assignment_4/code/hrm/getrate.vcg
 procedure HRM.GetRate
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:41:05
+VCs simplified 01-JUN-2014 13:57:13
 
 VCs for procedure_getrate :
  -----------------------------------------------------------------------------
@@ -268,9 +270,9 @@ VCs for procedure_getrate :
 File /home/yingziz/ICD_Simulator/assignment_4/code/hrm/init.vcg
 procedure HRM.Init
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:41:05
+VCs simplified 01-JUN-2014 13:57:14
 
 VCs for procedure_init :
  -----------------------------------------------------------------------------
@@ -284,9 +286,9 @@ VCs for procedure_init :
 File /home/yingziz/ICD_Simulator/assignment_4/code/hrm/ison.vcg
 function HRM.IsOn
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:41:05
+VCs simplified 01-JUN-2014 13:57:13
 
 VCs for function_ison :
  -----------------------------------------------------------------------------
@@ -299,9 +301,9 @@ VCs for function_ison :
 File /home/yingziz/ICD_Simulator/assignment_4/code/hrm/off.vcg
 procedure HRM.Off
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:41:05
+VCs simplified 01-JUN-2014 13:57:13
 
 VCs for procedure_off :
  -----------------------------------------------------------------------------
@@ -314,9 +316,9 @@ VCs for procedure_off :
 File /home/yingziz/ICD_Simulator/assignment_4/code/hrm/on.vcg
 procedure HRM.On
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:41:05
+VCs simplified 01-JUN-2014 13:57:14
 
 VCs for procedure_on :
  -----------------------------------------------------------------------------
@@ -330,9 +332,9 @@ VCs for procedure_on :
 File /home/yingziz/ICD_Simulator/assignment_4/code/hrm/tick.vcg
 procedure HRM.Tick
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:41:05
+VCs simplified 01-JUN-2014 13:57:14
 
 VCs for procedure_tick :
  -----------------------------------------------------------------------------
@@ -351,9 +353,9 @@ VCs for procedure_tick :
 File /home/yingziz/ICD_Simulator/assignment_4/code/icd/bpmarrayupdate.vcg
 procedure ICD.BPMArrayUpdate
 
-VCs generated 01-JUN-2014 12:40:45
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:50
+VCs simplified 01-JUN-2014 13:56:59
 
 VCs for procedure_bpmarrayupdate :
  -----------------------------------------------------------------------------
@@ -372,9 +374,9 @@ VCs for procedure_bpmarrayupdate :
 File /home/yingziz/ICD_Simulator/assignment_4/code/icd/calculateandsetimpluse.vcg
 procedure ICD.CalculateAndSetImpluse
 
-VCs generated 01-JUN-2014 12:40:45
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:60
+VCs simplified 01-JUN-2014 13:57:08
 
 VCs for procedure_calculateandsetimpluse :
  -----------------------------------------------------------------------------
@@ -488,9 +490,9 @@ VCs for procedure_calculateandsetimpluse :
 File /home/yingziz/ICD_Simulator/assignment_4/code/icd/getabnormalnum.vcg
 procedure ICD.GetAbnormalNum
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:51
+VCs simplified 01-JUN-2014 13:56:59
 
 VCs for procedure_getabnormalnum :
  -----------------------------------------------------------------------------
@@ -597,9 +599,9 @@ VCs for procedure_getabnormalnum :
 File /home/yingziz/ICD_Simulator/assignment_4/code/icd/init.vcg
 procedure ICD.Init
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:60
+VCs simplified 01-JUN-2014 13:57:08
 
 VCs for procedure_init :
  -----------------------------------------------------------------------------
@@ -629,9 +631,9 @@ VCs for procedure_init :
 File /home/yingziz/ICD_Simulator/assignment_4/code/icd/isfibrillation.vcg
 procedure ICD.isFibrillation
 
-VCs generated 01-JUN-2014 12:40:45
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:60
+VCs simplified 01-JUN-2014 13:57:08
 
 VCs for procedure_isfibrillation :
  -----------------------------------------------------------------------------
@@ -645,9 +647,9 @@ VCs for procedure_isfibrillation :
 File /home/yingziz/ICD_Simulator/assignment_4/code/icd/ison.vcg
 function ICD.IsOn
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:60
+VCs simplified 01-JUN-2014 13:57:08
 
 VCs for function_ison :
  -----------------------------------------------------------------------------
@@ -660,9 +662,9 @@ VCs for function_ison :
 File /home/yingziz/ICD_Simulator/assignment_4/code/icd/istachycardia.vcg
 procedure ICD.isTachycardia
 
-VCs generated 01-JUN-2014 12:40:45
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:41:05
+VCs simplified 01-JUN-2014 13:57:13
 
 VCs for procedure_istachycardia :
  -----------------------------------------------------------------------------
@@ -676,9 +678,9 @@ VCs for procedure_istachycardia :
 File /home/yingziz/ICD_Simulator/assignment_4/code/icd/iswait.vcg
 procedure ICD.isWait
 
-VCs generated 01-JUN-2014 12:40:45
+VCs generated 01-JUN-2014 13:56:56
 
-VCs simplified 01-JUN-2014 12:40:51
+VCs simplified 01-JUN-2014 13:56:59
 
 VCs for procedure_iswait :
  -----------------------------------------------------------------------------
@@ -696,9 +698,9 @@ VCs for procedure_iswait :
 File /home/yingziz/ICD_Simulator/assignment_4/code/icd/off.vcg
 procedure ICD.Off
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:60
+VCs simplified 01-JUN-2014 13:57:08
 
 VCs for procedure_off :
  -----------------------------------------------------------------------------
@@ -711,9 +713,9 @@ VCs for procedure_off :
 File /home/yingziz/ICD_Simulator/assignment_4/code/icd/on.vcg
 procedure ICD.On
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:41:05
+VCs simplified 01-JUN-2014 13:57:13
 
 VCs for procedure_on :
  -----------------------------------------------------------------------------
@@ -741,9 +743,9 @@ VCs for procedure_on :
 File /home/yingziz/ICD_Simulator/assignment_4/code/icd/setfibrillationbound.vcg
 procedure ICD.setFibrillationBound
 
-VCs generated 01-JUN-2014 12:40:45
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:41:05
+VCs simplified 01-JUN-2014 13:57:13
 
 VCs for procedure_setfibrillationbound :
  -----------------------------------------------------------------------------
@@ -759,9 +761,9 @@ VCs for procedure_setfibrillationbound :
 File /home/yingziz/ICD_Simulator/assignment_4/code/icd/settachycardiabound.vcg
 procedure ICD.setTachycardiaBound
 
-VCs generated 01-JUN-2014 12:40:45
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:60
+VCs simplified 01-JUN-2014 13:57:08
 
 VCs for procedure_settachycardiabound :
  -----------------------------------------------------------------------------
@@ -777,9 +779,9 @@ VCs for procedure_settachycardiabound :
 File /home/yingziz/ICD_Simulator/assignment_4/code/icd/tick.vcg
 procedure ICD.Tick
 
-VCs generated 01-JUN-2014 12:40:45
+VCs generated 01-JUN-2014 13:56:56
 
-VCs simplified 01-JUN-2014 12:41:03
+VCs simplified 01-JUN-2014 13:57:12
 
 VCs for procedure_tick :
  -----------------------------------------------------------------------------
@@ -795,9 +797,9 @@ VCs for procedure_tick :
 File /home/yingziz/ICD_Simulator/assignment_4/code/impulsegenerator/init.vcg
 procedure ImpulseGenerator.Init
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:50
+VCs simplified 01-JUN-2014 13:56:59
 
 VCs for procedure_init :
  -----------------------------------------------------------------------------
@@ -811,9 +813,9 @@ VCs for procedure_init :
 File /home/yingziz/ICD_Simulator/assignment_4/code/impulsegenerator/ison.vcg
 function ImpulseGenerator.IsOn
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:50
+VCs simplified 01-JUN-2014 13:56:59
 
 VCs for function_ison :
  -----------------------------------------------------------------------------
@@ -826,9 +828,9 @@ VCs for function_ison :
 File /home/yingziz/ICD_Simulator/assignment_4/code/impulsegenerator/off.vcg
 procedure ImpulseGenerator.Off
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:50
+VCs simplified 01-JUN-2014 13:56:59
 
 VCs for procedure_off :
  -----------------------------------------------------------------------------
@@ -841,9 +843,9 @@ VCs for procedure_off :
 File /home/yingziz/ICD_Simulator/assignment_4/code/impulsegenerator/on.vcg
 procedure ImpulseGenerator.On
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:50
+VCs simplified 01-JUN-2014 13:56:59
 
 VCs for procedure_on :
  -----------------------------------------------------------------------------
@@ -856,9 +858,9 @@ VCs for procedure_on :
 File /home/yingziz/ICD_Simulator/assignment_4/code/impulsegenerator/setimpulse.vcg
 procedure ImpulseGenerator.SetImpulse
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:50
+VCs simplified 01-JUN-2014 13:56:59
 
 VCs for procedure_setimpulse :
  -----------------------------------------------------------------------------
@@ -873,9 +875,9 @@ VCs for procedure_setimpulse :
 File /home/yingziz/ICD_Simulator/assignment_4/code/impulsegenerator/tick.vcg
 procedure ImpulseGenerator.Tick
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:50
+VCs simplified 01-JUN-2014 13:56:59
 
 VCs for procedure_tick :
  -----------------------------------------------------------------------------
@@ -890,9 +892,9 @@ VCs for procedure_tick :
 File /home/yingziz/ICD_Simulator/assignment_4/code/measures/limit.vcg
 function Measures.Limit
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:46
+VCs simplified 01-JUN-2014 13:56:57
 
 VCs for function_limit :
  -----------------------------------------------------------------------------
@@ -910,9 +912,9 @@ VCs for function_limit :
 File /home/yingziz/ICD_Simulator/assignment_4/code/measures/limitbpm.vcg
 function Measures.LimitBPM
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:46
+VCs simplified 01-JUN-2014 13:56:57
 
 VCs for function_limitbpm :
  -----------------------------------------------------------------------------
@@ -926,9 +928,9 @@ VCs for function_limitbpm :
 File /home/yingziz/ICD_Simulator/assignment_4/code/measures/limitfub.vcg
 function Measures.LimitFUB
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:46
+VCs simplified 01-JUN-2014 13:56:56
 
 VCs for function_limitfub :
  -----------------------------------------------------------------------------
@@ -942,9 +944,9 @@ VCs for function_limitfub :
 File /home/yingziz/ICD_Simulator/assignment_4/code/measures/limitjoules.vcg
 function Measures.LimitJoules
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:46
+VCs simplified 01-JUN-2014 13:56:57
 
 VCs for function_limitjoules :
  -----------------------------------------------------------------------------
@@ -958,9 +960,9 @@ VCs for function_limitjoules :
 File /home/yingziz/ICD_Simulator/assignment_4/code/measures/limittub.vcg
 function Measures.LimitTUB
 
-VCs generated 01-JUN-2014 12:40:44
+VCs generated 01-JUN-2014 13:56:55
 
-VCs simplified 01-JUN-2014 12:40:46
+VCs simplified 01-JUN-2014 13:56:57
 
 VCs for function_limittub :
  -----------------------------------------------------------------------------
@@ -980,14 +982,14 @@ The following subprograms have VCs proved by contradiction:
 
 The following subprograms have undischarged VCs (excluding those proved false):
 
-   2  /home/yingziz/ICD_Simulator/assignment_4/code/closedloop/off.vcg
-   2  /home/yingziz/ICD_Simulator/assignment_4/code/closedloop/on.vcg
+   1  /home/yingziz/ICD_Simulator/assignment_4/code/closedloop/off.vcg
+   1  /home/yingziz/ICD_Simulator/assignment_4/code/closedloop/on.vcg
    1  /home/yingziz/ICD_Simulator/assignment_4/code/icd/tick.vcg
 
 Proof strategies used by subprograms
 -------------------------------------------------------------------------
 Total subprograms with at least one VC proved by examiner:              8
-Total subprograms with at least one VC proved by simplifier:           39
+Total subprograms with at least one VC proved by simplifier:           40
 Total subprograms with at least one VC proved by contradiction:         1
 Total subprograms with at least one VC proved with user proof rule:     0
 Total subprograms with at least one VC proved by ViCToR:                0
@@ -1027,13 +1029,13 @@ Note: (User) denotes where the Simplifier has proved VCs using one or
 Total VCs by type:                                       
                        -----------Proved By Or Using-----------
                 Total Examnr   Simp (User) ViCToR Checkr Review  False Undisc
-Assert/Post       123     10    111             0      0      0      0      2
+Assert/Post       125     10    115             0      0      0      0      0
 Precondition        7      0      4             0      0      0      0      3
 Check stmnt.        0      0      0             0      0      0      0      0
 Runtime check     215      0    215             0      0      0      0      0
 Refinem. VCs        0      0      0             0      0      0      0      0
 Inherit. VCs        0      0      0             0      0      0      0      0
 ===============================================================================
-Totals:           345     10    330             0      0      0      0      5 <<<
+Totals:           347     10    334             0      0      0      0      3 <<<
 %Totals:                  3%    96%            0%     0%     0%     0%     1%
 ===================== End of Semantic Analysis Summary ========================

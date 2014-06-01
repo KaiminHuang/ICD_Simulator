@@ -5,14 +5,14 @@
            *******************************************************
 
 
-                        DATE : 01-JUN-2014 12:40:45.52
+                        DATE : 01-JUN-2014 13:56:56.14
 
                           procedure ClosedLoop.Off
 
 
 
 
-For path(s) from start to precondition check associated with statement of line 23:
+For path(s) from start to precondition check associated with statement of line 25:
 
 procedure_off_1.
 H1:    fld_ison(cl) = true .
@@ -68,6 +68,7 @@ H50:   fld_impulse(fld_hrt(cl)) >= measures__joules__first .
 H51:   fld_impulse(fld_hrt(cl)) <= measures__joules__last .
 H52:   fld_rate(fld_hrt(cl)) >= measures__bpm__first .
 H53:   fld_rate(fld_hrt(cl)) <= measures__bpm__last .
+H54:   fld_ison(cl) = true .
         ->
 C1:    fld_ison(fld_icds(cl)) = true .
  
@@ -128,73 +129,133 @@ H50:   fld_impulse(fld_hrt(cl)) >= measures__joules__first .
 H51:   fld_impulse(fld_hrt(cl)) <= measures__joules__last .
 H52:   fld_rate(fld_hrt(cl)) >= measures__bpm__first .
 H53:   fld_rate(fld_hrt(cl)) <= measures__bpm__last .
-H54:   fld_ison(fld_icds(cl)) = true .
-H55:   fld_ison(fld_icds(cl__1)) = false .
-H56:   true .
-H57:   fld_waitaftershock(fld_icds(cl__1)) >= integer__first .
-H58:   fld_waitaftershock(fld_icds(cl__1)) <= integer__last .
-H59:   fld_abnormalnum(fld_icds(cl__1)) >= integer__first .
-H60:   fld_abnormalnum(fld_icds(cl__1)) <= integer__last .
-H61:   true .
-H62:   fld_fibrillationbound(fld_icds(cl__1)) >= 
+H54:   fld_ison(cl) = true .
+H55:   fld_ison(fld_icds(cl)) = true .
+H56:   fld_ison(fld_icds(cl__1)) = false .
+H57:   true .
+H58:   fld_waitaftershock(fld_icds(cl__1)) >= integer__first .
+H59:   fld_waitaftershock(fld_icds(cl__1)) <= integer__last .
+H60:   fld_abnormalnum(fld_icds(cl__1)) >= integer__first .
+H61:   fld_abnormalnum(fld_icds(cl__1)) <= integer__last .
+H62:   true .
+H63:   fld_fibrillationbound(fld_icds(cl__1)) >= 
            measures__fub__first .
-H63:   fld_fibrillationbound(fld_icds(cl__1)) <= 
+H64:   fld_fibrillationbound(fld_icds(cl__1)) <= 
            measures__fub__last .
-H64:   fld_signal(fld_icds(cl__1)) >= integer__first .
-H65:   fld_signal(fld_icds(cl__1)) <= integer__last .
-H66:   fld_ticktonextimpulse(fld_icds(cl__1)) >= integer__first .
-H67:   fld_ticktonextimpulse(fld_icds(cl__1)) <= integer__last .
-H68:   fld_offset(fld_icds(cl__1)) >= integer__first .
-H69:   fld_offset(fld_icds(cl__1)) <= integer__last .
-H70:   fld_impulserate(fld_icds(cl__1)) >= integer__first .
-H71:   fld_impulserate(fld_icds(cl__1)) <= integer__last .
-H72:   fld_impulse(fld_icds(cl__1)) >= measures__joules__first .
-H73:   fld_impulse(fld_icds(cl__1)) <= measures__joules__last .
-H74:   true .
+H65:   fld_signal(fld_icds(cl__1)) >= integer__first .
+H66:   fld_signal(fld_icds(cl__1)) <= integer__last .
+H67:   fld_ticktonextimpulse(fld_icds(cl__1)) >= integer__first .
+H68:   fld_ticktonextimpulse(fld_icds(cl__1)) <= integer__last .
+H69:   fld_offset(fld_icds(cl__1)) >= integer__first .
+H70:   fld_offset(fld_icds(cl__1)) <= integer__last .
+H71:   fld_impulserate(fld_icds(cl__1)) >= integer__first .
+H72:   fld_impulserate(fld_icds(cl__1)) <= integer__last .
+H73:   fld_impulse(fld_icds(cl__1)) >= measures__joules__first .
+H74:   fld_impulse(fld_icds(cl__1)) <= measures__joules__last .
 H75:   true .
-H76:   fld_impulseratebound(fld_icds(cl__1)) >= measures__tub__first .
-H77:   fld_impulseratebound(fld_icds(cl__1)) <= measures__tub__last .
-H78:   fld_tachycardiabound(fld_icds(cl__1)) >= measures__tub__first .
-H79:   fld_tachycardiabound(fld_icds(cl__1)) <= measures__tub__last .
-H80:   true .
-H81:   fld_last1strate(fld_icds(cl__1)) >= measures__bpm__first .
-H82:   fld_last1strate(fld_icds(cl__1)) <= measures__bpm__last .
-H83:   fld_last2ndrate(fld_icds(cl__1)) >= measures__bpm__first .
-H84:   fld_last2ndrate(fld_icds(cl__1)) <= measures__bpm__last .
-H85:   fld_last3rdrate(fld_icds(cl__1)) >= measures__bpm__first .
-H86:   fld_last3rdrate(fld_icds(cl__1)) <= measures__bpm__last .
-H87:   fld_last4thrate(fld_icds(cl__1)) >= measures__bpm__first .
-H88:   fld_last4thrate(fld_icds(cl__1)) <= measures__bpm__last .
-H89:   fld_last5thrate(fld_icds(cl__1)) >= measures__bpm__first .
-H90:   fld_last5thrate(fld_icds(cl__1)) <= measures__bpm__last .
-H91:   fld_last6thrate(fld_icds(cl__1)) >= measures__bpm__first .
-H92:   fld_last6thrate(fld_icds(cl__1)) <= measures__bpm__last .
-H93:   fld_rate(fld_icds(cl__1)) >= measures__bpm__first .
-H94:   fld_rate(fld_icds(cl__1)) <= measures__bpm__last .
-H95:   fld_hrt(cl__1) = fld_hrt(cl) .
-H96:   fld_monitor(cl__1) = fld_monitor(cl) .
-H97:   fld_generator(cl__1) = fld_generator(cl) .
-H98:   fld_ison(cl__1) = fld_ison(cl) .
-H99:   cl__1 = upf_icds(cl, fld_icds(cl__1)) .
-H100:  not (fld_ison(fld_monitor(cl__2))) .
-H101:  true .
-H102:  fld_rate(fld_monitor(cl__2)) >= measures__bpm__first .
-H103:  fld_rate(fld_monitor(cl__2)) <= measures__bpm__last .
-H104:  fld_hrt(cl__2) = fld_hrt(cl__1) .
-H105:  fld_generator(cl__2) = fld_generator(cl__1) .
-H106:  fld_icds(cl__2) = fld_icds(cl__1) .
-H107:  fld_ison(cl__2) = fld_ison(cl__1) .
-H108:  cl__2 = upf_monitor(cl__1, fld_monitor(cl__2)) .
-H109:  not (fld_ison(fld_generator(cl__3))) .
-H110:  true .
-H111:  fld_impulse(fld_generator(cl__3)) >= measures__joules__first .
-H112:  fld_impulse(fld_generator(cl__3)) <= measures__joules__last .
-H113:  fld_hrt(cl__3) = fld_hrt(cl__2) .
-H114:  fld_monitor(cl__3) = fld_monitor(cl__2) .
-H115:  fld_icds(cl__3) = fld_icds(cl__2) .
-H116:  fld_ison(cl__3) = fld_ison(cl__2) .
-H117:  cl__3 = upf_generator(cl__2, fld_generator(cl__3)) .
+H76:   true .
+H77:   fld_impulseratebound(fld_icds(cl__1)) >= measures__tub__first .
+H78:   fld_impulseratebound(fld_icds(cl__1)) <= measures__tub__last .
+H79:   fld_tachycardiabound(fld_icds(cl__1)) >= measures__tub__first .
+H80:   fld_tachycardiabound(fld_icds(cl__1)) <= measures__tub__last .
+H81:   true .
+H82:   fld_last1strate(fld_icds(cl__1)) >= measures__bpm__first .
+H83:   fld_last1strate(fld_icds(cl__1)) <= measures__bpm__last .
+H84:   fld_last2ndrate(fld_icds(cl__1)) >= measures__bpm__first .
+H85:   fld_last2ndrate(fld_icds(cl__1)) <= measures__bpm__last .
+H86:   fld_last3rdrate(fld_icds(cl__1)) >= measures__bpm__first .
+H87:   fld_last3rdrate(fld_icds(cl__1)) <= measures__bpm__last .
+H88:   fld_last4thrate(fld_icds(cl__1)) >= measures__bpm__first .
+H89:   fld_last4thrate(fld_icds(cl__1)) <= measures__bpm__last .
+H90:   fld_last5thrate(fld_icds(cl__1)) >= measures__bpm__first .
+H91:   fld_last5thrate(fld_icds(cl__1)) <= measures__bpm__last .
+H92:   fld_last6thrate(fld_icds(cl__1)) >= measures__bpm__first .
+H93:   fld_last6thrate(fld_icds(cl__1)) <= measures__bpm__last .
+H94:   fld_rate(fld_icds(cl__1)) >= measures__bpm__first .
+H95:   fld_rate(fld_icds(cl__1)) <= measures__bpm__last .
+H96:   fld_hrt(cl__1) = fld_hrt(cl) .
+H97:   fld_monitor(cl__1) = fld_monitor(cl) .
+H98:   fld_generator(cl__1) = fld_generator(cl) .
+H99:   fld_ison(cl__1) = fld_ison(cl) .
+H100:  cl__1 = upf_icds(cl, fld_icds(cl__1)) .
+H101:  not (fld_ison(fld_monitor(cl__2))) .
+H102:  true .
+H103:  fld_rate(fld_monitor(cl__2)) >= measures__bpm__first .
+H104:  fld_rate(fld_monitor(cl__2)) <= measures__bpm__last .
+H105:  fld_hrt(cl__2) = fld_hrt(cl__1) .
+H106:  fld_generator(cl__2) = fld_generator(cl__1) .
+H107:  fld_icds(cl__2) = fld_icds(cl__1) .
+H108:  fld_ison(cl__2) = fld_ison(cl__1) .
+H109:  cl__2 = upf_monitor(cl__1, fld_monitor(cl__2)) .
+H110:  not (fld_ison(fld_generator(cl__3))) .
+H111:  true .
+H112:  fld_impulse(fld_generator(cl__3)) >= measures__joules__first .
+H113:  fld_impulse(fld_generator(cl__3)) <= measures__joules__last .
+H114:  fld_hrt(cl__3) = fld_hrt(cl__2) .
+H115:  fld_monitor(cl__3) = fld_monitor(cl__2) .
+H116:  fld_icds(cl__3) = fld_icds(cl__2) .
+H117:  fld_ison(cl__3) = fld_ison(cl__2) .
+H118:  cl__3 = upf_generator(cl__2, fld_generator(cl__3)) .
         ->
-C1:    fld_ison(cl__3) = false .
+C1:    fld_ison(upf_ison(cl__3, false)) = false .
+ 
+
+procedure_off_3.
+H1:    fld_ison(cl) = true .
+H2:    true .
+H3:    true .
+H4:    fld_waitaftershock(fld_icds(cl)) >= integer__first .
+H5:    fld_waitaftershock(fld_icds(cl)) <= integer__last .
+H6:    fld_abnormalnum(fld_icds(cl)) >= integer__first .
+H7:    fld_abnormalnum(fld_icds(cl)) <= integer__last .
+H8:    true .
+H9:    fld_fibrillationbound(fld_icds(cl)) >= measures__fub__first .
+H10:   fld_fibrillationbound(fld_icds(cl)) <= measures__fub__last .
+H11:   fld_signal(fld_icds(cl)) >= integer__first .
+H12:   fld_signal(fld_icds(cl)) <= integer__last .
+H13:   fld_ticktonextimpulse(fld_icds(cl)) >= integer__first .
+H14:   fld_ticktonextimpulse(fld_icds(cl)) <= integer__last .
+H15:   fld_offset(fld_icds(cl)) >= integer__first .
+H16:   fld_offset(fld_icds(cl)) <= integer__last .
+H17:   fld_impulserate(fld_icds(cl)) >= integer__first .
+H18:   fld_impulserate(fld_icds(cl)) <= integer__last .
+H19:   fld_impulse(fld_icds(cl)) >= measures__joules__first .
+H20:   fld_impulse(fld_icds(cl)) <= measures__joules__last .
+H21:   true .
+H22:   true .
+H23:   fld_impulseratebound(fld_icds(cl)) >= measures__tub__first .
+H24:   fld_impulseratebound(fld_icds(cl)) <= measures__tub__last .
+H25:   fld_tachycardiabound(fld_icds(cl)) >= measures__tub__first .
+H26:   fld_tachycardiabound(fld_icds(cl)) <= measures__tub__last .
+H27:   true .
+H28:   fld_last1strate(fld_icds(cl)) >= measures__bpm__first .
+H29:   fld_last1strate(fld_icds(cl)) <= measures__bpm__last .
+H30:   fld_last2ndrate(fld_icds(cl)) >= measures__bpm__first .
+H31:   fld_last2ndrate(fld_icds(cl)) <= measures__bpm__last .
+H32:   fld_last3rdrate(fld_icds(cl)) >= measures__bpm__first .
+H33:   fld_last3rdrate(fld_icds(cl)) <= measures__bpm__last .
+H34:   fld_last4thrate(fld_icds(cl)) >= measures__bpm__first .
+H35:   fld_last4thrate(fld_icds(cl)) <= measures__bpm__last .
+H36:   fld_last5thrate(fld_icds(cl)) >= measures__bpm__first .
+H37:   fld_last5thrate(fld_icds(cl)) <= measures__bpm__last .
+H38:   fld_last6thrate(fld_icds(cl)) >= measures__bpm__first .
+H39:   fld_last6thrate(fld_icds(cl)) <= measures__bpm__last .
+H40:   fld_rate(fld_icds(cl)) >= measures__bpm__first .
+H41:   fld_rate(fld_icds(cl)) <= measures__bpm__last .
+H42:   true .
+H43:   fld_impulse(fld_generator(cl)) >= measures__joules__first .
+H44:   fld_impulse(fld_generator(cl)) <= measures__joules__last .
+H45:   true .
+H46:   fld_rate(fld_monitor(cl)) >= measures__bpm__first .
+H47:   fld_rate(fld_monitor(cl)) <= measures__bpm__last .
+H48:   fld_defaultchange(fld_hrt(cl)) >= measures__bpm__first .
+H49:   fld_defaultchange(fld_hrt(cl)) <= measures__bpm__last .
+H50:   fld_impulse(fld_hrt(cl)) >= measures__joules__first .
+H51:   fld_impulse(fld_hrt(cl)) <= measures__joules__last .
+H52:   fld_rate(fld_hrt(cl)) >= measures__bpm__first .
+H53:   fld_rate(fld_hrt(cl)) <= measures__bpm__last .
+H54:   not (fld_ison(cl) = true) .
+        ->
+C1:    fld_ison(cl) = false .
  
 

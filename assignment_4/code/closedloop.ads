@@ -23,8 +23,6 @@ package ClosedLoop is
 	-- Create and initalise a ClosedLoop
 	procedure Init(cl : out ClosedLoopType);
 	--# derives cl from ;
-	--# post 	cl.IsOn = False;
-
 
 	-- Switch between on/off mode
 	procedure On (cl : in out ClosedLoopType);
@@ -37,17 +35,16 @@ package ClosedLoop is
 	--# derives cl from cl;
 	--# pre 	cl.IsOn = True;
    	--# post 	cl.IsOn = False;
+  
 
 	-- Set Upper Bound for tachycardia
 	procedure setTachycardiaBound (cl : in out ClosedLoopType; ub : in Integer);
 	--# derives cl from ub, cl;
-	-- Post here is not necessary becuase the on or off logic is handled by icd
 
 	-- Set Upper Bound for tachycardia
 	procedure setFibrillationBound (cl : in out ClosedLoopType; ub : in Integer);
 	--# derives cl from ub, cl;
-	-- Post here is not necessary becuase the on or off logic is handled by icd
-	
+
 	-- tick heart, monitor, ICD, Umpilse
 	procedure tick (cl: in out ClosedLoopType);
 	--# derives cl from cl;

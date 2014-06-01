@@ -5,7 +5,7 @@
 *****************************************************************************
 
 
-CREATED 01-JUN-2014, 12:40:45  SIMPLIFIED 01-JUN-2014, 12:40:47
+CREATED 01-JUN-2014, 13:56:56  SIMPLIFIED 01-JUN-2014, 13:56:57
 
 SPARK Simplifier GPL 2011
 Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
@@ -20,80 +20,84 @@ procedure ClosedLoop.On
 @@@@@@@@@@  VC: procedure_on_1.  @@@@@@@@@@
 %%%  Simplified H1 on reading formula in, to give:
      %%%  H1:  not fld_ison(cl)
-%%%  Simplified H61 on reading formula in, to give:
-     %%%  H61:  fld_ison(cl__1) <-> fld_ison(cl)
-%%%  Simplified H70 on reading formula in, to give:
-     %%%  H70:  fld_ison(cl__2) <-> fld_ison(cl__1)
----  Hypothesis H81 has been replaced by "true".  (It is already present, as 
-          H74).
-%%%  Simplified H85 on reading formula in, to give:
-     %%%  H85:  fld_ison(cl__3) <-> fld_ison(cl__2)
-%%%  Simplified H97 on reading formula in, to give:
-     %%%  H97:  fld_ison(fld_icds(cl__4)) <-> fld_ison(fld_icds(cl__3))
-%%%  Simplified H100 on reading formula in, to give:
-     %%%  H100:  fld_istachycardia(fld_icds(cl__4)) <-> fld_istachycardia(
-          fld_icds(cl__3))
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as H1)
+          .
+%%%  Simplified H62 on reading formula in, to give:
+     %%%  H62:  fld_ison(cl__1) <-> fld_ison(cl)
+%%%  Simplified H71 on reading formula in, to give:
+     %%%  H71:  fld_ison(cl__2) <-> fld_ison(cl__1)
+---  Hypothesis H82 has been replaced by "true".  (It is already present, as 
+          H75).
+%%%  Simplified H86 on reading formula in, to give:
+     %%%  H86:  fld_ison(cl__3) <-> fld_ison(cl__2)
+%%%  Simplified H98 on reading formula in, to give:
+     %%%  H98:  fld_ison(fld_icds(cl__4)) <-> fld_ison(fld_icds(cl__3))
 %%%  Simplified H101 on reading formula in, to give:
-     %%%  H101:  fld_isinimpulseprocess(fld_icds(cl__4)) <-> 
-          fld_isinimpulseprocess(fld_icds(cl__3))
-%%%  Simplified H108 on reading formula in, to give:
-     %%%  H108:  fld_isfibrillation(fld_icds(cl__4)) <-> fld_isfibrillation(
+     %%%  H101:  fld_istachycardia(fld_icds(cl__4)) <-> fld_istachycardia(
           fld_icds(cl__3))
-%%%  Simplified H111 on reading formula in, to give:
-     %%%  H111:  fld_iswait(fld_icds(cl__4)) <-> fld_iswait(fld_icds(cl__3))
-%%%  Simplified H115 on reading formula in, to give:
-     %%%  H115:  fld_ison(cl__4) <-> fld_ison(cl__3)
+%%%  Simplified H102 on reading formula in, to give:
+     %%%  H102:  fld_isinimpulseprocess(fld_icds(cl__4)) <-> 
+          fld_isinimpulseprocess(fld_icds(cl__3))
+%%%  Simplified H109 on reading formula in, to give:
+     %%%  H109:  fld_isfibrillation(fld_icds(cl__4)) <-> fld_isfibrillation(
+          fld_icds(cl__3))
+%%%  Simplified H112 on reading formula in, to give:
+     %%%  H112:  fld_iswait(fld_icds(cl__4)) <-> fld_iswait(fld_icds(cl__3))
+%%%  Simplified H116 on reading formula in, to give:
+     %%%  H116:  fld_ison(cl__4) <-> fld_ison(cl__3)
 ***  Proved C1:  fld_rate(fld_icds(cl__4)) >= measures__bpm__first
-     using hypothesis H89.
-***  Proved C2:  fld_rate(fld_icds(cl__4)) <= measures__bpm__last
      using hypothesis H90.
+***  Proved C2:  fld_rate(fld_icds(cl__4)) <= measures__bpm__last
+     using hypothesis H91.
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_on_2.  @@@@@@@@@@
 %%%  Simplified H1 on reading formula in, to give:
      %%%  H1:  not fld_ison(cl)
-%%%  Simplified H61 on reading formula in, to give:
-     %%%  H61:  fld_ison(cl__1) <-> fld_ison(cl)
-%%%  Simplified H70 on reading formula in, to give:
-     %%%  H70:  fld_ison(cl__2) <-> fld_ison(cl__1)
----  Hypothesis H81 has been replaced by "true".  (It is already present, as 
-          H74).
-%%%  Simplified H85 on reading formula in, to give:
-     %%%  H85:  fld_ison(cl__3) <-> fld_ison(cl__2)
-%%%  Simplified H97 on reading formula in, to give:
-     %%%  H97:  fld_ison(fld_icds(cl__4)) <-> fld_ison(fld_icds(cl__3))
-%%%  Simplified H100 on reading formula in, to give:
-     %%%  H100:  fld_istachycardia(fld_icds(cl__4)) <-> fld_istachycardia(
-          fld_icds(cl__3))
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as H1)
+          .
+%%%  Simplified H62 on reading formula in, to give:
+     %%%  H62:  fld_ison(cl__1) <-> fld_ison(cl)
+%%%  Simplified H71 on reading formula in, to give:
+     %%%  H71:  fld_ison(cl__2) <-> fld_ison(cl__1)
+---  Hypothesis H82 has been replaced by "true".  (It is already present, as 
+          H75).
+%%%  Simplified H86 on reading formula in, to give:
+     %%%  H86:  fld_ison(cl__3) <-> fld_ison(cl__2)
+%%%  Simplified H98 on reading formula in, to give:
+     %%%  H98:  fld_ison(fld_icds(cl__4)) <-> fld_ison(fld_icds(cl__3))
 %%%  Simplified H101 on reading formula in, to give:
-     %%%  H101:  fld_isinimpulseprocess(fld_icds(cl__4)) <-> 
-          fld_isinimpulseprocess(fld_icds(cl__3))
-%%%  Simplified H108 on reading formula in, to give:
-     %%%  H108:  fld_isfibrillation(fld_icds(cl__4)) <-> fld_isfibrillation(
+     %%%  H101:  fld_istachycardia(fld_icds(cl__4)) <-> fld_istachycardia(
           fld_icds(cl__3))
-%%%  Simplified H111 on reading formula in, to give:
-     %%%  H111:  fld_iswait(fld_icds(cl__4)) <-> fld_iswait(fld_icds(cl__3))
-%%%  Simplified H115 on reading formula in, to give:
-     %%%  H115:  fld_ison(cl__4) <-> fld_ison(cl__3)
----  Hypothesis H117 has been replaced by "true".  (It is already present, as 
-          H89).
+%%%  Simplified H102 on reading formula in, to give:
+     %%%  H102:  fld_isinimpulseprocess(fld_icds(cl__4)) <-> 
+          fld_isinimpulseprocess(fld_icds(cl__3))
+%%%  Simplified H109 on reading formula in, to give:
+     %%%  H109:  fld_isfibrillation(fld_icds(cl__4)) <-> fld_isfibrillation(
+          fld_icds(cl__3))
+%%%  Simplified H112 on reading formula in, to give:
+     %%%  H112:  fld_iswait(fld_icds(cl__4)) <-> fld_iswait(fld_icds(cl__3))
+%%%  Simplified H116 on reading formula in, to give:
+     %%%  H116:  fld_ison(cl__4) <-> fld_ison(cl__3)
 ---  Hypothesis H118 has been replaced by "true".  (It is already present, as 
           H90).
+---  Hypothesis H119 has been replaced by "true".  (It is already present, as 
+          H91).
 %%%  Simplified C1 on reading formula in, to give:
      %%%  C1:  not fld_ison(fld_icds(cl__4))
-+++  Using "A->B, not B |- not A" on hypotheses H61 & H1 yields a new 
++++  Using "A->B, not B |- not A" on hypotheses H62 & H1 yields a new 
           hypothesis:
-     +++  H119:  not fld_ison(cl__1)
-+++  Using "A->B, not B |- not A" on hypotheses H70 & H119 yields a new 
+     +++  H120:  not fld_ison(cl__1)
++++  Using "A->B, not B |- not A" on hypotheses H71 & H120 yields a new 
           hypothesis:
-     +++  H120:  not fld_ison(cl__2)
-+++  Using "A->B, not B |- not A" on hypotheses H85 & H120 yields a new 
+     +++  H121:  not fld_ison(cl__2)
++++  Using "A->B, not B |- not A" on hypotheses H86 & H121 yields a new 
           hypothesis:
-     +++  H121:  not fld_ison(cl__3)
-+++  Using "A->B, not B |- not A" on hypotheses H115 & H121 yields a new 
+     +++  H122:  not fld_ison(cl__3)
++++  Using "A->B, not B |- not A" on hypotheses H116 & H122 yields a new 
           hypothesis:
-     +++  H122:  not fld_ison(cl__4)
+     +++  H123:  not fld_ison(cl__4)
 -S-  Applied substitution rule on_rules(2).
      This was achieved by replacing all occurrences of integer__first by:
           - 2147483648.
@@ -119,8 +123,8 @@ procedure ClosedLoop.On
 <S>  New H19:  fld_impulse(fld_icds(cl)) >= 0
 <S>  New H43:  fld_impulse(fld_generator(cl)) >= 0
 <S>  New H50:  fld_impulse(fld_hrt(cl)) >= 0
-<S>  New H65:  fld_impulse(fld_generator(cl__2)) >= 0
-<S>  New H78:  fld_impulse(fld_hrt(cl__3)) >= 0
+<S>  New H66:  fld_impulse(fld_generator(cl__2)) >= 0
+<S>  New H79:  fld_impulse(fld_hrt(cl__3)) >= 0
 -S-  Applied substitution rule on_rules(8).
      This was achieved by replacing all occurrences of measures__joules__last 
           by:
@@ -128,8 +132,8 @@ procedure ClosedLoop.On
 <S>  New H20:  fld_impulse(fld_icds(cl)) <= 45
 <S>  New H44:  fld_impulse(fld_generator(cl)) <= 45
 <S>  New H51:  fld_impulse(fld_hrt(cl)) <= 45
-<S>  New H66:  fld_impulse(fld_generator(cl__2)) <= 45
-<S>  New H79:  fld_impulse(fld_hrt(cl__3)) <= 45
+<S>  New H67:  fld_impulse(fld_generator(cl__2)) <= 45
+<S>  New H80:  fld_impulse(fld_hrt(cl__3)) <= 45
 -S-  Applied substitution rule on_rules(12).
      This was achieved by replacing all occurrences of measures__bpm__first by:
           - 1.
@@ -143,13 +147,13 @@ procedure ClosedLoop.On
 <S>  New H46:  fld_rate(fld_monitor(cl)) >= - 1
 <S>  New H48:  fld_defaultchange(fld_hrt(cl)) >= - 1
 <S>  New H52:  fld_rate(fld_hrt(cl)) >= - 1
-<S>  New H56:  fld_rate(fld_monitor(cl__1)) >= - 1
-<S>  New H73:  - 1 <= fld_rate(fld_hrt(cl__3))
-<S>  New H76:  fld_defaultchange(fld_hrt(cl__3)) >= - 1
-<S>  New H80:  fld_rate(fld_hrt(cl__3)) >= - 1
-<S>  New H88:  not fld_ison(fld_monitor(cl__3)) -> fld_rate(fld_icds(cl__4)) = 
+<S>  New H57:  fld_rate(fld_monitor(cl__1)) >= - 1
+<S>  New H74:  - 1 <= fld_rate(fld_hrt(cl__3))
+<S>  New H77:  fld_defaultchange(fld_hrt(cl__3)) >= - 1
+<S>  New H81:  fld_rate(fld_hrt(cl__3)) >= - 1
+<S>  New H89:  not fld_ison(fld_monitor(cl__3)) -> fld_rate(fld_icds(cl__4)) = 
           - 1
-<S>  New H89:  fld_rate(fld_icds(cl__4)) >= - 1
+<S>  New H90:  fld_rate(fld_icds(cl__4)) >= - 1
 -S-  Applied substitution rule on_rules(13).
      This was achieved by replacing all occurrences of measures__bpm__last by:
           300.
@@ -163,10 +167,10 @@ procedure ClosedLoop.On
 <S>  New H47:  fld_rate(fld_monitor(cl)) <= 300
 <S>  New H49:  fld_defaultchange(fld_hrt(cl)) <= 300
 <S>  New H53:  fld_rate(fld_hrt(cl)) <= 300
-<S>  New H57:  fld_rate(fld_monitor(cl__1)) <= 300
-<S>  New H74:  fld_rate(fld_hrt(cl__3)) <= 300
-<S>  New H77:  fld_defaultchange(fld_hrt(cl__3)) <= 300
-<S>  New H90:  fld_rate(fld_icds(cl__4)) <= 300
+<S>  New H58:  fld_rate(fld_monitor(cl__1)) <= 300
+<S>  New H75:  fld_rate(fld_hrt(cl__3)) <= 300
+<S>  New H78:  fld_defaultchange(fld_hrt(cl__3)) <= 300
+<S>  New H91:  fld_rate(fld_icds(cl__4)) <= 300
 -S-  Applied substitution rule on_rules(17).
      This was achieved by replacing all occurrences of measures__tub__first by:
           100.
@@ -193,633 +197,254 @@ procedure ClosedLoop.On
 ---  Eliminated hypothesis H27 (true-hypothesis).
 ---  Eliminated hypothesis H42 (true-hypothesis).
 ---  Eliminated hypothesis H45 (true-hypothesis).
----  Eliminated hypothesis H55 (true-hypothesis).
----  Eliminated hypothesis H64 (true-hypothesis).
----  Eliminated hypothesis H81 (true-hypothesis).
----  Eliminated hypothesis H117 (true-hypothesis).
+---  Eliminated hypothesis H54 (true-hypothesis).
+---  Eliminated hypothesis H56 (true-hypothesis).
+---  Eliminated hypothesis H65 (true-hypothesis).
+---  Eliminated hypothesis H82 (true-hypothesis).
 ---  Eliminated hypothesis H118 (true-hypothesis).
----  Eliminated hypothesis H80 (duplicate of H73).
----  Eliminated hypothesis H76 (redundant, given H75).
----  Eliminated hypothesis H77 (redundant, given H75).
----  Eliminated hypothesis H78 (redundant, given H72).
----  Eliminated hypothesis H79 (redundant, given H72).
--S-  Substituted hypothesis H58.
+---  Eliminated hypothesis H119 (true-hypothesis).
+---  Eliminated hypothesis H81 (duplicate of H74).
+---  Eliminated hypothesis H77 (redundant, given H76).
+---  Eliminated hypothesis H78 (redundant, given H76).
+---  Eliminated hypothesis H79 (redundant, given H73).
+---  Eliminated hypothesis H80 (redundant, given H73).
+-S-  Substituted hypothesis H59.
      This was achieved by replacing all occurrences of fld_hrt(cl__1) by:
           fld_hrt(cl).
----  Substituted hypothesis H59, which specifies an equivalence for 
+---  Substituted hypothesis H60, which specifies an equivalence for 
           fld_generator(cl__1).
--S-  Substituted hypothesis H60.
+-S-  Substituted hypothesis H61.
      This was achieved by replacing all occurrences of fld_icds(cl__1) by:
           fld_icds(cl).
--S-  Substituted hypothesis H68.
+-S-  Substituted hypothesis H69.
      This was achieved by replacing all occurrences of fld_monitor(cl__2) by:
           fld_monitor(cl__1).
--S-  Substituted hypothesis H83.
+-S-  Substituted hypothesis H84.
      This was achieved by replacing all occurrences of fld_generator(cl__3) by:
           fld_generator(cl__2).
--S-  Substituted hypothesis H84.
+-S-  Substituted hypothesis H85.
      This was achieved by replacing all occurrences of fld_icds(cl__3) by:
           fld_icds(cl__2).
----  Substituted hypothesis H112, which specifies an equivalence for fld_hrt(
+---  Substituted hypothesis H113, which specifies an equivalence for fld_hrt(
           cl__4).
----  Substituted hypothesis H113, which specifies an equivalence for 
+---  Substituted hypothesis H114, which specifies an equivalence for 
           fld_monitor(cl__4).
----  Substituted hypothesis H67, which specifies an equivalence for fld_hrt(
+---  Substituted hypothesis H68, which specifies an equivalence for fld_hrt(
           cl__2).
--S-  Substituted hypothesis H69.
+-S-  Substituted hypothesis H70.
      This was achieved by replacing all occurrences of fld_icds(cl__2) by:
           fld_icds(cl).
--S-  Substituted hypothesis H82.
+-S-  Substituted hypothesis H83.
      This was achieved by replacing all occurrences of fld_monitor(cl__3) by:
           fld_monitor(cl__1).
----  Substituted hypothesis H114, which specifies an equivalence for 
+---  Substituted hypothesis H115, which specifies an equivalence for 
           fld_generator(cl__4).
----  Substituted hypothesis H91, which specifies an equivalence for 
-          fld_last6thrate(fld_icds(cl__4)).
 ---  Substituted hypothesis H92, which specifies an equivalence for 
-          fld_last5thrate(fld_icds(cl__4)).
+          fld_last6thrate(fld_icds(cl__4)).
 ---  Substituted hypothesis H93, which specifies an equivalence for 
-          fld_last4thrate(fld_icds(cl__4)).
+          fld_last5thrate(fld_icds(cl__4)).
 ---  Substituted hypothesis H94, which specifies an equivalence for 
-          fld_last3rdrate(fld_icds(cl__4)).
+          fld_last4thrate(fld_icds(cl__4)).
 ---  Substituted hypothesis H95, which specifies an equivalence for 
-          fld_last2ndrate(fld_icds(cl__4)).
+          fld_last3rdrate(fld_icds(cl__4)).
 ---  Substituted hypothesis H96, which specifies an equivalence for 
+          fld_last2ndrate(fld_icds(cl__4)).
+---  Substituted hypothesis H97, which specifies an equivalence for 
           fld_last1strate(fld_icds(cl__4)).
----  Substituted hypothesis H98, which specifies an equivalence for 
-          fld_tachycardiabound(fld_icds(cl__4)).
 ---  Substituted hypothesis H99, which specifies an equivalence for 
+          fld_tachycardiabound(fld_icds(cl__4)).
+---  Substituted hypothesis H100, which specifies an equivalence for 
           fld_impulseratebound(fld_icds(cl__4)).
----  Substituted hypothesis H102, which specifies an equivalence for 
-          fld_impulse(fld_icds(cl__4)).
 ---  Substituted hypothesis H103, which specifies an equivalence for 
+          fld_impulse(fld_icds(cl__4)).
+---  Substituted hypothesis H104, which specifies an equivalence for 
           fld_impulserate(fld_icds(cl__4)).
----  Substituted hypothesis H104, which specifies an equivalence for fld_offset(
+---  Substituted hypothesis H105, which specifies an equivalence for fld_offset(
           fld_icds(cl__4)).
----  Substituted hypothesis H105, which specifies an equivalence for 
+---  Substituted hypothesis H106, which specifies an equivalence for 
           fld_ticktonextimpulse(fld_icds(cl__4)).
----  Substituted hypothesis H106, which specifies an equivalence for fld_signal(
+---  Substituted hypothesis H107, which specifies an equivalence for fld_signal(
           fld_icds(cl__4)).
----  Substituted hypothesis H107, which specifies an equivalence for 
+---  Substituted hypothesis H108, which specifies an equivalence for 
           fld_fibrillationbound(fld_icds(cl__4)).
----  Substituted hypothesis H109, which specifies an equivalence for 
-          fld_abnormalnum(fld_icds(cl__4)).
 ---  Substituted hypothesis H110, which specifies an equivalence for 
+          fld_abnormalnum(fld_icds(cl__4)).
+---  Substituted hypothesis H111, which specifies an equivalence for 
           fld_waitaftershock(fld_icds(cl__4)).
--S-  Substituted hypothesis H61.
+-S-  Substituted hypothesis H62.
      This was achieved by replacing all occurrences of fld_ison(cl__1) by:
           fld_ison(cl).
--S-  Substituted hypothesis H85.
+-S-  Substituted hypothesis H86.
      This was achieved by replacing all occurrences of fld_ison(cl__3) by:
           fld_ison(cl__2).
--S-  Substituted hypothesis H97.
+-S-  Substituted hypothesis H98.
      This was achieved by replacing all occurrences of fld_ison(fld_icds(cl__4))
            by:
           fld_ison(fld_icds(cl)).
----  Substituted hypothesis H100, which specifies an equivalence for 
-          fld_istachycardia(fld_icds(cl__4)).
 ---  Substituted hypothesis H101, which specifies an equivalence for 
+          fld_istachycardia(fld_icds(cl__4)).
+---  Substituted hypothesis H102, which specifies an equivalence for 
           fld_isinimpulseprocess(fld_icds(cl__4)).
----  Substituted hypothesis H108, which specifies an equivalence for 
+---  Substituted hypothesis H109, which specifies an equivalence for 
           fld_isfibrillation(fld_icds(cl__4)).
----  Substituted hypothesis H111, which specifies an equivalence for fld_iswait(
+---  Substituted hypothesis H112, which specifies an equivalence for fld_iswait(
           fld_icds(cl__4)).
--S-  Substituted hypothesis H70.
+-S-  Substituted hypothesis H71.
      This was achieved by replacing all occurrences of fld_ison(cl__2) by:
           fld_ison(cl).
--S-  Substituted hypothesis H115.
+-S-  Substituted hypothesis H116.
      This was achieved by replacing all occurrences of fld_ison(cl__4) by:
           fld_ison(cl).
-+++  Using "A->B, A |- B" on hypotheses H87 & H54 yields a new hypothesis:
-     +++  H123:  fld_rate(fld_icds(cl__4)) = fld_rate(fld_monitor(cl__1))
-+++  Using "A->B, not B |- not A" on hypotheses H61 & H1 yields a new 
++++  Using "A->B, A |- B" on hypotheses H88 & H55 yields a new hypothesis:
+     +++  H124:  fld_rate(fld_icds(cl__4)) = fld_rate(fld_monitor(cl__1))
++++  Using "A->B, not B |- not A" on hypotheses H62 & H1 yields a new 
           hypothesis:
-     +++  H124:  not fld_ison(cl__1)
+     +++  H125:  not fld_ison(cl__1)
 ---  Attempted addition of new hypothesis:
           not fld_ison(cl__1)
-     eliminated: this already exists (as H124).
-+++  Using "A->B, not B |- not A" on hypotheses H61 & H119 yields a new 
+     eliminated: this already exists (as H125).
++++  Using "A->B, not B |- not A" on hypotheses H62 & H120 yields a new 
           hypothesis:
-     +++  H124:  not fld_ison(cl__1)
+     +++  H125:  not fld_ison(cl__1)
 ---  Attempted addition of new hypothesis:
           not fld_ison(cl__1)
-     eliminated: this already exists (as H124).
-+++  Using "A->B, not B |- not A" on hypotheses H61 & H120 yields a new 
+     eliminated: this already exists (as H125).
++++  Using "A->B, not B |- not A" on hypotheses H62 & H121 yields a new 
           hypothesis:
-     +++  H124:  not fld_ison(cl__1)
+     +++  H125:  not fld_ison(cl__1)
 ---  Attempted addition of new hypothesis:
           not fld_ison(cl__1)
-     eliminated: this already exists (as H124).
-+++  Using "A->B, not B |- not A" on hypotheses H61 & H121 yields a new 
+     eliminated: this already exists (as H125).
++++  Using "A->B, not B |- not A" on hypotheses H62 & H122 yields a new 
           hypothesis:
-     +++  H124:  not fld_ison(cl__1)
+     +++  H125:  not fld_ison(cl__1)
 ---  Attempted addition of new hypothesis:
           not fld_ison(cl__1)
-     eliminated: this already exists (as H124).
-+++  Using "A->B, not B |- not A" on hypotheses H61 & H122 yields a new 
+     eliminated: this already exists (as H125).
++++  Using "A->B, not B |- not A" on hypotheses H62 & H123 yields a new 
           hypothesis:
-     +++  H124:  not fld_ison(cl__1)
-+++  Using "A->B, not B |- not A" on hypotheses H70 & H1 yields a new 
+     +++  H125:  not fld_ison(cl__1)
++++  Using "A->B, not B |- not A" on hypotheses H71 & H1 yields a new 
           hypothesis:
-     +++  H125:  not fld_ison(cl__2)
+     +++  H126:  not fld_ison(cl__2)
 ---  Attempted addition of new hypothesis:
           not fld_ison(cl__2)
-     eliminated: this already exists (as H125).
-+++  Using "A->B, not B |- not A" on hypotheses H70 & H119 yields a new 
+     eliminated: this already exists (as H126).
++++  Using "A->B, not B |- not A" on hypotheses H71 & H120 yields a new 
           hypothesis:
-     +++  H125:  not fld_ison(cl__2)
+     +++  H126:  not fld_ison(cl__2)
 ---  Attempted addition of new hypothesis:
           not fld_ison(cl__2)
-     eliminated: this already exists (as H125).
-+++  Using "A->B, not B |- not A" on hypotheses H70 & H120 yields a new 
+     eliminated: this already exists (as H126).
++++  Using "A->B, not B |- not A" on hypotheses H71 & H121 yields a new 
           hypothesis:
-     +++  H125:  not fld_ison(cl__2)
+     +++  H126:  not fld_ison(cl__2)
 ---  Attempted addition of new hypothesis:
           not fld_ison(cl__2)
-     eliminated: this already exists (as H125).
-+++  Using "A->B, not B |- not A" on hypotheses H70 & H121 yields a new 
+     eliminated: this already exists (as H126).
++++  Using "A->B, not B |- not A" on hypotheses H71 & H122 yields a new 
           hypothesis:
-     +++  H125:  not fld_ison(cl__2)
+     +++  H126:  not fld_ison(cl__2)
 ---  Attempted addition of new hypothesis:
           not fld_ison(cl__2)
-     eliminated: this already exists (as H125).
-+++  Using "A->B, not B |- not A" on hypotheses H70 & H122 yields a new 
+     eliminated: this already exists (as H126).
++++  Using "A->B, not B |- not A" on hypotheses H71 & H123 yields a new 
           hypothesis:
-     +++  H125:  not fld_ison(cl__2)
-+++  Using "A->B, not B |- not A" on hypotheses H85 & H125 yields a new 
+     +++  H126:  not fld_ison(cl__2)
++++  Using "A->B, not B |- not A" on hypotheses H86 & H126 yields a new 
           hypothesis:
-     +++  H126:  not fld_ison(cl__3)
-+++  Using "A->B, not B |- not A" on hypotheses H115 & H1 yields a new 
+     +++  H127:  not fld_ison(cl__3)
++++  Using "A->B, not B |- not A" on hypotheses H116 & H1 yields a new 
           hypothesis:
-     +++  H127:  not fld_ison(cl__4)
+     +++  H128:  not fld_ison(cl__4)
 ---  Attempted addition of new hypothesis:
           not fld_ison(cl__4)
-     eliminated: this already exists (as H127).
-+++  Using "A->B, not B |- not A" on hypotheses H115 & H119 yields a new 
+     eliminated: this already exists (as H128).
++++  Using "A->B, not B |- not A" on hypotheses H116 & H120 yields a new 
           hypothesis:
-     +++  H127:  not fld_ison(cl__4)
+     +++  H128:  not fld_ison(cl__4)
 ---  Attempted addition of new hypothesis:
           not fld_ison(cl__4)
-     eliminated: this already exists (as H127).
-+++  Using "A->B, not B |- not A" on hypotheses H115 & H120 yields a new 
+     eliminated: this already exists (as H128).
++++  Using "A->B, not B |- not A" on hypotheses H116 & H121 yields a new 
           hypothesis:
-     +++  H127:  not fld_ison(cl__4)
+     +++  H128:  not fld_ison(cl__4)
 ---  Attempted addition of new hypothesis:
           not fld_ison(cl__4)
-     eliminated: this already exists (as H127).
-+++  Using "A->B, not B |- not A" on hypotheses H115 & H121 yields a new 
+     eliminated: this already exists (as H128).
++++  Using "A->B, not B |- not A" on hypotheses H116 & H122 yields a new 
           hypothesis:
-     +++  H127:  not fld_ison(cl__4)
+     +++  H128:  not fld_ison(cl__4)
 ---  Attempted addition of new hypothesis:
           not fld_ison(cl__4)
-     eliminated: this already exists (as H127).
-+++  Using "A->B, not B |- not A" on hypotheses H115 & H122 yields a new 
+     eliminated: this already exists (as H128).
++++  Using "A->B, not B |- not A" on hypotheses H116 & H123 yields a new 
           hypothesis:
-     +++  H127:  not fld_ison(cl__4)
-     +++  New H128:  integer__size >= 0
-     +++  New H129:  measures__joules__size >= 0
-     +++  New H130:  measures__bpm__size >= 0
-     +++  New H131:  measures__tub__size >= 0
-     +++  New H132:  measures__fub__size >= 0
-     +++  New H133:  heart__hearttype__size >= 0
-     +++  New H134:  impulsegenerator__generatortype__size >= 0
-     +++  New H135:  hrm__hrmtype__size >= 0
-     +++  New H136:  icd__icdtype__size >= 0
-     +++  New H137:  closedlooptype__size >= 0
+     +++  H128:  not fld_ison(cl__4)
+     +++  New H129:  integer__size >= 0
+     +++  New H130:  measures__joules__size >= 0
+     +++  New H131:  measures__bpm__size >= 0
+     +++  New H132:  measures__tub__size >= 0
+     +++  New H133:  measures__fub__size >= 0
+     +++  New H134:  heart__hearttype__size >= 0
+     +++  New H135:  impulsegenerator__generatortype__size >= 0
+     +++  New H136:  hrm__hrmtype__size >= 0
+     +++  New H137:  icd__icdtype__size >= 0
+     +++  New H138:  closedlooptype__size >= 0
 
 
 @@@@@@@@@@  VC: procedure_on_3.  @@@@@@@@@@
 %%%  Simplified H1 on reading formula in, to give:
      %%%  H1:  not fld_ison(cl)
-%%%  Simplified H61 on reading formula in, to give:
-     %%%  H61:  fld_ison(cl__1) <-> fld_ison(cl)
-%%%  Simplified H70 on reading formula in, to give:
-     %%%  H70:  fld_ison(cl__2) <-> fld_ison(cl__1)
----  Hypothesis H81 has been replaced by "true".  (It is already present, as 
-          H74).
-%%%  Simplified H85 on reading formula in, to give:
-     %%%  H85:  fld_ison(cl__3) <-> fld_ison(cl__2)
-%%%  Simplified H97 on reading formula in, to give:
-     %%%  H97:  fld_ison(fld_icds(cl__4)) <-> fld_ison(fld_icds(cl__3))
-%%%  Simplified H100 on reading formula in, to give:
-     %%%  H100:  fld_istachycardia(fld_icds(cl__4)) <-> fld_istachycardia(
-          fld_icds(cl__3))
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as H1)
+          .
+%%%  Simplified H62 on reading formula in, to give:
+     %%%  H62:  fld_ison(cl__1) <-> fld_ison(cl)
+%%%  Simplified H71 on reading formula in, to give:
+     %%%  H71:  fld_ison(cl__2) <-> fld_ison(cl__1)
+---  Hypothesis H82 has been replaced by "true".  (It is already present, as 
+          H75).
+%%%  Simplified H86 on reading formula in, to give:
+     %%%  H86:  fld_ison(cl__3) <-> fld_ison(cl__2)
+%%%  Simplified H98 on reading formula in, to give:
+     %%%  H98:  fld_ison(fld_icds(cl__4)) <-> fld_ison(fld_icds(cl__3))
 %%%  Simplified H101 on reading formula in, to give:
-     %%%  H101:  fld_isinimpulseprocess(fld_icds(cl__4)) <-> 
-          fld_isinimpulseprocess(fld_icds(cl__3))
-%%%  Simplified H108 on reading formula in, to give:
-     %%%  H108:  fld_isfibrillation(fld_icds(cl__4)) <-> fld_isfibrillation(
+     %%%  H101:  fld_istachycardia(fld_icds(cl__4)) <-> fld_istachycardia(
           fld_icds(cl__3))
-%%%  Simplified H111 on reading formula in, to give:
-     %%%  H111:  fld_iswait(fld_icds(cl__4)) <-> fld_iswait(fld_icds(cl__3))
-%%%  Simplified H115 on reading formula in, to give:
-     %%%  H115:  fld_ison(cl__4) <-> fld_ison(cl__3)
----  Hypothesis H117 has been replaced by "true".  (It is already present, as 
-          H89).
+%%%  Simplified H102 on reading formula in, to give:
+     %%%  H102:  fld_isinimpulseprocess(fld_icds(cl__4)) <-> 
+          fld_isinimpulseprocess(fld_icds(cl__3))
+%%%  Simplified H109 on reading formula in, to give:
+     %%%  H109:  fld_isfibrillation(fld_icds(cl__4)) <-> fld_isfibrillation(
+          fld_icds(cl__3))
+%%%  Simplified H112 on reading formula in, to give:
+     %%%  H112:  fld_iswait(fld_icds(cl__4)) <-> fld_iswait(fld_icds(cl__3))
+%%%  Simplified H116 on reading formula in, to give:
+     %%%  H116:  fld_ison(cl__4) <-> fld_ison(cl__3)
 ---  Hypothesis H118 has been replaced by "true".  (It is already present, as 
           H90).
-%%%  Simplified H119 on reading formula in, to give:
-     %%%  H119:  not fld_ison(fld_icds(cl__4))
+---  Hypothesis H119 has been replaced by "true".  (It is already present, as 
+          H91).
 %%%  Simplified H120 on reading formula in, to give:
-     %%%  H120:  fld_ison(fld_icds(cl__5))
-%%%  Simplified H163 on reading formula in, to give:
-     %%%  H163:  fld_ison(cl__5) <-> fld_ison(cl__4)
+     %%%  H120:  not fld_ison(fld_icds(cl__4))
+%%%  Simplified H121 on reading formula in, to give:
+     %%%  H121:  fld_ison(fld_icds(cl__5))
+%%%  Simplified H164 on reading formula in, to give:
+     %%%  H164:  fld_ison(cl__5) <-> fld_ison(cl__4)
 %%%  Simplified C1 on reading formula in, to give:
-     %%%  C1:  fld_ison(cl__5)
-+++  Using "A->B, not B |- not A" on hypotheses H97 & H119 yields a new 
-          hypothesis:
-     +++  H165:  not fld_ison(fld_icds(cl__3))
-+++  Using "A->B, not B |- not A" on hypotheses H61 & H1 yields a new 
-          hypothesis:
-     +++  H166:  not fld_ison(cl__1)
-+++  Using "A->B, not B |- not A" on hypotheses H70 & H166 yields a new 
-          hypothesis:
-     +++  H167:  not fld_ison(cl__2)
-+++  Using "A->B, not B |- not A" on hypotheses H85 & H167 yields a new 
-          hypothesis:
-     +++  H168:  not fld_ison(cl__3)
----  Attempted addition of new hypothesis:
-          not fld_ison(fld_icds(cl__4))
-     eliminated: this already exists (as H119).
-+++  Using "A->B, not B |- not A" on hypotheses H97 & H165 yields a new 
-          hypothesis:
-     +++  H119:  not fld_ison(fld_icds(cl__4))
-+++  Using "A->B, not B |- not A" on hypotheses H115 & H168 yields a new 
-          hypothesis:
-     +++  H169:  not fld_ison(cl__4)
-+++  Using "A->B, not B |- not A" on hypotheses H163 & H169 yields a new 
-          hypothesis:
-     +++  H170:  not fld_ison(cl__5)
--S-  Applied substitution rule on_rules(2).
-     This was achieved by replacing all occurrences of integer__first by:
-          - 2147483648.
-<S>  New H4:  fld_waitaftershock(fld_icds(cl)) >= - 2147483648
-<S>  New H6:  fld_abnormalnum(fld_icds(cl)) >= - 2147483648
-<S>  New H11:  fld_signal(fld_icds(cl)) >= - 2147483648
-<S>  New H13:  fld_ticktonextimpulse(fld_icds(cl)) >= - 2147483648
-<S>  New H15:  fld_offset(fld_icds(cl)) >= - 2147483648
-<S>  New H17:  fld_impulserate(fld_icds(cl)) >= - 2147483648
-<S>  New H122:  fld_waitaftershock(fld_icds(cl__5)) >= - 2147483648
-<S>  New H124:  fld_abnormalnum(fld_icds(cl__5)) >= - 2147483648
-<S>  New H129:  fld_signal(fld_icds(cl__5)) >= - 2147483648
-<S>  New H131:  fld_ticktonextimpulse(fld_icds(cl__5)) >= - 2147483648
-<S>  New H133:  fld_offset(fld_icds(cl__5)) >= - 2147483648
-<S>  New H135:  fld_impulserate(fld_icds(cl__5)) >= - 2147483648
--S-  Applied substitution rule on_rules(3).
-     This was achieved by replacing all occurrences of integer__last by:
-          2147483647.
-<S>  New H5:  fld_waitaftershock(fld_icds(cl)) <= 2147483647
-<S>  New H7:  fld_abnormalnum(fld_icds(cl)) <= 2147483647
-<S>  New H12:  fld_signal(fld_icds(cl)) <= 2147483647
-<S>  New H14:  fld_ticktonextimpulse(fld_icds(cl)) <= 2147483647
-<S>  New H16:  fld_offset(fld_icds(cl)) <= 2147483647
-<S>  New H18:  fld_impulserate(fld_icds(cl)) <= 2147483647
-<S>  New H123:  fld_waitaftershock(fld_icds(cl__5)) <= 2147483647
-<S>  New H125:  fld_abnormalnum(fld_icds(cl__5)) <= 2147483647
-<S>  New H130:  fld_signal(fld_icds(cl__5)) <= 2147483647
-<S>  New H132:  fld_ticktonextimpulse(fld_icds(cl__5)) <= 2147483647
-<S>  New H134:  fld_offset(fld_icds(cl__5)) <= 2147483647
-<S>  New H136:  fld_impulserate(fld_icds(cl__5)) <= 2147483647
--S-  Applied substitution rule on_rules(7).
-     This was achieved by replacing all occurrences of measures__joules__first 
-          by:
-          0.
-<S>  New H19:  fld_impulse(fld_icds(cl)) >= 0
-<S>  New H43:  fld_impulse(fld_generator(cl)) >= 0
-<S>  New H50:  fld_impulse(fld_hrt(cl)) >= 0
-<S>  New H65:  fld_impulse(fld_generator(cl__2)) >= 0
-<S>  New H78:  fld_impulse(fld_hrt(cl__3)) >= 0
-<S>  New H137:  fld_impulse(fld_icds(cl__5)) >= 0
--S-  Applied substitution rule on_rules(8).
-     This was achieved by replacing all occurrences of measures__joules__last 
-          by:
-          45.
-<S>  New H20:  fld_impulse(fld_icds(cl)) <= 45
-<S>  New H44:  fld_impulse(fld_generator(cl)) <= 45
-<S>  New H51:  fld_impulse(fld_hrt(cl)) <= 45
-<S>  New H66:  fld_impulse(fld_generator(cl__2)) <= 45
-<S>  New H79:  fld_impulse(fld_hrt(cl__3)) <= 45
-<S>  New H138:  fld_impulse(fld_icds(cl__5)) <= 45
--S-  Applied substitution rule on_rules(12).
-     This was achieved by replacing all occurrences of measures__bpm__first by:
-          - 1.
-<S>  New H28:  fld_last1strate(fld_icds(cl)) >= - 1
-<S>  New H30:  fld_last2ndrate(fld_icds(cl)) >= - 1
-<S>  New H32:  fld_last3rdrate(fld_icds(cl)) >= - 1
-<S>  New H34:  fld_last4thrate(fld_icds(cl)) >= - 1
-<S>  New H36:  fld_last5thrate(fld_icds(cl)) >= - 1
-<S>  New H38:  fld_last6thrate(fld_icds(cl)) >= - 1
-<S>  New H40:  fld_rate(fld_icds(cl)) >= - 1
-<S>  New H46:  fld_rate(fld_monitor(cl)) >= - 1
-<S>  New H48:  fld_defaultchange(fld_hrt(cl)) >= - 1
-<S>  New H52:  fld_rate(fld_hrt(cl)) >= - 1
-<S>  New H56:  fld_rate(fld_monitor(cl__1)) >= - 1
-<S>  New H73:  - 1 <= fld_rate(fld_hrt(cl__3))
-<S>  New H76:  fld_defaultchange(fld_hrt(cl__3)) >= - 1
-<S>  New H80:  fld_rate(fld_hrt(cl__3)) >= - 1
-<S>  New H88:  not fld_ison(fld_monitor(cl__3)) -> fld_rate(fld_icds(cl__4)) = 
-          - 1
-<S>  New H89:  fld_rate(fld_icds(cl__4)) >= - 1
-<S>  New H146:  fld_last1strate(fld_icds(cl__5)) >= - 1
-<S>  New H148:  fld_last2ndrate(fld_icds(cl__5)) >= - 1
-<S>  New H150:  fld_last3rdrate(fld_icds(cl__5)) >= - 1
-<S>  New H152:  fld_last4thrate(fld_icds(cl__5)) >= - 1
-<S>  New H154:  fld_last5thrate(fld_icds(cl__5)) >= - 1
-<S>  New H156:  fld_last6thrate(fld_icds(cl__5)) >= - 1
-<S>  New H158:  fld_rate(fld_icds(cl__5)) >= - 1
--S-  Applied substitution rule on_rules(13).
-     This was achieved by replacing all occurrences of measures__bpm__last by:
-          300.
-<S>  New H29:  fld_last1strate(fld_icds(cl)) <= 300
-<S>  New H31:  fld_last2ndrate(fld_icds(cl)) <= 300
-<S>  New H33:  fld_last3rdrate(fld_icds(cl)) <= 300
-<S>  New H35:  fld_last4thrate(fld_icds(cl)) <= 300
-<S>  New H37:  fld_last5thrate(fld_icds(cl)) <= 300
-<S>  New H39:  fld_last6thrate(fld_icds(cl)) <= 300
-<S>  New H41:  fld_rate(fld_icds(cl)) <= 300
-<S>  New H47:  fld_rate(fld_monitor(cl)) <= 300
-<S>  New H49:  fld_defaultchange(fld_hrt(cl)) <= 300
-<S>  New H53:  fld_rate(fld_hrt(cl)) <= 300
-<S>  New H57:  fld_rate(fld_monitor(cl__1)) <= 300
-<S>  New H74:  fld_rate(fld_hrt(cl__3)) <= 300
-<S>  New H77:  fld_defaultchange(fld_hrt(cl__3)) <= 300
-<S>  New H90:  fld_rate(fld_icds(cl__4)) <= 300
-<S>  New H147:  fld_last1strate(fld_icds(cl__5)) <= 300
-<S>  New H149:  fld_last2ndrate(fld_icds(cl__5)) <= 300
-<S>  New H151:  fld_last3rdrate(fld_icds(cl__5)) <= 300
-<S>  New H153:  fld_last4thrate(fld_icds(cl__5)) <= 300
-<S>  New H155:  fld_last5thrate(fld_icds(cl__5)) <= 300
-<S>  New H157:  fld_last6thrate(fld_icds(cl__5)) <= 300
-<S>  New H159:  fld_rate(fld_icds(cl__5)) <= 300
--S-  Applied substitution rule on_rules(17).
-     This was achieved by replacing all occurrences of measures__tub__first by:
-          100.
-<S>  New H23:  fld_impulseratebound(fld_icds(cl)) >= 100
-<S>  New H25:  fld_tachycardiabound(fld_icds(cl)) >= 100
-<S>  New H141:  fld_impulseratebound(fld_icds(cl__5)) >= 100
-<S>  New H143:  fld_tachycardiabound(fld_icds(cl__5)) >= 100
--S-  Applied substitution rule on_rules(18).
-     This was achieved by replacing all occurrences of measures__tub__last by:
-          150.
-<S>  New H24:  fld_impulseratebound(fld_icds(cl)) <= 150
-<S>  New H26:  fld_tachycardiabound(fld_icds(cl)) <= 150
-<S>  New H142:  fld_impulseratebound(fld_icds(cl__5)) <= 150
-<S>  New H144:  fld_tachycardiabound(fld_icds(cl__5)) <= 150
--S-  Applied substitution rule on_rules(22).
-     This was achieved by replacing all occurrences of measures__fub__first by:
-          3.
-<S>  New H9:  fld_fibrillationbound(fld_icds(cl)) >= 3
-<S>  New H127:  fld_fibrillationbound(fld_icds(cl__5)) >= 3
--S-  Applied substitution rule on_rules(23).
-     This was achieved by replacing all occurrences of measures__fub__last by:
-          15.
-<S>  New H10:  fld_fibrillationbound(fld_icds(cl)) <= 15
-<S>  New H128:  fld_fibrillationbound(fld_icds(cl__5)) <= 15
----  Eliminated hypothesis H2 (true-hypothesis).
----  Eliminated hypothesis H3 (true-hypothesis).
----  Eliminated hypothesis H8 (true-hypothesis).
----  Eliminated hypothesis H21 (true-hypothesis).
----  Eliminated hypothesis H22 (true-hypothesis).
----  Eliminated hypothesis H27 (true-hypothesis).
----  Eliminated hypothesis H42 (true-hypothesis).
----  Eliminated hypothesis H45 (true-hypothesis).
----  Eliminated hypothesis H55 (true-hypothesis).
----  Eliminated hypothesis H64 (true-hypothesis).
----  Eliminated hypothesis H81 (true-hypothesis).
----  Eliminated hypothesis H117 (true-hypothesis).
----  Eliminated hypothesis H118 (true-hypothesis).
----  Eliminated hypothesis H121 (true-hypothesis).
----  Eliminated hypothesis H126 (true-hypothesis).
----  Eliminated hypothesis H139 (true-hypothesis).
----  Eliminated hypothesis H140 (true-hypothesis).
----  Eliminated hypothesis H145 (true-hypothesis).
----  Eliminated hypothesis H80 (duplicate of H73).
----  Eliminated hypothesis H76 (redundant, given H75).
----  Eliminated hypothesis H77 (redundant, given H75).
----  Eliminated hypothesis H78 (redundant, given H72).
----  Eliminated hypothesis H79 (redundant, given H72).
--S-  Substituted hypothesis H58.
-     This was achieved by replacing all occurrences of fld_hrt(cl__1) by:
-          fld_hrt(cl).
----  Substituted hypothesis H59, which specifies an equivalence for 
-          fld_generator(cl__1).
--S-  Substituted hypothesis H60.
-     This was achieved by replacing all occurrences of fld_icds(cl__1) by:
-          fld_icds(cl).
--S-  Substituted hypothesis H68.
-     This was achieved by replacing all occurrences of fld_monitor(cl__2) by:
-          fld_monitor(cl__1).
--S-  Substituted hypothesis H83.
-     This was achieved by replacing all occurrences of fld_generator(cl__3) by:
-          fld_generator(cl__2).
--S-  Substituted hypothesis H84.
-     This was achieved by replacing all occurrences of fld_icds(cl__3) by:
-          fld_icds(cl__2).
--S-  Substituted hypothesis H112.
-     This was achieved by replacing all occurrences of fld_hrt(cl__4) by:
-          fld_hrt(cl__3).
--S-  Substituted hypothesis H113.
-     This was achieved by replacing all occurrences of fld_monitor(cl__4) by:
-          fld_monitor(cl__3).
----  Substituted hypothesis H162, which specifies an equivalence for 
-          fld_generator(cl__5).
----  Substituted hypothesis H67, which specifies an equivalence for fld_hrt(
-          cl__2).
--S-  Substituted hypothesis H69.
-     This was achieved by replacing all occurrences of fld_icds(cl__2) by:
-          fld_icds(cl).
--S-  Substituted hypothesis H82.
-     This was achieved by replacing all occurrences of fld_monitor(cl__3) by:
-          fld_monitor(cl__1).
----  Substituted hypothesis H114, which specifies an equivalence for 
-          fld_generator(cl__4).
----  Substituted hypothesis H160, which specifies an equivalence for fld_hrt(
-          cl__5).
----  Substituted hypothesis H91, which specifies an equivalence for 
-          fld_last6thrate(fld_icds(cl__4)).
----  Substituted hypothesis H92, which specifies an equivalence for 
-          fld_last5thrate(fld_icds(cl__4)).
----  Substituted hypothesis H93, which specifies an equivalence for 
-          fld_last4thrate(fld_icds(cl__4)).
----  Substituted hypothesis H94, which specifies an equivalence for 
-          fld_last3rdrate(fld_icds(cl__4)).
----  Substituted hypothesis H95, which specifies an equivalence for 
-          fld_last2ndrate(fld_icds(cl__4)).
----  Substituted hypothesis H96, which specifies an equivalence for 
-          fld_last1strate(fld_icds(cl__4)).
----  Substituted hypothesis H98, which specifies an equivalence for 
-          fld_tachycardiabound(fld_icds(cl__4)).
----  Substituted hypothesis H99, which specifies an equivalence for 
-          fld_impulseratebound(fld_icds(cl__4)).
----  Substituted hypothesis H102, which specifies an equivalence for 
-          fld_impulse(fld_icds(cl__4)).
----  Substituted hypothesis H103, which specifies an equivalence for 
-          fld_impulserate(fld_icds(cl__4)).
----  Substituted hypothesis H104, which specifies an equivalence for fld_offset(
-          fld_icds(cl__4)).
----  Substituted hypothesis H105, which specifies an equivalence for 
-          fld_ticktonextimpulse(fld_icds(cl__4)).
----  Substituted hypothesis H106, which specifies an equivalence for fld_signal(
-          fld_icds(cl__4)).
----  Substituted hypothesis H107, which specifies an equivalence for 
-          fld_fibrillationbound(fld_icds(cl__4)).
----  Substituted hypothesis H109, which specifies an equivalence for 
-          fld_abnormalnum(fld_icds(cl__4)).
----  Substituted hypothesis H110, which specifies an equivalence for 
-          fld_waitaftershock(fld_icds(cl__4)).
----  Substituted hypothesis H161, which specifies an equivalence for 
-          fld_monitor(cl__5).
--S-  Substituted hypothesis H61.
-     This was achieved by replacing all occurrences of fld_ison(cl__1) by:
-          fld_ison(cl).
--S-  Substituted hypothesis H85.
-     This was achieved by replacing all occurrences of fld_ison(cl__3) by:
-          fld_ison(cl__2).
--S-  Substituted hypothesis H163.
-     This was achieved by replacing all occurrences of fld_ison(cl__5) by:
-          fld_ison(cl__4).
--S-  Substituted hypothesis H97.
-     This was achieved by replacing all occurrences of fld_ison(fld_icds(cl__4))
-           by:
-          fld_ison(fld_icds(cl)).
----  Substituted hypothesis H100, which specifies an equivalence for 
-          fld_istachycardia(fld_icds(cl__4)).
----  Substituted hypothesis H101, which specifies an equivalence for 
-          fld_isinimpulseprocess(fld_icds(cl__4)).
----  Substituted hypothesis H108, which specifies an equivalence for 
-          fld_isfibrillation(fld_icds(cl__4)).
----  Substituted hypothesis H111, which specifies an equivalence for fld_iswait(
-          fld_icds(cl__4)).
--S-  Substituted hypothesis H70.
-     This was achieved by replacing all occurrences of fld_ison(cl__2) by:
-          fld_ison(cl).
--S-  Substituted hypothesis H115.
-     This was achieved by replacing all occurrences of fld_ison(cl__4) by:
-          fld_ison(cl).
-+++  Using "A->B, A |- B" on hypotheses H87 & H54 yields a new hypothesis:
-     +++  H171:  fld_rate(fld_icds(cl__4)) = fld_rate(fld_monitor(cl__1))
-+++  Using "A->B, not B |- not A" on hypotheses H61 & H1 yields a new 
-          hypothesis:
-     +++  H172:  not fld_ison(cl__1)
----  Attempted addition of new hypothesis:
-          not fld_ison(cl__1)
-     eliminated: this already exists (as H172).
-+++  Using "A->B, not B |- not A" on hypotheses H61 & H166 yields a new 
-          hypothesis:
-     +++  H172:  not fld_ison(cl__1)
----  Attempted addition of new hypothesis:
-          not fld_ison(cl__1)
-     eliminated: this already exists (as H172).
-+++  Using "A->B, not B |- not A" on hypotheses H61 & H167 yields a new 
-          hypothesis:
-     +++  H172:  not fld_ison(cl__1)
----  Attempted addition of new hypothesis:
-          not fld_ison(cl__1)
-     eliminated: this already exists (as H172).
-+++  Using "A->B, not B |- not A" on hypotheses H61 & H168 yields a new 
-          hypothesis:
-     +++  H172:  not fld_ison(cl__1)
----  Attempted addition of new hypothesis:
-          not fld_ison(cl__1)
-     eliminated: this already exists (as H172).
-+++  Using "A->B, not B |- not A" on hypotheses H61 & H169 yields a new 
-          hypothesis:
-     +++  H172:  not fld_ison(cl__1)
----  Attempted addition of new hypothesis:
-          not fld_ison(cl__1)
-     eliminated: this already exists (as H172).
-+++  Using "A->B, not B |- not A" on hypotheses H61 & H170 yields a new 
-          hypothesis:
-     +++  H172:  not fld_ison(cl__1)
-+++  Using "A->B, not B |- not A" on hypotheses H70 & H1 yields a new 
-          hypothesis:
-     +++  H173:  not fld_ison(cl__2)
----  Attempted addition of new hypothesis:
-          not fld_ison(cl__2)
-     eliminated: this already exists (as H173).
-+++  Using "A->B, not B |- not A" on hypotheses H70 & H166 yields a new 
-          hypothesis:
-     +++  H173:  not fld_ison(cl__2)
----  Attempted addition of new hypothesis:
-          not fld_ison(cl__2)
-     eliminated: this already exists (as H173).
-+++  Using "A->B, not B |- not A" on hypotheses H70 & H167 yields a new 
-          hypothesis:
-     +++  H173:  not fld_ison(cl__2)
----  Attempted addition of new hypothesis:
-          not fld_ison(cl__2)
-     eliminated: this already exists (as H173).
-+++  Using "A->B, not B |- not A" on hypotheses H70 & H168 yields a new 
-          hypothesis:
-     +++  H173:  not fld_ison(cl__2)
----  Attempted addition of new hypothesis:
-          not fld_ison(cl__2)
-     eliminated: this already exists (as H173).
-+++  Using "A->B, not B |- not A" on hypotheses H70 & H169 yields a new 
-          hypothesis:
-     +++  H173:  not fld_ison(cl__2)
----  Attempted addition of new hypothesis:
-          not fld_ison(cl__2)
-     eliminated: this already exists (as H173).
-+++  Using "A->B, not B |- not A" on hypotheses H70 & H170 yields a new 
-          hypothesis:
-     +++  H173:  not fld_ison(cl__2)
-+++  Using "A->B, not B |- not A" on hypotheses H85 & H173 yields a new 
-          hypothesis:
-     +++  H174:  not fld_ison(cl__3)
-+++  Using "A->B, not B |- not A" on hypotheses H97 & H119 yields a new 
-          hypothesis:
-     +++  H175:  not fld_ison(fld_icds(cl__4))
----  Attempted addition of new hypothesis:
-          not fld_ison(fld_icds(cl__4))
-     eliminated: this already exists (as H175).
-+++  Using "A->B, not B |- not A" on hypotheses H97 & H165 yields a new 
-          hypothesis:
-     +++  H175:  not fld_ison(fld_icds(cl__4))
-+++  Using "A->B, not B |- not A" on hypotheses H115 & H1 yields a new 
-          hypothesis:
-     +++  H176:  not fld_ison(cl__4)
----  Attempted addition of new hypothesis:
-          not fld_ison(cl__4)
-     eliminated: this already exists (as H176).
-+++  Using "A->B, not B |- not A" on hypotheses H115 & H166 yields a new 
-          hypothesis:
-     +++  H176:  not fld_ison(cl__4)
----  Attempted addition of new hypothesis:
-          not fld_ison(cl__4)
-     eliminated: this already exists (as H176).
-+++  Using "A->B, not B |- not A" on hypotheses H115 & H167 yields a new 
-          hypothesis:
-     +++  H176:  not fld_ison(cl__4)
----  Attempted addition of new hypothesis:
-          not fld_ison(cl__4)
-     eliminated: this already exists (as H176).
-+++  Using "A->B, not B |- not A" on hypotheses H115 & H168 yields a new 
-          hypothesis:
-     +++  H176:  not fld_ison(cl__4)
----  Attempted addition of new hypothesis:
-          not fld_ison(cl__4)
-     eliminated: this already exists (as H176).
-+++  Using "A->B, not B |- not A" on hypotheses H115 & H169 yields a new 
-          hypothesis:
-     +++  H176:  not fld_ison(cl__4)
----  Attempted addition of new hypothesis:
-          not fld_ison(cl__4)
-     eliminated: this already exists (as H176).
-+++  Using "A->B, not B |- not A" on hypotheses H115 & H170 yields a new 
-          hypothesis:
-     +++  H176:  not fld_ison(cl__4)
-+++  Using "A->B, not B |- not A" on hypotheses H163 & H176 yields a new 
-          hypothesis:
-     +++  H177:  not fld_ison(cl__5)
-     +++  New H178:  integer__size >= 0
-     +++  New H179:  measures__joules__size >= 0
-     +++  New H180:  measures__bpm__size >= 0
-     +++  New H181:  measures__tub__size >= 0
-     +++  New H182:  measures__fub__size >= 0
-     +++  New H183:  heart__hearttype__size >= 0
-     +++  New H184:  impulsegenerator__generatortype__size >= 0
-     +++  New H185:  hrm__hrmtype__size >= 0
-     +++  New H186:  icd__icdtype__size >= 0
-     +++  New H187:  closedlooptype__size >= 0
+     %%%  C1:  true
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_on_4.  @@@@@@@@@@
+%%%  Simplified H1 on reading formula in, to give:
+     %%%  H1:  not fld_ison(cl)
+%%%  Simplified H54 on reading formula in, to give:
+     %%%  H54:  fld_ison(cl)
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  fld_ison(cl)
+***  Proved C1:  fld_ison(cl)
+     using hypothesis H54.
+***  PROVED VC.
 

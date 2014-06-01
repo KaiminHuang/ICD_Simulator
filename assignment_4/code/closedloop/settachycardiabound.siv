@@ -5,7 +5,7 @@
 *****************************************************************************
 
 
-CREATED 01-JUN-2014, 12:40:45  SIMPLIFIED 01-JUN-2014, 12:40:46
+CREATED 01-JUN-2014, 13:56:56  SIMPLIFIED 01-JUN-2014, 13:56:57
 
 SPARK Simplifier GPL 2011
 Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
@@ -15,7 +15,7 @@ procedure ClosedLoop.setTachycardiaBound
 
 
 
-For path(s) from start to run-time check associated with statement of line 39:
+For path(s) from start to run-time check associated with statement of line 46:
 
 procedure_settachycardiabound_1.
 *** true .          /* all conclusions proved */

@@ -5,7 +5,7 @@
            *******************************************************
 
 
-                        DATE : 01-JUN-2014 12:40:45.57
+                        DATE : 01-JUN-2014 13:56:56.19
 
 Line
    1  with Measures;
@@ -17,87 +17,94 @@ Line
    7  package body ClosedLoop is
    8   	procedure Init(cl : out ClosedLoopType) is
    9  	begin
-  10     		--Initalise hrt, monitor, gen, icd
-  11  		Heart.Init(cl.Hrt);
-  12  		HRM.Init(cl.Monitor);
-  13  		ICD.Init(cl.Icds);
-  14  		ImpulseGenerator.Init(cl.Generator);
-  15  
-  16  		cl.IsOn 				:= False;
-  17  
-  18  	end Init;
+  10  		
+  11     		--Initalise hrt, monitor, gen, icd
+  12  		Heart.Init(cl.Hrt);
+  13  		HRM.Init(cl.Monitor);
+  14  		ICD.Init(cl.Icds);
+  15  		ImpulseGenerator.Init(cl.Generator);
+  16  
+  17  		cl.IsOn 				:= False;
+  18  
+  19  	end Init;
 
 +++        Flow analysis of subprogram Init performed: no 
            errors found.
 
-  19  
-  20  	procedure Off (cl : in out ClosedLoopType) is
-  21  	begin
-  22  		-- set all components to Off
-  23  		ICD.Off(cl.Icds);
-  24      	HRM.Off(cl.Monitor);
-  25  		ImpulseGenerator.Off(cl.Generator);
-  26  	end Off;
+  20  
+  21  	procedure Off (cl : in out ClosedLoopType) is
+  22  	begin
+  23  		if cl.IsOn = True then
+  24  			-- set all components to Off
+  25  			ICD.Off(cl.Icds);
+  26  			HRM.Off(cl.Monitor);
+  27  			ImpulseGenerator.Off(cl.Generator);
+  28  			cl.IsOn := False;
+  29  		end if;
+  30  	end Off;
 
 +++        Flow analysis of subprogram Off performed: no 
            errors found.
 
-  27  
-  28  	procedure On (cl : in out ClosedLoopType) is
-  29  	begin
-  30  		HRM.On(cl.Monitor, cl.Hrt);
-  31  		ImpulseGenerator.On(cl.Generator);
-  32  		Heart.Init(cl.Hrt);
-  33  		HRM.GetRate(cl.Monitor, cl.Icds.Rate);
-  34  		ICD.On(cl.Icds);
-  35  	end On;
+  31  
+  32  	procedure On (cl : in out ClosedLoopType) is
+  33  	begin
+  34  		if cl.IsOn = False then
+  35  			HRM.On(cl.Monitor, cl.Hrt);
+  36  			ImpulseGenerator.On(cl.Generator);
+  37  			Heart.Init(cl.Hrt);
+  38  			HRM.GetRate(cl.Monitor, cl.Icds.Rate);
+  39  			ICD.On(cl.Icds);
+  40  			cl.IsOn := True;
+  41  		end if;
+  42  	end On;
 
 +++        Flow analysis of subprogram On performed: no 
            errors found.
 
-  36  
-  37  	procedure setTachycardiaBound (cl : in out ClosedLoopType; ub : in Integer) is
-  38  	begin
-  39  		ICD.setTachycardiaBound(cl.Icds, ub);
-  40  	end setTachycardiaBound;
+  43  
+  44  	procedure setTachycardiaBound (cl : in out ClosedLoopType; ub : in Integer) is
+  45  	begin
+  46  		ICD.setTachycardiaBound(cl.Icds, ub);
+  47  	end setTachycardiaBound;
 
 +++        Flow analysis of subprogram setTachycardiaBound 
            performed: no errors found.
 
-  41  
-  42  	procedure setFibrillationBound (cl : in out ClosedLoopType; ub : in Integer) is
-  43  	begin
-  44  		ICD.setFibrillationBound(cl.Icds, ub);
-  45  	end setFibrillationBound;
+  48  
+  49  	procedure setFibrillationBound (cl : in out ClosedLoopType; ub : in Integer) is
+  50  	begin
+  51  		ICD.setFibrillationBound(cl.Icds, ub);
+  52  	end setFibrillationBound;
 
 +++        Flow analysis of subprogram setFibrillationBound 
            performed: no errors found.
 
-  46  
-  47  	procedure tick (cl: in out ClosedLoopType) is 
-  48  	begin
-  49  		-- tick all components
-  50  		Heart.Tick(cl.Hrt);
-  51  		HRM.Tick(cl.Monitor, cl.Hrt);
-  52  		ICD.Tick(cl.Icds, cl.Monitor, cl.Generator);
-  53  		ImpulseGenerator.Tick(cl.Generator, cl.Hrt);
-  54  
-  55  	end tick;
+  53  
+  54  	procedure tick (cl: in out ClosedLoopType) is 
+  55  	begin
+  56  		-- tick all components
+  57  		Heart.Tick(cl.Hrt);
+  58  		HRM.Tick(cl.Monitor, cl.Hrt);
+  59  		ICD.Tick(cl.Icds, cl.Monitor, cl.Generator);
+  60  		ImpulseGenerator.Tick(cl.Generator, cl.Hrt);
+  61  
+  62  	end tick;
 
 +++        Flow analysis of subprogram tick performed: no 
            errors found.
 
-  56  
-  57  	function IsOn(cl: in ClosedLoopType) return Boolean is
-  58    	begin
-  59      	return cl.IsOn;
-  60  	end IsOn;
+  63  
+  64  	function IsOn(cl: in ClosedLoopType) return Boolean is
+  65    	begin
+  66      	return cl.IsOn;
+  67  	end IsOn;
 
 +++        Flow analysis of subprogram IsOn performed: no 
            errors found.
 
-  61  	
-  62  end ClosedLoop;
+  68  	
+  69  end ClosedLoop;
 No summarized warnings
 
 
