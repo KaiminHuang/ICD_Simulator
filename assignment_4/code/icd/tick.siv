@@ -5,7 +5,7 @@
 *****************************************************************************
 
 
-CREATED 31-MAY-2014, 19:43:59  SIMPLIFIED 31-MAY-2014, 19:44:16
+CREATED 01-JUN-2014, 12:40:45  SIMPLIFIED 01-JUN-2014, 12:41:03
 
 SPARK Simplifier GPL 2011
 Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
@@ -15,14 +15,14 @@ procedure ICD.Tick
 
 
 
-For path(s) from start to run-time check associated with statement of line 221:
+For path(s) from start to run-time check associated with statement of line 232:
 
 procedure_tick_1.
 *** true .          /* all conclusions proved */
 
 
 For path(s) from start to precondition check associated with statement of line 
-          229:
+          240:
 
 procedure_tick_2.
 H1:    fld_waitaftershock(icdinstance) >= - 2147483648 .
@@ -41,196 +41,219 @@ H13:   fld_impulserate(icdinstance) >= - 2147483648 .
 H14:   fld_impulserate(icdinstance) <= 2147483647 .
 H15:   fld_impulse(icdinstance) >= 0 .
 H16:   fld_impulse(icdinstance) <= 45 .
-H17:   fld_tachycardiabound(icdinstance) >= 100 .
-H18:   fld_tachycardiabound(icdinstance) <= 150 .
-H19:   fld_last1strate(icdinstance) >= - 1 .
-H20:   fld_last1strate(icdinstance) <= 300 .
-H21:   fld_last2ndrate(icdinstance) >= - 1 .
-H22:   fld_last2ndrate(icdinstance) <= 300 .
-H23:   fld_last3rdrate(icdinstance) >= - 1 .
-H24:   fld_last3rdrate(icdinstance) <= 300 .
-H25:   fld_last4thrate(icdinstance) >= - 1 .
-H26:   fld_last4thrate(icdinstance) <= 300 .
-H27:   fld_last5thrate(icdinstance) >= - 1 .
-H28:   fld_last5thrate(icdinstance) <= 300 .
-H29:   fld_last6thrate(icdinstance) >= - 1 .
-H30:   fld_last6thrate(icdinstance) <= 300 .
-H31:   fld_rate(icdinstance) >= - 1 .
-H32:   fld_rate(icdinstance) <= 300 .
-H33:   fld_rate(hm) >= - 1 .
-H34:   fld_rate(hm) <= 300 .
-H35:   fld_impulse(gen) >= 0 .
-H36:   fld_impulse(gen) <= 45 .
-H37:   fld_ison(hm) -> fld_rate(icdinstance__1) = fld_rate(hm) .
-H38:   not fld_ison(hm) -> fld_rate(icdinstance__1) = - 1 .
-H39:   fld_rate(icdinstance__1) >= - 1 .
-H40:   fld_rate(icdinstance__1) <= 300 .
-H41:   fld_last6thrate(icdinstance__1) = fld_last6thrate(icdinstance) .
-H42:   fld_last5thrate(icdinstance__1) = fld_last5thrate(icdinstance) .
-H43:   fld_last4thrate(icdinstance__1) = fld_last4thrate(icdinstance) .
-H44:   fld_last3rdrate(icdinstance__1) = fld_last3rdrate(icdinstance) .
-H45:   fld_last2ndrate(icdinstance__1) = fld_last2ndrate(icdinstance) .
-H46:   fld_last1strate(icdinstance__1) = fld_last1strate(icdinstance) .
-H47:   fld_ison(icdinstance__1) <-> fld_ison(icdinstance) .
-H48:   fld_tachycardiabound(icdinstance__1) = fld_tachycardiabound(icdinstance) 
+H17:   fld_impulseratebound(icdinstance) >= 100 .
+H18:   fld_impulseratebound(icdinstance) <= 150 .
+H19:   fld_tachycardiabound(icdinstance) >= 100 .
+H20:   fld_tachycardiabound(icdinstance) <= 150 .
+H21:   fld_last1strate(icdinstance) >= - 1 .
+H22:   fld_last1strate(icdinstance) <= 300 .
+H23:   fld_last2ndrate(icdinstance) >= - 1 .
+H24:   fld_last2ndrate(icdinstance) <= 300 .
+H25:   fld_last3rdrate(icdinstance) >= - 1 .
+H26:   fld_last3rdrate(icdinstance) <= 300 .
+H27:   fld_last4thrate(icdinstance) >= - 1 .
+H28:   fld_last4thrate(icdinstance) <= 300 .
+H29:   fld_last5thrate(icdinstance) >= - 1 .
+H30:   fld_last5thrate(icdinstance) <= 300 .
+H31:   fld_last6thrate(icdinstance) >= - 1 .
+H32:   fld_last6thrate(icdinstance) <= 300 .
+H33:   fld_rate(icdinstance) >= - 1 .
+H34:   fld_rate(icdinstance) <= 300 .
+H35:   fld_rate(hm) >= - 1 .
+H36:   fld_rate(hm) <= 300 .
+H37:   fld_impulse(gen) >= 0 .
+H38:   fld_impulse(gen) <= 45 .
+H39:   fld_ison(hm) -> fld_rate(icdinstance__1) = fld_rate(hm) .
+H40:   not fld_ison(hm) -> fld_rate(icdinstance__1) = - 1 .
+H41:   fld_rate(icdinstance__1) >= - 1 .
+H42:   fld_rate(icdinstance__1) <= 300 .
+H43:   fld_last6thrate(icdinstance__1) = fld_last6thrate(icdinstance) .
+H44:   fld_last5thrate(icdinstance__1) = fld_last5thrate(icdinstance) .
+H45:   fld_last4thrate(icdinstance__1) = fld_last4thrate(icdinstance) .
+H46:   fld_last3rdrate(icdinstance__1) = fld_last3rdrate(icdinstance) .
+H47:   fld_last2ndrate(icdinstance__1) = fld_last2ndrate(icdinstance) .
+H48:   fld_last1strate(icdinstance__1) = fld_last1strate(icdinstance) .
+H49:   fld_ison(icdinstance__1) <-> fld_ison(icdinstance) .
+H50:   fld_tachycardiabound(icdinstance__1) = fld_tachycardiabound(icdinstance) 
           .
-H49:   fld_istachycardia(icdinstance__1) <-> fld_istachycardia(icdinstance) .
-H50:   fld_isinimpulseprocess(icdinstance__1) <-> fld_isinimpulseprocess(
+H51:   fld_impulseratebound(icdinstance__1) = fld_impulseratebound(icdinstance) 
+          .
+H52:   fld_istachycardia(icdinstance__1) <-> fld_istachycardia(icdinstance) .
+H53:   fld_isinimpulseprocess(icdinstance__1) <-> fld_isinimpulseprocess(
           icdinstance) .
-H51:   fld_impulse(icdinstance__1) = fld_impulse(icdinstance) .
-H52:   fld_impulserate(icdinstance__1) = fld_impulserate(icdinstance) .
-H53:   fld_offset(icdinstance__1) = fld_offset(icdinstance) .
-H54:   fld_ticktonextimpulse(icdinstance__1) = fld_ticktonextimpulse(
+H54:   fld_impulse(icdinstance__1) = fld_impulse(icdinstance) .
+H55:   fld_impulserate(icdinstance__1) = fld_impulserate(icdinstance) .
+H56:   fld_offset(icdinstance__1) = fld_offset(icdinstance) .
+H57:   fld_ticktonextimpulse(icdinstance__1) = fld_ticktonextimpulse(
           icdinstance) .
-H55:   fld_signal(icdinstance__1) = fld_signal(icdinstance) .
-H56:   fld_fibrillationbound(icdinstance__1) = fld_fibrillationbound(
+H58:   fld_signal(icdinstance__1) = fld_signal(icdinstance) .
+H59:   fld_fibrillationbound(icdinstance__1) = fld_fibrillationbound(
           icdinstance) .
-H57:   fld_isfibrillation(icdinstance__1) <-> fld_isfibrillation(icdinstance) .
-H58:   fld_abnormalnum(icdinstance__1) = fld_abnormalnum(icdinstance) .
-H59:   fld_waitaftershock(icdinstance__1) = fld_waitaftershock(icdinstance) .
-H60:   fld_iswait(icdinstance__1) <-> fld_iswait(icdinstance) .
-H61:   icdinstance__1 = upf_rate(icdinstance, fld_rate(icdinstance__1)) .
-H62:   fld_waitaftershock(icdinstance__2) >= - 2147483648 .
-H63:   fld_waitaftershock(icdinstance__2) <= 2147483647 .
-H64:   fld_abnormalnum(icdinstance__2) >= - 2147483648 .
-H65:   fld_abnormalnum(icdinstance__2) <= 2147483647 .
-H66:   fld_fibrillationbound(icdinstance__2) >= 3 .
-H67:   fld_fibrillationbound(icdinstance__2) <= 15 .
-H68:   fld_signal(icdinstance__2) >= - 2147483648 .
-H69:   fld_signal(icdinstance__2) <= 2147483647 .
-H70:   fld_ticktonextimpulse(icdinstance__2) >= - 2147483648 .
-H71:   fld_ticktonextimpulse(icdinstance__2) <= 2147483647 .
-H72:   fld_offset(icdinstance__2) >= - 2147483648 .
-H73:   fld_offset(icdinstance__2) <= 2147483647 .
-H74:   fld_impulserate(icdinstance__2) >= - 2147483648 .
-H75:   fld_impulserate(icdinstance__2) <= 2147483647 .
-H76:   fld_impulse(icdinstance__2) >= 0 .
-H77:   fld_impulse(icdinstance__2) <= 45 .
-H78:   fld_tachycardiabound(icdinstance__2) >= 100 .
-H79:   fld_tachycardiabound(icdinstance__2) <= 150 .
-H80:   fld_last1strate(icdinstance__2) >= - 1 .
-H81:   fld_last1strate(icdinstance__2) <= 300 .
-H82:   fld_last2ndrate(icdinstance__2) >= - 1 .
-H83:   fld_last2ndrate(icdinstance__2) <= 300 .
-H84:   fld_last3rdrate(icdinstance__2) >= - 1 .
-H85:   fld_last3rdrate(icdinstance__2) <= 300 .
-H86:   fld_last4thrate(icdinstance__2) >= - 1 .
-H87:   fld_last4thrate(icdinstance__2) <= 300 .
-H88:   fld_last5thrate(icdinstance__2) >= - 1 .
-H89:   fld_last5thrate(icdinstance__2) <= 300 .
-H90:   fld_last6thrate(icdinstance__2) >= - 1 .
-H91:   fld_last6thrate(icdinstance__2) <= 300 .
-H92:   fld_rate(icdinstance__2) >= - 1 .
-H93:   fld_rate(icdinstance__2) <= 300 .
-H94:   fld_waitaftershock(icdinstance__3) >= - 2147483648 .
-H95:   fld_waitaftershock(icdinstance__3) <= 2147483647 .
-H96:   fld_abnormalnum(icdinstance__3) >= - 2147483648 .
-H97:   fld_abnormalnum(icdinstance__3) <= 2147483647 .
-H98:   fld_fibrillationbound(icdinstance__3) >= 3 .
-H99:   fld_fibrillationbound(icdinstance__3) <= 15 .
-H100:  fld_signal(icdinstance__3) >= - 2147483648 .
-H101:  fld_signal(icdinstance__3) <= 2147483647 .
-H102:  fld_ticktonextimpulse(icdinstance__3) >= - 2147483648 .
-H103:  fld_ticktonextimpulse(icdinstance__3) <= 2147483647 .
-H104:  fld_offset(icdinstance__3) >= - 2147483648 .
-H105:  fld_offset(icdinstance__3) <= 2147483647 .
-H106:  fld_impulserate(icdinstance__3) >= - 2147483648 .
-H107:  fld_impulserate(icdinstance__3) <= 2147483647 .
-H108:  fld_impulse(icdinstance__3) >= 0 .
-H109:  fld_impulse(icdinstance__3) <= 45 .
-H110:  fld_tachycardiabound(icdinstance__3) >= 100 .
-H111:  fld_tachycardiabound(icdinstance__3) <= 150 .
-H112:  fld_last1strate(icdinstance__3) >= - 1 .
-H113:  fld_last1strate(icdinstance__3) <= 300 .
-H114:  fld_last2ndrate(icdinstance__3) >= - 1 .
-H115:  fld_last2ndrate(icdinstance__3) <= 300 .
-H116:  fld_last3rdrate(icdinstance__3) >= - 1 .
-H117:  fld_last3rdrate(icdinstance__3) <= 300 .
-H118:  fld_last4thrate(icdinstance__3) >= - 1 .
-H119:  fld_last4thrate(icdinstance__3) <= 300 .
-H120:  fld_last5thrate(icdinstance__3) >= - 1 .
-H121:  fld_last5thrate(icdinstance__3) <= 300 .
-H122:  fld_last6thrate(icdinstance__3) >= - 1 .
-H123:  fld_last6thrate(icdinstance__3) <= 300 .
-H124:  fld_rate(icdinstance__3) >= - 1 .
-H125:  fld_rate(icdinstance__3) <= 300 .
-H126:  fld_waitaftershock(icdinstance__4) >= - 2147483648 .
-H127:  fld_waitaftershock(icdinstance__4) <= 2147483647 .
-H128:  fld_abnormalnum(icdinstance__4) >= - 2147483648 .
-H129:  fld_abnormalnum(icdinstance__4) <= 2147483647 .
-H130:  fld_fibrillationbound(icdinstance__4) >= 3 .
-H131:  fld_fibrillationbound(icdinstance__4) <= 15 .
-H132:  fld_signal(icdinstance__4) >= - 2147483648 .
-H133:  fld_signal(icdinstance__4) <= 2147483647 .
-H134:  fld_ticktonextimpulse(icdinstance__4) >= - 2147483648 .
-H135:  fld_ticktonextimpulse(icdinstance__4) <= 2147483647 .
-H136:  fld_offset(icdinstance__4) >= - 2147483648 .
-H137:  fld_offset(icdinstance__4) <= 2147483647 .
-H138:  fld_impulserate(icdinstance__4) >= - 2147483648 .
-H139:  fld_impulserate(icdinstance__4) <= 2147483647 .
-H140:  fld_impulse(icdinstance__4) >= 0 .
-H141:  fld_impulse(icdinstance__4) <= 45 .
-H142:  fld_tachycardiabound(icdinstance__4) >= 100 .
-H143:  fld_tachycardiabound(icdinstance__4) <= 150 .
-H144:  fld_last1strate(icdinstance__4) >= - 1 .
-H145:  fld_last1strate(icdinstance__4) <= 300 .
-H146:  fld_last2ndrate(icdinstance__4) >= - 1 .
-H147:  fld_last2ndrate(icdinstance__4) <= 300 .
-H148:  fld_last3rdrate(icdinstance__4) >= - 1 .
-H149:  fld_last3rdrate(icdinstance__4) <= 300 .
-H150:  fld_last4thrate(icdinstance__4) >= - 1 .
-H151:  fld_last4thrate(icdinstance__4) <= 300 .
-H152:  fld_last5thrate(icdinstance__4) >= - 1 .
-H153:  fld_last5thrate(icdinstance__4) <= 300 .
-H154:  fld_last6thrate(icdinstance__4) >= - 1 .
-H155:  fld_last6thrate(icdinstance__4) <= 300 .
-H156:  fld_rate(icdinstance__4) >= - 1 .
-H157:  fld_rate(icdinstance__4) <= 300 .
-H158:  fld_waitaftershock(icdinstance__5) >= - 2147483648 .
-H159:  fld_waitaftershock(icdinstance__5) <= 2147483647 .
-H160:  fld_abnormalnum(icdinstance__5) >= - 2147483648 .
-H161:  fld_abnormalnum(icdinstance__5) <= 2147483647 .
-H162:  fld_fibrillationbound(icdinstance__5) >= 3 .
-H163:  fld_fibrillationbound(icdinstance__5) <= 15 .
-H164:  fld_signal(icdinstance__5) >= - 2147483648 .
-H165:  fld_signal(icdinstance__5) <= 2147483647 .
-H166:  fld_ticktonextimpulse(icdinstance__5) >= - 2147483648 .
-H167:  fld_ticktonextimpulse(icdinstance__5) <= 2147483647 .
-H168:  fld_offset(icdinstance__5) >= - 2147483648 .
-H169:  fld_offset(icdinstance__5) <= 2147483647 .
-H170:  fld_impulserate(icdinstance__5) >= - 2147483648 .
-H171:  fld_impulserate(icdinstance__5) <= 2147483647 .
-H172:  fld_impulse(icdinstance__5) >= 0 .
-H173:  fld_impulse(icdinstance__5) <= 45 .
-H174:  fld_tachycardiabound(icdinstance__5) >= 100 .
-H175:  fld_tachycardiabound(icdinstance__5) <= 150 .
-H176:  fld_last1strate(icdinstance__5) >= - 1 .
-H177:  fld_last1strate(icdinstance__5) <= 300 .
-H178:  fld_last2ndrate(icdinstance__5) >= - 1 .
-H179:  fld_last2ndrate(icdinstance__5) <= 300 .
-H180:  fld_last3rdrate(icdinstance__5) >= - 1 .
-H181:  fld_last3rdrate(icdinstance__5) <= 300 .
-H182:  fld_last4thrate(icdinstance__5) >= - 1 .
-H183:  fld_last4thrate(icdinstance__5) <= 300 .
-H184:  fld_last5thrate(icdinstance__5) >= - 1 .
-H185:  fld_last5thrate(icdinstance__5) <= 300 .
-H186:  fld_last6thrate(icdinstance__5) >= - 1 .
-H187:  fld_last6thrate(icdinstance__5) <= 300 .
-H188:  fld_rate(icdinstance__5) >= - 1 .
-H189:  fld_rate(icdinstance__5) <= 300 .
-H190:  integer__size >= 0 .
-H191:  measures__joules__size >= 0 .
-H192:  measures__bpm__size >= 0 .
-H193:  measures__tub__size >= 0 .
-H194:  measures__fub__size >= 0 .
-H195:  impulsegenerator__generatortype__size >= 0 .
-H196:  hrm__hrmtype__size >= 0 .
-H197:  icdtype__size >= 0 .
+H60:   fld_isfibrillation(icdinstance__1) <-> fld_isfibrillation(icdinstance) .
+H61:   fld_abnormalnum(icdinstance__1) = fld_abnormalnum(icdinstance) .
+H62:   fld_waitaftershock(icdinstance__1) = fld_waitaftershock(icdinstance) .
+H63:   fld_iswait(icdinstance__1) <-> fld_iswait(icdinstance) .
+H64:   icdinstance__1 = upf_rate(icdinstance, fld_rate(icdinstance__1)) .
+H65:   fld_waitaftershock(icdinstance__2) >= - 2147483648 .
+H66:   fld_waitaftershock(icdinstance__2) <= 2147483647 .
+H67:   fld_abnormalnum(icdinstance__2) >= - 2147483648 .
+H68:   fld_abnormalnum(icdinstance__2) <= 2147483647 .
+H69:   fld_fibrillationbound(icdinstance__2) >= 3 .
+H70:   fld_fibrillationbound(icdinstance__2) <= 15 .
+H71:   fld_signal(icdinstance__2) >= - 2147483648 .
+H72:   fld_signal(icdinstance__2) <= 2147483647 .
+H73:   fld_ticktonextimpulse(icdinstance__2) >= - 2147483648 .
+H74:   fld_ticktonextimpulse(icdinstance__2) <= 2147483647 .
+H75:   fld_offset(icdinstance__2) >= - 2147483648 .
+H76:   fld_offset(icdinstance__2) <= 2147483647 .
+H77:   fld_impulserate(icdinstance__2) >= - 2147483648 .
+H78:   fld_impulserate(icdinstance__2) <= 2147483647 .
+H79:   fld_impulse(icdinstance__2) >= 0 .
+H80:   fld_impulse(icdinstance__2) <= 45 .
+H81:   fld_impulseratebound(icdinstance__2) >= 100 .
+H82:   fld_impulseratebound(icdinstance__2) <= 150 .
+H83:   fld_tachycardiabound(icdinstance__2) >= 100 .
+H84:   fld_tachycardiabound(icdinstance__2) <= 150 .
+H85:   fld_last1strate(icdinstance__2) >= - 1 .
+H86:   fld_last1strate(icdinstance__2) <= 300 .
+H87:   fld_last2ndrate(icdinstance__2) >= - 1 .
+H88:   fld_last2ndrate(icdinstance__2) <= 300 .
+H89:   fld_last3rdrate(icdinstance__2) >= - 1 .
+H90:   fld_last3rdrate(icdinstance__2) <= 300 .
+H91:   fld_last4thrate(icdinstance__2) >= - 1 .
+H92:   fld_last4thrate(icdinstance__2) <= 300 .
+H93:   fld_last5thrate(icdinstance__2) >= - 1 .
+H94:   fld_last5thrate(icdinstance__2) <= 300 .
+H95:   fld_last6thrate(icdinstance__2) >= - 1 .
+H96:   fld_last6thrate(icdinstance__2) <= 300 .
+H97:   fld_rate(icdinstance__2) >= - 1 .
+H98:   fld_rate(icdinstance__2) <= 300 .
+H99:   (fld_waitaftershock(icdinstance__3) > 1 -> not fld_iswait(icdinstance__3)
+          ) or (fld_waitaftershock(icdinstance__3) = 1 -> fld_iswait(
+          icdinstance__3)) .
+H100:  fld_waitaftershock(icdinstance__3) >= - 2147483648 .
+H101:  fld_waitaftershock(icdinstance__3) <= 2147483647 .
+H102:  fld_abnormalnum(icdinstance__3) >= - 2147483648 .
+H103:  fld_abnormalnum(icdinstance__3) <= 2147483647 .
+H104:  fld_fibrillationbound(icdinstance__3) >= 3 .
+H105:  fld_fibrillationbound(icdinstance__3) <= 15 .
+H106:  fld_signal(icdinstance__3) >= - 2147483648 .
+H107:  fld_signal(icdinstance__3) <= 2147483647 .
+H108:  fld_ticktonextimpulse(icdinstance__3) >= - 2147483648 .
+H109:  fld_ticktonextimpulse(icdinstance__3) <= 2147483647 .
+H110:  fld_offset(icdinstance__3) >= - 2147483648 .
+H111:  fld_offset(icdinstance__3) <= 2147483647 .
+H112:  fld_impulserate(icdinstance__3) >= - 2147483648 .
+H113:  fld_impulserate(icdinstance__3) <= 2147483647 .
+H114:  fld_impulse(icdinstance__3) >= 0 .
+H115:  fld_impulse(icdinstance__3) <= 45 .
+H116:  fld_impulseratebound(icdinstance__3) >= 100 .
+H117:  fld_impulseratebound(icdinstance__3) <= 150 .
+H118:  fld_tachycardiabound(icdinstance__3) >= 100 .
+H119:  fld_tachycardiabound(icdinstance__3) <= 150 .
+H120:  fld_last1strate(icdinstance__3) >= - 1 .
+H121:  fld_last1strate(icdinstance__3) <= 300 .
+H122:  fld_last2ndrate(icdinstance__3) >= - 1 .
+H123:  fld_last2ndrate(icdinstance__3) <= 300 .
+H124:  fld_last3rdrate(icdinstance__3) >= - 1 .
+H125:  fld_last3rdrate(icdinstance__3) <= 300 .
+H126:  fld_last4thrate(icdinstance__3) >= - 1 .
+H127:  fld_last4thrate(icdinstance__3) <= 300 .
+H128:  fld_last5thrate(icdinstance__3) >= - 1 .
+H129:  fld_last5thrate(icdinstance__3) <= 300 .
+H130:  fld_last6thrate(icdinstance__3) >= - 1 .
+H131:  fld_last6thrate(icdinstance__3) <= 300 .
+H132:  fld_rate(icdinstance__3) >= - 1 .
+H133:  fld_rate(icdinstance__3) <= 300 .
+H134:  (fld_rate(icdinstance__4) >= fld_tachycardiabound(icdinstance__4) -> 
+          fld_istachycardia(icdinstance__4)) or (fld_rate(icdinstance__4) < 
+          fld_tachycardiabound(icdinstance__4) -> not fld_istachycardia(
+          icdinstance__4)) .
+H135:  fld_waitaftershock(icdinstance__4) >= - 2147483648 .
+H136:  fld_waitaftershock(icdinstance__4) <= 2147483647 .
+H137:  fld_abnormalnum(icdinstance__4) >= - 2147483648 .
+H138:  fld_abnormalnum(icdinstance__4) <= 2147483647 .
+H139:  fld_fibrillationbound(icdinstance__4) >= 3 .
+H140:  fld_fibrillationbound(icdinstance__4) <= 15 .
+H141:  fld_signal(icdinstance__4) >= - 2147483648 .
+H142:  fld_signal(icdinstance__4) <= 2147483647 .
+H143:  fld_ticktonextimpulse(icdinstance__4) >= - 2147483648 .
+H144:  fld_ticktonextimpulse(icdinstance__4) <= 2147483647 .
+H145:  fld_offset(icdinstance__4) >= - 2147483648 .
+H146:  fld_offset(icdinstance__4) <= 2147483647 .
+H147:  fld_impulserate(icdinstance__4) >= - 2147483648 .
+H148:  fld_impulserate(icdinstance__4) <= 2147483647 .
+H149:  fld_impulse(icdinstance__4) >= 0 .
+H150:  fld_impulse(icdinstance__4) <= 45 .
+H151:  fld_impulseratebound(icdinstance__4) >= 100 .
+H152:  fld_impulseratebound(icdinstance__4) <= 150 .
+H153:  fld_tachycardiabound(icdinstance__4) >= 100 .
+H154:  fld_tachycardiabound(icdinstance__4) <= 150 .
+H155:  fld_last1strate(icdinstance__4) >= - 1 .
+H156:  fld_last1strate(icdinstance__4) <= 300 .
+H157:  fld_last2ndrate(icdinstance__4) >= - 1 .
+H158:  fld_last2ndrate(icdinstance__4) <= 300 .
+H159:  fld_last3rdrate(icdinstance__4) >= - 1 .
+H160:  fld_last3rdrate(icdinstance__4) <= 300 .
+H161:  fld_last4thrate(icdinstance__4) >= - 1 .
+H162:  fld_last4thrate(icdinstance__4) <= 300 .
+H163:  fld_last5thrate(icdinstance__4) >= - 1 .
+H164:  fld_last5thrate(icdinstance__4) <= 300 .
+H165:  fld_last6thrate(icdinstance__4) >= - 1 .
+H166:  fld_last6thrate(icdinstance__4) <= 300 .
+H167:  fld_rate(icdinstance__4) >= - 1 .
+H168:  fld_rate(icdinstance__4) <= 300 .
+H169:  (fld_abnormalnum(icdinstance__5) > 3 -> not fld_istachycardia(
+          icdinstance__5) and fld_isfibrillation(icdinstance__5)) or (
+          fld_abnormalnum(icdinstance__5) > 3 -> not fld_istachycardia(
+          icdinstance__5)) .
+H170:  fld_waitaftershock(icdinstance__5) >= - 2147483648 .
+H171:  fld_waitaftershock(icdinstance__5) <= 2147483647 .
+H172:  fld_abnormalnum(icdinstance__5) >= - 2147483648 .
+H173:  fld_abnormalnum(icdinstance__5) <= 2147483647 .
+H174:  fld_fibrillationbound(icdinstance__5) >= 3 .
+H175:  fld_fibrillationbound(icdinstance__5) <= 15 .
+H176:  fld_signal(icdinstance__5) >= - 2147483648 .
+H177:  fld_signal(icdinstance__5) <= 2147483647 .
+H178:  fld_ticktonextimpulse(icdinstance__5) >= - 2147483648 .
+H179:  fld_ticktonextimpulse(icdinstance__5) <= 2147483647 .
+H180:  fld_offset(icdinstance__5) >= - 2147483648 .
+H181:  fld_offset(icdinstance__5) <= 2147483647 .
+H182:  fld_impulserate(icdinstance__5) >= - 2147483648 .
+H183:  fld_impulserate(icdinstance__5) <= 2147483647 .
+H184:  fld_impulse(icdinstance__5) >= 0 .
+H185:  fld_impulse(icdinstance__5) <= 45 .
+H186:  fld_impulseratebound(icdinstance__5) >= 100 .
+H187:  fld_impulseratebound(icdinstance__5) <= 150 .
+H188:  fld_tachycardiabound(icdinstance__5) >= 100 .
+H189:  fld_tachycardiabound(icdinstance__5) <= 150 .
+H190:  fld_last1strate(icdinstance__5) >= - 1 .
+H191:  fld_last1strate(icdinstance__5) <= 300 .
+H192:  fld_last2ndrate(icdinstance__5) >= - 1 .
+H193:  fld_last2ndrate(icdinstance__5) <= 300 .
+H194:  fld_last3rdrate(icdinstance__5) >= - 1 .
+H195:  fld_last3rdrate(icdinstance__5) <= 300 .
+H196:  fld_last4thrate(icdinstance__5) >= - 1 .
+H197:  fld_last4thrate(icdinstance__5) <= 300 .
+H198:  fld_last5thrate(icdinstance__5) >= - 1 .
+H199:  fld_last5thrate(icdinstance__5) <= 300 .
+H200:  fld_last6thrate(icdinstance__5) >= - 1 .
+H201:  fld_last6thrate(icdinstance__5) <= 300 .
+H202:  fld_rate(icdinstance__5) >= - 1 .
+H203:  fld_rate(icdinstance__5) <= 300 .
+H204:  integer__size >= 0 .
+H205:  measures__joules__size >= 0 .
+H206:  measures__bpm__size >= 0 .
+H207:  measures__tub__size >= 0 .
+H208:  measures__fub__size >= 0 .
+H209:  impulsegenerator__generatortype__size >= 0 .
+H210:  hrm__hrmtype__size >= 0 .
+H211:  icdtype__size >= 0 .
        ->
 C1:    fld_ison(icdinstance__5) .
 
 
-For path(s) from start to run-time check associated with statement of line 231:
+For path(s) from start to run-time check associated with statement of line 242:
 
 procedure_tick_3.
 *** true .          /* all conclusions proved */

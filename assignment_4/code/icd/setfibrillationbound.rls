@@ -5,7 +5,7 @@
            /*********************************************************/
 
 
-                        /*DATE : 31-MAY-2014 19:43:59.47*/
+                        /*DATE : 01-JUN-2014 12:40:45.08*/
 
                      /*procedure ICD.setFibrillationBound*/
 
@@ -53,6 +53,7 @@ setfibrillat_rules(27): A = B may_be_deduced_from
       fld_last1strate(A) = fld_last1strate(B),
       fld_ison(A) = fld_ison(B),
       fld_tachycardiabound(A) = fld_tachycardiabound(B),
+      fld_impulseratebound(A) = fld_impulseratebound(B),
       fld_istachycardia(A) = fld_istachycardia(B),
       fld_isinimpulseprocess(A) = fld_isinimpulseprocess(B),
       fld_impulse(A) = fld_impulse(B),

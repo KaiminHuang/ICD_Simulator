@@ -5,7 +5,7 @@
            *******************************************************
 
 
-                        DATE : 31-MAY-2014 19:43:59.71
+                        DATE : 01-JUN-2014 12:40:45.57
 
 Options:
     noswitch
@@ -29,7 +29,7 @@ Options:
     error_explanations=off
     justification_option=full
     output_directory=.
-    output_directory (actual)=/home/kaiminh/swen90010-2014/assignments/assignment-4/code/
+    output_directory (actual)=/home/yingziz/ICD_Simulator/assignment_4/code/
 
 Selected files:
    measures.adb
@@ -41,7 +41,7 @@ Selected files:
 
 
 Index Filename(s) used were: 
-   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/project.idx
+   /home/yingziz/ICD_Simulator/assignment_4/code/project.idx
 
 
 No Meta Files used
@@ -71,23 +71,23 @@ No summarized warnings
 
 
 Source Filename(s) used were:
-   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/measures.adb
-   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/measures.ads
-   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/heart.adb
-   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/heart.ads
-   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/randomnumber.ads
-   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/impulsegenerator.adb
-   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/impulsegenerator.ads
-   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/hrm.adb
-   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/hrm.ads
-   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd.adb
-   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd.ads
-   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/closedloop.adb
-   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/closedloop.ads
+   /home/yingziz/ICD_Simulator/assignment_4/code/measures.adb
+   /home/yingziz/ICD_Simulator/assignment_4/code/measures.ads
+   /home/yingziz/ICD_Simulator/assignment_4/code/heart.adb
+   /home/yingziz/ICD_Simulator/assignment_4/code/heart.ads
+   /home/yingziz/ICD_Simulator/assignment_4/code/randomnumber.ads
+   /home/yingziz/ICD_Simulator/assignment_4/code/impulsegenerator.adb
+   /home/yingziz/ICD_Simulator/assignment_4/code/impulsegenerator.ads
+   /home/yingziz/ICD_Simulator/assignment_4/code/hrm.adb
+   /home/yingziz/ICD_Simulator/assignment_4/code/hrm.ads
+   /home/yingziz/ICD_Simulator/assignment_4/code/icd.adb
+   /home/yingziz/ICD_Simulator/assignment_4/code/icd.ads
+   /home/yingziz/ICD_Simulator/assignment_4/code/closedloop.adb
+   /home/yingziz/ICD_Simulator/assignment_4/code/closedloop.ads
 
 
 
-Source Filename:   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/measures.ads
+Source Filename:   /home/yingziz/ICD_Simulator/assignment_4/code/measures.ads
 No Listing File
 
    Unit name:  Measures
@@ -99,7 +99,7 @@ No errors found
 No summarized warnings
 
 
-Source Filename:   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/heart.ads
+Source Filename:   /home/yingziz/ICD_Simulator/assignment_4/code/heart.ads
 No Listing File
 
    Unit name:  Heart
@@ -111,7 +111,7 @@ No errors found
 No summarized warnings
 
 
-Source Filename:   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/randomnumber.ads
+Source Filename:   /home/yingziz/ICD_Simulator/assignment_4/code/randomnumber.ads
 No Listing File
 
    Unit name:  RandomNumber
@@ -123,7 +123,7 @@ No errors found
 No summarized warnings
 
 
-Source Filename:   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/impulsegenerator.ads
+Source Filename:   /home/yingziz/ICD_Simulator/assignment_4/code/impulsegenerator.ads
 No Listing File
 
    Unit name:  ImpulseGenerator
@@ -135,7 +135,7 @@ No errors found
 No summarized warnings
 
 
-Source Filename:   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/hrm.ads
+Source Filename:   /home/yingziz/ICD_Simulator/assignment_4/code/hrm.ads
 No Listing File
 
    Unit name:  HRM
@@ -147,7 +147,7 @@ No errors found
 No summarized warnings
 
 
-Source Filename:   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd.ads
+Source Filename:   /home/yingziz/ICD_Simulator/assignment_4/code/icd.ads
 No Listing File
 
    Unit name:  ICD
@@ -159,7 +159,7 @@ No errors found
 No summarized warnings
 
 
-Source Filename:   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/closedloop.ads
+Source Filename:   /home/yingziz/ICD_Simulator/assignment_4/code/closedloop.ads
 No Listing File
 
    Unit name:  ClosedLoop
@@ -171,8 +171,8 @@ No errors found
 No summarized warnings
 
 
-Source Filename:   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/measures.adb
-Listing Filename:  /home/kaiminh/swen90010-2014/assignments/assignment-4/code/measures.lst
+Source Filename:   /home/yingziz/ICD_Simulator/assignment_4/code/measures.adb
+Listing Filename:  /home/yingziz/ICD_Simulator/assignment_4/code/measures.lst
 
    Unit name:  Measures
    Unit type:  package body
@@ -183,8 +183,8 @@ No errors found
 No summarized warnings
 
 
-Source Filename:   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/heart.adb
-Listing Filename:  /home/kaiminh/swen90010-2014/assignments/assignment-4/code/heart.lst
+Source Filename:   /home/yingziz/ICD_Simulator/assignment_4/code/heart.adb
+Listing Filename:  /home/yingziz/ICD_Simulator/assignment_4/code/heart.lst
 
    Unit name:  Heart
    Unit type:  package body
@@ -197,8 +197,8 @@ No errors found
 (*Note: the above warnings may affect the validity of the analysis.)
 
 
-Source Filename:   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/impulsegenerator.adb
-Listing Filename:  /home/kaiminh/swen90010-2014/assignments/assignment-4/code/impulsegenerator.lst
+Source Filename:   /home/yingziz/ICD_Simulator/assignment_4/code/impulsegenerator.adb
+Listing Filename:  /home/yingziz/ICD_Simulator/assignment_4/code/impulsegenerator.lst
 
    Unit name:  ImpulseGenerator
    Unit type:  package body
@@ -209,8 +209,8 @@ No errors found
 No summarized warnings
 
 
-Source Filename:   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/hrm.adb
-Listing Filename:  /home/kaiminh/swen90010-2014/assignments/assignment-4/code/hrm.lst
+Source Filename:   /home/yingziz/ICD_Simulator/assignment_4/code/hrm.adb
+Listing Filename:  /home/yingziz/ICD_Simulator/assignment_4/code/hrm.lst
 
    Unit name:  HRM
    Unit type:  package body
@@ -223,8 +223,8 @@ No errors found
 (*Note: the above warnings may affect the validity of the analysis.)
 
 
-Source Filename:   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd.adb
-Listing Filename:  /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd.lst
+Source Filename:   /home/yingziz/ICD_Simulator/assignment_4/code/icd.adb
+Listing Filename:  /home/yingziz/ICD_Simulator/assignment_4/code/icd.lst
 
    Unit name:  ICD
    Unit type:  package body
@@ -235,8 +235,8 @@ No errors found
 No summarized warnings
 
 
-Source Filename:   /home/kaiminh/swen90010-2014/assignments/assignment-4/code/closedloop.adb
-Listing Filename:  /home/kaiminh/swen90010-2014/assignments/assignment-4/code/closedloop.lst
+Source Filename:   /home/yingziz/ICD_Simulator/assignment_4/code/closedloop.adb
+Listing Filename:  /home/yingziz/ICD_Simulator/assignment_4/code/closedloop.lst
 
    Unit name:  ClosedLoop
    Unit type:  package body

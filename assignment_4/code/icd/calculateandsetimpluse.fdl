@@ -5,7 +5,7 @@
            {*******************************************************}
 
 
-                        {DATE : 31-MAY-2014 19:43:59.51}
+                        {DATE : 01-JUN-2014 12:40:45.12}
 
                     {procedure ICD.CalculateAndSetImpluse}
 
@@ -23,6 +23,7 @@ title procedure calculateandsetimpluse;
         last1strate : integer;
         ison : boolean;
         tachycardiabound : integer;
+        impulseratebound : integer;
         istachycardia : boolean;
         isinimpulseprocess : boolean;
         impulse : integer;

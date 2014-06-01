@@ -5,7 +5,7 @@
 *****************************************************************************
 
 
-CREATED 31-MAY-2014, 19:43:59  SIMPLIFIED 31-MAY-2014, 19:44:14
+CREATED 01-JUN-2014, 12:40:44  SIMPLIFIED 01-JUN-2014, 12:40:60
 
 SPARK Simplifier GPL 2011
 Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
@@ -63,7 +63,7 @@ procedure_init_8.
 *** true .          /* all conclusions proved */
 
 
-For path(s) from start to run-time check associated with statement of line 22:
+For path(s) from start to run-time check associated with statement of line 20:
 
 procedure_init_9.
 *** true .          /* all conclusions proved */
@@ -93,13 +93,13 @@ procedure_init_13.
 *** true .          /* all conclusions proved */
 
 
-For path(s) from start to run-time check associated with statement of line 28:
+For path(s) from start to run-time check associated with statement of line 27:
 
 procedure_init_14.
 *** true .          /* all conclusions proved */
 
 
-For path(s) from start to run-time check associated with statement of line 31:
+For path(s) from start to run-time check associated with statement of line 29:
 
 procedure_init_15.
 *** true .          /* all conclusions proved */
@@ -111,9 +111,15 @@ procedure_init_16.
 *** true .          /* all conclusions proved */
 
 
-For path(s) from start to finish:
+For path(s) from start to run-time check associated with statement of line 33:
 
 procedure_init_17.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_init_18.
 *** true .          /* all conclusions proved */
 
 

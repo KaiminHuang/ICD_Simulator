@@ -5,7 +5,7 @@
 *****************************************************************************
 
 
-CREATED 31-MAY-2014, 19:43:59  SIMPLIFIED 31-MAY-2014, 19:44:12
+CREATED 01-JUN-2014, 12:40:45  SIMPLIFIED 01-JUN-2014, 12:40:60
 
 SPARK Simplifier GPL 2011
 Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
@@ -15,13 +15,13 @@ procedure ICD.setTachycardiaBound
 
 
 
-For path(s) from start to run-time check associated with statement of line 138:
+For path(s) from start to run-time check associated with statement of line 140:
 
 procedure_settachycardiabound_1.
 *** true .          /* all conclusions proved */
 
 
-For path(s) from start to run-time check associated with statement of line 138:
+For path(s) from start to run-time check associated with statement of line 140:
 
 procedure_settachycardiabound_2.
 *** true .          /* all conclusions proved */
@@ -30,52 +30,7 @@ procedure_settachycardiabound_2.
 For path(s) from start to finish:
 
 procedure_settachycardiabound_3.
-H1:    fld_waitaftershock(icdinstance) >= - 2147483648 .
-H2:    fld_waitaftershock(icdinstance) <= 2147483647 .
-H3:    fld_abnormalnum(icdinstance) >= - 2147483648 .
-H4:    fld_abnormalnum(icdinstance) <= 2147483647 .
-H5:    fld_fibrillationbound(icdinstance) >= 3 .
-H6:    fld_fibrillationbound(icdinstance) <= 15 .
-H7:    fld_signal(icdinstance) >= - 2147483648 .
-H8:    fld_signal(icdinstance) <= 2147483647 .
-H9:    fld_ticktonextimpulse(icdinstance) >= - 2147483648 .
-H10:   fld_ticktonextimpulse(icdinstance) <= 2147483647 .
-H11:   fld_offset(icdinstance) >= - 2147483648 .
-H12:   fld_offset(icdinstance) <= 2147483647 .
-H13:   fld_impulserate(icdinstance) >= - 2147483648 .
-H14:   fld_impulserate(icdinstance) <= 2147483647 .
-H15:   fld_impulse(icdinstance) >= 0 .
-H16:   fld_impulse(icdinstance) <= 45 .
-H17:   fld_tachycardiabound(icdinstance) >= 100 .
-H18:   fld_tachycardiabound(icdinstance) <= 150 .
-H19:   fld_last1strate(icdinstance) >= - 1 .
-H20:   fld_last1strate(icdinstance) <= 300 .
-H21:   fld_last2ndrate(icdinstance) >= - 1 .
-H22:   fld_last2ndrate(icdinstance) <= 300 .
-H23:   fld_last3rdrate(icdinstance) >= - 1 .
-H24:   fld_last3rdrate(icdinstance) <= 300 .
-H25:   fld_last4thrate(icdinstance) >= - 1 .
-H26:   fld_last4thrate(icdinstance) <= 300 .
-H27:   fld_last5thrate(icdinstance) >= - 1 .
-H28:   fld_last5thrate(icdinstance) <= 300 .
-H29:   fld_last6thrate(icdinstance) >= - 1 .
-H30:   fld_last6thrate(icdinstance) <= 300 .
-H31:   fld_rate(icdinstance) >= - 1 .
-H32:   fld_rate(icdinstance) <= 300 .
-H33:   ub >= - 2147483648 .
-H34:   ub <= 2147483647 .
-H35:   not fld_ison(icdinstance) .
-H36:   measures__limittub(ub) >= 100 .
-H37:   measures__limittub(ub) <= 150 .
-H38:   integer__size >= 0 .
-H39:   measures__joules__size >= 0 .
-H40:   measures__bpm__size >= 0 .
-H41:   measures__tub__size >= 0 .
-H42:   measures__fub__size >= 0 .
-H43:   icdtype__size >= 0 .
-       ->
-C1:    not fld_ison(icdinstance) -> upf_tachycardiabound(icdinstance, 
-          measures__limittub(ub)) = icdinstance .
+*** true .          /* all conclusions proved */
 
 
 procedure_settachycardiabound_4.

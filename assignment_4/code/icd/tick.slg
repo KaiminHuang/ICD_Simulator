@@ -5,7 +5,7 @@
 *****************************************************************************
 
 
-CREATED 31-MAY-2014, 19:43:59  SIMPLIFIED 31-MAY-2014, 19:44:16
+CREATED 01-JUN-2014, 12:40:45  SIMPLIFIED 01-JUN-2014, 12:41:03
 
 SPARK Simplifier GPL 2011
 Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
@@ -18,44 +18,58 @@ procedure ICD.Tick
 
 
 @@@@@@@@@@  VC: procedure_tick_1.  @@@@@@@@@@
-%%%  Simplified H55 on reading formula in, to give:
-     %%%  H55:  fld_ison(icdinstance__1) <-> fld_ison(icdinstance)
 %%%  Simplified H57 on reading formula in, to give:
-     %%%  H57:  fld_istachycardia(icdinstance__1) <-> fld_istachycardia(
+     %%%  H57:  fld_ison(icdinstance__1) <-> fld_ison(icdinstance)
+%%%  Simplified H60 on reading formula in, to give:
+     %%%  H60:  fld_istachycardia(icdinstance__1) <-> fld_istachycardia(
           icdinstance)
-%%%  Simplified H58 on reading formula in, to give:
-     %%%  H58:  fld_isinimpulseprocess(icdinstance__1) <-> 
+%%%  Simplified H61 on reading formula in, to give:
+     %%%  H61:  fld_isinimpulseprocess(icdinstance__1) <-> 
           fld_isinimpulseprocess(icdinstance)
-%%%  Simplified H65 on reading formula in, to give:
-     %%%  H65:  fld_isfibrillation(icdinstance__1) <-> fld_isfibrillation(
-          icdinstance)
 %%%  Simplified H68 on reading formula in, to give:
-     %%%  H68:  fld_iswait(icdinstance__1) <-> fld_iswait(icdinstance)
+     %%%  H68:  fld_isfibrillation(icdinstance__1) <-> fld_isfibrillation(
+          icdinstance)
+%%%  Simplified H71 on reading formula in, to give:
+     %%%  H71:  fld_iswait(icdinstance__1) <-> fld_iswait(icdinstance)
 ***  Proved C1:  fld_rate(icdinstance__1) >= measures__bpm__first
-     using hypothesis H47.
+     using hypothesis H49.
 ***  Proved C2:  fld_rate(icdinstance__1) <= measures__bpm__last
-     using hypothesis H48.
+     using hypothesis H50.
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_tick_2.  @@@@@@@@@@
-%%%  Simplified H55 on reading formula in, to give:
-     %%%  H55:  fld_ison(icdinstance__1) <-> fld_ison(icdinstance)
 %%%  Simplified H57 on reading formula in, to give:
-     %%%  H57:  fld_istachycardia(icdinstance__1) <-> fld_istachycardia(
+     %%%  H57:  fld_ison(icdinstance__1) <-> fld_ison(icdinstance)
+%%%  Simplified H60 on reading formula in, to give:
+     %%%  H60:  fld_istachycardia(icdinstance__1) <-> fld_istachycardia(
           icdinstance)
-%%%  Simplified H58 on reading formula in, to give:
-     %%%  H58:  fld_isinimpulseprocess(icdinstance__1) <-> 
+%%%  Simplified H61 on reading formula in, to give:
+     %%%  H61:  fld_isinimpulseprocess(icdinstance__1) <-> 
           fld_isinimpulseprocess(icdinstance)
-%%%  Simplified H65 on reading formula in, to give:
-     %%%  H65:  fld_isfibrillation(icdinstance__1) <-> fld_isfibrillation(
-          icdinstance)
 %%%  Simplified H68 on reading formula in, to give:
-     %%%  H68:  fld_iswait(icdinstance__1) <-> fld_iswait(icdinstance)
----  Hypothesis H70 has been replaced by "true".  (It is already present, as 
-          H47).
----  Hypothesis H71 has been replaced by "true".  (It is already present, as 
-          H48).
+     %%%  H68:  fld_isfibrillation(icdinstance__1) <-> fld_isfibrillation(
+          icdinstance)
+%%%  Simplified H71 on reading formula in, to give:
+     %%%  H71:  fld_iswait(icdinstance__1) <-> fld_iswait(icdinstance)
+---  Hypothesis H73 has been replaced by "true".  (It is already present, as 
+          H49).
+---  Hypothesis H74 has been replaced by "true".  (It is already present, as 
+          H50).
+%%%  Simplified H114 on reading formula in, to give:
+     %%%  H114:  (fld_waitaftershock(icdinstance__3) > 1 -> not fld_iswait(
+          icdinstance__3)) or (fld_waitaftershock(icdinstance__3) = 1 -> 
+          fld_iswait(icdinstance__3))
+%%%  Simplified H154 on reading formula in, to give:
+     %%%  H154:  (fld_rate(icdinstance__4) >= fld_tachycardiabound(
+          icdinstance__4) -> fld_istachycardia(icdinstance__4)) or (fld_rate(
+          icdinstance__4) < fld_tachycardiabound(icdinstance__4) -> not 
+          fld_istachycardia(icdinstance__4))
+%%%  Simplified H194 on reading formula in, to give:
+     %%%  H194:  (fld_abnormalnum(icdinstance__5) > 3 -> not fld_istachycardia(
+          icdinstance__5) and fld_isfibrillation(icdinstance__5)) or (
+          fld_abnormalnum(icdinstance__5) > 3 -> not fld_istachycardia(
+          icdinstance__5))
 %%%  Simplified C1 on reading formula in, to give:
      %%%  C1:  fld_ison(icdinstance__5)
 -S-  Applied substitution rule tick_rules(2).
@@ -67,30 +81,30 @@ procedure ICD.Tick
 <S>  New H12:  fld_ticktonextimpulse(icdinstance) >= - 2147483648
 <S>  New H14:  fld_offset(icdinstance) >= - 2147483648
 <S>  New H16:  fld_impulserate(icdinstance) >= - 2147483648
-<S>  New H73:  fld_waitaftershock(icdinstance__2) >= - 2147483648
-<S>  New H75:  fld_abnormalnum(icdinstance__2) >= - 2147483648
-<S>  New H80:  fld_signal(icdinstance__2) >= - 2147483648
-<S>  New H82:  fld_ticktonextimpulse(icdinstance__2) >= - 2147483648
-<S>  New H84:  fld_offset(icdinstance__2) >= - 2147483648
-<S>  New H86:  fld_impulserate(icdinstance__2) >= - 2147483648
-<S>  New H110:  fld_waitaftershock(icdinstance__3) >= - 2147483648
-<S>  New H112:  fld_abnormalnum(icdinstance__3) >= - 2147483648
-<S>  New H117:  fld_signal(icdinstance__3) >= - 2147483648
-<S>  New H119:  fld_ticktonextimpulse(icdinstance__3) >= - 2147483648
-<S>  New H121:  fld_offset(icdinstance__3) >= - 2147483648
-<S>  New H123:  fld_impulserate(icdinstance__3) >= - 2147483648
-<S>  New H147:  fld_waitaftershock(icdinstance__4) >= - 2147483648
-<S>  New H149:  fld_abnormalnum(icdinstance__4) >= - 2147483648
-<S>  New H154:  fld_signal(icdinstance__4) >= - 2147483648
-<S>  New H156:  fld_ticktonextimpulse(icdinstance__4) >= - 2147483648
-<S>  New H158:  fld_offset(icdinstance__4) >= - 2147483648
-<S>  New H160:  fld_impulserate(icdinstance__4) >= - 2147483648
-<S>  New H184:  fld_waitaftershock(icdinstance__5) >= - 2147483648
-<S>  New H186:  fld_abnormalnum(icdinstance__5) >= - 2147483648
-<S>  New H191:  fld_signal(icdinstance__5) >= - 2147483648
-<S>  New H193:  fld_ticktonextimpulse(icdinstance__5) >= - 2147483648
-<S>  New H195:  fld_offset(icdinstance__5) >= - 2147483648
-<S>  New H197:  fld_impulserate(icdinstance__5) >= - 2147483648
+<S>  New H76:  fld_waitaftershock(icdinstance__2) >= - 2147483648
+<S>  New H78:  fld_abnormalnum(icdinstance__2) >= - 2147483648
+<S>  New H83:  fld_signal(icdinstance__2) >= - 2147483648
+<S>  New H85:  fld_ticktonextimpulse(icdinstance__2) >= - 2147483648
+<S>  New H87:  fld_offset(icdinstance__2) >= - 2147483648
+<S>  New H89:  fld_impulserate(icdinstance__2) >= - 2147483648
+<S>  New H116:  fld_waitaftershock(icdinstance__3) >= - 2147483648
+<S>  New H118:  fld_abnormalnum(icdinstance__3) >= - 2147483648
+<S>  New H123:  fld_signal(icdinstance__3) >= - 2147483648
+<S>  New H125:  fld_ticktonextimpulse(icdinstance__3) >= - 2147483648
+<S>  New H127:  fld_offset(icdinstance__3) >= - 2147483648
+<S>  New H129:  fld_impulserate(icdinstance__3) >= - 2147483648
+<S>  New H156:  fld_waitaftershock(icdinstance__4) >= - 2147483648
+<S>  New H158:  fld_abnormalnum(icdinstance__4) >= - 2147483648
+<S>  New H163:  fld_signal(icdinstance__4) >= - 2147483648
+<S>  New H165:  fld_ticktonextimpulse(icdinstance__4) >= - 2147483648
+<S>  New H167:  fld_offset(icdinstance__4) >= - 2147483648
+<S>  New H169:  fld_impulserate(icdinstance__4) >= - 2147483648
+<S>  New H196:  fld_waitaftershock(icdinstance__5) >= - 2147483648
+<S>  New H198:  fld_abnormalnum(icdinstance__5) >= - 2147483648
+<S>  New H203:  fld_signal(icdinstance__5) >= - 2147483648
+<S>  New H205:  fld_ticktonextimpulse(icdinstance__5) >= - 2147483648
+<S>  New H207:  fld_offset(icdinstance__5) >= - 2147483648
+<S>  New H209:  fld_impulserate(icdinstance__5) >= - 2147483648
 -S-  Applied substitution rule tick_rules(3).
      This was achieved by replacing all occurrences of integer__last by:
           2147483647.
@@ -100,267 +114,293 @@ procedure ICD.Tick
 <S>  New H13:  fld_ticktonextimpulse(icdinstance) <= 2147483647
 <S>  New H15:  fld_offset(icdinstance) <= 2147483647
 <S>  New H17:  fld_impulserate(icdinstance) <= 2147483647
-<S>  New H74:  fld_waitaftershock(icdinstance__2) <= 2147483647
-<S>  New H76:  fld_abnormalnum(icdinstance__2) <= 2147483647
-<S>  New H81:  fld_signal(icdinstance__2) <= 2147483647
-<S>  New H83:  fld_ticktonextimpulse(icdinstance__2) <= 2147483647
-<S>  New H85:  fld_offset(icdinstance__2) <= 2147483647
-<S>  New H87:  fld_impulserate(icdinstance__2) <= 2147483647
-<S>  New H111:  fld_waitaftershock(icdinstance__3) <= 2147483647
-<S>  New H113:  fld_abnormalnum(icdinstance__3) <= 2147483647
-<S>  New H118:  fld_signal(icdinstance__3) <= 2147483647
-<S>  New H120:  fld_ticktonextimpulse(icdinstance__3) <= 2147483647
-<S>  New H122:  fld_offset(icdinstance__3) <= 2147483647
-<S>  New H124:  fld_impulserate(icdinstance__3) <= 2147483647
-<S>  New H148:  fld_waitaftershock(icdinstance__4) <= 2147483647
-<S>  New H150:  fld_abnormalnum(icdinstance__4) <= 2147483647
-<S>  New H155:  fld_signal(icdinstance__4) <= 2147483647
-<S>  New H157:  fld_ticktonextimpulse(icdinstance__4) <= 2147483647
-<S>  New H159:  fld_offset(icdinstance__4) <= 2147483647
-<S>  New H161:  fld_impulserate(icdinstance__4) <= 2147483647
-<S>  New H185:  fld_waitaftershock(icdinstance__5) <= 2147483647
-<S>  New H187:  fld_abnormalnum(icdinstance__5) <= 2147483647
-<S>  New H192:  fld_signal(icdinstance__5) <= 2147483647
-<S>  New H194:  fld_ticktonextimpulse(icdinstance__5) <= 2147483647
-<S>  New H196:  fld_offset(icdinstance__5) <= 2147483647
-<S>  New H198:  fld_impulserate(icdinstance__5) <= 2147483647
+<S>  New H77:  fld_waitaftershock(icdinstance__2) <= 2147483647
+<S>  New H79:  fld_abnormalnum(icdinstance__2) <= 2147483647
+<S>  New H84:  fld_signal(icdinstance__2) <= 2147483647
+<S>  New H86:  fld_ticktonextimpulse(icdinstance__2) <= 2147483647
+<S>  New H88:  fld_offset(icdinstance__2) <= 2147483647
+<S>  New H90:  fld_impulserate(icdinstance__2) <= 2147483647
+<S>  New H117:  fld_waitaftershock(icdinstance__3) <= 2147483647
+<S>  New H119:  fld_abnormalnum(icdinstance__3) <= 2147483647
+<S>  New H124:  fld_signal(icdinstance__3) <= 2147483647
+<S>  New H126:  fld_ticktonextimpulse(icdinstance__3) <= 2147483647
+<S>  New H128:  fld_offset(icdinstance__3) <= 2147483647
+<S>  New H130:  fld_impulserate(icdinstance__3) <= 2147483647
+<S>  New H157:  fld_waitaftershock(icdinstance__4) <= 2147483647
+<S>  New H159:  fld_abnormalnum(icdinstance__4) <= 2147483647
+<S>  New H164:  fld_signal(icdinstance__4) <= 2147483647
+<S>  New H166:  fld_ticktonextimpulse(icdinstance__4) <= 2147483647
+<S>  New H168:  fld_offset(icdinstance__4) <= 2147483647
+<S>  New H170:  fld_impulserate(icdinstance__4) <= 2147483647
+<S>  New H197:  fld_waitaftershock(icdinstance__5) <= 2147483647
+<S>  New H199:  fld_abnormalnum(icdinstance__5) <= 2147483647
+<S>  New H204:  fld_signal(icdinstance__5) <= 2147483647
+<S>  New H206:  fld_ticktonextimpulse(icdinstance__5) <= 2147483647
+<S>  New H208:  fld_offset(icdinstance__5) <= 2147483647
+<S>  New H210:  fld_impulserate(icdinstance__5) <= 2147483647
 -S-  Applied substitution rule tick_rules(7).
      This was achieved by replacing all occurrences of measures__joules__first 
           by:
           0.
 <S>  New H18:  fld_impulse(icdinstance) >= 0
-<S>  New H43:  fld_impulse(gen) >= 0
-<S>  New H88:  fld_impulse(icdinstance__2) >= 0
-<S>  New H125:  fld_impulse(icdinstance__3) >= 0
-<S>  New H162:  fld_impulse(icdinstance__4) >= 0
-<S>  New H199:  fld_impulse(icdinstance__5) >= 0
+<S>  New H45:  fld_impulse(gen) >= 0
+<S>  New H91:  fld_impulse(icdinstance__2) >= 0
+<S>  New H131:  fld_impulse(icdinstance__3) >= 0
+<S>  New H171:  fld_impulse(icdinstance__4) >= 0
+<S>  New H211:  fld_impulse(icdinstance__5) >= 0
 -S-  Applied substitution rule tick_rules(8).
      This was achieved by replacing all occurrences of measures__joules__last 
           by:
           45.
 <S>  New H19:  fld_impulse(icdinstance) <= 45
-<S>  New H44:  fld_impulse(gen) <= 45
-<S>  New H89:  fld_impulse(icdinstance__2) <= 45
-<S>  New H126:  fld_impulse(icdinstance__3) <= 45
-<S>  New H163:  fld_impulse(icdinstance__4) <= 45
-<S>  New H200:  fld_impulse(icdinstance__5) <= 45
+<S>  New H46:  fld_impulse(gen) <= 45
+<S>  New H92:  fld_impulse(icdinstance__2) <= 45
+<S>  New H132:  fld_impulse(icdinstance__3) <= 45
+<S>  New H172:  fld_impulse(icdinstance__4) <= 45
+<S>  New H212:  fld_impulse(icdinstance__5) <= 45
 -S-  Applied substitution rule tick_rules(12).
      This was achieved by replacing all occurrences of measures__bpm__first by:
           - 1.
-<S>  New H25:  fld_last1strate(icdinstance) >= - 1
-<S>  New H27:  fld_last2ndrate(icdinstance) >= - 1
-<S>  New H29:  fld_last3rdrate(icdinstance) >= - 1
-<S>  New H31:  fld_last4thrate(icdinstance) >= - 1
-<S>  New H33:  fld_last5thrate(icdinstance) >= - 1
-<S>  New H35:  fld_last6thrate(icdinstance) >= - 1
-<S>  New H37:  fld_rate(icdinstance) >= - 1
-<S>  New H40:  fld_rate(hm) >= - 1
-<S>  New H46:  not fld_ison(hm) -> fld_rate(icdinstance__1) = - 1
-<S>  New H47:  fld_rate(icdinstance__1) >= - 1
-<S>  New H95:  fld_last1strate(icdinstance__2) >= - 1
-<S>  New H97:  fld_last2ndrate(icdinstance__2) >= - 1
-<S>  New H99:  fld_last3rdrate(icdinstance__2) >= - 1
-<S>  New H101:  fld_last4thrate(icdinstance__2) >= - 1
-<S>  New H103:  fld_last5thrate(icdinstance__2) >= - 1
-<S>  New H105:  fld_last6thrate(icdinstance__2) >= - 1
-<S>  New H107:  fld_rate(icdinstance__2) >= - 1
-<S>  New H132:  fld_last1strate(icdinstance__3) >= - 1
-<S>  New H134:  fld_last2ndrate(icdinstance__3) >= - 1
-<S>  New H136:  fld_last3rdrate(icdinstance__3) >= - 1
-<S>  New H138:  fld_last4thrate(icdinstance__3) >= - 1
-<S>  New H140:  fld_last5thrate(icdinstance__3) >= - 1
-<S>  New H142:  fld_last6thrate(icdinstance__3) >= - 1
-<S>  New H144:  fld_rate(icdinstance__3) >= - 1
-<S>  New H169:  fld_last1strate(icdinstance__4) >= - 1
-<S>  New H171:  fld_last2ndrate(icdinstance__4) >= - 1
-<S>  New H173:  fld_last3rdrate(icdinstance__4) >= - 1
-<S>  New H175:  fld_last4thrate(icdinstance__4) >= - 1
-<S>  New H177:  fld_last5thrate(icdinstance__4) >= - 1
-<S>  New H179:  fld_last6thrate(icdinstance__4) >= - 1
-<S>  New H181:  fld_rate(icdinstance__4) >= - 1
-<S>  New H206:  fld_last1strate(icdinstance__5) >= - 1
-<S>  New H208:  fld_last2ndrate(icdinstance__5) >= - 1
-<S>  New H210:  fld_last3rdrate(icdinstance__5) >= - 1
-<S>  New H212:  fld_last4thrate(icdinstance__5) >= - 1
-<S>  New H214:  fld_last5thrate(icdinstance__5) >= - 1
-<S>  New H216:  fld_last6thrate(icdinstance__5) >= - 1
-<S>  New H218:  fld_rate(icdinstance__5) >= - 1
+<S>  New H27:  fld_last1strate(icdinstance) >= - 1
+<S>  New H29:  fld_last2ndrate(icdinstance) >= - 1
+<S>  New H31:  fld_last3rdrate(icdinstance) >= - 1
+<S>  New H33:  fld_last4thrate(icdinstance) >= - 1
+<S>  New H35:  fld_last5thrate(icdinstance) >= - 1
+<S>  New H37:  fld_last6thrate(icdinstance) >= - 1
+<S>  New H39:  fld_rate(icdinstance) >= - 1
+<S>  New H42:  fld_rate(hm) >= - 1
+<S>  New H48:  not fld_ison(hm) -> fld_rate(icdinstance__1) = - 1
+<S>  New H49:  fld_rate(icdinstance__1) >= - 1
+<S>  New H100:  fld_last1strate(icdinstance__2) >= - 1
+<S>  New H102:  fld_last2ndrate(icdinstance__2) >= - 1
+<S>  New H104:  fld_last3rdrate(icdinstance__2) >= - 1
+<S>  New H106:  fld_last4thrate(icdinstance__2) >= - 1
+<S>  New H108:  fld_last5thrate(icdinstance__2) >= - 1
+<S>  New H110:  fld_last6thrate(icdinstance__2) >= - 1
+<S>  New H112:  fld_rate(icdinstance__2) >= - 1
+<S>  New H140:  fld_last1strate(icdinstance__3) >= - 1
+<S>  New H142:  fld_last2ndrate(icdinstance__3) >= - 1
+<S>  New H144:  fld_last3rdrate(icdinstance__3) >= - 1
+<S>  New H146:  fld_last4thrate(icdinstance__3) >= - 1
+<S>  New H148:  fld_last5thrate(icdinstance__3) >= - 1
+<S>  New H150:  fld_last6thrate(icdinstance__3) >= - 1
+<S>  New H152:  fld_rate(icdinstance__3) >= - 1
+<S>  New H180:  fld_last1strate(icdinstance__4) >= - 1
+<S>  New H182:  fld_last2ndrate(icdinstance__4) >= - 1
+<S>  New H184:  fld_last3rdrate(icdinstance__4) >= - 1
+<S>  New H186:  fld_last4thrate(icdinstance__4) >= - 1
+<S>  New H188:  fld_last5thrate(icdinstance__4) >= - 1
+<S>  New H190:  fld_last6thrate(icdinstance__4) >= - 1
+<S>  New H192:  fld_rate(icdinstance__4) >= - 1
+<S>  New H220:  fld_last1strate(icdinstance__5) >= - 1
+<S>  New H222:  fld_last2ndrate(icdinstance__5) >= - 1
+<S>  New H224:  fld_last3rdrate(icdinstance__5) >= - 1
+<S>  New H226:  fld_last4thrate(icdinstance__5) >= - 1
+<S>  New H228:  fld_last5thrate(icdinstance__5) >= - 1
+<S>  New H230:  fld_last6thrate(icdinstance__5) >= - 1
+<S>  New H232:  fld_rate(icdinstance__5) >= - 1
 -S-  Applied substitution rule tick_rules(13).
      This was achieved by replacing all occurrences of measures__bpm__last by:
           300.
-<S>  New H26:  fld_last1strate(icdinstance) <= 300
-<S>  New H28:  fld_last2ndrate(icdinstance) <= 300
-<S>  New H30:  fld_last3rdrate(icdinstance) <= 300
-<S>  New H32:  fld_last4thrate(icdinstance) <= 300
-<S>  New H34:  fld_last5thrate(icdinstance) <= 300
-<S>  New H36:  fld_last6thrate(icdinstance) <= 300
-<S>  New H38:  fld_rate(icdinstance) <= 300
-<S>  New H41:  fld_rate(hm) <= 300
-<S>  New H48:  fld_rate(icdinstance__1) <= 300
-<S>  New H96:  fld_last1strate(icdinstance__2) <= 300
-<S>  New H98:  fld_last2ndrate(icdinstance__2) <= 300
-<S>  New H100:  fld_last3rdrate(icdinstance__2) <= 300
-<S>  New H102:  fld_last4thrate(icdinstance__2) <= 300
-<S>  New H104:  fld_last5thrate(icdinstance__2) <= 300
-<S>  New H106:  fld_last6thrate(icdinstance__2) <= 300
-<S>  New H108:  fld_rate(icdinstance__2) <= 300
-<S>  New H133:  fld_last1strate(icdinstance__3) <= 300
-<S>  New H135:  fld_last2ndrate(icdinstance__3) <= 300
-<S>  New H137:  fld_last3rdrate(icdinstance__3) <= 300
-<S>  New H139:  fld_last4thrate(icdinstance__3) <= 300
-<S>  New H141:  fld_last5thrate(icdinstance__3) <= 300
-<S>  New H143:  fld_last6thrate(icdinstance__3) <= 300
-<S>  New H145:  fld_rate(icdinstance__3) <= 300
-<S>  New H170:  fld_last1strate(icdinstance__4) <= 300
-<S>  New H172:  fld_last2ndrate(icdinstance__4) <= 300
-<S>  New H174:  fld_last3rdrate(icdinstance__4) <= 300
-<S>  New H176:  fld_last4thrate(icdinstance__4) <= 300
-<S>  New H178:  fld_last5thrate(icdinstance__4) <= 300
-<S>  New H180:  fld_last6thrate(icdinstance__4) <= 300
-<S>  New H182:  fld_rate(icdinstance__4) <= 300
-<S>  New H207:  fld_last1strate(icdinstance__5) <= 300
-<S>  New H209:  fld_last2ndrate(icdinstance__5) <= 300
-<S>  New H211:  fld_last3rdrate(icdinstance__5) <= 300
-<S>  New H213:  fld_last4thrate(icdinstance__5) <= 300
-<S>  New H215:  fld_last5thrate(icdinstance__5) <= 300
-<S>  New H217:  fld_last6thrate(icdinstance__5) <= 300
-<S>  New H219:  fld_rate(icdinstance__5) <= 300
+<S>  New H28:  fld_last1strate(icdinstance) <= 300
+<S>  New H30:  fld_last2ndrate(icdinstance) <= 300
+<S>  New H32:  fld_last3rdrate(icdinstance) <= 300
+<S>  New H34:  fld_last4thrate(icdinstance) <= 300
+<S>  New H36:  fld_last5thrate(icdinstance) <= 300
+<S>  New H38:  fld_last6thrate(icdinstance) <= 300
+<S>  New H40:  fld_rate(icdinstance) <= 300
+<S>  New H43:  fld_rate(hm) <= 300
+<S>  New H50:  fld_rate(icdinstance__1) <= 300
+<S>  New H101:  fld_last1strate(icdinstance__2) <= 300
+<S>  New H103:  fld_last2ndrate(icdinstance__2) <= 300
+<S>  New H105:  fld_last3rdrate(icdinstance__2) <= 300
+<S>  New H107:  fld_last4thrate(icdinstance__2) <= 300
+<S>  New H109:  fld_last5thrate(icdinstance__2) <= 300
+<S>  New H111:  fld_last6thrate(icdinstance__2) <= 300
+<S>  New H113:  fld_rate(icdinstance__2) <= 300
+<S>  New H141:  fld_last1strate(icdinstance__3) <= 300
+<S>  New H143:  fld_last2ndrate(icdinstance__3) <= 300
+<S>  New H145:  fld_last3rdrate(icdinstance__3) <= 300
+<S>  New H147:  fld_last4thrate(icdinstance__3) <= 300
+<S>  New H149:  fld_last5thrate(icdinstance__3) <= 300
+<S>  New H151:  fld_last6thrate(icdinstance__3) <= 300
+<S>  New H153:  fld_rate(icdinstance__3) <= 300
+<S>  New H181:  fld_last1strate(icdinstance__4) <= 300
+<S>  New H183:  fld_last2ndrate(icdinstance__4) <= 300
+<S>  New H185:  fld_last3rdrate(icdinstance__4) <= 300
+<S>  New H187:  fld_last4thrate(icdinstance__4) <= 300
+<S>  New H189:  fld_last5thrate(icdinstance__4) <= 300
+<S>  New H191:  fld_last6thrate(icdinstance__4) <= 300
+<S>  New H193:  fld_rate(icdinstance__4) <= 300
+<S>  New H221:  fld_last1strate(icdinstance__5) <= 300
+<S>  New H223:  fld_last2ndrate(icdinstance__5) <= 300
+<S>  New H225:  fld_last3rdrate(icdinstance__5) <= 300
+<S>  New H227:  fld_last4thrate(icdinstance__5) <= 300
+<S>  New H229:  fld_last5thrate(icdinstance__5) <= 300
+<S>  New H231:  fld_last6thrate(icdinstance__5) <= 300
+<S>  New H233:  fld_rate(icdinstance__5) <= 300
 -S-  Applied substitution rule tick_rules(17).
      This was achieved by replacing all occurrences of measures__tub__first by:
           100.
-<S>  New H22:  fld_tachycardiabound(icdinstance) >= 100
-<S>  New H92:  fld_tachycardiabound(icdinstance__2) >= 100
-<S>  New H129:  fld_tachycardiabound(icdinstance__3) >= 100
-<S>  New H166:  fld_tachycardiabound(icdinstance__4) >= 100
-<S>  New H203:  fld_tachycardiabound(icdinstance__5) >= 100
+<S>  New H22:  fld_impulseratebound(icdinstance) >= 100
+<S>  New H24:  fld_tachycardiabound(icdinstance) >= 100
+<S>  New H95:  fld_impulseratebound(icdinstance__2) >= 100
+<S>  New H97:  fld_tachycardiabound(icdinstance__2) >= 100
+<S>  New H135:  fld_impulseratebound(icdinstance__3) >= 100
+<S>  New H137:  fld_tachycardiabound(icdinstance__3) >= 100
+<S>  New H175:  fld_impulseratebound(icdinstance__4) >= 100
+<S>  New H177:  fld_tachycardiabound(icdinstance__4) >= 100
+<S>  New H215:  fld_impulseratebound(icdinstance__5) >= 100
+<S>  New H217:  fld_tachycardiabound(icdinstance__5) >= 100
 -S-  Applied substitution rule tick_rules(18).
      This was achieved by replacing all occurrences of measures__tub__last by:
           150.
-<S>  New H23:  fld_tachycardiabound(icdinstance) <= 150
-<S>  New H93:  fld_tachycardiabound(icdinstance__2) <= 150
-<S>  New H130:  fld_tachycardiabound(icdinstance__3) <= 150
-<S>  New H167:  fld_tachycardiabound(icdinstance__4) <= 150
-<S>  New H204:  fld_tachycardiabound(icdinstance__5) <= 150
+<S>  New H23:  fld_impulseratebound(icdinstance) <= 150
+<S>  New H25:  fld_tachycardiabound(icdinstance) <= 150
+<S>  New H96:  fld_impulseratebound(icdinstance__2) <= 150
+<S>  New H98:  fld_tachycardiabound(icdinstance__2) <= 150
+<S>  New H136:  fld_impulseratebound(icdinstance__3) <= 150
+<S>  New H138:  fld_tachycardiabound(icdinstance__3) <= 150
+<S>  New H176:  fld_impulseratebound(icdinstance__4) <= 150
+<S>  New H178:  fld_tachycardiabound(icdinstance__4) <= 150
+<S>  New H216:  fld_impulseratebound(icdinstance__5) <= 150
+<S>  New H218:  fld_tachycardiabound(icdinstance__5) <= 150
 -S-  Applied substitution rule tick_rules(22).
      This was achieved by replacing all occurrences of measures__fub__first by:
           3.
 <S>  New H8:  fld_fibrillationbound(icdinstance) >= 3
-<S>  New H78:  fld_fibrillationbound(icdinstance__2) >= 3
-<S>  New H115:  fld_fibrillationbound(icdinstance__3) >= 3
-<S>  New H152:  fld_fibrillationbound(icdinstance__4) >= 3
-<S>  New H189:  fld_fibrillationbound(icdinstance__5) >= 3
+<S>  New H81:  fld_fibrillationbound(icdinstance__2) >= 3
+<S>  New H121:  fld_fibrillationbound(icdinstance__3) >= 3
+<S>  New H161:  fld_fibrillationbound(icdinstance__4) >= 3
+<S>  New H201:  fld_fibrillationbound(icdinstance__5) >= 3
 -S-  Applied substitution rule tick_rules(23).
      This was achieved by replacing all occurrences of measures__fub__last by:
           15.
 <S>  New H9:  fld_fibrillationbound(icdinstance) <= 15
-<S>  New H79:  fld_fibrillationbound(icdinstance__2) <= 15
-<S>  New H116:  fld_fibrillationbound(icdinstance__3) <= 15
-<S>  New H153:  fld_fibrillationbound(icdinstance__4) <= 15
-<S>  New H190:  fld_fibrillationbound(icdinstance__5) <= 15
+<S>  New H82:  fld_fibrillationbound(icdinstance__2) <= 15
+<S>  New H122:  fld_fibrillationbound(icdinstance__3) <= 15
+<S>  New H162:  fld_fibrillationbound(icdinstance__4) <= 15
+<S>  New H202:  fld_fibrillationbound(icdinstance__5) <= 15
 ---  Eliminated hypothesis H1 (true-hypothesis).
 ---  Eliminated hypothesis H2 (true-hypothesis).
 ---  Eliminated hypothesis H7 (true-hypothesis).
 ---  Eliminated hypothesis H20 (true-hypothesis).
 ---  Eliminated hypothesis H21 (true-hypothesis).
----  Eliminated hypothesis H24 (true-hypothesis).
----  Eliminated hypothesis H39 (true-hypothesis).
----  Eliminated hypothesis H42 (true-hypothesis).
----  Eliminated hypothesis H70 (true-hypothesis).
----  Eliminated hypothesis H71 (true-hypothesis).
----  Eliminated hypothesis H72 (true-hypothesis).
----  Eliminated hypothesis H77 (true-hypothesis).
----  Eliminated hypothesis H90 (true-hypothesis).
----  Eliminated hypothesis H91 (true-hypothesis).
+---  Eliminated hypothesis H26 (true-hypothesis).
+---  Eliminated hypothesis H41 (true-hypothesis).
+---  Eliminated hypothesis H44 (true-hypothesis).
+---  Eliminated hypothesis H73 (true-hypothesis).
+---  Eliminated hypothesis H74 (true-hypothesis).
+---  Eliminated hypothesis H75 (true-hypothesis).
+---  Eliminated hypothesis H80 (true-hypothesis).
+---  Eliminated hypothesis H93 (true-hypothesis).
 ---  Eliminated hypothesis H94 (true-hypothesis).
----  Eliminated hypothesis H109 (true-hypothesis).
----  Eliminated hypothesis H114 (true-hypothesis).
----  Eliminated hypothesis H127 (true-hypothesis).
----  Eliminated hypothesis H128 (true-hypothesis).
----  Eliminated hypothesis H131 (true-hypothesis).
----  Eliminated hypothesis H146 (true-hypothesis).
----  Eliminated hypothesis H151 (true-hypothesis).
----  Eliminated hypothesis H164 (true-hypothesis).
----  Eliminated hypothesis H165 (true-hypothesis).
----  Eliminated hypothesis H168 (true-hypothesis).
----  Eliminated hypothesis H183 (true-hypothesis).
----  Eliminated hypothesis H188 (true-hypothesis).
----  Eliminated hypothesis H201 (true-hypothesis).
----  Eliminated hypothesis H202 (true-hypothesis).
----  Eliminated hypothesis H205 (true-hypothesis).
----  Substituted hypothesis H49, which specifies an equivalence for 
-          fld_last6thrate(icdinstance__1).
----  Substituted hypothesis H50, which specifies an equivalence for 
-          fld_last5thrate(icdinstance__1).
+---  Eliminated hypothesis H99 (true-hypothesis).
+---  Eliminated hypothesis H115 (true-hypothesis).
+---  Eliminated hypothesis H120 (true-hypothesis).
+---  Eliminated hypothesis H133 (true-hypothesis).
+---  Eliminated hypothesis H134 (true-hypothesis).
+---  Eliminated hypothesis H139 (true-hypothesis).
+---  Eliminated hypothesis H155 (true-hypothesis).
+---  Eliminated hypothesis H160 (true-hypothesis).
+---  Eliminated hypothesis H173 (true-hypothesis).
+---  Eliminated hypothesis H174 (true-hypothesis).
+---  Eliminated hypothesis H179 (true-hypothesis).
+---  Eliminated hypothesis H195 (true-hypothesis).
+---  Eliminated hypothesis H200 (true-hypothesis).
+---  Eliminated hypothesis H213 (true-hypothesis).
+---  Eliminated hypothesis H214 (true-hypothesis).
+---  Eliminated hypothesis H219 (true-hypothesis).
 ---  Substituted hypothesis H51, which specifies an equivalence for 
-          fld_last4thrate(icdinstance__1).
+          fld_last6thrate(icdinstance__1).
 ---  Substituted hypothesis H52, which specifies an equivalence for 
-          fld_last3rdrate(icdinstance__1).
+          fld_last5thrate(icdinstance__1).
 ---  Substituted hypothesis H53, which specifies an equivalence for 
-          fld_last2ndrate(icdinstance__1).
+          fld_last4thrate(icdinstance__1).
 ---  Substituted hypothesis H54, which specifies an equivalence for 
-          fld_last1strate(icdinstance__1).
+          fld_last3rdrate(icdinstance__1).
+---  Substituted hypothesis H55, which specifies an equivalence for 
+          fld_last2ndrate(icdinstance__1).
 ---  Substituted hypothesis H56, which specifies an equivalence for 
+          fld_last1strate(icdinstance__1).
+---  Substituted hypothesis H58, which specifies an equivalence for 
           fld_tachycardiabound(icdinstance__1).
----  Substituted hypothesis H59, which specifies an equivalence for fld_impulse(
+---  Substituted hypothesis H59, which specifies an equivalence for 
+          fld_impulseratebound(icdinstance__1).
+---  Substituted hypothesis H62, which specifies an equivalence for fld_impulse(
+          icdinstance__1).
+---  Substituted hypothesis H63, which specifies an equivalence for 
+          fld_impulserate(icdinstance__1).
+---  Substituted hypothesis H64, which specifies an equivalence for fld_offset(
+          icdinstance__1).
+---  Substituted hypothesis H65, which specifies an equivalence for 
+          fld_ticktonextimpulse(icdinstance__1).
+---  Substituted hypothesis H66, which specifies an equivalence for fld_signal(
+          icdinstance__1).
+---  Substituted hypothesis H67, which specifies an equivalence for 
+          fld_fibrillationbound(icdinstance__1).
+---  Substituted hypothesis H69, which specifies an equivalence for 
+          fld_abnormalnum(icdinstance__1).
+---  Substituted hypothesis H70, which specifies an equivalence for 
+          fld_waitaftershock(icdinstance__1).
+---  Substituted hypothesis H57, which specifies an equivalence for fld_ison(
           icdinstance__1).
 ---  Substituted hypothesis H60, which specifies an equivalence for 
-          fld_impulserate(icdinstance__1).
----  Substituted hypothesis H61, which specifies an equivalence for fld_offset(
-          icdinstance__1).
----  Substituted hypothesis H62, which specifies an equivalence for 
-          fld_ticktonextimpulse(icdinstance__1).
----  Substituted hypothesis H63, which specifies an equivalence for fld_signal(
-          icdinstance__1).
----  Substituted hypothesis H64, which specifies an equivalence for 
-          fld_fibrillationbound(icdinstance__1).
----  Substituted hypothesis H66, which specifies an equivalence for 
-          fld_abnormalnum(icdinstance__1).
----  Substituted hypothesis H67, which specifies an equivalence for 
-          fld_waitaftershock(icdinstance__1).
----  Substituted hypothesis H55, which specifies an equivalence for fld_ison(
-          icdinstance__1).
----  Substituted hypothesis H57, which specifies an equivalence for 
           fld_istachycardia(icdinstance__1).
----  Substituted hypothesis H58, which specifies an equivalence for 
+---  Substituted hypothesis H61, which specifies an equivalence for 
           fld_isinimpulseprocess(icdinstance__1).
----  Substituted hypothesis H65, which specifies an equivalence for 
+---  Substituted hypothesis H68, which specifies an equivalence for 
           fld_isfibrillation(icdinstance__1).
----  Substituted hypothesis H68, which specifies an equivalence for fld_iswait(
+---  Substituted hypothesis H71, which specifies an equivalence for fld_iswait(
           icdinstance__1).
-     +++  New H220:  integer__size >= 0
-     +++  New H221:  measures__joules__size >= 0
-     +++  New H222:  measures__bpm__size >= 0
-     +++  New H223:  measures__tub__size >= 0
-     +++  New H224:  measures__fub__size >= 0
-     +++  New H225:  impulsegenerator__generatortype__size >= 0
-     +++  New H226:  hrm__hrmtype__size >= 0
-     +++  New H227:  icdtype__size >= 0
+     +++  New H234:  integer__size >= 0
+     +++  New H235:  measures__joules__size >= 0
+     +++  New H236:  measures__bpm__size >= 0
+     +++  New H237:  measures__tub__size >= 0
+     +++  New H238:  measures__fub__size >= 0
+     +++  New H239:  impulsegenerator__generatortype__size >= 0
+     +++  New H240:  hrm__hrmtype__size >= 0
+     +++  New H241:  icdtype__size >= 0
 
 
 @@@@@@@@@@  VC: procedure_tick_3.  @@@@@@@@@@
-%%%  Simplified H55 on reading formula in, to give:
-     %%%  H55:  fld_ison(icdinstance__1) <-> fld_ison(icdinstance)
 %%%  Simplified H57 on reading formula in, to give:
-     %%%  H57:  fld_istachycardia(icdinstance__1) <-> fld_istachycardia(
+     %%%  H57:  fld_ison(icdinstance__1) <-> fld_ison(icdinstance)
+%%%  Simplified H60 on reading formula in, to give:
+     %%%  H60:  fld_istachycardia(icdinstance__1) <-> fld_istachycardia(
           icdinstance)
-%%%  Simplified H58 on reading formula in, to give:
-     %%%  H58:  fld_isinimpulseprocess(icdinstance__1) <-> 
+%%%  Simplified H61 on reading formula in, to give:
+     %%%  H61:  fld_isinimpulseprocess(icdinstance__1) <-> 
           fld_isinimpulseprocess(icdinstance)
-%%%  Simplified H65 on reading formula in, to give:
-     %%%  H65:  fld_isfibrillation(icdinstance__1) <-> fld_isfibrillation(
-          icdinstance)
 %%%  Simplified H68 on reading formula in, to give:
-     %%%  H68:  fld_iswait(icdinstance__1) <-> fld_iswait(icdinstance)
----  Hypothesis H70 has been replaced by "true".  (It is already present, as 
-          H47).
----  Hypothesis H71 has been replaced by "true".  (It is already present, as 
-          H48).
-%%%  Simplified H220 on reading formula in, to give:
-     %%%  H220:  fld_ison(icdinstance__5)
+     %%%  H68:  fld_isfibrillation(icdinstance__1) <-> fld_isfibrillation(
+          icdinstance)
+%%%  Simplified H71 on reading formula in, to give:
+     %%%  H71:  fld_iswait(icdinstance__1) <-> fld_iswait(icdinstance)
+---  Hypothesis H73 has been replaced by "true".  (It is already present, as 
+          H49).
+---  Hypothesis H74 has been replaced by "true".  (It is already present, as 
+          H50).
+%%%  Simplified H114 on reading formula in, to give:
+     %%%  H114:  (fld_waitaftershock(icdinstance__3) > 1 -> not fld_iswait(
+          icdinstance__3)) or (fld_waitaftershock(icdinstance__3) = 1 -> 
+          fld_iswait(icdinstance__3))
+%%%  Simplified H154 on reading formula in, to give:
+     %%%  H154:  (fld_rate(icdinstance__4) >= fld_tachycardiabound(
+          icdinstance__4) -> fld_istachycardia(icdinstance__4)) or (fld_rate(
+          icdinstance__4) < fld_tachycardiabound(icdinstance__4) -> not 
+          fld_istachycardia(icdinstance__4))
+%%%  Simplified H194 on reading formula in, to give:
+     %%%  H194:  (fld_abnormalnum(icdinstance__5) > 3 -> not fld_istachycardia(
+          icdinstance__5) and fld_isfibrillation(icdinstance__5)) or (
+          fld_abnormalnum(icdinstance__5) > 3 -> not fld_istachycardia(
+          icdinstance__5))
+%%%  Simplified H234 on reading formula in, to give:
+     %%%  H234:  fld_ison(icdinstance__5)
 ***  Proved C1:  fld_impulse(icdinstance__6) >= measures__joules__first
-     using hypothesis H238.
+     using hypothesis H252.
 ***  Proved C2:  fld_impulse(icdinstance__6) <= measures__joules__last
-     using hypothesis H239.
+     using hypothesis H253.
 ***  PROVED VC.
 
 

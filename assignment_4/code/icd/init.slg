@@ -5,7 +5,7 @@
 *****************************************************************************
 
 
-CREATED 31-MAY-2014, 19:43:59  SIMPLIFIED 31-MAY-2014, 19:44:14
+CREATED 01-JUN-2014, 12:40:44  SIMPLIFIED 01-JUN-2014, 12:40:60
 
 SPARK Simplifier GPL 2011
 Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
@@ -194,6 +194,44 @@ procedure ICD.Init
           .
 %%%  Simplified H16 on reading formula in, to give:
      %%%  H16:  true
+***  Proved C2:  measures__tub__last - 15 <= measures__tub__last
+-S-  Applied substitution rule init_rules(17).
+     This was achieved by replacing all occurrences of measures__tub__first by:
+          100.
+<S>  New H17:  100 <= measures__tub__last
+<S>  New C1:  measures__tub__last >= 115
+-S-  Applied substitution rule init_rules(18).
+     This was achieved by replacing all occurrences of measures__tub__last by:
+          150.
+<S>  New H17:  true
+<S>  New C1:  true
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_init_10.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  true
+---  Hypothesis H4 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H6 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H7 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H3)
+          .
+%%%  Simplified H16 on reading formula in, to give:
+     %%%  H16:  true
 -S-  Applied substitution rule init_rules(7).
      This was achieved by replacing all occurrences of measures__joules__first 
           by:
@@ -209,7 +247,7 @@ procedure ICD.Init
 ***  PROVED VC.
 
 
-@@@@@@@@@@  VC: procedure_init_10.  @@@@@@@@@@
+@@@@@@@@@@  VC: procedure_init_11.  @@@@@@@@@@
 %%%  Simplified H2 on reading formula in, to give:
      %%%  H2:  true
 ---  Hypothesis H4 has been replaced by "true".  (It is already present, as H2).
@@ -245,36 +283,6 @@ procedure ICD.Init
 ***  PROVED VC.
 
 
-@@@@@@@@@@  VC: procedure_init_11.  @@@@@@@@@@
-%%%  Simplified H2 on reading formula in, to give:
-     %%%  H2:  true
----  Hypothesis H4 has been replaced by "true".  (It is already present, as H2).
----  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
----  Hypothesis H6 has been replaced by "true".  (It is already present, as H2).
----  Hypothesis H7 has been replaced by "true".  (It is already present, as H3).
----  Hypothesis H8 has been replaced by "true".  (It is already present, as H2).
----  Hypothesis H9 has been replaced by "true".  (It is already present, as H3).
----  Hypothesis H10 has been replaced by "true".  (It is already present, as H2)
-          .
----  Hypothesis H11 has been replaced by "true".  (It is already present, as H3)
-          .
----  Hypothesis H12 has been replaced by "true".  (It is already present, as H2)
-          .
----  Hypothesis H13 has been replaced by "true".  (It is already present, as H3)
-          .
----  Hypothesis H14 has been replaced by "true".  (It is already present, as H2)
-          .
----  Hypothesis H15 has been replaced by "true".  (It is already present, as H3)
-          .
-%%%  Simplified H16 on reading formula in, to give:
-     %%%  H16:  true
-***  Proved C1:  0 >= integer__first
-     using hypothesis H20.
-***  Proved C2:  0 <= integer__last
-     using hypothesis H21.
-***  PROVED VC.
-
-
 @@@@@@@@@@  VC: procedure_init_12.  @@@@@@@@@@
 %%%  Simplified H2 on reading formula in, to give:
      %%%  H2:  true
@@ -298,14 +306,10 @@ procedure ICD.Init
           .
 %%%  Simplified H16 on reading formula in, to give:
      %%%  H16:  true
----  Hypothesis H22 has been replaced by "true".  (It is already present, as 
-          H20).
----  Hypothesis H23 has been replaced by "true".  (It is already present, as 
-          H21).
 ***  Proved C1:  0 >= integer__first
-     using hypothesis H20.
+     using hypothesis H22.
 ***  Proved C2:  0 <= integer__last
-     using hypothesis H21.
+     using hypothesis H23.
 ***  PROVED VC.
 
 
@@ -332,22 +336,14 @@ procedure ICD.Init
           .
 %%%  Simplified H16 on reading formula in, to give:
      %%%  H16:  true
----  Hypothesis H22 has been replaced by "true".  (It is already present, as 
-          H20).
----  Hypothesis H23 has been replaced by "true".  (It is already present, as 
-          H21).
 ---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
-          H20).
+          H22).
 ---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
-          H21).
-***  Proved C1:  10 >= integer__first
-     using hypothesis H20.
--S-  Applied substitution rule init_rules(3).
-     This was achieved by replacing all occurrences of integer__last by:
-          2147483647.
-<S>  New H21:  true
-<S>  New C2:  true
-***  Proved C2:  true
+          H23).
+***  Proved C1:  0 >= integer__first
+     using hypothesis H22.
+***  Proved C2:  0 <= integer__last
+     using hypothesis H23.
 ***  PROVED VC.
 
 
@@ -374,24 +370,20 @@ procedure ICD.Init
           .
 %%%  Simplified H16 on reading formula in, to give:
      %%%  H16:  true
----  Hypothesis H22 has been replaced by "true".  (It is already present, as 
-          H20).
----  Hypothesis H23 has been replaced by "true".  (It is already present, as 
-          H21).
 ---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
-          H20).
+          H22).
 ---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
-          H21).
-%%%  Simplified C1 on reading formula in, to give:
-     %%%  C1:  true
-***  Proved C1:  true
--S-  Applied substitution rule init_rules(22).
-     This was achieved by replacing all occurrences of measures__fub__first by:
-          3.
-<S>  New C2:  3 <= measures__fub__last
--S-  Applied substitution rule init_rules(23).
-     This was achieved by replacing all occurrences of measures__fub__last by:
-          15.
+          H23).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H23).
+***  Proved C1:  10 >= integer__first
+     using hypothesis H22.
+-S-  Applied substitution rule init_rules(3).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H23:  true
 <S>  New C2:  true
 ***  Proved C2:  true
 ***  PROVED VC.
@@ -420,20 +412,26 @@ procedure ICD.Init
           .
 %%%  Simplified H16 on reading formula in, to give:
      %%%  H16:  true
----  Hypothesis H22 has been replaced by "true".  (It is already present, as 
-          H20).
----  Hypothesis H23 has been replaced by "true".  (It is already present, as 
-          H21).
 ---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
-          H20).
+          H22).
 ---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
-          H21).
-%%%  Simplified H28 on reading formula in, to give:
-     %%%  H28:  true
-***  Proved C1:  10 >= integer__first
-     using hypothesis H26.
-***  Proved C2:  10 <= integer__last
-     using hypothesis H27.
+          H23).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H23).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  true
+***  Proved C1:  true
+-S-  Applied substitution rule init_rules(22).
+     This was achieved by replacing all occurrences of measures__fub__first by:
+          3.
+<S>  New C2:  3 <= measures__fub__last
+-S-  Applied substitution rule init_rules(23).
+     This was achieved by replacing all occurrences of measures__fub__last by:
+          15.
+<S>  New C2:  true
+***  Proved C2:  true
 ***  PROVED VC.
 
 
@@ -460,28 +458,68 @@ procedure ICD.Init
           .
 %%%  Simplified H16 on reading formula in, to give:
      %%%  H16:  true
----  Hypothesis H22 has been replaced by "true".  (It is already present, as 
-          H20).
----  Hypothesis H23 has been replaced by "true".  (It is already present, as 
-          H21).
 ---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
-          H20).
+          H22).
 ---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
-          H21).
-%%%  Simplified H28 on reading formula in, to give:
-     %%%  H28:  true
----  Hypothesis H30 has been replaced by "true".  (It is already present, as 
-          H26).
----  Hypothesis H31 has been replaced by "true".  (It is already present, as 
-          H27).
-***  Proved C1:  0 >= integer__first
-     using hypothesis H20.
-***  Proved C2:  0 <= integer__last
-     using hypothesis H21.
+          H23).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H23).
+%%%  Simplified H30 on reading formula in, to give:
+     %%%  H30:  true
+***  Proved C1:  10 >= integer__first
+     using hypothesis H28.
+***  Proved C2:  10 <= integer__last
+     using hypothesis H29.
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_init_17.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  true
+---  Hypothesis H4 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H6 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H7 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H3)
+          .
+%%%  Simplified H16 on reading formula in, to give:
+     %%%  H16:  true
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H23).
+%%%  Simplified H30 on reading formula in, to give:
+     %%%  H30:  true
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as 
+          H28).
+---  Hypothesis H33 has been replaced by "true".  (It is already present, as 
+          H29).
+***  Proved C1:  0 >= integer__first
+     using hypothesis H22.
+***  Proved C2:  0 <= integer__last
+     using hypothesis H23.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_init_18.  @@@@@@@@@@
 ***  Proved C1:  true
 ***  PROVED VC.
 

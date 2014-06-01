@@ -20,7 +20,7 @@ A -rules=none
 A -error_explanations=off
 A -justification_option=full
 A -output_directory=.
-A -output_directory (actual)=/home/kaiminh/swen90010-2014/assignments/assignment-4/code/
+A -output_directory (actual)=/home/yingziz/ICD_Simulator/assignment_4/code/
 P
 R
 

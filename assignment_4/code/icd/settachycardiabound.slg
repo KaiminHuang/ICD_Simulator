@@ -5,7 +5,7 @@
 *****************************************************************************
 
 
-CREATED 31-MAY-2014, 19:43:59  SIMPLIFIED 31-MAY-2014, 19:44:12
+CREATED 01-JUN-2014, 12:40:45  SIMPLIFIED 01-JUN-2014, 12:40:60
 
 SPARK Simplifier GPL 2011
 Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
@@ -19,147 +19,57 @@ procedure ICD.setTachycardiaBound
 
 @@@@@@@@@@  VC: procedure_settachycardiabound_1.  @@@@@@@@@@
 ***  Proved C1:  ub >= integer__first
-     using hypothesis H39.
+     using hypothesis H41.
 ***  Proved C2:  ub <= integer__last
-     using hypothesis H40.
+     using hypothesis H42.
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_settachycardiabound_2.  @@@@@@@@@@
----  Hypothesis H42 has been replaced by "true".  (It is already present, as 
-          H39).
----  Hypothesis H43 has been replaced by "true".  (It is already present, as 
-          H40).
----  Hypothesis H47 has been replaced by "true".  (It is already present, as 
-          H45).
+---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
+          H47).
 ***  Proved C1:  measures__limittub(ub) >= measures__tub__first
-     using hypothesis H44.
+     using hypothesis H46.
 ***  Proved C2:  measures__limittub(ub) <= measures__tub__last
-     using hypothesis H45.
+     using hypothesis H47.
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_settachycardiabound_3.  @@@@@@@@@@
----  Hypothesis H42 has been replaced by "true".  (It is already present, as 
-          H39).
----  Hypothesis H43 has been replaced by "true".  (It is already present, as 
-          H40).
----  Hypothesis H47 has been replaced by "true".  (It is already present, as 
-          H45).
----  Hypothesis H48 has been replaced by "true".  (It is already present, as 
-          H44).
+---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
+          H42).
 ---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
-          H45).
+          H47).
+---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
+          H46).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H47).
 %%%  Simplified C1 on reading formula in, to give:
      %%%  C1:  (fld_ison(icdinstance) -> measures__limittub(ub) = ub) or (
           fld_ison(icdinstance) -> measures__tub__first <= measures__limittub(
-          ub) and measures__limittub(ub) <= measures__tub__last)
-%%%  Simplified C2 on reading formula in, to give:
-     %%%  C2:  not fld_ison(icdinstance) -> upf_tachycardiabound(icdinstance, 
-          measures__limittub(ub)) = icdinstance
+          ub) and measures__limittub(ub) <= measures__tub__last) or (not 
+          fld_ison(icdinstance) -> upf_tachycardiabound(icdinstance, 
+          measures__limittub(ub)) = icdinstance)
 ***  Proved C1:  (fld_ison(icdinstance) -> measures__limittub(ub) = ub) or (
           fld_ison(icdinstance) -> measures__tub__first <= measures__limittub(
-          ub) and measures__limittub(ub) <= measures__tub__last)
-     using hypothesis H41.
--S-  Applied substitution rule settachycard_rules(2).
-     This was achieved by replacing all occurrences of integer__first by:
-          - 2147483648.
-<S>  New H3:  fld_waitaftershock(icdinstance) >= - 2147483648
-<S>  New H5:  fld_abnormalnum(icdinstance) >= - 2147483648
-<S>  New H10:  fld_signal(icdinstance) >= - 2147483648
-<S>  New H12:  fld_ticktonextimpulse(icdinstance) >= - 2147483648
-<S>  New H14:  fld_offset(icdinstance) >= - 2147483648
-<S>  New H16:  fld_impulserate(icdinstance) >= - 2147483648
-<S>  New H39:  ub >= - 2147483648
--S-  Applied substitution rule settachycard_rules(3).
-     This was achieved by replacing all occurrences of integer__last by:
-          2147483647.
-<S>  New H4:  fld_waitaftershock(icdinstance) <= 2147483647
-<S>  New H6:  fld_abnormalnum(icdinstance) <= 2147483647
-<S>  New H11:  fld_signal(icdinstance) <= 2147483647
-<S>  New H13:  fld_ticktonextimpulse(icdinstance) <= 2147483647
-<S>  New H15:  fld_offset(icdinstance) <= 2147483647
-<S>  New H17:  fld_impulserate(icdinstance) <= 2147483647
-<S>  New H40:  ub <= 2147483647
--S-  Applied substitution rule settachycard_rules(7).
-     This was achieved by replacing all occurrences of measures__joules__first 
-          by:
-          0.
-<S>  New H18:  fld_impulse(icdinstance) >= 0
--S-  Applied substitution rule settachycard_rules(8).
-     This was achieved by replacing all occurrences of measures__joules__last 
-          by:
-          45.
-<S>  New H19:  fld_impulse(icdinstance) <= 45
--S-  Applied substitution rule settachycard_rules(12).
-     This was achieved by replacing all occurrences of measures__bpm__first by:
-          - 1.
-<S>  New H25:  fld_last1strate(icdinstance) >= - 1
-<S>  New H27:  fld_last2ndrate(icdinstance) >= - 1
-<S>  New H29:  fld_last3rdrate(icdinstance) >= - 1
-<S>  New H31:  fld_last4thrate(icdinstance) >= - 1
-<S>  New H33:  fld_last5thrate(icdinstance) >= - 1
-<S>  New H35:  fld_last6thrate(icdinstance) >= - 1
-<S>  New H37:  fld_rate(icdinstance) >= - 1
--S-  Applied substitution rule settachycard_rules(13).
-     This was achieved by replacing all occurrences of measures__bpm__last by:
-          300.
-<S>  New H26:  fld_last1strate(icdinstance) <= 300
-<S>  New H28:  fld_last2ndrate(icdinstance) <= 300
-<S>  New H30:  fld_last3rdrate(icdinstance) <= 300
-<S>  New H32:  fld_last4thrate(icdinstance) <= 300
-<S>  New H34:  fld_last5thrate(icdinstance) <= 300
-<S>  New H36:  fld_last6thrate(icdinstance) <= 300
-<S>  New H38:  fld_rate(icdinstance) <= 300
--S-  Applied substitution rule settachycard_rules(17).
-     This was achieved by replacing all occurrences of measures__tub__first by:
-          100.
-<S>  New H22:  fld_tachycardiabound(icdinstance) >= 100
-<S>  New H44:  measures__limittub(ub) >= 100
-<S>  New H46:  100 <= measures__limittub(ub)
--S-  Applied substitution rule settachycard_rules(18).
-     This was achieved by replacing all occurrences of measures__tub__last by:
-          150.
-<S>  New H23:  fld_tachycardiabound(icdinstance) <= 150
-<S>  New H45:  measures__limittub(ub) <= 150
--S-  Applied substitution rule settachycard_rules(22).
-     This was achieved by replacing all occurrences of measures__fub__first by:
-          3.
-<S>  New H8:  fld_fibrillationbound(icdinstance) >= 3
--S-  Applied substitution rule settachycard_rules(23).
-     This was achieved by replacing all occurrences of measures__fub__last by:
-          15.
-<S>  New H9:  fld_fibrillationbound(icdinstance) <= 15
----  Eliminated hypothesis H1 (true-hypothesis).
----  Eliminated hypothesis H2 (true-hypothesis).
----  Eliminated hypothesis H7 (true-hypothesis).
----  Eliminated hypothesis H20 (true-hypothesis).
----  Eliminated hypothesis H21 (true-hypothesis).
----  Eliminated hypothesis H24 (true-hypothesis).
----  Eliminated hypothesis H42 (true-hypothesis).
----  Eliminated hypothesis H43 (true-hypothesis).
----  Eliminated hypothesis H47 (true-hypothesis).
----  Eliminated hypothesis H48 (true-hypothesis).
----  Eliminated hypothesis H49 (true-hypothesis).
----  Eliminated hypothesis H46 (duplicate of H44).
-     +++  New H50:  integer__size >= 0
-     +++  New H51:  measures__joules__size >= 0
-     +++  New H52:  measures__bpm__size >= 0
-     +++  New H53:  measures__tub__size >= 0
-     +++  New H54:  measures__fub__size >= 0
-     +++  New H55:  icdtype__size >= 0
+          ub) and measures__limittub(ub) <= measures__tub__last) or (not 
+          fld_ison(icdinstance) -> upf_tachycardiabound(icdinstance, 
+          measures__limittub(ub)) = icdinstance)
+     using hypothesis H43.
+***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_settachycardiabound_4.  @@@@@@@@@@
-%%%  Simplified H41 on reading formula in, to give:
-     %%%  H41:  fld_ison(icdinstance)
-%%%  Simplified C2 on reading formula in, to give:
-     %%%  C2:  true
-***  Proved C1:  (fld_ison(icdinstance) -> fld_tachycardiabound(icdinstance) = 
-          ub) or (fld_ison(icdinstance) -> measures__tub__first <= 
-          fld_tachycardiabound(icdinstance) and fld_tachycardiabound(
-          icdinstance) <= measures__tub__last)
-     using hypotheses H22 & H23.
-***  Proved C2:  true
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  fld_ison(icdinstance)
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  true
+***  Proved C1:  true
 ***  PROVED VC.
 

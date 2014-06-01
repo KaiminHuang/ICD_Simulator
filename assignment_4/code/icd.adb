@@ -17,6 +17,7 @@ package body ICD is
 		icdInstance.IsOn 				:= False;
 		--Tachycardia realated variables
 		icdInstance.TachycardiaBound 	:= Measures.TUB'First;
+		icdInstance.ImpulseRateBound	:= Measures.TUB'Last - 15;
 		icdInstance.isTachycardia 		:= False;
 		icdInstance.isInImpulseProcess 	:= False;
 		icdInstance.Impulse 			:= 0;
@@ -70,6 +71,7 @@ package body ICD is
 	end IsOn;
 
 	procedure Off(icdInstance: in out ICDType) is
+
 	begin
     	-- Since ICD is the controller, it should never be turned down, only turn down Hrm and Gen
     	icdInstance.IsOn := False;
@@ -153,63 +155,72 @@ package body ICD is
 
 	procedure CalculateAndSetImpluse(icdInstance : in out ICDType) is
 	begin
-		-- reset impulse to 0 before each caculation
-		icdInstance.Impulse := 0;
-		--check whether there is 1s after giving a shock
-		if not icdInstance.isWait then
-			-- Check whether there is a Fibrillation
-			if icdInstance.isFibrillation then
-				-- since Fibrillation is heavier than Tachycardia then if a Fibrillation is detected
-				--, set impulse to 30, and terminate all in process impulse
-				icdInstance.Impulse 			:= 30;
-				icdInstance.isInImpulseProcess 	:= False;
-				icdInstance.isWait				:= True;
-				-- reset tick and sinal to it's defualt value
-				icdInstance.TickToNextImpulse 	:= 0;
-				icdInstance.Signal 				:= 10;
-			end if;
-				
-			-- check whether there is a Tachycardia detected or a impulse treatment in process
-			if (icdInstance.isTachycardia or icdInstance.isInImpulseProcess) then
-				-- set the isInImpulseProcess to true indicatong that there is a treatment in 
-				-- process it will be changed to false when  a process is finised (signal == 0)
-				icdInstance.isInImpulseProcess := True;
-				--caculate the bpm, which equals Upper Bound + 15
-				icdInstance.ImpulseRate := icdInstance.TachycardiaBound + 15;
-				--caculate the offset between inpulse
-				icdInstance.offset := 600 / icdInstance.ImpulseRate;
-
-				if icdInstance.TickToNextImpulse = 0 then
-					-- if yes print "--Already in impulse procedure"
-					-- set Impluse value to 2 j;
-					icdInstance.Impulse := 2;
-					-- update how many signal remains need to send
-					icdInstance.Signal := icdInstance.Signal - 1;
-					-- set next impulse time to offset once it is 0
-					icdInstance.TickToNextImpulse := icdInstance.offset -1 ;
-				else
-					icdInstance.Impulse := 0;
-					icdInstance.TickToNextImpulse := icdInstance.TickToNextImpulse - 1;
+		if icdInstance.Ison = True then
+			-- reset impulse to 0 before each caculation
+			 icdInstance.Impulse := 0;
+			--check whether there is 1s after giving a shock
+			if not icdInstance.isWait then
+				-- Check whether there is a Fibrillation
+				if icdInstance.isFibrillation then
+					-- since Fibrillation is heavier than Tachycardia then if a Fibrillation is detected
+					--, set impulse to 30, and terminate all in process impulse
+					icdInstance.Impulse 			:= 30;
+					icdInstance.isInImpulseProcess 	:= False;
+					icdInstance.isWait				:= True;
+					-- reset tick and sinal to it's defualt value
+					icdInstance.TickToNextImpulse 	:= 0;
+					icdInstance.Signal 				:= 10;
 				end if;
-				-- if singal equals to 0 means the treatment is fninished then set the isTachycardia
-				-- to False set TickToNextImpulse to default 0 reset singal to 10
-				if icdInstance.Signal = 0 then
-					icdInstance.TickToNextImpulse := 0;
-					icdInstance.Signal := 10;
-					icdInstance.isInImpulseProcess := False;
+					
+				-- check whether there is a Tachycardia detected or a impulse treatment in process
+				if (icdInstance.isTachycardia or icdInstance.isInImpulseProcess) then
+					-- set the isInImpulseProcess to true indicatong that there is a treatment in 
+					-- process it will be changed to false when  a process is finised (signal == 0)
+					icdInstance.isInImpulseProcess := True;
+					--caculate the bpm, which equals Upper Bound + 15
+					if icdInstance.ImpulseRate  <= icdInstance.ImpulseRateBound then
+						icdInstance.ImpulseRate := icdInstance.TachycardiaBound + 15;
+					end if;
+					--caculate the offset between inpulse
+					icdInstance.offset := 600 / icdInstance.ImpulseRate;
+
+					if icdInstance.TickToNextImpulse = 0 then
+						-- if yes print "--Already in impulse procedure"
+						-- set Impluse value to 2 j;
+						icdInstance.Impulse := 2;
+						-- update how many signal remains need to send
+						if icdInstance.Signal > 0 then
+							icdInstance.Signal := icdInstance.Signal - 1;
+						end if;
+						-- set next impulse time to offset once it is 0
+						icdInstance.TickToNextImpulse := icdInstance.offset -1 ;
+					else
+						icdInstance.Impulse := 0;
+						if icdInstance.TickToNextImpulse > 0 then
+							icdInstance.TickToNextImpulse := icdInstance.TickToNextImpulse - 1;
+						end if;
+					end if;
+					-- if singal equals to 0 means the treatment is fninished then set the isTachycardia
+					-- to False set TickToNextImpulse to default 0 reset singal to 10
+					if icdInstance.Signal = 0 then
+						icdInstance.TickToNextImpulse := 0;
+						icdInstance.Signal := 10;
+						icdInstance.isInImpulseProcess := False;
+					end if;
 				end if;
 			end if;
 		end if;
-
 	end CalculateAndSetImpluse;
 
 	procedure isWait(icdInstance : in out ICDType) is
 	begin
 		if icdInstance.isWait then
-			icdInstance.waitAfterShock := icdInstance.waitAfterShock -1 ;
-			if icdInstance.waitAfterShock = 0 then
-				icdInstance.waitAfterShock := 10;
-				icdInstance.isWait := False;
+			if icdInstance.waitAfterShock > 1 then
+				icdInstance.waitAfterShock := icdInstance.waitAfterShock -1 ;
+				if icdInstance.waitAfterShock = 0 then
+					icdInstance.waitAfterShock := 10;
+					icdInstance.isWait := False;
+				end if;
 			end if;
 		end if;
 	end isWait;

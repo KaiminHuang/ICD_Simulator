@@ -21,6 +21,7 @@ record
             IsOn                : Boolean;          -- Indeicates whether ICD is on
 
             TachycardiaBound    : Measures.TUB;     -- Setting the upper bound for a tachycardia
+            ImpulseRateBound    : Measures.TUB;     -- Setting the bound for ImpulseRate
             isTachycardia       : Boolean;          -- Indeicates whether there is a tachycardia?
             isInImpulseProcess  : Boolean;          -- Indicate whether it's in the period of giving
                                                     -- impulse
@@ -70,33 +71,56 @@ record
     -- Get the status of whether there is a tachycardia?
     procedure isTachycardia(icdInstance : in out ICDType);
     --# derives icdInstance from icdInstance;
+    --# post    ((icdInstance.Rate >= icdInstance.TachycardiaBound) -> 
+    --#             icdInstance.isTachycardia = True)  
+    --#          or
+    --#         ((icdInstance.Rate < icdInstance.TachycardiaBound) ->
+    --#             icdInstance.isTachycardia = False);
 
     -- Get the status of whether there is a Fibrillation?
     procedure isFibrillation(icdInstance : in out ICDType);
     --# derives icdInstance from icdInstance;
+    --# post    ((icdInstance.AbnormalNum > 3) -> 
+    --#             ((icdInstance.isTachycardia = False) 
+    --#             and 
+    --#             (icdInstance.isFibrillation = true)))  
+    --#         or
+    --#         ((icdInstance.AbnormalNum > 3) ->
+    --#             icdInstance.isTachycardia = False);
 
     -- Set Tachycardia Upper Bound for tachycardia
     procedure setTachycardiaBound (icdInstance : in out ICDType; ub : in Integer);
     --# derives icdInstance from icdInstance, ub;
-    --# post ((icdInstance.IsOn -> icdInstance.TachycardiaBound = ub) or 
-    --#     (icdInstance.IsOn -> (Measures.TUB'First <= icdInstance.TachycardiaBound and 
-    --#     icdInstance.TachycardiaBound <= Measures.TUB'Last) )) and
-    --#      (not icdInstance.IsOn -> icdInstance = icdInstance~);
+    --# post    ((icdInstance.IsOn -> icdInstance.TachycardiaBound = ub) 
+    --#         or 
+    --#         (icdInstance.IsOn -> (Measures.TUB'First <= icdInstance.TachycardiaBound 
+    --#             and 
+    --#             icdInstance.TachycardiaBound <= Measures.TUB'Last) ))
+    --#         or
+    --#         (not icdInstance.IsOn -> icdInstance = icdInstance~);
 
     -- Set Tachycardia Upper Bound for Fibrillation
     procedure setFibrillationBound (icdInstance : in out ICDType; ub : in Integer);
     --# derives icdInstance from icdInstance, ub;
-    --# post ((icdInstance.IsOn -> icdInstance.FibrillationBound = ub) or 
-    --#     (icdInstance.IsOn -> (Measures.FUB'First <= icdInstance.FibrillationBound and 
-    --#     icdInstance.FibrillationBound <= Measures.FUB'Last) )) and
-    --#      (not icdInstance.IsOn -> icdInstance = icdInstance~);
+    --# post    ((icdInstance.IsOn -> icdInstance.FibrillationBound = ub) 
+    --#         or 
+    --#         (icdInstance.IsOn -> (Measures.FUB'First <= icdInstance.FibrillationBound 
+    --#             and 
+    --#             icdInstance.FibrillationBound <= Measures.FUB'Last) )) 
+    --#         or
+    --#         (not icdInstance.IsOn -> icdInstance = icdInstance~);
 
 
     -- Calculate and set the Impluse
     procedure CalculateAndSetImpluse(icdInstance : in out ICDType);
     --# derives icdInstance from icdInstance;
     --# pre icdInstance.Ison = True;
-    --# post icdInstance.Impulse = 2 or  icdInstance.Impulse = 30;
+    --# post    (icdInstance.isFibrillation -> icdInstance.Impulse = 30)
+    --#         or
+    --#         ((icdInstance.isTachycardia and icdInstance.Signal = 0) -> icdInstance.Impulse = 2)
+    --#         or
+    --#         ((icdInstance.isTachycardia and icdInstance.Signal > 0) -> icdInstance.Impulse = 0);
+
 
     -- update the array make last6Rate(i+1):= last6Rate(i)
     procedure BPMArrayUpdate (icdInstance : in out ICDType);
@@ -105,10 +129,16 @@ record
     -- indicates that the icd should wait 1s after a 30 j shock was given
     procedure isWait(icdInstance : in out ICDType);
     --# derives icdInstance from icdInstance;
+    --# post    ((icdInstance.waitAfterShock > 1) -> 
+    --#             (icdInstance.isWait = False))  
+    --#         or
+    --#         ((icdInstance.waitAfterShock = 1) ->
+    --#             icdInstance.isWait = true);
 
     -- get abnormal heart rate number from the last six records
     procedure GetAbnormalNum (icdInstance : in out ICDType);
     --# derives icdInstance from icdInstance;
+    --# post  (icdInstance.AbnormalNum >= 0) and (icdInstance.AbnormalNum <=6);
     
     -- Tick the clock, reading heart rate from the Hrm, and decide wheter to call the generator
     procedure Tick (icdInstance : in out ICDType; Hm : in HRM.HRMType; Gen : in out ImpulseGenerator.

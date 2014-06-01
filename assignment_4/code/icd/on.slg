@@ -5,7 +5,7 @@
 *****************************************************************************
 
 
-CREATED 31-MAY-2014, 19:43:59  SIMPLIFIED 31-MAY-2014, 19:44:17
+CREATED 01-JUN-2014, 12:40:44  SIMPLIFIED 01-JUN-2014, 12:41:05
 
 SPARK Simplifier GPL 2011
 Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
@@ -24,140 +24,140 @@ procedure ICD.On
      %%%  C1:  true
 ***  Proved C1:  true
 ***  Proved C2:  measures__bpm__first <= measures__bpm__last
-     using hypotheses H25 & H26.
+     using hypotheses H27 & H28.
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_on_2.  @@@@@@@@@@
 %%%  Simplified H1 on reading formula in, to give:
      %%%  H1:  not fld_ison(icdinstance)
-%%%  Simplified H39 on reading formula in, to give:
-     %%%  H39:  true
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  true
 %%%  Simplified C1 on reading formula in, to give:
      %%%  C1:  true
 ***  Proved C1:  true
 ***  Proved C2:  measures__bpm__first <= measures__bpm__last
-     using hypothesis H40.
+     using hypothesis H42.
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_on_3.  @@@@@@@@@@
 %%%  Simplified H1 on reading formula in, to give:
      %%%  H1:  not fld_ison(icdinstance)
-%%%  Simplified H39 on reading formula in, to give:
-     %%%  H39:  true
----  Hypothesis H41 has been replaced by "true".  (It is already present, as 
-          H39).
----  Hypothesis H42 has been replaced by "true".  (It is already present, as 
-          H40).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  true
+---  Hypothesis H43 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
+          H42).
 %%%  Simplified C1 on reading formula in, to give:
      %%%  C1:  true
 ***  Proved C1:  true
 ***  Proved C2:  measures__bpm__first <= measures__bpm__last
-     using hypothesis H40.
+     using hypothesis H42.
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_on_4.  @@@@@@@@@@
 %%%  Simplified H1 on reading formula in, to give:
      %%%  H1:  not fld_ison(icdinstance)
-%%%  Simplified H39 on reading formula in, to give:
-     %%%  H39:  true
----  Hypothesis H41 has been replaced by "true".  (It is already present, as 
-          H39).
----  Hypothesis H42 has been replaced by "true".  (It is already present, as 
-          H40).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  true
 ---  Hypothesis H43 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
+---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
+          H42).
 %%%  Simplified C1 on reading formula in, to give:
      %%%  C1:  true
 ***  Proved C1:  true
 ***  Proved C2:  measures__bpm__first <= measures__bpm__last
-     using hypothesis H40.
+     using hypothesis H42.
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_on_5.  @@@@@@@@@@
 %%%  Simplified H1 on reading formula in, to give:
      %%%  H1:  not fld_ison(icdinstance)
-%%%  Simplified H39 on reading formula in, to give:
-     %%%  H39:  true
----  Hypothesis H41 has been replaced by "true".  (It is already present, as 
-          H39).
----  Hypothesis H42 has been replaced by "true".  (It is already present, as 
-          H40).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  true
 ---  Hypothesis H43 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H42).
 %%%  Simplified C1 on reading formula in, to give:
      %%%  C1:  true
 ***  Proved C1:  true
 ***  Proved C2:  measures__bpm__first <= measures__bpm__last
-     using hypothesis H40.
+     using hypothesis H42.
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_on_6.  @@@@@@@@@@
 %%%  Simplified H1 on reading formula in, to give:
      %%%  H1:  not fld_ison(icdinstance)
-%%%  Simplified H39 on reading formula in, to give:
-     %%%  H39:  true
----  Hypothesis H41 has been replaced by "true".  (It is already present, as 
-          H39).
----  Hypothesis H42 has been replaced by "true".  (It is already present, as 
-          H40).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  true
 ---  Hypothesis H43 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
+---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
+          H42).
 %%%  Simplified C1 on reading formula in, to give:
      %%%  C1:  true
 ***  Proved C1:  true
 ***  Proved C2:  measures__bpm__first <= measures__bpm__last
-     using hypothesis H40.
+     using hypothesis H42.
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_on_7.  @@@@@@@@@@
 %%%  Simplified H1 on reading formula in, to give:
      %%%  H1:  not fld_ison(icdinstance)
-%%%  Simplified H39 on reading formula in, to give:
-     %%%  H39:  true
----  Hypothesis H41 has been replaced by "true".  (It is already present, as 
-          H39).
----  Hypothesis H42 has been replaced by "true".  (It is already present, as 
-          H40).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  true
 ---  Hypothesis H43 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H42).
 %%%  Simplified C1 on reading formula in, to give:
      %%%  C1:  true
 ***  Proved C1:  true
@@ -169,30 +169,30 @@ procedure ICD.On
 @@@@@@@@@@  VC: procedure_on_8.  @@@@@@@@@@
 %%%  Simplified H1 on reading formula in, to give:
      %%%  H1:  not fld_ison(icdinstance)
-%%%  Simplified H39 on reading formula in, to give:
-     %%%  H39:  true
----  Hypothesis H41 has been replaced by "true".  (It is already present, as 
-          H39).
----  Hypothesis H42 has been replaced by "true".  (It is already present, as 
-          H40).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  true
 ---  Hypothesis H43 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
-          H40).
-%%%  Simplified H51 on reading formula in, to give:
-     %%%  H51:  true
+          H42).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H42).
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  true
 -S-  Applied substitution rule on_rules(7).
      This was achieved by replacing all occurrences of measures__joules__first 
           by:
@@ -213,30 +213,30 @@ procedure ICD.On
 @@@@@@@@@@  VC: procedure_on_9.  @@@@@@@@@@
 %%%  Simplified H1 on reading formula in, to give:
      %%%  H1:  not fld_ison(icdinstance)
-%%%  Simplified H39 on reading formula in, to give:
-     %%%  H39:  true
----  Hypothesis H41 has been replaced by "true".  (It is already present, as 
-          H39).
----  Hypothesis H42 has been replaced by "true".  (It is already present, as 
-          H40).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  true
 ---  Hypothesis H43 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
-          H40).
-%%%  Simplified H51 on reading formula in, to give:
-     %%%  H51:  true
+          H42).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H42).
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  true
 -S-  Applied substitution rule on_rules(2).
      This was achieved by replacing all occurrences of integer__first by:
           - 2147483648.
@@ -265,112 +265,112 @@ procedure ICD.On
 @@@@@@@@@@  VC: procedure_on_10.  @@@@@@@@@@
 %%%  Simplified H1 on reading formula in, to give:
      %%%  H1:  not fld_ison(icdinstance)
-%%%  Simplified H39 on reading formula in, to give:
-     %%%  H39:  true
----  Hypothesis H41 has been replaced by "true".  (It is already present, as 
-          H39).
----  Hypothesis H42 has been replaced by "true".  (It is already present, as 
-          H40).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  true
 ---  Hypothesis H43 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
-          H40).
-%%%  Simplified H51 on reading formula in, to give:
-     %%%  H51:  true
+          H42).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H42).
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  true
 ***  Proved C1:  0 >= integer__first
-     using hypothesis H55.
+     using hypothesis H57.
 ***  Proved C2:  0 <= integer__last
-     using hypothesis H56.
+     using hypothesis H58.
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_on_11.  @@@@@@@@@@
 %%%  Simplified H1 on reading formula in, to give:
      %%%  H1:  not fld_ison(icdinstance)
-%%%  Simplified H39 on reading formula in, to give:
-     %%%  H39:  true
----  Hypothesis H41 has been replaced by "true".  (It is already present, as 
-          H39).
----  Hypothesis H42 has been replaced by "true".  (It is already present, as 
-          H40).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  true
 ---  Hypothesis H43 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
-          H40).
-%%%  Simplified H51 on reading formula in, to give:
-     %%%  H51:  true
----  Hypothesis H57 has been replaced by "true".  (It is already present, as 
-          H55).
----  Hypothesis H58 has been replaced by "true".  (It is already present, as 
-          H56).
+          H42).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H42).
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  true
+---  Hypothesis H59 has been replaced by "true".  (It is already present, as 
+          H57).
+---  Hypothesis H60 has been replaced by "true".  (It is already present, as 
+          H58).
 ***  Proved C1:  0 >= integer__first
-     using hypothesis H55.
+     using hypothesis H57.
 ***  Proved C2:  0 <= integer__last
-     using hypothesis H56.
+     using hypothesis H58.
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_on_12.  @@@@@@@@@@
 %%%  Simplified H1 on reading formula in, to give:
      %%%  H1:  not fld_ison(icdinstance)
-%%%  Simplified H39 on reading formula in, to give:
-     %%%  H39:  true
----  Hypothesis H41 has been replaced by "true".  (It is already present, as 
-          H39).
----  Hypothesis H42 has been replaced by "true".  (It is already present, as 
-          H40).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  true
 ---  Hypothesis H43 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
-          H40).
-%%%  Simplified H51 on reading formula in, to give:
-     %%%  H51:  true
----  Hypothesis H57 has been replaced by "true".  (It is already present, as 
-          H55).
----  Hypothesis H58 has been replaced by "true".  (It is already present, as 
-          H56).
+          H42).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H42).
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  true
 ---  Hypothesis H59 has been replaced by "true".  (It is already present, as 
-          H55).
+          H57).
 ---  Hypothesis H60 has been replaced by "true".  (It is already present, as 
-          H56).
+          H58).
+---  Hypothesis H61 has been replaced by "true".  (It is already present, as 
+          H57).
+---  Hypothesis H62 has been replaced by "true".  (It is already present, as 
+          H58).
 ***  Proved C1:  10 >= integer__first
-     using hypothesis H55.
+     using hypothesis H57.
 -S-  Applied substitution rule on_rules(3).
      This was achieved by replacing all occurrences of integer__last by:
           2147483647.
@@ -380,7 +380,7 @@ procedure ICD.On
 <S>  New H13:  fld_ticktonextimpulse(icdinstance) <= 2147483647
 <S>  New H15:  fld_offset(icdinstance) <= 2147483647
 <S>  New H17:  fld_impulserate(icdinstance) <= 2147483647
-<S>  New H56:  true
+<S>  New H58:  true
 <S>  New C2:  true
 ***  Proved C2:  true
 ***  PROVED VC.
@@ -389,38 +389,38 @@ procedure ICD.On
 @@@@@@@@@@  VC: procedure_on_13.  @@@@@@@@@@
 %%%  Simplified H1 on reading formula in, to give:
      %%%  H1:  not fld_ison(icdinstance)
-%%%  Simplified H39 on reading formula in, to give:
-     %%%  H39:  true
----  Hypothesis H41 has been replaced by "true".  (It is already present, as 
-          H39).
----  Hypothesis H42 has been replaced by "true".  (It is already present, as 
-          H40).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  true
 ---  Hypothesis H43 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
-          H40).
-%%%  Simplified H51 on reading formula in, to give:
-     %%%  H51:  true
----  Hypothesis H57 has been replaced by "true".  (It is already present, as 
-          H55).
----  Hypothesis H58 has been replaced by "true".  (It is already present, as 
-          H56).
+          H42).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H42).
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  true
 ---  Hypothesis H59 has been replaced by "true".  (It is already present, as 
-          H55).
+          H57).
 ---  Hypothesis H60 has been replaced by "true".  (It is already present, as 
-          H56).
+          H58).
+---  Hypothesis H61 has been replaced by "true".  (It is already present, as 
+          H57).
+---  Hypothesis H62 has been replaced by "true".  (It is already present, as 
+          H58).
 %%%  Simplified C1 on reading formula in, to give:
      %%%  C1:  true
 ***  Proved C1:  true
@@ -432,140 +432,140 @@ procedure ICD.On
 @@@@@@@@@@  VC: procedure_on_14.  @@@@@@@@@@
 %%%  Simplified H1 on reading formula in, to give:
      %%%  H1:  not fld_ison(icdinstance)
-%%%  Simplified H39 on reading formula in, to give:
-     %%%  H39:  true
----  Hypothesis H41 has been replaced by "true".  (It is already present, as 
-          H39).
----  Hypothesis H42 has been replaced by "true".  (It is already present, as 
-          H40).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  true
 ---  Hypothesis H43 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
-          H40).
-%%%  Simplified H51 on reading formula in, to give:
-     %%%  H51:  true
----  Hypothesis H57 has been replaced by "true".  (It is already present, as 
-          H55).
----  Hypothesis H58 has been replaced by "true".  (It is already present, as 
-          H56).
+          H42).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H42).
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  true
 ---  Hypothesis H59 has been replaced by "true".  (It is already present, as 
-          H55).
+          H57).
 ---  Hypothesis H60 has been replaced by "true".  (It is already present, as 
-          H56).
-%%%  Simplified H63 on reading formula in, to give:
-     %%%  H63:  true
+          H58).
+---  Hypothesis H61 has been replaced by "true".  (It is already present, as 
+          H57).
+---  Hypothesis H62 has been replaced by "true".  (It is already present, as 
+          H58).
+%%%  Simplified H65 on reading formula in, to give:
+     %%%  H65:  true
 ***  Proved C1:  10 >= integer__first
-     using hypothesis H61.
+     using hypothesis H63.
 ***  Proved C2:  10 <= integer__last
-     using hypothesis H62.
+     using hypothesis H64.
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_on_15.  @@@@@@@@@@
 %%%  Simplified H1 on reading formula in, to give:
      %%%  H1:  not fld_ison(icdinstance)
-%%%  Simplified H39 on reading formula in, to give:
-     %%%  H39:  true
----  Hypothesis H41 has been replaced by "true".  (It is already present, as 
-          H39).
----  Hypothesis H42 has been replaced by "true".  (It is already present, as 
-          H40).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  true
 ---  Hypothesis H43 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
-          H40).
-%%%  Simplified H51 on reading formula in, to give:
-     %%%  H51:  true
----  Hypothesis H57 has been replaced by "true".  (It is already present, as 
-          H55).
----  Hypothesis H58 has been replaced by "true".  (It is already present, as 
-          H56).
+          H42).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H42).
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  true
 ---  Hypothesis H59 has been replaced by "true".  (It is already present, as 
-          H55).
+          H57).
 ---  Hypothesis H60 has been replaced by "true".  (It is already present, as 
-          H56).
-%%%  Simplified H63 on reading formula in, to give:
-     %%%  H63:  true
----  Hypothesis H65 has been replaced by "true".  (It is already present, as 
-          H61).
----  Hypothesis H66 has been replaced by "true".  (It is already present, as 
-          H62).
+          H58).
+---  Hypothesis H61 has been replaced by "true".  (It is already present, as 
+          H57).
+---  Hypothesis H62 has been replaced by "true".  (It is already present, as 
+          H58).
+%%%  Simplified H65 on reading formula in, to give:
+     %%%  H65:  true
+---  Hypothesis H67 has been replaced by "true".  (It is already present, as 
+          H63).
+---  Hypothesis H68 has been replaced by "true".  (It is already present, as 
+          H64).
 ***  Proved C1:  0 >= integer__first
-     using hypothesis H55.
+     using hypothesis H57.
 ***  Proved C2:  0 <= integer__last
-     using hypothesis H56.
+     using hypothesis H58.
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_on_16.  @@@@@@@@@@
 %%%  Simplified H1 on reading formula in, to give:
      %%%  H1:  not fld_ison(icdinstance)
-%%%  Simplified H39 on reading formula in, to give:
-     %%%  H39:  true
----  Hypothesis H41 has been replaced by "true".  (It is already present, as 
-          H39).
----  Hypothesis H42 has been replaced by "true".  (It is already present, as 
-          H40).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  true
 ---  Hypothesis H43 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
-          H40).
+          H42).
 ---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
-          H39).
+          H41).
 ---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
-          H40).
-%%%  Simplified H51 on reading formula in, to give:
-     %%%  H51:  true
----  Hypothesis H57 has been replaced by "true".  (It is already present, as 
-          H55).
----  Hypothesis H58 has been replaced by "true".  (It is already present, as 
-          H56).
+          H42).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H42).
+%%%  Simplified H53 on reading formula in, to give:
+     %%%  H53:  true
 ---  Hypothesis H59 has been replaced by "true".  (It is already present, as 
-          H55).
+          H57).
 ---  Hypothesis H60 has been replaced by "true".  (It is already present, as 
-          H56).
-%%%  Simplified H63 on reading formula in, to give:
-     %%%  H63:  true
----  Hypothesis H65 has been replaced by "true".  (It is already present, as 
-          H61).
----  Hypothesis H66 has been replaced by "true".  (It is already present, as 
-          H62).
+          H58).
+---  Hypothesis H61 has been replaced by "true".  (It is already present, as 
+          H57).
+---  Hypothesis H62 has been replaced by "true".  (It is already present, as 
+          H58).
+%%%  Simplified H65 on reading formula in, to give:
+     %%%  H65:  true
 ---  Hypothesis H67 has been replaced by "true".  (It is already present, as 
-          H55).
+          H63).
 ---  Hypothesis H68 has been replaced by "true".  (It is already present, as 
-          H56).
+          H64).
+---  Hypothesis H69 has been replaced by "true".  (It is already present, as 
+          H57).
+---  Hypothesis H70 has been replaced by "true".  (It is already present, as 
+          H58).
 %%%  Simplified C1 on reading formula in, to give:
      %%%  C1:  true
 ***  Proved C1:  true

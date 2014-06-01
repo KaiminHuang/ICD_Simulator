@@ -5,14 +5,14 @@
            *******************************************************
 
 
-                        DATE : 31-MAY-2014 19:43:59.47
+                        DATE : 01-JUN-2014 12:40:45.08
 
                      procedure ICD.setFibrillationBound
 
 
 
 
-For path(s) from start to run-time check associated with statement of line 129:
+For path(s) from start to run-time check associated with statement of line 131:
 
 procedure_setfibrillationbound_1.
 H1:    true .
@@ -36,32 +36,34 @@ H18:   fld_impulse(icdinstance) >= measures__joules__first .
 H19:   fld_impulse(icdinstance) <= measures__joules__last .
 H20:   true .
 H21:   true .
-H22:   fld_tachycardiabound(icdinstance) >= measures__tub__first .
-H23:   fld_tachycardiabound(icdinstance) <= measures__tub__last .
-H24:   true .
-H25:   fld_last1strate(icdinstance) >= measures__bpm__first .
-H26:   fld_last1strate(icdinstance) <= measures__bpm__last .
-H27:   fld_last2ndrate(icdinstance) >= measures__bpm__first .
-H28:   fld_last2ndrate(icdinstance) <= measures__bpm__last .
-H29:   fld_last3rdrate(icdinstance) >= measures__bpm__first .
-H30:   fld_last3rdrate(icdinstance) <= measures__bpm__last .
-H31:   fld_last4thrate(icdinstance) >= measures__bpm__first .
-H32:   fld_last4thrate(icdinstance) <= measures__bpm__last .
-H33:   fld_last5thrate(icdinstance) >= measures__bpm__first .
-H34:   fld_last5thrate(icdinstance) <= measures__bpm__last .
-H35:   fld_last6thrate(icdinstance) >= measures__bpm__first .
-H36:   fld_last6thrate(icdinstance) <= measures__bpm__last .
-H37:   fld_rate(icdinstance) >= measures__bpm__first .
-H38:   fld_rate(icdinstance) <= measures__bpm__last .
-H39:   ub >= integer__first .
-H40:   ub <= integer__last .
-H41:   not (fld_ison(icdinstance)) .
+H22:   fld_impulseratebound(icdinstance) >= measures__tub__first .
+H23:   fld_impulseratebound(icdinstance) <= measures__tub__last .
+H24:   fld_tachycardiabound(icdinstance) >= measures__tub__first .
+H25:   fld_tachycardiabound(icdinstance) <= measures__tub__last .
+H26:   true .
+H27:   fld_last1strate(icdinstance) >= measures__bpm__first .
+H28:   fld_last1strate(icdinstance) <= measures__bpm__last .
+H29:   fld_last2ndrate(icdinstance) >= measures__bpm__first .
+H30:   fld_last2ndrate(icdinstance) <= measures__bpm__last .
+H31:   fld_last3rdrate(icdinstance) >= measures__bpm__first .
+H32:   fld_last3rdrate(icdinstance) <= measures__bpm__last .
+H33:   fld_last4thrate(icdinstance) >= measures__bpm__first .
+H34:   fld_last4thrate(icdinstance) <= measures__bpm__last .
+H35:   fld_last5thrate(icdinstance) >= measures__bpm__first .
+H36:   fld_last5thrate(icdinstance) <= measures__bpm__last .
+H37:   fld_last6thrate(icdinstance) >= measures__bpm__first .
+H38:   fld_last6thrate(icdinstance) <= measures__bpm__last .
+H39:   fld_rate(icdinstance) >= measures__bpm__first .
+H40:   fld_rate(icdinstance) <= measures__bpm__last .
+H41:   ub >= integer__first .
+H42:   ub <= integer__last .
+H43:   not (fld_ison(icdinstance)) .
         ->
 C1:    ub >= integer__first .
 C2:    ub <= integer__last .
  
 
-For path(s) from start to run-time check associated with statement of line 129:
+For path(s) from start to run-time check associated with statement of line 131:
 
 procedure_setfibrillationbound_2.
 H1:    true .
@@ -85,32 +87,34 @@ H18:   fld_impulse(icdinstance) >= measures__joules__first .
 H19:   fld_impulse(icdinstance) <= measures__joules__last .
 H20:   true .
 H21:   true .
-H22:   fld_tachycardiabound(icdinstance) >= measures__tub__first .
-H23:   fld_tachycardiabound(icdinstance) <= measures__tub__last .
-H24:   true .
-H25:   fld_last1strate(icdinstance) >= measures__bpm__first .
-H26:   fld_last1strate(icdinstance) <= measures__bpm__last .
-H27:   fld_last2ndrate(icdinstance) >= measures__bpm__first .
-H28:   fld_last2ndrate(icdinstance) <= measures__bpm__last .
-H29:   fld_last3rdrate(icdinstance) >= measures__bpm__first .
-H30:   fld_last3rdrate(icdinstance) <= measures__bpm__last .
-H31:   fld_last4thrate(icdinstance) >= measures__bpm__first .
-H32:   fld_last4thrate(icdinstance) <= measures__bpm__last .
-H33:   fld_last5thrate(icdinstance) >= measures__bpm__first .
-H34:   fld_last5thrate(icdinstance) <= measures__bpm__last .
-H35:   fld_last6thrate(icdinstance) >= measures__bpm__first .
-H36:   fld_last6thrate(icdinstance) <= measures__bpm__last .
-H37:   fld_rate(icdinstance) >= measures__bpm__first .
-H38:   fld_rate(icdinstance) <= measures__bpm__last .
-H39:   ub >= integer__first .
-H40:   ub <= integer__last .
-H41:   not (fld_ison(icdinstance)) .
-H42:   ub >= integer__first .
-H43:   ub <= integer__last .
-H44:   measures__limitfub(ub) >= measures__fub__first .
-H45:   measures__limitfub(ub) <= measures__fub__last .
-H46:   measures__fub__first <= measures__limitfub(ub) .
+H22:   fld_impulseratebound(icdinstance) >= measures__tub__first .
+H23:   fld_impulseratebound(icdinstance) <= measures__tub__last .
+H24:   fld_tachycardiabound(icdinstance) >= measures__tub__first .
+H25:   fld_tachycardiabound(icdinstance) <= measures__tub__last .
+H26:   true .
+H27:   fld_last1strate(icdinstance) >= measures__bpm__first .
+H28:   fld_last1strate(icdinstance) <= measures__bpm__last .
+H29:   fld_last2ndrate(icdinstance) >= measures__bpm__first .
+H30:   fld_last2ndrate(icdinstance) <= measures__bpm__last .
+H31:   fld_last3rdrate(icdinstance) >= measures__bpm__first .
+H32:   fld_last3rdrate(icdinstance) <= measures__bpm__last .
+H33:   fld_last4thrate(icdinstance) >= measures__bpm__first .
+H34:   fld_last4thrate(icdinstance) <= measures__bpm__last .
+H35:   fld_last5thrate(icdinstance) >= measures__bpm__first .
+H36:   fld_last5thrate(icdinstance) <= measures__bpm__last .
+H37:   fld_last6thrate(icdinstance) >= measures__bpm__first .
+H38:   fld_last6thrate(icdinstance) <= measures__bpm__last .
+H39:   fld_rate(icdinstance) >= measures__bpm__first .
+H40:   fld_rate(icdinstance) <= measures__bpm__last .
+H41:   ub >= integer__first .
+H42:   ub <= integer__last .
+H43:   not (fld_ison(icdinstance)) .
+H44:   ub >= integer__first .
+H45:   ub <= integer__last .
+H46:   measures__limitfub(ub) >= measures__fub__first .
 H47:   measures__limitfub(ub) <= measures__fub__last .
+H48:   measures__fub__first <= measures__limitfub(ub) .
+H49:   measures__limitfub(ub) <= measures__fub__last .
         ->
 C1:    measures__limitfub(ub) >= measures__fub__first .
 C2:    measures__limitfub(ub) <= measures__fub__last .
@@ -140,36 +144,38 @@ H18:   fld_impulse(icdinstance) >= measures__joules__first .
 H19:   fld_impulse(icdinstance) <= measures__joules__last .
 H20:   true .
 H21:   true .
-H22:   fld_tachycardiabound(icdinstance) >= measures__tub__first .
-H23:   fld_tachycardiabound(icdinstance) <= measures__tub__last .
-H24:   true .
-H25:   fld_last1strate(icdinstance) >= measures__bpm__first .
-H26:   fld_last1strate(icdinstance) <= measures__bpm__last .
-H27:   fld_last2ndrate(icdinstance) >= measures__bpm__first .
-H28:   fld_last2ndrate(icdinstance) <= measures__bpm__last .
-H29:   fld_last3rdrate(icdinstance) >= measures__bpm__first .
-H30:   fld_last3rdrate(icdinstance) <= measures__bpm__last .
-H31:   fld_last4thrate(icdinstance) >= measures__bpm__first .
-H32:   fld_last4thrate(icdinstance) <= measures__bpm__last .
-H33:   fld_last5thrate(icdinstance) >= measures__bpm__first .
-H34:   fld_last5thrate(icdinstance) <= measures__bpm__last .
-H35:   fld_last6thrate(icdinstance) >= measures__bpm__first .
-H36:   fld_last6thrate(icdinstance) <= measures__bpm__last .
-H37:   fld_rate(icdinstance) >= measures__bpm__first .
-H38:   fld_rate(icdinstance) <= measures__bpm__last .
-H39:   ub >= integer__first .
-H40:   ub <= integer__last .
-H41:   not (fld_ison(icdinstance)) .
-H42:   ub >= integer__first .
-H43:   ub <= integer__last .
-H44:   measures__limitfub(ub) >= measures__fub__first .
-H45:   measures__limitfub(ub) <= measures__fub__last .
-H46:   measures__fub__first <= measures__limitfub(ub) .
+H22:   fld_impulseratebound(icdinstance) >= measures__tub__first .
+H23:   fld_impulseratebound(icdinstance) <= measures__tub__last .
+H24:   fld_tachycardiabound(icdinstance) >= measures__tub__first .
+H25:   fld_tachycardiabound(icdinstance) <= measures__tub__last .
+H26:   true .
+H27:   fld_last1strate(icdinstance) >= measures__bpm__first .
+H28:   fld_last1strate(icdinstance) <= measures__bpm__last .
+H29:   fld_last2ndrate(icdinstance) >= measures__bpm__first .
+H30:   fld_last2ndrate(icdinstance) <= measures__bpm__last .
+H31:   fld_last3rdrate(icdinstance) >= measures__bpm__first .
+H32:   fld_last3rdrate(icdinstance) <= measures__bpm__last .
+H33:   fld_last4thrate(icdinstance) >= measures__bpm__first .
+H34:   fld_last4thrate(icdinstance) <= measures__bpm__last .
+H35:   fld_last5thrate(icdinstance) >= measures__bpm__first .
+H36:   fld_last5thrate(icdinstance) <= measures__bpm__last .
+H37:   fld_last6thrate(icdinstance) >= measures__bpm__first .
+H38:   fld_last6thrate(icdinstance) <= measures__bpm__last .
+H39:   fld_rate(icdinstance) >= measures__bpm__first .
+H40:   fld_rate(icdinstance) <= measures__bpm__last .
+H41:   ub >= integer__first .
+H42:   ub <= integer__last .
+H43:   not (fld_ison(icdinstance)) .
+H44:   ub >= integer__first .
+H45:   ub <= integer__last .
+H46:   measures__limitfub(ub) >= measures__fub__first .
 H47:   measures__limitfub(ub) <= measures__fub__last .
-H48:   measures__limitfub(ub) >= measures__fub__first .
+H48:   measures__fub__first <= measures__limitfub(ub) .
 H49:   measures__limitfub(ub) <= measures__fub__last .
+H50:   measures__limitfub(ub) >= measures__fub__first .
+H51:   measures__limitfub(ub) <= measures__fub__last .
         ->
-C1:    (fld_ison(upf_fibrillationbound(icdinstance, 
+C1:    ((fld_ison(upf_fibrillationbound(icdinstance, 
            measures__limitfub(ub))) -> (fld_fibrillationbound(
            upf_fibrillationbound(icdinstance, 
            measures__limitfub(ub))) = ub)) or (fld_ison(
@@ -179,11 +185,11 @@ C1:    (fld_ison(upf_fibrillationbound(icdinstance,
            icdinstance, measures__limitfub(ub)))) and (
            fld_fibrillationbound(upf_fibrillationbound(
            icdinstance, measures__limitfub(ub))) <= 
-           measures__fub__last))) .
-C2:    (not (fld_ison(upf_fibrillationbound(icdinstance, 
+           measures__fub__last)))) or ((not (fld_ison(
+           upf_fibrillationbound(icdinstance, 
            measures__limitfub(ub))))) -> (upf_fibrillationbound(
            icdinstance, measures__limitfub(ub)) = 
-           icdinstance) .
+           icdinstance)) .
  
 
 procedure_setfibrillationbound_4.
@@ -208,33 +214,34 @@ H18:   fld_impulse(icdinstance) >= measures__joules__first .
 H19:   fld_impulse(icdinstance) <= measures__joules__last .
 H20:   true .
 H21:   true .
-H22:   fld_tachycardiabound(icdinstance) >= measures__tub__first .
-H23:   fld_tachycardiabound(icdinstance) <= measures__tub__last .
-H24:   true .
-H25:   fld_last1strate(icdinstance) >= measures__bpm__first .
-H26:   fld_last1strate(icdinstance) <= measures__bpm__last .
-H27:   fld_last2ndrate(icdinstance) >= measures__bpm__first .
-H28:   fld_last2ndrate(icdinstance) <= measures__bpm__last .
-H29:   fld_last3rdrate(icdinstance) >= measures__bpm__first .
-H30:   fld_last3rdrate(icdinstance) <= measures__bpm__last .
-H31:   fld_last4thrate(icdinstance) >= measures__bpm__first .
-H32:   fld_last4thrate(icdinstance) <= measures__bpm__last .
-H33:   fld_last5thrate(icdinstance) >= measures__bpm__first .
-H34:   fld_last5thrate(icdinstance) <= measures__bpm__last .
-H35:   fld_last6thrate(icdinstance) >= measures__bpm__first .
-H36:   fld_last6thrate(icdinstance) <= measures__bpm__last .
-H37:   fld_rate(icdinstance) >= measures__bpm__first .
-H38:   fld_rate(icdinstance) <= measures__bpm__last .
-H39:   ub >= integer__first .
-H40:   ub <= integer__last .
-H41:   not (not (fld_ison(icdinstance))) .
+H22:   fld_impulseratebound(icdinstance) >= measures__tub__first .
+H23:   fld_impulseratebound(icdinstance) <= measures__tub__last .
+H24:   fld_tachycardiabound(icdinstance) >= measures__tub__first .
+H25:   fld_tachycardiabound(icdinstance) <= measures__tub__last .
+H26:   true .
+H27:   fld_last1strate(icdinstance) >= measures__bpm__first .
+H28:   fld_last1strate(icdinstance) <= measures__bpm__last .
+H29:   fld_last2ndrate(icdinstance) >= measures__bpm__first .
+H30:   fld_last2ndrate(icdinstance) <= measures__bpm__last .
+H31:   fld_last3rdrate(icdinstance) >= measures__bpm__first .
+H32:   fld_last3rdrate(icdinstance) <= measures__bpm__last .
+H33:   fld_last4thrate(icdinstance) >= measures__bpm__first .
+H34:   fld_last4thrate(icdinstance) <= measures__bpm__last .
+H35:   fld_last5thrate(icdinstance) >= measures__bpm__first .
+H36:   fld_last5thrate(icdinstance) <= measures__bpm__last .
+H37:   fld_last6thrate(icdinstance) >= measures__bpm__first .
+H38:   fld_last6thrate(icdinstance) <= measures__bpm__last .
+H39:   fld_rate(icdinstance) >= measures__bpm__first .
+H40:   fld_rate(icdinstance) <= measures__bpm__last .
+H41:   ub >= integer__first .
+H42:   ub <= integer__last .
+H43:   not (not (fld_ison(icdinstance))) .
         ->
-C1:    (fld_ison(icdinstance) -> (fld_fibrillationbound(
+C1:    ((fld_ison(icdinstance) -> (fld_fibrillationbound(
            icdinstance) = ub)) or (fld_ison(icdinstance) -> ((
            measures__fub__first <= fld_fibrillationbound(
            icdinstance)) and (fld_fibrillationbound(
-           icdinstance) <= measures__fub__last))) .
-C2:    (not (fld_ison(icdinstance))) -> (icdinstance = 
-           icdinstance) .
+           icdinstance) <= measures__fub__last)))) or ((not (fld_ison(
+           icdinstance))) -> (icdinstance = icdinstance)) .
  
 

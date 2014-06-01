@@ -5,7 +5,7 @@
 *****************************************************************************
 
 
-CREATED 31-MAY-2014, 19:43:59  SIMPLIFIED 31-MAY-2014, 19:44:14
+CREATED 01-JUN-2014, 12:40:45  SIMPLIFIED 01-JUN-2014, 12:40:60
 
 SPARK Simplifier GPL 2011
 Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
@@ -18,11 +18,18 @@ procedure ICD.isFibrillation
 
 
 @@@@@@@@@@  VC: procedure_isfibrillation_1.  @@@@@@@@@@
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  true
 ***  Proved C1:  true
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_isfibrillation_2.  @@@@@@@@@@
-***  Proved C1:  true
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  not fld_abnormalnum(icdinstance__1) > 3 or (fld_abnormalnum(
+          icdinstance__1) > 3 -> not fld_istachycardia(icdinstance__1))
+***  Proved C1:  not fld_abnormalnum(icdinstance__1) > 3 or (fld_abnormalnum(
+          icdinstance__1) > 3 -> not fld_istachycardia(icdinstance__1))
+     using hypothesis H82.
 ***  PROVED VC.
 

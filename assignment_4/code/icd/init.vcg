@@ -5,7 +5,7 @@
            *******************************************************
 
 
-                        DATE : 31-MAY-2014 19:43:59.17
+                        DATE : 01-JUN-2014 12:40:44.61
 
                              procedure ICD.Init
 
@@ -140,7 +140,7 @@ C1:    measures__tub__first >= measures__tub__first .
 C2:    measures__tub__first <= measures__tub__last .
  
 
-For path(s) from start to run-time check associated with statement of line 22:
+For path(s) from start to run-time check associated with statement of line 20:
 
 procedure_init_9.
 H1:    true .
@@ -161,8 +161,8 @@ H15:   measures__bpm__first <= measures__bpm__last .
 H16:   measures__tub__first >= measures__tub__first .
 H17:   measures__tub__first <= measures__tub__last .
         ->
-C1:    0 >= measures__joules__first .
-C2:    0 <= measures__joules__last .
+C1:    measures__tub__last - 15 >= measures__tub__first .
+C2:    measures__tub__last - 15 <= measures__tub__last .
  
 
 For path(s) from start to run-time check associated with statement of line 23:
@@ -185,11 +185,11 @@ H14:   measures__bpm__first >= measures__bpm__first .
 H15:   measures__bpm__first <= measures__bpm__last .
 H16:   measures__tub__first >= measures__tub__first .
 H17:   measures__tub__first <= measures__tub__last .
-H18:   0 >= measures__joules__first .
-H19:   0 <= measures__joules__last .
+H18:   measures__tub__last - 15 >= measures__tub__first .
+H19:   measures__tub__last - 15 <= measures__tub__last .
         ->
-C1:    0 >= integer__first .
-C2:    0 <= integer__last .
+C1:    0 >= measures__joules__first .
+C2:    0 <= measures__joules__last .
  
 
 For path(s) from start to run-time check associated with statement of line 24:
@@ -212,10 +212,10 @@ H14:   measures__bpm__first >= measures__bpm__first .
 H15:   measures__bpm__first <= measures__bpm__last .
 H16:   measures__tub__first >= measures__tub__first .
 H17:   measures__tub__first <= measures__tub__last .
-H18:   0 >= measures__joules__first .
-H19:   0 <= measures__joules__last .
-H20:   0 >= integer__first .
-H21:   0 <= integer__last .
+H18:   measures__tub__last - 15 >= measures__tub__first .
+H19:   measures__tub__last - 15 <= measures__tub__last .
+H20:   0 >= measures__joules__first .
+H21:   0 <= measures__joules__last .
         ->
 C1:    0 >= integer__first .
 C2:    0 <= integer__last .
@@ -241,10 +241,10 @@ H14:   measures__bpm__first >= measures__bpm__first .
 H15:   measures__bpm__first <= measures__bpm__last .
 H16:   measures__tub__first >= measures__tub__first .
 H17:   measures__tub__first <= measures__tub__last .
-H18:   0 >= measures__joules__first .
-H19:   0 <= measures__joules__last .
-H20:   0 >= integer__first .
-H21:   0 <= integer__last .
+H18:   measures__tub__last - 15 >= measures__tub__first .
+H19:   measures__tub__last - 15 <= measures__tub__last .
+H20:   0 >= measures__joules__first .
+H21:   0 <= measures__joules__last .
 H22:   0 >= integer__first .
 H23:   0 <= integer__last .
         ->
@@ -272,20 +272,20 @@ H14:   measures__bpm__first >= measures__bpm__first .
 H15:   measures__bpm__first <= measures__bpm__last .
 H16:   measures__tub__first >= measures__tub__first .
 H17:   measures__tub__first <= measures__tub__last .
-H18:   0 >= measures__joules__first .
-H19:   0 <= measures__joules__last .
-H20:   0 >= integer__first .
-H21:   0 <= integer__last .
+H18:   measures__tub__last - 15 >= measures__tub__first .
+H19:   measures__tub__last - 15 <= measures__tub__last .
+H20:   0 >= measures__joules__first .
+H21:   0 <= measures__joules__last .
 H22:   0 >= integer__first .
 H23:   0 <= integer__last .
 H24:   0 >= integer__first .
 H25:   0 <= integer__last .
         ->
-C1:    10 >= integer__first .
-C2:    10 <= integer__last .
+C1:    0 >= integer__first .
+C2:    0 <= integer__last .
  
 
-For path(s) from start to run-time check associated with statement of line 28:
+For path(s) from start to run-time check associated with statement of line 27:
 
 procedure_init_14.
 H1:    true .
@@ -305,22 +305,22 @@ H14:   measures__bpm__first >= measures__bpm__first .
 H15:   measures__bpm__first <= measures__bpm__last .
 H16:   measures__tub__first >= measures__tub__first .
 H17:   measures__tub__first <= measures__tub__last .
-H18:   0 >= measures__joules__first .
-H19:   0 <= measures__joules__last .
-H20:   0 >= integer__first .
-H21:   0 <= integer__last .
+H18:   measures__tub__last - 15 >= measures__tub__first .
+H19:   measures__tub__last - 15 <= measures__tub__last .
+H20:   0 >= measures__joules__first .
+H21:   0 <= measures__joules__last .
 H22:   0 >= integer__first .
 H23:   0 <= integer__last .
 H24:   0 >= integer__first .
 H25:   0 <= integer__last .
-H26:   10 >= integer__first .
-H27:   10 <= integer__last .
+H26:   0 >= integer__first .
+H27:   0 <= integer__last .
         ->
-C1:    measures__fub__first >= measures__fub__first .
-C2:    measures__fub__first <= measures__fub__last .
+C1:    10 >= integer__first .
+C2:    10 <= integer__last .
  
 
-For path(s) from start to run-time check associated with statement of line 31:
+For path(s) from start to run-time check associated with statement of line 29:
 
 procedure_init_15.
 H1:    true .
@@ -340,21 +340,21 @@ H14:   measures__bpm__first >= measures__bpm__first .
 H15:   measures__bpm__first <= measures__bpm__last .
 H16:   measures__tub__first >= measures__tub__first .
 H17:   measures__tub__first <= measures__tub__last .
-H18:   0 >= measures__joules__first .
-H19:   0 <= measures__joules__last .
-H20:   0 >= integer__first .
-H21:   0 <= integer__last .
+H18:   measures__tub__last - 15 >= measures__tub__first .
+H19:   measures__tub__last - 15 <= measures__tub__last .
+H20:   0 >= measures__joules__first .
+H21:   0 <= measures__joules__last .
 H22:   0 >= integer__first .
 H23:   0 <= integer__last .
 H24:   0 >= integer__first .
 H25:   0 <= integer__last .
-H26:   10 >= integer__first .
-H27:   10 <= integer__last .
-H28:   measures__fub__first >= measures__fub__first .
-H29:   measures__fub__first <= measures__fub__last .
+H26:   0 >= integer__first .
+H27:   0 <= integer__last .
+H28:   10 >= integer__first .
+H29:   10 <= integer__last .
         ->
-C1:    10 >= integer__first .
-C2:    10 <= integer__last .
+C1:    measures__fub__first >= measures__fub__first .
+C2:    measures__fub__first <= measures__fub__last .
  
 
 For path(s) from start to run-time check associated with statement of line 32:
@@ -377,20 +377,61 @@ H14:   measures__bpm__first >= measures__bpm__first .
 H15:   measures__bpm__first <= measures__bpm__last .
 H16:   measures__tub__first >= measures__tub__first .
 H17:   measures__tub__first <= measures__tub__last .
-H18:   0 >= measures__joules__first .
-H19:   0 <= measures__joules__last .
-H20:   0 >= integer__first .
-H21:   0 <= integer__last .
+H18:   measures__tub__last - 15 >= measures__tub__first .
+H19:   measures__tub__last - 15 <= measures__tub__last .
+H20:   0 >= measures__joules__first .
+H21:   0 <= measures__joules__last .
 H22:   0 >= integer__first .
 H23:   0 <= integer__last .
 H24:   0 >= integer__first .
 H25:   0 <= integer__last .
-H26:   10 >= integer__first .
-H27:   10 <= integer__last .
-H28:   measures__fub__first >= measures__fub__first .
-H29:   measures__fub__first <= measures__fub__last .
-H30:   10 >= integer__first .
-H31:   10 <= integer__last .
+H26:   0 >= integer__first .
+H27:   0 <= integer__last .
+H28:   10 >= integer__first .
+H29:   10 <= integer__last .
+H30:   measures__fub__first >= measures__fub__first .
+H31:   measures__fub__first <= measures__fub__last .
+        ->
+C1:    10 >= integer__first .
+C2:    10 <= integer__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 33:
+
+procedure_init_17.
+H1:    true .
+H2:    measures__bpm__first >= measures__bpm__first .
+H3:    measures__bpm__first <= measures__bpm__last .
+H4:    measures__bpm__first >= measures__bpm__first .
+H5:    measures__bpm__first <= measures__bpm__last .
+H6:    measures__bpm__first >= measures__bpm__first .
+H7:    measures__bpm__first <= measures__bpm__last .
+H8:    measures__bpm__first >= measures__bpm__first .
+H9:    measures__bpm__first <= measures__bpm__last .
+H10:   measures__bpm__first >= measures__bpm__first .
+H11:   measures__bpm__first <= measures__bpm__last .
+H12:   measures__bpm__first >= measures__bpm__first .
+H13:   measures__bpm__first <= measures__bpm__last .
+H14:   measures__bpm__first >= measures__bpm__first .
+H15:   measures__bpm__first <= measures__bpm__last .
+H16:   measures__tub__first >= measures__tub__first .
+H17:   measures__tub__first <= measures__tub__last .
+H18:   measures__tub__last - 15 >= measures__tub__first .
+H19:   measures__tub__last - 15 <= measures__tub__last .
+H20:   0 >= measures__joules__first .
+H21:   0 <= measures__joules__last .
+H22:   0 >= integer__first .
+H23:   0 <= integer__last .
+H24:   0 >= integer__first .
+H25:   0 <= integer__last .
+H26:   0 >= integer__first .
+H27:   0 <= integer__last .
+H28:   10 >= integer__first .
+H29:   10 <= integer__last .
+H30:   measures__fub__first >= measures__fub__first .
+H31:   measures__fub__first <= measures__fub__last .
+H32:   10 >= integer__first .
+H33:   10 <= integer__last .
         ->
 C1:    0 >= integer__first .
 C2:    0 <= integer__last .
@@ -398,7 +439,7 @@ C2:    0 <= integer__last .
 
 For path(s) from start to finish:
 
-procedure_init_17.
+procedure_init_18.
 *** true .          /* trivially true VC removed by Examiner */
 
 

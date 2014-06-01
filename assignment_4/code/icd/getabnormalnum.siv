@@ -5,7 +5,7 @@
 *****************************************************************************
 
 
-CREATED 31-MAY-2014, 19:43:59  SIMPLIFIED 31-MAY-2014, 19:44:05
+CREATED 01-JUN-2014, 12:40:44  SIMPLIFIED 01-JUN-2014, 12:40:51
 
 SPARK Simplifier GPL 2011
 Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
@@ -15,25 +15,25 @@ procedure ICD.GetAbnormalNum
 
 
 
-For path(s) from start to run-time check associated with statement of line 80:
+For path(s) from start to run-time check associated with statement of line 82:
 
 procedure_getabnormalnum_1.
 *** true .          /* all conclusions proved */
 
 
-For path(s) from start to run-time check associated with statement of line 81:
+For path(s) from start to run-time check associated with statement of line 83:
 
 procedure_getabnormalnum_2.
 *** true .          /* all conclusions proved */
 
 
-For path(s) from start to run-time check associated with statement of line 82:
+For path(s) from start to run-time check associated with statement of line 84:
 
 procedure_getabnormalnum_3.
 *** true .          /* all conclusions proved */
 
 
-For path(s) from start to run-time check associated with statement of line 84:
+For path(s) from start to run-time check associated with statement of line 86:
 
 procedure_getabnormalnum_4.
 *** true .          /* all conclusions proved */
@@ -43,7 +43,7 @@ procedure_getabnormalnum_5.
 *** true .          /* all conclusions proved */
 
 
-For path(s) from start to run-time check associated with statement of line 85:
+For path(s) from start to run-time check associated with statement of line 87:
 
 procedure_getabnormalnum_6.
 *** true .          /* all conclusions proved */
@@ -53,7 +53,7 @@ procedure_getabnormalnum_7.
 *** true .          /* all conclusions proved */
 
 
-For path(s) from start to run-time check associated with statement of line 87:
+For path(s) from start to run-time check associated with statement of line 89:
 
 procedure_getabnormalnum_8.
 *** true .          /* all conclusions proved */
@@ -71,7 +71,7 @@ procedure_getabnormalnum_11.
 *** true .          /* all conclusions proved */
 
 
-For path(s) from start to run-time check associated with statement of line 88:
+For path(s) from start to run-time check associated with statement of line 90:
 
 procedure_getabnormalnum_12.
 *** true .          /* all conclusions proved */
@@ -89,7 +89,7 @@ procedure_getabnormalnum_15.
 *** true .          /* all conclusions proved */
 
 
-For path(s) from start to run-time check associated with statement of line 90:
+For path(s) from start to run-time check associated with statement of line 92:
 
 procedure_getabnormalnum_16.
 *** true .          /* all conclusions proved */
@@ -123,7 +123,7 @@ procedure_getabnormalnum_23.
 *** true .          /* all conclusions proved */
 
 
-For path(s) from start to run-time check associated with statement of line 91:
+For path(s) from start to run-time check associated with statement of line 93:
 
 procedure_getabnormalnum_24.
 *** true .          /* all conclusions proved */
@@ -157,7 +157,7 @@ procedure_getabnormalnum_31.
 *** true .          /* all conclusions proved */
 
 
-For path(s) from start to run-time check associated with statement of line 93:
+For path(s) from start to run-time check associated with statement of line 95:
 
 procedure_getabnormalnum_32.
 *** true .          /* all conclusions proved */
@@ -223,7 +223,7 @@ procedure_getabnormalnum_47.
 *** true .          /* all conclusions proved */
 
 
-For path(s) from start to run-time check associated with statement of line 94:
+For path(s) from start to run-time check associated with statement of line 96:
 
 procedure_getabnormalnum_48.
 *** true .          /* all conclusions proved */

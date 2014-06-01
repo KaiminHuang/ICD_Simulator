@@ -5,7 +5,7 @@
            *******************************************************
 
 
-                        DATE : 31-MAY-2014 19:43:59.21
+                        DATE : 01-JUN-2014 12:40:44.65
 
                              procedure ICD.Off
 
@@ -36,23 +36,25 @@ H18:   fld_impulse(icdinstance) >= measures__joules__first .
 H19:   fld_impulse(icdinstance) <= measures__joules__last .
 H20:   true .
 H21:   true .
-H22:   fld_tachycardiabound(icdinstance) >= measures__tub__first .
-H23:   fld_tachycardiabound(icdinstance) <= measures__tub__last .
-H24:   true .
-H25:   fld_last1strate(icdinstance) >= measures__bpm__first .
-H26:   fld_last1strate(icdinstance) <= measures__bpm__last .
-H27:   fld_last2ndrate(icdinstance) >= measures__bpm__first .
-H28:   fld_last2ndrate(icdinstance) <= measures__bpm__last .
-H29:   fld_last3rdrate(icdinstance) >= measures__bpm__first .
-H30:   fld_last3rdrate(icdinstance) <= measures__bpm__last .
-H31:   fld_last4thrate(icdinstance) >= measures__bpm__first .
-H32:   fld_last4thrate(icdinstance) <= measures__bpm__last .
-H33:   fld_last5thrate(icdinstance) >= measures__bpm__first .
-H34:   fld_last5thrate(icdinstance) <= measures__bpm__last .
-H35:   fld_last6thrate(icdinstance) >= measures__bpm__first .
-H36:   fld_last6thrate(icdinstance) <= measures__bpm__last .
-H37:   fld_rate(icdinstance) >= measures__bpm__first .
-H38:   fld_rate(icdinstance) <= measures__bpm__last .
+H22:   fld_impulseratebound(icdinstance) >= measures__tub__first .
+H23:   fld_impulseratebound(icdinstance) <= measures__tub__last .
+H24:   fld_tachycardiabound(icdinstance) >= measures__tub__first .
+H25:   fld_tachycardiabound(icdinstance) <= measures__tub__last .
+H26:   true .
+H27:   fld_last1strate(icdinstance) >= measures__bpm__first .
+H28:   fld_last1strate(icdinstance) <= measures__bpm__last .
+H29:   fld_last2ndrate(icdinstance) >= measures__bpm__first .
+H30:   fld_last2ndrate(icdinstance) <= measures__bpm__last .
+H31:   fld_last3rdrate(icdinstance) >= measures__bpm__first .
+H32:   fld_last3rdrate(icdinstance) <= measures__bpm__last .
+H33:   fld_last4thrate(icdinstance) >= measures__bpm__first .
+H34:   fld_last4thrate(icdinstance) <= measures__bpm__last .
+H35:   fld_last5thrate(icdinstance) >= measures__bpm__first .
+H36:   fld_last5thrate(icdinstance) <= measures__bpm__last .
+H37:   fld_last6thrate(icdinstance) >= measures__bpm__first .
+H38:   fld_last6thrate(icdinstance) <= measures__bpm__last .
+H39:   fld_rate(icdinstance) >= measures__bpm__first .
+H40:   fld_rate(icdinstance) <= measures__bpm__last .
         ->
 C1:    fld_ison(upf_ison(icdinstance, false)) = false .
  

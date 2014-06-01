@@ -34,16 +34,16 @@ Summary Dead Path files (.sdp)
         'L' - Live path
 
 in the directory:
-/home/kaiminh/swen90010-2014/assignments/assignment-4/code
+/home/yingziz/ICD_Simulator/assignment_4/code
 
-Summary produced: 31-MAY-2014 19:44:17.96
+Summary produced: 01-JUN-2014 12:41:05.42
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/closedloop/init.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/closedloop/init.vcg
 procedure ClosedLoop.Init
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:45
 
-VCs simplified 31-MAY-2014 19:44:01
+VCs simplified 01-JUN-2014 12:40:47
 
 VCs for procedure_init :
  -----------------------------------------------------------------------------
@@ -53,12 +53,12 @@ VCs for procedure_init :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/closedloop/ison.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/closedloop/ison.vcg
 function ClosedLoop.IsOn
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:45
 
-VCs simplified 31-MAY-2014 19:44:01
+VCs simplified 01-JUN-2014 12:40:46
 
 VCs for function_ison :
  -----------------------------------------------------------------------------
@@ -68,12 +68,12 @@ VCs for function_ison :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/closedloop/off.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/closedloop/off.vcg
 procedure ClosedLoop.Off
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:45
 
-VCs simplified 31-MAY-2014 19:44:01
+VCs simplified 01-JUN-2014 12:40:46
 
 VCs for procedure_off :
  -----------------------------------------------------------------------------
@@ -84,12 +84,12 @@ VCs for procedure_off :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/closedloop/on.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/closedloop/on.vcg
 procedure ClosedLoop.On
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:45
 
-VCs simplified 31-MAY-2014 19:44:01
+VCs simplified 01-JUN-2014 12:40:47
 
 VCs for procedure_on :
  -----------------------------------------------------------------------------
@@ -101,12 +101,12 @@ VCs for procedure_on :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/closedloop/setfibrillationbound.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/closedloop/setfibrillationbound.vcg
 procedure ClosedLoop.setFibrillationBound
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:45
 
-VCs simplified 31-MAY-2014 19:44:04
+VCs simplified 01-JUN-2014 12:40:50
 
 VCs for procedure_setfibrillationbound :
  -----------------------------------------------------------------------------
@@ -117,12 +117,12 @@ VCs for procedure_setfibrillationbound :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/closedloop/settachycardiabound.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/closedloop/settachycardiabound.vcg
 procedure ClosedLoop.setTachycardiaBound
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:45
 
-VCs simplified 31-MAY-2014 19:44:00
+VCs simplified 01-JUN-2014 12:40:46
 
 VCs for procedure_settachycardiabound :
  -----------------------------------------------------------------------------
@@ -133,12 +133,12 @@ VCs for procedure_settachycardiabound :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/closedloop/tick.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/closedloop/tick.vcg
 procedure ClosedLoop.tick
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:45
 
-VCs simplified 31-MAY-2014 19:44:01
+VCs simplified 01-JUN-2014 12:40:47
 
 VCs for procedure_tick :
  -----------------------------------------------------------------------------
@@ -148,12 +148,12 @@ VCs for procedure_tick :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/heart/getimpulse.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/heart/getimpulse.vcg
 function Heart.GetImpulse
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:00
+VCs simplified 01-JUN-2014 12:40:46
 
 VCs for function_getimpulse :
  -----------------------------------------------------------------------------
@@ -163,12 +163,12 @@ VCs for function_getimpulse :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/heart/getrate.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/heart/getrate.vcg
 procedure Heart.GetRate
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:00
+VCs simplified 01-JUN-2014 12:40:46
 
 VCs for procedure_getrate :
  -----------------------------------------------------------------------------
@@ -179,12 +179,12 @@ VCs for procedure_getrate :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/heart/init.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/heart/init.vcg
 procedure Heart.Init
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:00
+VCs simplified 01-JUN-2014 12:40:46
 
 VCs for procedure_init :
  -----------------------------------------------------------------------------
@@ -199,12 +199,12 @@ VCs for procedure_init :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/heart/setimpulse.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/heart/setimpulse.vcg
 procedure Heart.SetImpulse
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:00
+VCs simplified 01-JUN-2014 12:40:46
 
 VCs for procedure_setimpulse :
  -----------------------------------------------------------------------------
@@ -215,12 +215,12 @@ VCs for procedure_setimpulse :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/heart/tick.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/heart/tick.vcg
 procedure Heart.Tick
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:00
+VCs simplified 01-JUN-2014 12:40:46
 
 VCs for procedure_tick :
  -----------------------------------------------------------------------------
@@ -247,12 +247,12 @@ VCs for procedure_tick :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/hrm/getrate.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/hrm/getrate.vcg
 procedure HRM.GetRate
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:18
+VCs simplified 01-JUN-2014 12:41:05
 
 VCs for procedure_getrate :
  -----------------------------------------------------------------------------
@@ -265,12 +265,12 @@ VCs for procedure_getrate :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/hrm/init.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/hrm/init.vcg
 procedure HRM.Init
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:18
+VCs simplified 01-JUN-2014 12:41:05
 
 VCs for procedure_init :
  -----------------------------------------------------------------------------
@@ -281,12 +281,12 @@ VCs for procedure_init :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/hrm/ison.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/hrm/ison.vcg
 function HRM.IsOn
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:18
+VCs simplified 01-JUN-2014 12:41:05
 
 VCs for function_ison :
  -----------------------------------------------------------------------------
@@ -296,12 +296,12 @@ VCs for function_ison :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/hrm/off.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/hrm/off.vcg
 procedure HRM.Off
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:18
+VCs simplified 01-JUN-2014 12:41:05
 
 VCs for procedure_off :
  -----------------------------------------------------------------------------
@@ -311,12 +311,12 @@ VCs for procedure_off :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/hrm/on.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/hrm/on.vcg
 procedure HRM.On
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:18
+VCs simplified 01-JUN-2014 12:41:05
 
 VCs for procedure_on :
  -----------------------------------------------------------------------------
@@ -327,12 +327,12 @@ VCs for procedure_on :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/hrm/tick.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/hrm/tick.vcg
 procedure HRM.Tick
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:18
+VCs simplified 01-JUN-2014 12:41:05
 
 VCs for procedure_tick :
  -----------------------------------------------------------------------------
@@ -348,244 +348,258 @@ VCs for procedure_tick :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/bpmarrayupdate.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/icd/bpmarrayupdate.vcg
 procedure ICD.BPMArrayUpdate
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:45
 
-VCs simplified 31-MAY-2014 19:44:04
+VCs simplified 01-JUN-2014 12:40:50
 
 VCs for procedure_bpmarrayupdate :
  -----------------------------------------------------------------------------
 | #   | From  | To                  | Proved By          | Dead Path | Status |
 |-----------------------------------------------------------------------------
-| 1   | start | rtc check @ 144     | Inference          | No DPC    |   I-   |
-| 2   | start | rtc check @ 145     | Inference          | No DPC    |   I-   |
-| 3   | start | rtc check @ 146     | Inference          | No DPC    |   I-   |
-| 4   | start | rtc check @ 147     | Inference          | No DPC    |   I-   |
-| 5   | start | rtc check @ 148     | Inference          | No DPC    |   I-   |
-| 6   | start | rtc check @ 149     | Inference          | No DPC    |   I-   |
+| 1   | start | rtc check @ 146     | Inference          | No DPC    |   I-   |
+| 2   | start | rtc check @ 147     | Inference          | No DPC    |   I-   |
+| 3   | start | rtc check @ 148     | Inference          | No DPC    |   I-   |
+| 4   | start | rtc check @ 149     | Inference          | No DPC    |   I-   |
+| 5   | start | rtc check @ 150     | Inference          | No DPC    |   I-   |
+| 6   | start | rtc check @ 151     | Inference          | No DPC    |   I-   |
 | 7   | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/calculateandsetimpluse.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/icd/calculateandsetimpluse.vcg
 procedure ICD.CalculateAndSetImpluse
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:45
 
-VCs simplified 31-MAY-2014 19:44:14
+VCs simplified 01-JUN-2014 12:40:60
 
 VCs for procedure_calculateandsetimpluse :
  -----------------------------------------------------------------------------
 | #   | From  | To                  | Proved By          | Dead Path | Status |
 |-----------------------------------------------------------------------------
-| 1   | start | rtc check @ 157     | Inference          | No DPC    |   I-   |
-| 2   | start | rtc check @ 164     | Inference          | No DPC    |   I-   |
-| 3   | start | rtc check @ 168     | Inference          | No DPC    |   I-   |
-| 4   | start | rtc check @ 169     | Inference          | No DPC    |   I-   |
-| 5   | start | rtc check @ 178     | Inference          | No DPC    |   I-   |
-| 6   | start | rtc check @ 178     | Inference          | No DPC    |   I-   |
-| 7   | start | rtc check @ 180     | Inference          | No DPC    |   I-   |
-| 8   | start | rtc check @ 180     | Inference          | No DPC    |   I-   |
+| 1   | start | rtc check @ 160     | Inference          | No DPC    |   I-   |
+| 2   | start | rtc check @ 167     | Inference          | No DPC    |   I-   |
+| 3   | start | rtc check @ 171     | Inference          | No DPC    |   I-   |
+| 4   | start | rtc check @ 172     | Inference          | No DPC    |   I-   |
+| 5   | start | rtc check @ 182     | Inference          | No DPC    |   I-   |
+| 6   | start | rtc check @ 182     | Inference          | No DPC    |   I-   |
+| 7   | start | rtc check @ 185     | Inference          | No DPC    |   I-   |
+| 8   | start | rtc check @ 185     | Inference          | No DPC    |   I-   |
 | 9   | start | rtc check @ 185     | Inference          | No DPC    |   I-   |
 | 10  | start | rtc check @ 185     | Inference          | No DPC    |   I-   |
-| 11  | start | rtc check @ 187     | Inference          | No DPC    |   I-   |
-| 12  | start | rtc check @ 187     | Undischarged       | No DPC    |   U-   |
-| 13  | start | rtc check @ 189     | Inference          | No DPC    |   I-   |
-| 14  | start | rtc check @ 189     | Inference          | No DPC    |   I-   |
-| 15  | start | rtc check @ 191     | Inference          | No DPC    |   I-   |
-| 16  | start | rtc check @ 191     | Inference          | No DPC    |   I-   |
-| 17  | start | rtc check @ 192     | Inference          | No DPC    |   I-   |
-| 18  | start | rtc check @ 192     | Undischarged       | No DPC    |   U-   |
-| 19  | start | rtc check @ 197     | Inference          | No DPC    |   I-   |
-| 20  | start | rtc check @ 197     | Inference          | No DPC    |   I-   |
-| 21  | start | rtc check @ 197     | Inference          | No DPC    |   I-   |
-| 22  | start | rtc check @ 197     | Inference          | No DPC    |   I-   |
-| 23  | start | rtc check @ 198     | Inference          | No DPC    |   I-   |
-| 24  | start | rtc check @ 198     | Inference          | No DPC    |   I-   |
-| 25  | start | rtc check @ 198     | Inference          | No DPC    |   I-   |
-| 26  | start | rtc check @ 198     | Inference          | No DPC    |   I-   |
-| 27  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
-| 28  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
-| 29  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
-| 30  | start |    assert @ finish  | False              | No DPC    |   F-   |
-| 31  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
-| 32  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
-| 33  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
-| 34  | start |    assert @ finish  | False              | No DPC    |   F-   |
-| 35  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
-| 36  | start |    assert @ finish  | False              | No DPC    |   F-   |
-| 37  | start |    assert @ finish  | False              | No DPC    |   F-   |
+| 11  | start | rtc check @ 190     | Inference          | No DPC    |   I-   |
+| 12  | start | rtc check @ 190     | Inference          | No DPC    |   I-   |
+| 13  | start | rtc check @ 190     | Inference          | No DPC    |   I-   |
+| 14  | start | rtc check @ 190     | Inference          | No DPC    |   I-   |
+| 15  | start | rtc check @ 193     | Inference          | No DPC    |   I-   |
+| 16  | start | rtc check @ 193     | Inference          | No DPC    |   I-   |
+| 17  | start | rtc check @ 193     | Inference          | No DPC    |   I-   |
+| 18  | start | rtc check @ 193     | Inference          | No DPC    |   I-   |
+| 19  | start | rtc check @ 196     | Inference          | No DPC    |   I-   |
+| 20  | start | rtc check @ 196     | Inference          | No DPC    |   I-   |
+| 21  | start | rtc check @ 196     | Inference          | No DPC    |   I-   |
+| 22  | start | rtc check @ 196     | Inference          | No DPC    |   I-   |
+| 23  | start | rtc check @ 196     | Contradiction      | No DPC    |   X-   |
+| 24  | start | rtc check @ 196     | Inference          | No DPC    |   I-   |
+| 25  | start | rtc check @ 196     | Contradiction      | No DPC    |   X-   |
+| 26  | start | rtc check @ 196     | Inference          | No DPC    |   I-   |
+| 27  | start | rtc check @ 198     | Inference          | No DPC    |   I-   |
+| 28  | start | rtc check @ 198     | Inference          | No DPC    |   I-   |
+| 29  | start | rtc check @ 198     | Inference          | No DPC    |   I-   |
+| 30  | start | rtc check @ 198     | Inference          | No DPC    |   I-   |
+| 31  | start | rtc check @ 200     | Inference          | No DPC    |   I-   |
+| 32  | start | rtc check @ 200     | Inference          | No DPC    |   I-   |
+| 33  | start | rtc check @ 200     | Inference          | No DPC    |   I-   |
+| 34  | start | rtc check @ 200     | Inference          | No DPC    |   I-   |
+| 35  | start | rtc check @ 206     | Inference          | No DPC    |   I-   |
+| 36  | start | rtc check @ 206     | Inference          | No DPC    |   I-   |
+| 37  | start | rtc check @ 206     | Inference          | No DPC    |   I-   |
+| 38  | start | rtc check @ 206     | Inference          | No DPC    |   I-   |
+| 39  | start | rtc check @ 206     | Inference          | No DPC    |   I-   |
+| 40  | start | rtc check @ 206     | Inference          | No DPC    |   I-   |
+| 41  | start | rtc check @ 206     | Inference          | No DPC    |   I-   |
+| 42  | start | rtc check @ 206     | Inference          | No DPC    |   I-   |
+| 43  | start | rtc check @ 206     | Inference          | No DPC    |   I-   |
+| 44  | start | rtc check @ 206     | Inference          | No DPC    |   I-   |
+| 45  | start | rtc check @ 206     | Inference          | No DPC    |   I-   |
+| 46  | start | rtc check @ 206     | Inference          | No DPC    |   I-   |
+| 47  | start | rtc check @ 206     | Inference          | No DPC    |   I-   |
+| 48  | start | rtc check @ 206     | Inference          | No DPC    |   I-   |
+| 49  | start | rtc check @ 206     | Inference          | No DPC    |   I-   |
+| 50  | start | rtc check @ 206     | Inference          | No DPC    |   I-   |
+| 51  | start | rtc check @ 207     | Inference          | No DPC    |   I-   |
+| 52  | start | rtc check @ 207     | Inference          | No DPC    |   I-   |
+| 53  | start | rtc check @ 207     | Inference          | No DPC    |   I-   |
+| 54  | start | rtc check @ 207     | Inference          | No DPC    |   I-   |
+| 55  | start | rtc check @ 207     | Inference          | No DPC    |   I-   |
+| 56  | start | rtc check @ 207     | Inference          | No DPC    |   I-   |
+| 57  | start | rtc check @ 207     | Inference          | No DPC    |   I-   |
+| 58  | start | rtc check @ 207     | Inference          | No DPC    |   I-   |
+| 59  | start | rtc check @ 207     | Inference          | No DPC    |   I-   |
+| 60  | start | rtc check @ 207     | Inference          | No DPC    |   I-   |
+| 61  | start | rtc check @ 207     | Inference          | No DPC    |   I-   |
+| 62  | start | rtc check @ 207     | Inference          | No DPC    |   I-   |
+| 63  | start | rtc check @ 207     | Inference          | No DPC    |   I-   |
+| 64  | start | rtc check @ 207     | Inference          | No DPC    |   I-   |
+| 65  | start | rtc check @ 207     | Inference          | No DPC    |   I-   |
+| 66  | start | rtc check @ 207     | Inference          | No DPC    |   I-   |
+| 67  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 68  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 69  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 70  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 71  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 72  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 73  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 74  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 75  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 76  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 77  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 78  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 79  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 80  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 81  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 82  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 83  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 84  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 85  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 86  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 87  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 88  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 89  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 90  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 91  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 92  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 93  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 94  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 95  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 96  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 97  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 98  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 99  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 100 | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 101 | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 102 | start |    assert @ finish  | Contradiction      | No DPC    |   X-   |
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/calculateimpluse.vcg
-procedure ICD.CalculateImpluse
-
-VCs generated 31-MAY-2014 19:37:37
-
-VCs simplified 31-MAY-2014 19:44:13
-
-VCs for procedure_calculateimpluse :
- -----------------------------------------------------------------------------
-| #   | From  | To                  | Proved By          | Dead Path | Status |
-|-----------------------------------------------------------------------------
-| 1   | start | rtc check @ 157     | Inference          | No DPC    |   I-   |
-| 2   | start | rtc check @ 164     | Inference          | No DPC    |   I-   |
-| 3   | start | rtc check @ 168     | Inference          | No DPC    |   I-   |
-| 4   | start | rtc check @ 169     | Inference          | No DPC    |   I-   |
-| 5   | start | rtc check @ 178     | Inference          | No DPC    |   I-   |
-| 6   | start | rtc check @ 178     | Inference          | No DPC    |   I-   |
-| 7   | start | rtc check @ 180     | Inference          | No DPC    |   I-   |
-| 8   | start | rtc check @ 180     | Inference          | No DPC    |   I-   |
-| 9   | start | rtc check @ 185     | Inference          | No DPC    |   I-   |
-| 10  | start | rtc check @ 185     | Inference          | No DPC    |   I-   |
-| 11  | start | rtc check @ 187     | Inference          | No DPC    |   I-   |
-| 12  | start | rtc check @ 187     | Undischarged       | No DPC    |   U-   |
-| 13  | start | rtc check @ 189     | Inference          | No DPC    |   I-   |
-| 14  | start | rtc check @ 189     | Inference          | No DPC    |   I-   |
-| 15  | start | rtc check @ 191     | Inference          | No DPC    |   I-   |
-| 16  | start | rtc check @ 191     | Inference          | No DPC    |   I-   |
-| 17  | start | rtc check @ 192     | Inference          | No DPC    |   I-   |
-| 18  | start | rtc check @ 192     | Undischarged       | No DPC    |   U-   |
-| 19  | start | rtc check @ 197     | Inference          | No DPC    |   I-   |
-| 20  | start | rtc check @ 197     | Inference          | No DPC    |   I-   |
-| 21  | start | rtc check @ 197     | Inference          | No DPC    |   I-   |
-| 22  | start | rtc check @ 197     | Inference          | No DPC    |   I-   |
-| 23  | start | rtc check @ 198     | Inference          | No DPC    |   I-   |
-| 24  | start | rtc check @ 198     | Inference          | No DPC    |   I-   |
-| 25  | start | rtc check @ 198     | Inference          | No DPC    |   I-   |
-| 26  | start | rtc check @ 198     | Inference          | No DPC    |   I-   |
-| 27  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 28  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 29  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 30  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 31  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 32  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 33  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 34  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 35  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 36  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 37  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
- -----------------------------------------------------------------------------
-
-
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/getabnormalnum.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/icd/getabnormalnum.vcg
 procedure ICD.GetAbnormalNum
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:05
+VCs simplified 01-JUN-2014 12:40:51
 
 VCs for procedure_getabnormalnum :
  -----------------------------------------------------------------------------
 | #   | From  | To                  | Proved By          | Dead Path | Status |
 |-----------------------------------------------------------------------------
-| 1   | start | rtc check @ 80      | Inference          | No DPC    |   I-   |
-| 2   | start | rtc check @ 81      | Inference          | No DPC    |   I-   |
-| 3   | start | rtc check @ 82      | Inference          | No DPC    |   I-   |
-| 4   | start | rtc check @ 84      | Inference          | No DPC    |   I-   |
-| 5   | start | rtc check @ 84      | Inference          | No DPC    |   I-   |
-| 6   | start | rtc check @ 85      | Inference          | No DPC    |   I-   |
-| 7   | start | rtc check @ 85      | Inference          | No DPC    |   I-   |
-| 8   | start | rtc check @ 87      | Inference          | No DPC    |   I-   |
-| 9   | start | rtc check @ 87      | Inference          | No DPC    |   I-   |
-| 10  | start | rtc check @ 87      | Inference          | No DPC    |   I-   |
-| 11  | start | rtc check @ 87      | Inference          | No DPC    |   I-   |
-| 12  | start | rtc check @ 88      | Inference          | No DPC    |   I-   |
-| 13  | start | rtc check @ 88      | Inference          | No DPC    |   I-   |
-| 14  | start | rtc check @ 88      | Inference          | No DPC    |   I-   |
-| 15  | start | rtc check @ 88      | Inference          | No DPC    |   I-   |
-| 16  | start | rtc check @ 90      | Inference          | No DPC    |   I-   |
-| 17  | start | rtc check @ 90      | Inference          | No DPC    |   I-   |
-| 18  | start | rtc check @ 90      | Inference          | No DPC    |   I-   |
-| 19  | start | rtc check @ 90      | Inference          | No DPC    |   I-   |
-| 20  | start | rtc check @ 90      | Inference          | No DPC    |   I-   |
-| 21  | start | rtc check @ 90      | Inference          | No DPC    |   I-   |
-| 22  | start | rtc check @ 90      | Inference          | No DPC    |   I-   |
-| 23  | start | rtc check @ 90      | Inference          | No DPC    |   I-   |
-| 24  | start | rtc check @ 91      | Inference          | No DPC    |   I-   |
-| 25  | start | rtc check @ 91      | Inference          | No DPC    |   I-   |
-| 26  | start | rtc check @ 91      | Inference          | No DPC    |   I-   |
-| 27  | start | rtc check @ 91      | Inference          | No DPC    |   I-   |
-| 28  | start | rtc check @ 91      | Inference          | No DPC    |   I-   |
-| 29  | start | rtc check @ 91      | Inference          | No DPC    |   I-   |
-| 30  | start | rtc check @ 91      | Inference          | No DPC    |   I-   |
-| 31  | start | rtc check @ 91      | Inference          | No DPC    |   I-   |
-| 32  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
-| 33  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
-| 34  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
-| 35  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
-| 36  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
-| 37  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
-| 38  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
-| 39  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
-| 40  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
-| 41  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
-| 42  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
-| 43  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
-| 44  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
-| 45  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
-| 46  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
-| 47  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
-| 48  | start | rtc check @ 94      | Inference          | No DPC    |   I-   |
-| 49  | start | rtc check @ 94      | Inference          | No DPC    |   I-   |
-| 50  | start | rtc check @ 94      | Inference          | No DPC    |   I-   |
-| 51  | start | rtc check @ 94      | Inference          | No DPC    |   I-   |
-| 52  | start | rtc check @ 94      | Inference          | No DPC    |   I-   |
-| 53  | start | rtc check @ 94      | Inference          | No DPC    |   I-   |
-| 54  | start | rtc check @ 94      | Inference          | No DPC    |   I-   |
-| 55  | start | rtc check @ 94      | Inference          | No DPC    |   I-   |
-| 56  | start | rtc check @ 94      | Inference          | No DPC    |   I-   |
-| 57  | start | rtc check @ 94      | Inference          | No DPC    |   I-   |
-| 58  | start | rtc check @ 94      | Inference          | No DPC    |   I-   |
-| 59  | start | rtc check @ 94      | Inference          | No DPC    |   I-   |
-| 60  | start | rtc check @ 94      | Inference          | No DPC    |   I-   |
-| 61  | start | rtc check @ 94      | Inference          | No DPC    |   I-   |
-| 62  | start | rtc check @ 94      | Inference          | No DPC    |   I-   |
-| 63  | start | rtc check @ 94      | Inference          | No DPC    |   I-   |
-| 64  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 65  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 66  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 67  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 68  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 69  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 70  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 71  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 72  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 73  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 74  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 75  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 76  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 77  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 78  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 79  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 80  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 81  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 82  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 83  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 84  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 85  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 86  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 87  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 88  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 89  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 90  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 91  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 92  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 93  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 94  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 95  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
+| 1   | start | rtc check @ 82      | Inference          | No DPC    |   I-   |
+| 2   | start | rtc check @ 83      | Inference          | No DPC    |   I-   |
+| 3   | start | rtc check @ 84      | Inference          | No DPC    |   I-   |
+| 4   | start | rtc check @ 86      | Inference          | No DPC    |   I-   |
+| 5   | start | rtc check @ 86      | Inference          | No DPC    |   I-   |
+| 6   | start | rtc check @ 87      | Inference          | No DPC    |   I-   |
+| 7   | start | rtc check @ 87      | Inference          | No DPC    |   I-   |
+| 8   | start | rtc check @ 89      | Inference          | No DPC    |   I-   |
+| 9   | start | rtc check @ 89      | Inference          | No DPC    |   I-   |
+| 10  | start | rtc check @ 89      | Inference          | No DPC    |   I-   |
+| 11  | start | rtc check @ 89      | Inference          | No DPC    |   I-   |
+| 12  | start | rtc check @ 90      | Inference          | No DPC    |   I-   |
+| 13  | start | rtc check @ 90      | Inference          | No DPC    |   I-   |
+| 14  | start | rtc check @ 90      | Inference          | No DPC    |   I-   |
+| 15  | start | rtc check @ 90      | Inference          | No DPC    |   I-   |
+| 16  | start | rtc check @ 92      | Inference          | No DPC    |   I-   |
+| 17  | start | rtc check @ 92      | Inference          | No DPC    |   I-   |
+| 18  | start | rtc check @ 92      | Inference          | No DPC    |   I-   |
+| 19  | start | rtc check @ 92      | Inference          | No DPC    |   I-   |
+| 20  | start | rtc check @ 92      | Inference          | No DPC    |   I-   |
+| 21  | start | rtc check @ 92      | Inference          | No DPC    |   I-   |
+| 22  | start | rtc check @ 92      | Inference          | No DPC    |   I-   |
+| 23  | start | rtc check @ 92      | Inference          | No DPC    |   I-   |
+| 24  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
+| 25  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
+| 26  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
+| 27  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
+| 28  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
+| 29  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
+| 30  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
+| 31  | start | rtc check @ 93      | Inference          | No DPC    |   I-   |
+| 32  | start | rtc check @ 95      | Inference          | No DPC    |   I-   |
+| 33  | start | rtc check @ 95      | Inference          | No DPC    |   I-   |
+| 34  | start | rtc check @ 95      | Inference          | No DPC    |   I-   |
+| 35  | start | rtc check @ 95      | Inference          | No DPC    |   I-   |
+| 36  | start | rtc check @ 95      | Inference          | No DPC    |   I-   |
+| 37  | start | rtc check @ 95      | Inference          | No DPC    |   I-   |
+| 38  | start | rtc check @ 95      | Inference          | No DPC    |   I-   |
+| 39  | start | rtc check @ 95      | Inference          | No DPC    |   I-   |
+| 40  | start | rtc check @ 95      | Inference          | No DPC    |   I-   |
+| 41  | start | rtc check @ 95      | Inference          | No DPC    |   I-   |
+| 42  | start | rtc check @ 95      | Inference          | No DPC    |   I-   |
+| 43  | start | rtc check @ 95      | Inference          | No DPC    |   I-   |
+| 44  | start | rtc check @ 95      | Inference          | No DPC    |   I-   |
+| 45  | start | rtc check @ 95      | Inference          | No DPC    |   I-   |
+| 46  | start | rtc check @ 95      | Inference          | No DPC    |   I-   |
+| 47  | start | rtc check @ 95      | Inference          | No DPC    |   I-   |
+| 48  | start | rtc check @ 96      | Inference          | No DPC    |   I-   |
+| 49  | start | rtc check @ 96      | Inference          | No DPC    |   I-   |
+| 50  | start | rtc check @ 96      | Inference          | No DPC    |   I-   |
+| 51  | start | rtc check @ 96      | Inference          | No DPC    |   I-   |
+| 52  | start | rtc check @ 96      | Inference          | No DPC    |   I-   |
+| 53  | start | rtc check @ 96      | Inference          | No DPC    |   I-   |
+| 54  | start | rtc check @ 96      | Inference          | No DPC    |   I-   |
+| 55  | start | rtc check @ 96      | Inference          | No DPC    |   I-   |
+| 56  | start | rtc check @ 96      | Inference          | No DPC    |   I-   |
+| 57  | start | rtc check @ 96      | Inference          | No DPC    |   I-   |
+| 58  | start | rtc check @ 96      | Inference          | No DPC    |   I-   |
+| 59  | start | rtc check @ 96      | Inference          | No DPC    |   I-   |
+| 60  | start | rtc check @ 96      | Inference          | No DPC    |   I-   |
+| 61  | start | rtc check @ 96      | Inference          | No DPC    |   I-   |
+| 62  | start | rtc check @ 96      | Inference          | No DPC    |   I-   |
+| 63  | start | rtc check @ 96      | Inference          | No DPC    |   I-   |
+| 64  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 65  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 66  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 67  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 68  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 69  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 70  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 71  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 72  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 73  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 74  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 75  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 76  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 77  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 78  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 79  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 80  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 81  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 82  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 83  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 84  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 85  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 86  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 87  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 88  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 89  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 90  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 91  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 92  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 93  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 94  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 95  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/init.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/icd/init.vcg
 procedure ICD.Init
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:14
+VCs simplified 01-JUN-2014 12:40:60
 
 VCs for procedure_init :
  -----------------------------------------------------------------------------
@@ -599,40 +613,41 @@ VCs for procedure_init :
 | 6   | start | rtc check @ 14      | Inference          | No DPC    |   I-   |
 | 7   | start | rtc check @ 15      | Inference          | No DPC    |   I-   |
 | 8   | start | rtc check @ 19      | Inference          | No DPC    |   I-   |
-| 9   | start | rtc check @ 22      | Inference          | No DPC    |   I-   |
+| 9   | start | rtc check @ 20      | Inference          | No DPC    |   I-   |
 | 10  | start | rtc check @ 23      | Inference          | No DPC    |   I-   |
 | 11  | start | rtc check @ 24      | Inference          | No DPC    |   I-   |
 | 12  | start | rtc check @ 25      | Inference          | No DPC    |   I-   |
 | 13  | start | rtc check @ 26      | Inference          | No DPC    |   I-   |
-| 14  | start | rtc check @ 28      | Inference          | No DPC    |   I-   |
-| 15  | start | rtc check @ 31      | Inference          | No DPC    |   I-   |
+| 14  | start | rtc check @ 27      | Inference          | No DPC    |   I-   |
+| 15  | start | rtc check @ 29      | Inference          | No DPC    |   I-   |
 | 16  | start | rtc check @ 32      | Inference          | No DPC    |   I-   |
-| 17  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
+| 17  | start | rtc check @ 33      | Inference          | No DPC    |   I-   |
+| 18  | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/isfibrillation.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/icd/isfibrillation.vcg
 procedure ICD.isFibrillation
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:45
 
-VCs simplified 31-MAY-2014 19:44:14
+VCs simplified 01-JUN-2014 12:40:60
 
 VCs for procedure_isfibrillation :
  -----------------------------------------------------------------------------
 | #   | From  | To                  | Proved By          | Dead Path | Status |
 |-----------------------------------------------------------------------------
-| 1   | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 2   | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
+| 1   | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 2   | start |    assert @ finish  | Inference          | No DPC    |   I-   |
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/ison.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/icd/ison.vcg
 function ICD.IsOn
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:13
+VCs simplified 01-JUN-2014 12:40:60
 
 VCs for function_ison :
  -----------------------------------------------------------------------------
@@ -642,47 +657,48 @@ VCs for function_ison :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/istachycardia.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/icd/istachycardia.vcg
 procedure ICD.isTachycardia
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:45
 
-VCs simplified 31-MAY-2014 19:44:17
+VCs simplified 01-JUN-2014 12:41:05
 
 VCs for procedure_istachycardia :
  -----------------------------------------------------------------------------
 | #   | From  | To                  | Proved By          | Dead Path | Status |
 |-----------------------------------------------------------------------------
-| 1   | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 2   | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
+| 1   | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 2   | start |    assert @ finish  | Inference          | No DPC    |   I-   |
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/iswait.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/icd/iswait.vcg
 procedure ICD.isWait
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:45
 
-VCs simplified 31-MAY-2014 19:44:04
+VCs simplified 01-JUN-2014 12:40:51
 
 VCs for procedure_iswait :
  -----------------------------------------------------------------------------
 | #   | From  | To                  | Proved By          | Dead Path | Status |
 |-----------------------------------------------------------------------------
-| 1   | start | rtc check @ 209     | Undischarged       | No DPC    |   U-   |
-| 2   | start | rtc check @ 211     | Inference          | No DPC    |   I-   |
-| 3   | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 4   | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
-| 5   | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
+| 1   | start | rtc check @ 219     | Inference          | No DPC    |   I-   |
+| 2   | start | rtc check @ 221     | Inference          | No DPC    |   I-   |
+| 3   | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 4   | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 5   | start |    assert @ finish  | Inference          | No DPC    |   I-   |
+| 6   | start |    assert @ finish  | Inference          | No DPC    |   I-   |
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/off.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/icd/off.vcg
 procedure ICD.Off
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:14
+VCs simplified 01-JUN-2014 12:40:60
 
 VCs for procedure_off :
  -----------------------------------------------------------------------------
@@ -692,96 +708,96 @@ VCs for procedure_off :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/on.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/icd/on.vcg
 procedure ICD.On
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:17
+VCs simplified 01-JUN-2014 12:41:05
 
 VCs for procedure_on :
  -----------------------------------------------------------------------------
 | #   | From  | To                  | Proved By          | Dead Path | Status |
 |-----------------------------------------------------------------------------
-| 1   | start | rtc check @ 39      | Inference          | No DPC    |   I-   |
-| 2   | start | rtc check @ 40      | Inference          | No DPC    |   I-   |
-| 3   | start | rtc check @ 41      | Inference          | No DPC    |   I-   |
-| 4   | start | rtc check @ 42      | Inference          | No DPC    |   I-   |
-| 5   | start | rtc check @ 43      | Inference          | No DPC    |   I-   |
-| 6   | start | rtc check @ 44      | Inference          | No DPC    |   I-   |
-| 7   | start | rtc check @ 48      | Inference          | No DPC    |   I-   |
-| 8   | start | rtc check @ 51      | Inference          | No DPC    |   I-   |
-| 9   | start | rtc check @ 52      | Inference          | No DPC    |   I-   |
-| 10  | start | rtc check @ 53      | Inference          | No DPC    |   I-   |
-| 11  | start | rtc check @ 54      | Inference          | No DPC    |   I-   |
-| 12  | start | rtc check @ 55      | Inference          | No DPC    |   I-   |
-| 13  | start | rtc check @ 57      | Inference          | No DPC    |   I-   |
-| 14  | start | rtc check @ 60      | Inference          | No DPC    |   I-   |
-| 15  | start | rtc check @ 61      | Inference          | No DPC    |   I-   |
+| 1   | start | rtc check @ 40      | Inference          | No DPC    |   I-   |
+| 2   | start | rtc check @ 41      | Inference          | No DPC    |   I-   |
+| 3   | start | rtc check @ 42      | Inference          | No DPC    |   I-   |
+| 4   | start | rtc check @ 43      | Inference          | No DPC    |   I-   |
+| 5   | start | rtc check @ 44      | Inference          | No DPC    |   I-   |
+| 6   | start | rtc check @ 45      | Inference          | No DPC    |   I-   |
+| 7   | start | rtc check @ 49      | Inference          | No DPC    |   I-   |
+| 8   | start | rtc check @ 52      | Inference          | No DPC    |   I-   |
+| 9   | start | rtc check @ 53      | Inference          | No DPC    |   I-   |
+| 10  | start | rtc check @ 54      | Inference          | No DPC    |   I-   |
+| 11  | start | rtc check @ 55      | Inference          | No DPC    |   I-   |
+| 12  | start | rtc check @ 56      | Inference          | No DPC    |   I-   |
+| 13  | start | rtc check @ 58      | Inference          | No DPC    |   I-   |
+| 14  | start | rtc check @ 61      | Inference          | No DPC    |   I-   |
+| 15  | start | rtc check @ 62      | Inference          | No DPC    |   I-   |
 | 16  | start |    assert @ finish  | Inference          | No DPC    |   I-   |
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/setfibrillationbound.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/icd/setfibrillationbound.vcg
 procedure ICD.setFibrillationBound
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:45
 
-VCs simplified 31-MAY-2014 19:44:17
+VCs simplified 01-JUN-2014 12:41:05
 
 VCs for procedure_setfibrillationbound :
  -----------------------------------------------------------------------------
 | #   | From  | To                  | Proved By          | Dead Path | Status |
 |-----------------------------------------------------------------------------
-| 1   | start | rtc check @ 129     | Inference          | No DPC    |   I-   |
-| 2   | start | rtc check @ 129     | Inference          | No DPC    |   I-   |
-| 3   | start |    assert @ finish  | Undischarged       | No DPC    |   U-   |
+| 1   | start | rtc check @ 131     | Inference          | No DPC    |   I-   |
+| 2   | start | rtc check @ 131     | Inference          | No DPC    |   I-   |
+| 3   | start |    assert @ finish  | Inference          | No DPC    |   I-   |
 | 4   | start |    assert @ finish  | Inference          | No DPC    |   I-   |
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/settachycardiabound.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/icd/settachycardiabound.vcg
 procedure ICD.setTachycardiaBound
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:45
 
-VCs simplified 31-MAY-2014 19:44:12
+VCs simplified 01-JUN-2014 12:40:60
 
 VCs for procedure_settachycardiabound :
  -----------------------------------------------------------------------------
 | #   | From  | To                  | Proved By          | Dead Path | Status |
 |-----------------------------------------------------------------------------
-| 1   | start | rtc check @ 138     | Inference          | No DPC    |   I-   |
-| 2   | start | rtc check @ 138     | Inference          | No DPC    |   I-   |
-| 3   | start |    assert @ finish  | Undischarged       | No DPC    |   U-   |
+| 1   | start | rtc check @ 140     | Inference          | No DPC    |   I-   |
+| 2   | start | rtc check @ 140     | Inference          | No DPC    |   I-   |
+| 3   | start |    assert @ finish  | Inference          | No DPC    |   I-   |
 | 4   | start |    assert @ finish  | Inference          | No DPC    |   I-   |
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/tick.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/icd/tick.vcg
 procedure ICD.Tick
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:45
 
-VCs simplified 31-MAY-2014 19:44:16
+VCs simplified 01-JUN-2014 12:41:03
 
 VCs for procedure_tick :
  -----------------------------------------------------------------------------
 | #   | From  | To                  | Proved By          | Dead Path | Status |
 |-----------------------------------------------------------------------------
-| 1   | start | rtc check @ 221     | Inference          | No DPC    |   I-   |
-| 2   | start | pre check @ 229     | Undischarged       | No DPC    |   U-   |
-| 3   | start | rtc check @ 231     | Inference          | No DPC    |   I-   |
+| 1   | start | rtc check @ 232     | Inference          | No DPC    |   I-   |
+| 2   | start | pre check @ 240     | Undischarged       | No DPC    |   U-   |
+| 3   | start | rtc check @ 242     | Inference          | No DPC    |   I-   |
 | 4   | start |    assert @ finish  | Examiner           | No DPC    |   E-   |
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/impulsegenerator/init.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/impulsegenerator/init.vcg
 procedure ImpulseGenerator.Init
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:04
+VCs simplified 01-JUN-2014 12:40:50
 
 VCs for procedure_init :
  -----------------------------------------------------------------------------
@@ -792,12 +808,12 @@ VCs for procedure_init :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/impulsegenerator/ison.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/impulsegenerator/ison.vcg
 function ImpulseGenerator.IsOn
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:04
+VCs simplified 01-JUN-2014 12:40:50
 
 VCs for function_ison :
  -----------------------------------------------------------------------------
@@ -807,12 +823,12 @@ VCs for function_ison :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/impulsegenerator/off.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/impulsegenerator/off.vcg
 procedure ImpulseGenerator.Off
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:04
+VCs simplified 01-JUN-2014 12:40:50
 
 VCs for procedure_off :
  -----------------------------------------------------------------------------
@@ -822,12 +838,12 @@ VCs for procedure_off :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/impulsegenerator/on.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/impulsegenerator/on.vcg
 procedure ImpulseGenerator.On
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:04
+VCs simplified 01-JUN-2014 12:40:50
 
 VCs for procedure_on :
  -----------------------------------------------------------------------------
@@ -837,12 +853,12 @@ VCs for procedure_on :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/impulsegenerator/setimpulse.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/impulsegenerator/setimpulse.vcg
 procedure ImpulseGenerator.SetImpulse
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:04
+VCs simplified 01-JUN-2014 12:40:50
 
 VCs for procedure_setimpulse :
  -----------------------------------------------------------------------------
@@ -854,12 +870,12 @@ VCs for procedure_setimpulse :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/impulsegenerator/tick.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/impulsegenerator/tick.vcg
 procedure ImpulseGenerator.Tick
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:04
+VCs simplified 01-JUN-2014 12:40:50
 
 VCs for procedure_tick :
  -----------------------------------------------------------------------------
@@ -871,12 +887,12 @@ VCs for procedure_tick :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/measures/limit.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/measures/limit.vcg
 function Measures.Limit
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:00
+VCs simplified 01-JUN-2014 12:40:46
 
 VCs for function_limit :
  -----------------------------------------------------------------------------
@@ -891,12 +907,12 @@ VCs for function_limit :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/measures/limitbpm.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/measures/limitbpm.vcg
 function Measures.LimitBPM
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:00
+VCs simplified 01-JUN-2014 12:40:46
 
 VCs for function_limitbpm :
  -----------------------------------------------------------------------------
@@ -907,12 +923,12 @@ VCs for function_limitbpm :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/measures/limitfub.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/measures/limitfub.vcg
 function Measures.LimitFUB
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:43:60
+VCs simplified 01-JUN-2014 12:40:46
 
 VCs for function_limitfub :
  -----------------------------------------------------------------------------
@@ -923,12 +939,12 @@ VCs for function_limitfub :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/measures/limitjoules.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/measures/limitjoules.vcg
 function Measures.LimitJoules
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:00
+VCs simplified 01-JUN-2014 12:40:46
 
 VCs for function_limitjoules :
  -----------------------------------------------------------------------------
@@ -939,12 +955,12 @@ VCs for function_limitjoules :
  -----------------------------------------------------------------------------
 
 
-File /home/kaiminh/swen90010-2014/assignments/assignment-4/code/measures/limittub.vcg
+File /home/yingziz/ICD_Simulator/assignment_4/code/measures/limittub.vcg
 function Measures.LimitTUB
 
-VCs generated 31-MAY-2014 19:43:59
+VCs generated 01-JUN-2014 12:40:44
 
-VCs simplified 31-MAY-2014 19:44:00
+VCs simplified 01-JUN-2014 12:40:46
 
 VCs for function_limittub :
  -----------------------------------------------------------------------------
@@ -958,26 +974,21 @@ VCs for function_limittub :
 ===============================================================================
 Summary:
 
-The following subprograms have VCs proved false:
+The following subprograms have VCs proved by contradiction:
 
-   4  /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/calculateandsetimpluse.vcg
+   3  /home/yingziz/ICD_Simulator/assignment_4/code/icd/calculateandsetimpluse.vcg
 
 The following subprograms have undischarged VCs (excluding those proved false):
 
-   2  /home/kaiminh/swen90010-2014/assignments/assignment-4/code/closedloop/off.vcg
-   2  /home/kaiminh/swen90010-2014/assignments/assignment-4/code/closedloop/on.vcg
-   2  /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/calculateandsetimpluse.vcg
-   2  /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/calculateimpluse.vcg
-   1  /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/iswait.vcg
-   1  /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/setfibrillationbound.vcg
-   1  /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/settachycardiabound.vcg
-   1  /home/kaiminh/swen90010-2014/assignments/assignment-4/code/icd/tick.vcg
+   2  /home/yingziz/ICD_Simulator/assignment_4/code/closedloop/off.vcg
+   2  /home/yingziz/ICD_Simulator/assignment_4/code/closedloop/on.vcg
+   1  /home/yingziz/ICD_Simulator/assignment_4/code/icd/tick.vcg
 
 Proof strategies used by subprograms
 -------------------------------------------------------------------------
-Total subprograms with at least one VC proved by examiner:             13
-Total subprograms with at least one VC proved by simplifier:           38
-Total subprograms with at least one VC proved by contradiction:         0
+Total subprograms with at least one VC proved by examiner:              8
+Total subprograms with at least one VC proved by simplifier:           39
+Total subprograms with at least one VC proved by contradiction:         1
 Total subprograms with at least one VC proved with user proof rule:     0
 Total subprograms with at least one VC proved by ViCToR:                0
 Total subprograms with at least one VC proved using checker:            0
@@ -985,8 +996,8 @@ Total subprograms with at least one VC discharged by review:            0
 
 Maximum extent of strategies used for fully proved subprograms:
 -------------------------------------------------------------------------
-Total subprograms with proof completed by examiner:                     4
-Total subprograms with proof completed by simplifier:                  31
+Total subprograms with proof completed by examiner:                     2
+Total subprograms with proof completed by simplifier:                  37
 Total subprograms with proof completed with user defined rules:         0
 Total subprograms with proof completed by ViCToR:                       0
 Total subprograms with proof completed by checker:                      0
@@ -994,11 +1005,11 @@ Total subprograms with VCs discharged by review:                        0
 
 Overall subprogram summary:
 -------------------------------------------------------------------------
-Total subprograms fully proved:                                        35
-Total subprograms with at least one undischarged VC:                    7  <<<
-Total subprograms with at least one false VC:                           1  <<<
+Total subprograms fully proved:                                        39
+Total subprograms with at least one undischarged VC:                    3  <<<
+Total subprograms with at least one false VC:                           0
                                                                     -----
-Total subprograms for which VCs have been generated:                   43
+Total subprograms for which VCs have been generated:                   42
 
 
 ZombieScope Summary:
@@ -1016,13 +1027,13 @@ Note: (User) denotes where the Simplifier has proved VCs using one or
 Total VCs by type:                                       
                        -----------Proved By Or Using-----------
                 Total Examnr   Simp (User) ViCToR Checkr Review  False Undisc
-Assert/Post       108     60     40             0      0      0      4      4
+Assert/Post       123     10    111             0      0      0      0      2
 Precondition        7      0      4             0      0      0      0      3
 Check stmnt.        0      0      0             0      0      0      0      0
-Runtime check     200      0    195             0      0      0      0      5
+Runtime check     215      0    215             0      0      0      0      0
 Refinem. VCs        0      0      0             0      0      0      0      0
 Inherit. VCs        0      0      0             0      0      0      0      0
 ===============================================================================
-Totals:           315     60    239             0      0      0      4     12 <<<
-%Totals:                 19%    76%            0%     0%     0%     1%     4%
+Totals:           345     10    330             0      0      0      0      5 <<<
+%Totals:                  3%    96%            0%     0%     0%     0%     1%
 ===================== End of Semantic Analysis Summary ========================

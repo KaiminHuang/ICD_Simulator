@@ -5,7 +5,7 @@
 *****************************************************************************
 
 
-CREATED 31-MAY-2014, 19:43:59  SIMPLIFIED 31-MAY-2014, 19:44:00
+CREATED 01-JUN-2014, 12:40:45  SIMPLIFIED 01-JUN-2014, 12:40:46
 
 SPARK Simplifier GPL 2011
 Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
@@ -19,9 +19,9 @@ procedure ClosedLoop.setTachycardiaBound
 
 @@@@@@@@@@  VC: procedure_settachycardiabound_1.  @@@@@@@@@@
 ***  Proved C1:  ub >= integer__first
-     using hypothesis H52.
+     using hypothesis H54.
 ***  Proved C2:  ub <= integer__last
-     using hypothesis H53.
+     using hypothesis H55.
 ***  PROVED VC.
 
 

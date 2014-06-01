@@ -5,7 +5,7 @@
 *****************************************************************************
 
 
-CREATED 31-MAY-2014, 19:43:59  SIMPLIFIED 31-MAY-2014, 19:44:04
+CREATED 01-JUN-2014, 12:40:45  SIMPLIFIED 01-JUN-2014, 12:40:50
 
 SPARK Simplifier GPL 2011
 Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
@@ -19,129 +19,129 @@ procedure ICD.BPMArrayUpdate
 
 @@@@@@@@@@  VC: procedure_bpmarrayupdate_1.  @@@@@@@@@@
 ***  Proved C1:  fld_last5thrate(icdinstance) >= measures__bpm__first
-     using hypothesis H33.
+     using hypothesis H35.
 ***  Proved C2:  fld_last5thrate(icdinstance) <= measures__bpm__last
-     using hypothesis H34.
+     using hypothesis H36.
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_bpmarrayupdate_2.  @@@@@@@@@@
----  Hypothesis H39 has been replaced by "true".  (It is already present, as 
-          H33).
----  Hypothesis H40 has been replaced by "true".  (It is already present, as 
-          H34).
+---  Hypothesis H41 has been replaced by "true".  (It is already present, as 
+          H35).
+---  Hypothesis H42 has been replaced by "true".  (It is already present, as 
+          H36).
 %%%  Simplified C1 on reading formula in, to give:
      %%%  C1:  fld_last4thrate(icdinstance) >= measures__bpm__first
 %%%  Simplified C2 on reading formula in, to give:
      %%%  C2:  fld_last4thrate(icdinstance) <= measures__bpm__last
 ***  Proved C1:  fld_last4thrate(icdinstance) >= measures__bpm__first
-     using hypothesis H31.
+     using hypothesis H33.
 ***  Proved C2:  fld_last4thrate(icdinstance) <= measures__bpm__last
-     using hypothesis H32.
+     using hypothesis H34.
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_bpmarrayupdate_3.  @@@@@@@@@@
----  Hypothesis H39 has been replaced by "true".  (It is already present, as 
-          H33).
----  Hypothesis H40 has been replaced by "true".  (It is already present, as 
-          H34).
-%%%  Simplified H41 on reading formula in, to give:
-     %%%  H41:  fld_last4thrate(icdinstance) >= measures__bpm__first
-%%%  Simplified H42 on reading formula in, to give:
-     %%%  H42:  fld_last4thrate(icdinstance) <= measures__bpm__last
+---  Hypothesis H41 has been replaced by "true".  (It is already present, as 
+          H35).
+---  Hypothesis H42 has been replaced by "true".  (It is already present, as 
+          H36).
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  fld_last4thrate(icdinstance) >= measures__bpm__first
+%%%  Simplified H44 on reading formula in, to give:
+     %%%  H44:  fld_last4thrate(icdinstance) <= measures__bpm__last
 %%%  Simplified C1 on reading formula in, to give:
      %%%  C1:  fld_last3rdrate(icdinstance) >= measures__bpm__first
 %%%  Simplified C2 on reading formula in, to give:
      %%%  C2:  fld_last3rdrate(icdinstance) <= measures__bpm__last
 ***  Proved C1:  fld_last3rdrate(icdinstance) >= measures__bpm__first
-     using hypothesis H29.
+     using hypothesis H31.
 ***  Proved C2:  fld_last3rdrate(icdinstance) <= measures__bpm__last
-     using hypothesis H30.
+     using hypothesis H32.
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_bpmarrayupdate_4.  @@@@@@@@@@
----  Hypothesis H39 has been replaced by "true".  (It is already present, as 
-          H33).
----  Hypothesis H40 has been replaced by "true".  (It is already present, as 
-          H34).
-%%%  Simplified H41 on reading formula in, to give:
-     %%%  H41:  fld_last4thrate(icdinstance) >= measures__bpm__first
-%%%  Simplified H42 on reading formula in, to give:
-     %%%  H42:  fld_last4thrate(icdinstance) <= measures__bpm__last
+---  Hypothesis H41 has been replaced by "true".  (It is already present, as 
+          H35).
+---  Hypothesis H42 has been replaced by "true".  (It is already present, as 
+          H36).
 %%%  Simplified H43 on reading formula in, to give:
-     %%%  H43:  fld_last3rdrate(icdinstance) >= measures__bpm__first
+     %%%  H43:  fld_last4thrate(icdinstance) >= measures__bpm__first
 %%%  Simplified H44 on reading formula in, to give:
-     %%%  H44:  fld_last3rdrate(icdinstance) <= measures__bpm__last
+     %%%  H44:  fld_last4thrate(icdinstance) <= measures__bpm__last
+%%%  Simplified H45 on reading formula in, to give:
+     %%%  H45:  fld_last3rdrate(icdinstance) >= measures__bpm__first
+%%%  Simplified H46 on reading formula in, to give:
+     %%%  H46:  fld_last3rdrate(icdinstance) <= measures__bpm__last
 %%%  Simplified C1 on reading formula in, to give:
      %%%  C1:  fld_last2ndrate(icdinstance) >= measures__bpm__first
 %%%  Simplified C2 on reading formula in, to give:
      %%%  C2:  fld_last2ndrate(icdinstance) <= measures__bpm__last
 ***  Proved C1:  fld_last2ndrate(icdinstance) >= measures__bpm__first
-     using hypothesis H27.
+     using hypothesis H29.
 ***  Proved C2:  fld_last2ndrate(icdinstance) <= measures__bpm__last
-     using hypothesis H28.
+     using hypothesis H30.
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_bpmarrayupdate_5.  @@@@@@@@@@
----  Hypothesis H39 has been replaced by "true".  (It is already present, as 
-          H33).
----  Hypothesis H40 has been replaced by "true".  (It is already present, as 
-          H34).
-%%%  Simplified H41 on reading formula in, to give:
-     %%%  H41:  fld_last4thrate(icdinstance) >= measures__bpm__first
-%%%  Simplified H42 on reading formula in, to give:
-     %%%  H42:  fld_last4thrate(icdinstance) <= measures__bpm__last
+---  Hypothesis H41 has been replaced by "true".  (It is already present, as 
+          H35).
+---  Hypothesis H42 has been replaced by "true".  (It is already present, as 
+          H36).
 %%%  Simplified H43 on reading formula in, to give:
-     %%%  H43:  fld_last3rdrate(icdinstance) >= measures__bpm__first
+     %%%  H43:  fld_last4thrate(icdinstance) >= measures__bpm__first
 %%%  Simplified H44 on reading formula in, to give:
-     %%%  H44:  fld_last3rdrate(icdinstance) <= measures__bpm__last
+     %%%  H44:  fld_last4thrate(icdinstance) <= measures__bpm__last
 %%%  Simplified H45 on reading formula in, to give:
-     %%%  H45:  fld_last2ndrate(icdinstance) >= measures__bpm__first
+     %%%  H45:  fld_last3rdrate(icdinstance) >= measures__bpm__first
 %%%  Simplified H46 on reading formula in, to give:
-     %%%  H46:  fld_last2ndrate(icdinstance) <= measures__bpm__last
+     %%%  H46:  fld_last3rdrate(icdinstance) <= measures__bpm__last
+%%%  Simplified H47 on reading formula in, to give:
+     %%%  H47:  fld_last2ndrate(icdinstance) >= measures__bpm__first
+%%%  Simplified H48 on reading formula in, to give:
+     %%%  H48:  fld_last2ndrate(icdinstance) <= measures__bpm__last
 %%%  Simplified C1 on reading formula in, to give:
      %%%  C1:  fld_last1strate(icdinstance) >= measures__bpm__first
 %%%  Simplified C2 on reading formula in, to give:
      %%%  C2:  fld_last1strate(icdinstance) <= measures__bpm__last
 ***  Proved C1:  fld_last1strate(icdinstance) >= measures__bpm__first
-     using hypothesis H25.
+     using hypothesis H27.
 ***  Proved C2:  fld_last1strate(icdinstance) <= measures__bpm__last
-     using hypothesis H26.
+     using hypothesis H28.
 ***  PROVED VC.
 
 
 @@@@@@@@@@  VC: procedure_bpmarrayupdate_6.  @@@@@@@@@@
----  Hypothesis H39 has been replaced by "true".  (It is already present, as 
-          H33).
----  Hypothesis H40 has been replaced by "true".  (It is already present, as 
-          H34).
-%%%  Simplified H41 on reading formula in, to give:
-     %%%  H41:  fld_last4thrate(icdinstance) >= measures__bpm__first
-%%%  Simplified H42 on reading formula in, to give:
-     %%%  H42:  fld_last4thrate(icdinstance) <= measures__bpm__last
+---  Hypothesis H41 has been replaced by "true".  (It is already present, as 
+          H35).
+---  Hypothesis H42 has been replaced by "true".  (It is already present, as 
+          H36).
 %%%  Simplified H43 on reading formula in, to give:
-     %%%  H43:  fld_last3rdrate(icdinstance) >= measures__bpm__first
+     %%%  H43:  fld_last4thrate(icdinstance) >= measures__bpm__first
 %%%  Simplified H44 on reading formula in, to give:
-     %%%  H44:  fld_last3rdrate(icdinstance) <= measures__bpm__last
+     %%%  H44:  fld_last4thrate(icdinstance) <= measures__bpm__last
 %%%  Simplified H45 on reading formula in, to give:
-     %%%  H45:  fld_last2ndrate(icdinstance) >= measures__bpm__first
+     %%%  H45:  fld_last3rdrate(icdinstance) >= measures__bpm__first
 %%%  Simplified H46 on reading formula in, to give:
-     %%%  H46:  fld_last2ndrate(icdinstance) <= measures__bpm__last
+     %%%  H46:  fld_last3rdrate(icdinstance) <= measures__bpm__last
 %%%  Simplified H47 on reading formula in, to give:
-     %%%  H47:  fld_last1strate(icdinstance) >= measures__bpm__first
+     %%%  H47:  fld_last2ndrate(icdinstance) >= measures__bpm__first
 %%%  Simplified H48 on reading formula in, to give:
-     %%%  H48:  fld_last1strate(icdinstance) <= measures__bpm__last
+     %%%  H48:  fld_last2ndrate(icdinstance) <= measures__bpm__last
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  fld_last1strate(icdinstance) >= measures__bpm__first
+%%%  Simplified H50 on reading formula in, to give:
+     %%%  H50:  fld_last1strate(icdinstance) <= measures__bpm__last
 %%%  Simplified C1 on reading formula in, to give:
      %%%  C1:  fld_rate(icdinstance) >= measures__bpm__first
 %%%  Simplified C2 on reading formula in, to give:
      %%%  C2:  fld_rate(icdinstance) <= measures__bpm__last
 ***  Proved C1:  fld_rate(icdinstance) >= measures__bpm__first
-     using hypothesis H37.
+     using hypothesis H39.
 ***  Proved C2:  fld_rate(icdinstance) <= measures__bpm__last
-     using hypothesis H38.
+     using hypothesis H40.
 ***  PROVED VC.
 
 

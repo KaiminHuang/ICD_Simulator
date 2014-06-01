@@ -5,7 +5,7 @@
            /*********************************************************/
 
 
-                        /*DATE : 31-MAY-2014 19:43:59.46*/
+                        /*DATE : 01-JUN-2014 12:40:45.07*/
 
                         /*procedure ICD.isTachycardia*/
 
@@ -15,3 +15,54 @@ rule_family istachycardi_rules:
      X <= Y requires [X:ire, Y:ire] &
      X >= Y requires [X:ire, Y:ire].
 
+istachycardi_rules(1): integer__size >= 0 may_be_deduced.
+istachycardi_rules(2): integer__first may_be_replaced_by -2147483648.
+istachycardi_rules(3): integer__last may_be_replaced_by 2147483647.
+istachycardi_rules(4): integer__base__first may_be_replaced_by -2147483648.
+istachycardi_rules(5): integer__base__last may_be_replaced_by 2147483647.
+istachycardi_rules(6): measures__joules__size >= 0 may_be_deduced.
+istachycardi_rules(7): measures__joules__first may_be_replaced_by 0.
+istachycardi_rules(8): measures__joules__last may_be_replaced_by 45.
+istachycardi_rules(9): measures__joules__base__first may_be_replaced_by -2147483648.
+istachycardi_rules(10): measures__joules__base__last may_be_replaced_by 2147483647.
+istachycardi_rules(11): measures__bpm__size >= 0 may_be_deduced.
+istachycardi_rules(12): measures__bpm__first may_be_replaced_by -1.
+istachycardi_rules(13): measures__bpm__last may_be_replaced_by 300.
+istachycardi_rules(14): measures__bpm__base__first may_be_replaced_by -2147483648.
+istachycardi_rules(15): measures__bpm__base__last may_be_replaced_by 2147483647.
+istachycardi_rules(16): measures__tub__size >= 0 may_be_deduced.
+istachycardi_rules(17): measures__tub__first may_be_replaced_by 100.
+istachycardi_rules(18): measures__tub__last may_be_replaced_by 150.
+istachycardi_rules(19): measures__tub__base__first may_be_replaced_by -2147483648.
+istachycardi_rules(20): measures__tub__base__last may_be_replaced_by 2147483647.
+istachycardi_rules(21): measures__fub__size >= 0 may_be_deduced.
+istachycardi_rules(22): measures__fub__first may_be_replaced_by 3.
+istachycardi_rules(23): measures__fub__last may_be_replaced_by 15.
+istachycardi_rules(24): measures__fub__base__first may_be_replaced_by -2147483648.
+istachycardi_rules(25): measures__fub__base__last may_be_replaced_by 2147483647.
+istachycardi_rules(26): icdtype__size >= 0 may_be_deduced.
+istachycardi_rules(27): A = B may_be_deduced_from
+     [goal(checktype(A,icdtype)),
+      goal(checktype(B,icdtype)),
+      fld_rate(A) = fld_rate(B),
+      fld_last6thrate(A) = fld_last6thrate(B),
+      fld_last5thrate(A) = fld_last5thrate(B),
+      fld_last4thrate(A) = fld_last4thrate(B),
+      fld_last3rdrate(A) = fld_last3rdrate(B),
+      fld_last2ndrate(A) = fld_last2ndrate(B),
+      fld_last1strate(A) = fld_last1strate(B),
+      fld_ison(A) = fld_ison(B),
+      fld_tachycardiabound(A) = fld_tachycardiabound(B),
+      fld_impulseratebound(A) = fld_impulseratebound(B),
+      fld_istachycardia(A) = fld_istachycardia(B),
+      fld_isinimpulseprocess(A) = fld_isinimpulseprocess(B),
+      fld_impulse(A) = fld_impulse(B),
+      fld_impulserate(A) = fld_impulserate(B),
+      fld_offset(A) = fld_offset(B),
+      fld_ticktonextimpulse(A) = fld_ticktonextimpulse(B),
+      fld_signal(A) = fld_signal(B),
+      fld_fibrillationbound(A) = fld_fibrillationbound(B),
+      fld_isfibrillation(A) = fld_isfibrillation(B),
+      fld_abnormalnum(A) = fld_abnormalnum(B),
+      fld_waitaftershock(A) = fld_waitaftershock(B),
+      fld_iswait(A) = fld_iswait(B)].

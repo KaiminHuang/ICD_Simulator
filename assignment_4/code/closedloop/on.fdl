@@ -5,7 +5,7 @@
            {*******************************************************}
 
 
-                        {DATE : 31-MAY-2014 19:43:59.67}
+                        {DATE : 01-JUN-2014 12:40:45.54}
 
                           {procedure ClosedLoop.On}
 
@@ -36,6 +36,7 @@ title procedure on;
         last1strate : integer;
         ison : boolean;
         tachycardiabound : integer;
+        impulseratebound : integer;
         istachycardia : boolean;
         isinimpulseprocess : boolean;
         impulse : integer;
